@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18F80E821DB5F30400FF1830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E811DB5F30400FF1830 /* main.m */; };
+		18F80E851DB5F30400FF1830 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E841DB5F30400FF1830 /* AppDelegate.m */; };
+		18F80E881DB5F30400FF1830 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E871DB5F30400FF1830 /* ViewController.m */; };
+		18F80E8B1DB5F30400FF1830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F80E891DB5F30400FF1830 /* Main.storyboard */; };
+		18F80E8D1DB5F30400FF1830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F80E8C1DB5F30400FF1830 /* Assets.xcassets */; };
+		18F80E901DB5F30400FF1830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F80E8E1DB5F30400FF1830 /* LaunchScreen.storyboard */; };
+		18F80E9B1DB5F30400FF1830 /* WTCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E9A1DB5F30400FF1830 /* WTCarTests.m */; };
+		18F80EA61DB5F30400FF1830 /* WTCarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80EA51DB5F30400FF1830 /* WTCarUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18F80E971DB5F30400FF1830 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18F80E751DB5F30400FF1830 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18F80E7C1DB5F30400FF1830;
+			remoteInfo = WTCar;
+		};
+		18F80EA21DB5F30400FF1830 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18F80E751DB5F30400FF1830 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18F80E7C1DB5F30400FF1830;
+			remoteInfo = WTCar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18F80E7D1DB5F30400FF1830 /* WTCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F80E811DB5F30400FF1830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18F80E831DB5F30400FF1830 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18F80E841DB5F30400FF1830 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18F80E861DB5F30400FF1830 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18F80E871DB5F30400FF1830 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18F80E8A1DB5F30400FF1830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18F80E8C1DB5F30400FF1830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18F80E8F1DB5F30400FF1830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18F80E911DB5F30400FF1830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F80E961DB5F30400FF1830 /* WTCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F80E9A1DB5F30400FF1830 /* WTCarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTCarTests.m; sourceTree = "<group>"; };
+		18F80E9C1DB5F30400FF1830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F80EA11DB5F30400FF1830 /* WTCarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTCarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F80EA51DB5F30400FF1830 /* WTCarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTCarUITests.m; sourceTree = "<group>"; };
+		18F80EA71DB5F30400FF1830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18F80E7A1DB5F30400FF1830 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F80E931DB5F30400FF1830 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F80E9E1DB5F30400FF1830 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18F80E741DB5F30400FF1830 = {
+			isa = PBXGroup;
+			children = (
+				18F80E7F1DB5F30400FF1830 /* WTCar */,
+				18F80E991DB5F30400FF1830 /* WTCarTests */,
+				18F80EA41DB5F30400FF1830 /* WTCarUITests */,
+				18F80E7E1DB5F30400FF1830 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18F80E7E1DB5F30400FF1830 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18F80E7D1DB5F30400FF1830 /* WTCar.app */,
+				18F80E961DB5F30400FF1830 /* WTCarTests.xctest */,
+				18F80EA11DB5F30400FF1830 /* WTCarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18F80E7F1DB5F30400FF1830 /* WTCar */ = {
+			isa = PBXGroup;
+			children = (
+				18F80E831DB5F30400FF1830 /* AppDelegate.h */,
+				18F80E841DB5F30400FF1830 /* AppDelegate.m */,
+				18F80E861DB5F30400FF1830 /* ViewController.h */,
+				18F80E871DB5F30400FF1830 /* ViewController.m */,
+				18F80E891DB5F30400FF1830 /* Main.storyboard */,
+				18F80E8C1DB5F30400FF1830 /* Assets.xcassets */,
+				18F80E8E1DB5F30400FF1830 /* LaunchScreen.storyboard */,
+				18F80E911DB5F30400FF1830 /* Info.plist */,
+				18F80E801DB5F30400FF1830 /* Supporting Files */,
+			);
+			path = WTCar;
+			sourceTree = "<group>";
+		};
+		18F80E801DB5F30400FF1830 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18F80E811DB5F30400FF1830 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18F80E991DB5F30400FF1830 /* WTCarTests */ = {
+			isa = PBXGroup;
+			children = (
+				18F80E9A1DB5F30400FF1830 /* WTCarTests.m */,
+				18F80E9C1DB5F30400FF1830 /* Info.plist */,
+			);
+			path = WTCarTests;
+			sourceTree = "<group>";
+		};
+		18F80EA41DB5F30400FF1830 /* WTCarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18F80EA51DB5F30400FF1830 /* WTCarUITests.m */,
+				18F80EA71DB5F30400FF1830 /* Info.plist */,
+			);
+			path = WTCarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18F80E7C1DB5F30400FF1830 /* WTCar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F80EAA1DB5F30400FF1830 /* Build configuration list for PBXNativeTarget "WTCar" */;
+			buildPhases = (
+				18F80E791DB5F30400FF1830 /* Sources */,
+				18F80E7A1DB5F30400FF1830 /* Frameworks */,
+				18F80E7B1DB5F30400FF1830 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WTCar;
+			productName = WTCar;
+			productReference = 18F80E7D1DB5F30400FF1830 /* WTCar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18F80E951DB5F30400FF1830 /* WTCarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F80EAD1DB5F30400FF1830 /* Build configuration list for PBXNativeTarget "WTCarTests" */;
+			buildPhases = (
+				18F80E921DB5F30400FF1830 /* Sources */,
+				18F80E931DB5F30400FF1830 /* Frameworks */,
+				18F80E941DB5F30400FF1830 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18F80E981DB5F30400FF1830 /* PBXTargetDependency */,
+			);
+			name = WTCarTests;
+			productName = WTCarTests;
+			productReference = 18F80E961DB5F30400FF1830 /* WTCarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18F80EA01DB5F30400FF1830 /* WTCarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F80EB01DB5F30400FF1830 /* Build configuration list for PBXNativeTarget "WTCarUITests" */;
+			buildPhases = (
+				18F80E9D1DB5F30400FF1830 /* Sources */,
+				18F80E9E1DB5F30400FF1830 /* Frameworks */,
+				18F80E9F1DB5F30400FF1830 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18F80EA31DB5F30400FF1830 /* PBXTargetDependency */,
+			);
+			name = WTCarUITests;
+			productName = WTCarUITests;
+			productReference = 18F80EA11DB5F30400FF1830 /* WTCarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18F80E751DB5F30400FF1830 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = apple;
+				TargetAttributes = {
+					18F80E7C1DB5F30400FF1830 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					18F80E951DB5F30400FF1830 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18F80E7C1DB5F30400FF1830;
+					};
+					18F80EA01DB5F30400FF1830 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18F80E7C1DB5F30400FF1830;
+					};
+				};
+			};
+			buildConfigurationList = 18F80E781DB5F30400FF1830 /* Build configuration list for PBXProject "WTCar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18F80E741DB5F30400FF1830;
+			productRefGroup = 18F80E7E1DB5F30400FF1830 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18F80E7C1DB5F30400FF1830 /* WTCar */,
+				18F80E951DB5F30400FF1830 /* WTCarTests */,
+				18F80EA01DB5F30400FF1830 /* WTCarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18F80E7B1DB5F30400FF1830 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F80E901DB5F30400FF1830 /* LaunchScreen.storyboard in Resources */,
+				18F80E8D1DB5F30400FF1830 /* Assets.xcassets in Resources */,
+				18F80E8B1DB5F30400FF1830 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F80E941DB5F30400FF1830 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F80E9F1DB5F30400FF1830 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18F80E791DB5F30400FF1830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F80E881DB5F30400FF1830 /* ViewController.m in Sources */,
+				18F80E851DB5F30400FF1830 /* AppDelegate.m in Sources */,
+				18F80E821DB5F30400FF1830 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F80E921DB5F30400FF1830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F80E9B1DB5F30400FF1830 /* WTCarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F80E9D1DB5F30400FF1830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F80EA61DB5F30400FF1830 /* WTCarUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18F80E981DB5F30400FF1830 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18F80E7C1DB5F30400FF1830 /* WTCar */;
+			targetProxy = 18F80E971DB5F30400FF1830 /* PBXContainerItemProxy */;
+		};
+		18F80EA31DB5F30400FF1830 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18F80E7C1DB5F30400FF1830 /* WTCar */;
+			targetProxy = 18F80EA21DB5F30400FF1830 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18F80E891DB5F30400FF1830 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F80E8A1DB5F30400FF1830 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18F80E8E1DB5F30400FF1830 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F80E8F1DB5F30400FF1830 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18F80EA81DB5F30400FF1830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18F80EA91DB5F30400FF1830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18F80EAB1DB5F30400FF1830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WTCar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18F80EAC1DB5F30400FF1830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WTCar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18F80EAE1DB5F30400FF1830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WTCarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WTCar.app/WTCar";
+			};
+			name = Debug;
+		};
+		18F80EAF1DB5F30400FF1830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WTCarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WTCar.app/WTCar";
+			};
+			name = Release;
+		};
+		18F80EB11DB5F30400FF1830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WTCarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WTCar;
+			};
+			name = Debug;
+		};
+		18F80EB21DB5F30400FF1830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WTCarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WTCar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18F80E781DB5F30400FF1830 /* Build configuration list for PBXProject "WTCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F80EA81DB5F30400FF1830 /* Debug */,
+				18F80EA91DB5F30400FF1830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18F80EAA1DB5F30400FF1830 /* Build configuration list for PBXNativeTarget "WTCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F80EAB1DB5F30400FF1830 /* Debug */,
+				18F80EAC1DB5F30400FF1830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18F80EAD1DB5F30400FF1830 /* Build configuration list for PBXNativeTarget "WTCarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F80EAE1DB5F30400FF1830 /* Debug */,
+				18F80EAF1DB5F30400FF1830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18F80EB01DB5F30400FF1830 /* Build configuration list for PBXNativeTarget "WTCarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F80EB11DB5F30400FF1830 /* Debug */,
+				18F80EB21DB5F30400FF1830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18F80E751DB5F30400FF1830 /* Project object */;
+}
