@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */; };
+		18E648701DB6276800B11D8F /* WTCarResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486F1DB6276800B11D8F /* WTCarResponse.m */; };
 		18F80E821DB5F30400FF1830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E811DB5F30400FF1830 /* main.m */; };
 		18F80E851DB5F30400FF1830 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E841DB5F30400FF1830 /* AppDelegate.m */; };
 		18F80E881DB5F30400FF1830 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E871DB5F30400FF1830 /* ViewController.m */; };
@@ -15,6 +17,12 @@
 		18F80E901DB5F30400FF1830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F80E8E1DB5F30400FF1830 /* LaunchScreen.storyboard */; };
 		18F80E9B1DB5F30400FF1830 /* WTCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E9A1DB5F30400FF1830 /* WTCarTests.m */; };
 		18F80EA61DB5F30400FF1830 /* WTCarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80EA51DB5F30400FF1830 /* WTCarUITests.m */; };
+		18F80EC61DB60CE700FF1830 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80EBA1DB60CE700FF1830 /* AFHTTPSessionManager.m */; };
+		18F80EC71DB60CE700FF1830 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80EBD1DB60CE700FF1830 /* AFNetworkReachabilityManager.m */; };
+		18F80EC81DB60CE700FF1830 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80EBF1DB60CE700FF1830 /* AFSecurityPolicy.m */; };
+		18F80EC91DB60CE700FF1830 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80EC11DB60CE700FF1830 /* AFURLRequestSerialization.m */; };
+		18F80ECA1DB60CE700FF1830 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80EC31DB60CE700FF1830 /* AFURLResponseSerialization.m */; };
+		18F80ECB1DB60CE700FF1830 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80EC51DB60CE700FF1830 /* AFURLSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18E6486B1DB6103900B11D8F /* WTCarBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCarBaseRequest.h; sourceTree = "<group>"; };
+		18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarBaseRequest.m; sourceTree = "<group>"; };
+		18E6486E1DB6276800B11D8F /* WTCarResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCarResponse.h; sourceTree = "<group>"; };
+		18E6486F1DB6276800B11D8F /* WTCarResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarResponse.m; sourceTree = "<group>"; };
 		18F80E7D1DB5F30400FF1830 /* WTCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F80E811DB5F30400FF1830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18F80E831DB5F30400FF1830 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +63,19 @@
 		18F80EA11DB5F30400FF1830 /* WTCarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTCarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F80EA51DB5F30400FF1830 /* WTCarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTCarUITests.m; sourceTree = "<group>"; };
 		18F80EA71DB5F30400FF1830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F80EB91DB60CE700FF1830 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		18F80EBA1DB60CE700FF1830 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		18F80EBB1DB60CE700FF1830 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		18F80EBC1DB60CE700FF1830 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		18F80EBD1DB60CE700FF1830 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		18F80EBE1DB60CE700FF1830 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		18F80EBF1DB60CE700FF1830 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		18F80EC01DB60CE700FF1830 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		18F80EC11DB60CE700FF1830 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		18F80EC21DB60CE700FF1830 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		18F80EC31DB60CE700FF1830 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		18F80EC41DB60CE700FF1830 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		18F80EC51DB60CE700FF1830 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +126,8 @@
 		18F80E7F1DB5F30400FF1830 /* WTCar */ = {
 			isa = PBXGroup;
 			children = (
+				18F80EB31DB5F5C400FF1830 /* DateLayer */,
+				18F80EB71DB5F5C400FF1830 /* lib */,
 				18F80E831DB5F30400FF1830 /* AppDelegate.h */,
 				18F80E841DB5F30400FF1830 /* AppDelegate.m */,
 				18F80E861DB5F30400FF1830 /* ViewController.h */,
@@ -138,6 +165,69 @@
 				18F80EA71DB5F30400FF1830 /* Info.plist */,
 			);
 			path = WTCarUITests;
+			sourceTree = "<group>";
+		};
+		18F80EB31DB5F5C400FF1830 /* DateLayer */ = {
+			isa = PBXGroup;
+			children = (
+				18F80EB41DB5F5C400FF1830 /* Model */,
+				18F80EB51DB5F5C400FF1830 /* Networking */,
+				18F80EB61DB5F5C400FF1830 /* Utils */,
+			);
+			path = DateLayer;
+			sourceTree = "<group>";
+		};
+		18F80EB41DB5F5C400FF1830 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18E6486E1DB6276800B11D8F /* WTCarResponse.h */,
+				18E6486F1DB6276800B11D8F /* WTCarResponse.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18F80EB51DB5F5C400FF1830 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				18E6486B1DB6103900B11D8F /* WTCarBaseRequest.h */,
+				18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		18F80EB61DB5F5C400FF1830 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		18F80EB71DB5F5C400FF1830 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				18F80EB81DB60CE700FF1830 /* AFNetworking */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		18F80EB81DB60CE700FF1830 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				18F80EB91DB60CE700FF1830 /* AFHTTPSessionManager.h */,
+				18F80EBA1DB60CE700FF1830 /* AFHTTPSessionManager.m */,
+				18F80EBB1DB60CE700FF1830 /* AFNetworking.h */,
+				18F80EBC1DB60CE700FF1830 /* AFNetworkReachabilityManager.h */,
+				18F80EBD1DB60CE700FF1830 /* AFNetworkReachabilityManager.m */,
+				18F80EBE1DB60CE700FF1830 /* AFSecurityPolicy.h */,
+				18F80EBF1DB60CE700FF1830 /* AFSecurityPolicy.m */,
+				18F80EC01DB60CE700FF1830 /* AFURLRequestSerialization.h */,
+				18F80EC11DB60CE700FF1830 /* AFURLRequestSerialization.m */,
+				18F80EC21DB60CE700FF1830 /* AFURLResponseSerialization.h */,
+				18F80EC31DB60CE700FF1830 /* AFURLResponseSerialization.m */,
+				18F80EC41DB60CE700FF1830 /* AFURLSessionManager.h */,
+				18F80EC51DB60CE700FF1830 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +297,7 @@
 				TargetAttributes = {
 					18F80E7C1DB5F30400FF1830 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ECVCAG6ZK6;
 						ProvisioningStyle = Automatic;
 					};
 					18F80E951DB5F30400FF1830 = {
@@ -273,9 +364,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */,
+				18F80ECB1DB60CE700FF1830 /* AFURLSessionManager.m in Sources */,
 				18F80E881DB5F30400FF1830 /* ViewController.m in Sources */,
 				18F80E851DB5F30400FF1830 /* AppDelegate.m in Sources */,
+				18F80EC71DB60CE700FF1830 /* AFNetworkReachabilityManager.m in Sources */,
 				18F80E821DB5F30400FF1830 /* main.m in Sources */,
+				18F80EC81DB60CE700FF1830 /* AFSecurityPolicy.m in Sources */,
+				18F80EC91DB60CE700FF1830 /* AFURLRequestSerialization.m in Sources */,
+				18F80ECA1DB60CE700FF1830 /* AFURLResponseSerialization.m in Sources */,
+				18F80EC61DB60CE700FF1830 /* AFHTTPSessionManager.m in Sources */,
+				18E648701DB6276800B11D8F /* WTCarResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ECVCAG6ZK6;
 				INFOPLIST_FILE = WTCar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCar;
@@ -435,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ECVCAG6ZK6;
 				INFOPLIST_FILE = WTCar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCar;
@@ -507,6 +608,7 @@
 				18F80EAC1DB5F30400FF1830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18F80EAD1DB5F30400FF1830 /* Build configuration list for PBXNativeTarget "WTCarTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +617,7 @@
 				18F80EAF1DB5F30400FF1830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18F80EB01DB5F30400FF1830 /* Build configuration list for PBXNativeTarget "WTCarUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +626,7 @@
 				18F80EB21DB5F30400FF1830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
