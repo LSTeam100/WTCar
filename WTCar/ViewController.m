@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIView *myView = [[UIView alloc]init];
+    myView.backgroundColor =[UIColor blackColor];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
