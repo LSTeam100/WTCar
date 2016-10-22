@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "WTCTabBarViewController.h"
 @interface ViewController ()
 
 @end
@@ -18,6 +18,8 @@
     [super viewDidLoad];
     UIView *myView = [[UIView alloc]init];
     myView.backgroundColor =[UIColor blackColor];
+    WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
+    [self.navigationController pushViewController:upmTabbar animated:YES];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
