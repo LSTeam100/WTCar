@@ -65,6 +65,12 @@
 		18D8838F1DBB674900F19129 /* WTCCarManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D8838D1DBB674900F19129 /* WTCCarManageTableViewCell.xib */; };
 		18D883931DBB6F9500F19129 /* WTCPublishCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D883911DBB6F9500F19129 /* WTCPublishCarViewController.m */; };
 		18D883941DBB6F9500F19129 /* WTCPublishCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D883921DBB6F9500F19129 /* WTCPublishCarViewController.xib */; };
+		18D8839A1DBB74A400F19129 /* ChineseString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D883971DBB74A400F19129 /* ChineseString.m */; };
+		18D8839B1DBB74A400F19129 /* pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D883991DBB74A400F19129 /* pinyin.m */; };
+		18D883A71DBB854500F19129 /* WTCCarBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D883A51DBB854500F19129 /* WTCCarBrandViewController.m */; };
+		18D883A81DBB854500F19129 /* WTCCarBrandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D883A61DBB854500F19129 /* WTCCarBrandViewController.xib */; };
+		18D883AE1DBC738E00F19129 /* MultiTablesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D883AB1DBC738E00F19129 /* MultiTablesView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		18D883AF1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D883AD1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m */; };
 		18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */; };
 		18E648701DB6276800B11D8F /* WTCarResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486F1DB6276800B11D8F /* WTCarResponse.m */; };
 		18F80E821DB5F30400FF1830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E811DB5F30400FF1830 /* main.m */; };
@@ -212,6 +218,17 @@
 		18D883901DBB6F9500F19129 /* WTCPublishCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCPublishCarViewController.h; sourceTree = "<group>"; };
 		18D883911DBB6F9500F19129 /* WTCPublishCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCPublishCarViewController.m; sourceTree = "<group>"; };
 		18D883921DBB6F9500F19129 /* WTCPublishCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCPublishCarViewController.xib; sourceTree = "<group>"; };
+		18D883961DBB74A400F19129 /* ChineseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseString.h; sourceTree = "<group>"; };
+		18D883971DBB74A400F19129 /* ChineseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseString.m; sourceTree = "<group>"; };
+		18D883981DBB74A400F19129 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		18D883991DBB74A400F19129 /* pinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pinyin.m; sourceTree = "<group>"; };
+		18D883A41DBB854500F19129 /* WTCCarBrandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarBrandViewController.h; sourceTree = "<group>"; };
+		18D883A51DBB854500F19129 /* WTCCarBrandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarBrandViewController.m; sourceTree = "<group>"; };
+		18D883A61DBB854500F19129 /* WTCCarBrandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCarBrandViewController.xib; sourceTree = "<group>"; };
+		18D883AA1DBC738E00F19129 /* MultiTablesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiTablesView.h; sourceTree = "<group>"; };
+		18D883AB1DBC738E00F19129 /* MultiTablesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiTablesView.m; sourceTree = "<group>"; };
+		18D883AC1DBC738E00F19129 /* UITableView+FixedTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FixedTableHeaderView.h"; sourceTree = "<group>"; };
+		18D883AD1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FixedTableHeaderView.m"; sourceTree = "<group>"; };
 		18E6486B1DB6103900B11D8F /* WTCarBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCarBaseRequest.h; sourceTree = "<group>"; };
 		18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarBaseRequest.m; sourceTree = "<group>"; };
 		18E6486E1DB6276800B11D8F /* WTCarResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCarResponse.h; sourceTree = "<group>"; };
@@ -359,6 +376,9 @@
 				18D883901DBB6F9500F19129 /* WTCPublishCarViewController.h */,
 				18D883911DBB6F9500F19129 /* WTCPublishCarViewController.m */,
 				18D883921DBB6F9500F19129 /* WTCPublishCarViewController.xib */,
+				18D883A41DBB854500F19129 /* WTCCarBrandViewController.h */,
+				18D883A51DBB854500F19129 /* WTCCarBrandViewController.m */,
+				18D883A61DBB854500F19129 /* WTCCarBrandViewController.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -489,6 +509,28 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		18D883951DBB74A400F19129 /* ChineseSorting */ = {
+			isa = PBXGroup;
+			children = (
+				18D883961DBB74A400F19129 /* ChineseString.h */,
+				18D883971DBB74A400F19129 /* ChineseString.m */,
+				18D883981DBB74A400F19129 /* pinyin.h */,
+				18D883991DBB74A400F19129 /* pinyin.m */,
+			);
+			path = ChineseSorting;
+			sourceTree = "<group>";
+		};
+		18D883A91DBC738E00F19129 /* MultiTablesView */ = {
+			isa = PBXGroup;
+			children = (
+				18D883AA1DBC738E00F19129 /* MultiTablesView.h */,
+				18D883AB1DBC738E00F19129 /* MultiTablesView.m */,
+				18D883AC1DBC738E00F19129 /* UITableView+FixedTableHeaderView.h */,
+				18D883AD1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m */,
+			);
+			path = MultiTablesView;
+			sourceTree = "<group>";
+		};
 		18F80E741DB5F30400FF1830 = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +634,8 @@
 		18F80EB71DB5F5C400FF1830 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				18D883A91DBC738E00F19129 /* MultiTablesView */,
+				18D883951DBB74A400F19129 /* ChineseSorting */,
 				18D883571DBB49F500F19129 /* SDWebImage */,
 				18D883111DBB49B200F19129 /* MJRefresh */,
 				18D8832F1DBB49B200F19129 /* MJExtension */,
@@ -733,6 +777,7 @@
 				18F80E901DB5F30400FF1830 /* LaunchScreen.storyboard in Resources */,
 				18D883941DBB6F9500F19129 /* WTCPublishCarViewController.xib in Resources */,
 				18D883871DBB638000F19129 /* WTCCarManageController.xib in Resources */,
+				18D883A81DBB854500F19129 /* WTCCarBrandViewController.xib in Resources */,
 				18F80E8D1DB5F30400FF1830 /* Assets.xcassets in Resources */,
 				18D883411DBB49B200F19129 /* LICENSE in Resources */,
 				18F80E8B1DB5F30400FF1830 /* Main.storyboard in Resources */,
@@ -767,6 +812,7 @@
 				18D882EB1DBB1B8300F19129 /* WTCTabBar.m in Sources */,
 				18D883511DBB49B200F19129 /* MJProperty.m in Sources */,
 				18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */,
+				18D883AF1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m in Sources */,
 				18D883101DBB484400F19129 /* MBProgressHUD.m in Sources */,
 				18D883541DBB49B200F19129 /* NSObject+MJKeyValue.m in Sources */,
 				18D883531DBB49B200F19129 /* NSObject+MJCoding.m in Sources */,
@@ -776,6 +822,7 @@
 				18D8837D1DBB49F500F19129 /* UIButton+WebCache.m in Sources */,
 				18D883931DBB6F9500F19129 /* WTCPublishCarViewController.m in Sources */,
 				18D883481DBB49B200F19129 /* MJRefreshHeader.m in Sources */,
+				18D8839A1DBB74A400F19129 /* ChineseString.m in Sources */,
 				18D883751DBB49F500F19129 /* NSData+ImageContentType.m in Sources */,
 				18D883781DBB49F500F19129 /* SDWebImageDecoder.m in Sources */,
 				18D882F41DBB1E0200F19129 /* WTCNavigationBar.m in Sources */,
@@ -792,8 +839,10 @@
 				18D883761DBB49F500F19129 /* SDImageCache.m in Sources */,
 				18D883521DBB49B200F19129 /* MJType.m in Sources */,
 				18D8838E1DBB674900F19129 /* WTCCarManageTableViewCell.m in Sources */,
+				18D8839B1DBB74A400F19129 /* pinyin.m in Sources */,
 				18D8837C1DBB49F500F19129 /* SDWebImagePrefetcher.m in Sources */,
 				18D883461DBB49B200F19129 /* MJRefreshGifFooter.m in Sources */,
+				18D883A71DBB854500F19129 /* WTCCarBrandViewController.m in Sources */,
 				18D882EC1DBB1B8300F19129 /* WTCTabBarItem.m in Sources */,
 				18D883801DBB49F500F19129 /* UIImageView+HighlightedWebCache.m in Sources */,
 				18F80E851DB5F30400FF1830 /* AppDelegate.m in Sources */,
@@ -811,6 +860,7 @@
 				18F80EC61DB60CE700FF1830 /* AFHTTPSessionManager.m in Sources */,
 				18D8834C1DBB49B200F19129 /* UIScrollView+MJRefresh.m in Sources */,
 				18D883821DBB49F500F19129 /* UIView+WebCacheOperation.m in Sources */,
+				18D883AE1DBC738E00F19129 /* MultiTablesView.m in Sources */,
 				18D883051DBB207D00F19129 /* WTCMineViewController.m in Sources */,
 				18D8830A1DBB20A600F19129 /* WTCHomeViewController.m in Sources */,
 				18D8838A1DBB63E100F19129 /* WTCBaseViewController.m in Sources */,

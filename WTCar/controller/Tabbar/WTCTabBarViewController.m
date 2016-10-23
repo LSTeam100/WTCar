@@ -14,7 +14,7 @@
 #import <objc/runtime.h>
 
 #import "WTCCarManageController.h"
-
+#import "WTCCarBrandViewController.h"
 @interface WTCTabBarViewController ()
 
 @end
@@ -28,7 +28,7 @@
 }
 -(void)setControllers
 {
-    WTCCarManageController *home=[[WTCCarManageController alloc]init];
+    WTCCarBrandViewController *home=[[WTCCarBrandViewController alloc]init];
     UINavigationController *homeNav=[[UINavigationController alloc]initWithRootViewController:home];
     WTCShareViewController *share=[[WTCShareViewController alloc]initWithNibName:@"WTCShareViewController" bundle:nil];
     UINavigationController *shareNav=[[UINavigationController alloc]initWithRootViewController:share];
