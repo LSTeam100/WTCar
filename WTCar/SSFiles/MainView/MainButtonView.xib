@@ -17,16 +17,16 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTF-YW-PZa">
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQf-pF-ZKk">
-                                    <state key="normal" title="Button" image="展商名录.png"/>
+                                    <state key="normal" title="Button" image="更多.png"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obg-pz-er2">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="70" id="9Ed-aL-S6Q"/>
                                         <constraint firstAttribute="height" constant="70" id="9Yr-LM-RxV"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="展品.png"/>
+                                    <state key="normal" title="Button" image="搜索.png"/>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="展商名录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogo-mV-Vv3">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布车辆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogo-mV-Vv3">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="9mG-Xv-A35"/>
                                         <constraint firstAttribute="width" constant="80" id="MgI-Gp-6or"/>
@@ -35,7 +35,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="展位图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLQ-Y2-7qN">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺设置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLQ-Y2-7qN">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="Iif-rG-Hcm"/>
                                         <constraint firstAttribute="width" constant="80" id="O5k-OP-FEE"/>
@@ -45,9 +45,9 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-xo-NOW">
-                                    <state key="normal" title="Button" image="展馆平面图.png"/>
+                                    <state key="normal" title="Button" image="酒店信息.png"/>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="展品" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-JE-p8n">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆管理" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-JE-p8n">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="dC6-jl-uAi"/>
                                         <constraint firstAttribute="width" constant="80" id="qZs-9t-Aaw"/>
@@ -70,7 +70,7 @@
                                     </constraints>
                                     <state key="normal" title="Button" image="客户邀请.png"/>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如何到达" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-0l-NAp">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商家POS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-0l-NAp">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="StD-ux-g8i"/>
                                         <constraint firstAttribute="width" constant="80" id="XDE-6L-fYp"/>
@@ -79,7 +79,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="酒店信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-Sp-g7M">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车险质保" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-Sp-g7M">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="L0K-d6-Gsx"/>
                                         <constraint firstAttribute="width" constant="80" id="sDh-zF-byX"/>
@@ -95,7 +95,7 @@
                                     </constraints>
                                     <state key="normal" title="Button" image="酒店信息.png"/>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户邀请" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0t-S8-FC9">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配资服务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0t-S8-FC9">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="80" id="FXz-h1-ECy"/>
                                         <constraint firstAttribute="height" constant="20" id="uEP-xf-4qo"/>
@@ -118,7 +118,7 @@
                                     </constraints>
                                     <state key="normal" title="Button" image="更多.png"/>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系我们" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d82-dM-PG3">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务工具" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d82-dM-PG3">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="80" id="FH6-L2-aAh"/>
                                         <constraint firstAttribute="height" constant="20" id="R0R-Dw-dqA"/>
@@ -127,26 +127,10 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62G-TL-X7O">
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="20" id="Ii9-K9-hO7"/>
-                                        <constraint firstAttribute="width" constant="80" id="MbI-9D-XtM"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOO-wd-wiY">
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="70" id="DWa-j2-pyv"/>
-                                        <constraint firstAttribute="width" constant="70" id="RBe-Cl-5S4"/>
-                                    </constraints>
-                                    <state key="normal" title="Button" image="搜索.png"/>
-                                </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbR-NK-ICF">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汽车小常识" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbR-NK-ICF">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="FPZ-la-EgU"/>
-                                        <constraint firstAttribute="width" constant="80" id="VKe-Xy-9Eb"/>
+                                        <constraint firstAttribute="width" constant="83" id="VKe-Xy-9Eb"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -179,7 +163,6 @@
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="6ZE-0l-NAp" firstAttribute="top" secondItem="YbR-ER-HQu" secondAttribute="bottom" constant="25" id="0cK-uI-Pzy"/>
-                                <constraint firstItem="62G-TL-X7O" firstAttribute="centerX" secondItem="vOO-wd-wiY" secondAttribute="centerX" id="1QY-5y-HM1"/>
                                 <constraint firstItem="KTD-Gr-Z3I" firstAttribute="width" secondItem="sef-e5-fSO" secondAttribute="width" constant="1" id="3zM-ok-Fho"/>
                                 <constraint firstItem="NQf-pF-ZKk" firstAttribute="height" secondItem="Obg-pz-er2" secondAttribute="height" id="43N-q8-SeO"/>
                                 <constraint firstItem="1NF-Ck-p21" firstAttribute="top" secondItem="pa8-bV-JXT" secondAttribute="bottom" constant="73" id="52A-5O-KWP"/>
@@ -203,7 +186,6 @@
                                 <constraint firstAttribute="height" constant="750" id="REy-jl-2UW"/>
                                 <constraint firstItem="aCv-if-rcI" firstAttribute="top" secondItem="kpm-xo-NOW" secondAttribute="bottom" constant="73" id="RYY-ZL-Sd9"/>
                                 <constraint firstItem="YbR-ER-HQu" firstAttribute="top" secondItem="NQf-pF-ZKk" secondAttribute="bottom" constant="73" id="SY2-eQ-xy4"/>
-                                <constraint firstItem="vOO-wd-wiY" firstAttribute="centerX" secondItem="aCv-if-rcI" secondAttribute="centerX" id="UeO-W6-cEQ"/>
                                 <constraint firstItem="iGV-QF-Ata" firstAttribute="top" secondItem="sef-e5-fSO" secondAttribute="top" id="UzR-Rv-yWd"/>
                                 <constraint firstItem="kpm-xo-NOW" firstAttribute="width" secondItem="Obg-pz-er2" secondAttribute="width" id="VDS-YD-Udv"/>
                                 <constraint firstItem="6ZE-0l-NAp" firstAttribute="centerX" secondItem="YbR-ER-HQu" secondAttribute="centerX" id="Wuh-dv-OS6"/>
@@ -229,13 +211,11 @@
                                 <constraint firstItem="sef-e5-fSO" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="prC-NZ-h1R"/>
                                 <constraint firstItem="kpm-xo-NOW" firstAttribute="height" secondItem="Obg-pz-er2" secondAttribute="height" id="rPa-0n-6F0"/>
                                 <constraint firstItem="sef-e5-fSO" firstAttribute="leading" secondItem="MTF-YW-PZa" secondAttribute="leading" id="sbE-JD-af2"/>
-                                <constraint firstItem="62G-TL-X7O" firstAttribute="top" secondItem="vOO-wd-wiY" secondAttribute="bottom" constant="25" id="u4C-iG-85n"/>
                                 <constraint firstItem="N6d-JE-p8n" firstAttribute="top" secondItem="Obg-pz-er2" secondAttribute="bottom" constant="25" id="uW6-O3-LhU"/>
                                 <constraint firstItem="kpm-xo-NOW" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="w6D-Cy-Tsb"/>
                                 <constraint firstItem="KTD-Gr-Z3I" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="w9Q-Tw-hji"/>
                                 <constraint firstItem="iGV-QF-Ata" firstAttribute="leading" secondItem="MTF-YW-PZa" secondAttribute="leading" constant="334" id="wRQ-cn-5zh"/>
                                 <constraint firstItem="i0t-S8-FC9" firstAttribute="centerX" secondItem="pa8-bV-JXT" secondAttribute="centerX" id="ynl-jq-I8p"/>
-                                <constraint firstItem="vOO-wd-wiY" firstAttribute="top" secondItem="aCv-if-rcI" secondAttribute="bottom" constant="73" id="zmP-PX-Vk5"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
@@ -243,24 +223,12 @@
                                 </mask>
                             </variation>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYg-EJ-9B0">
-                            <constraints>
-                                <constraint firstAttribute="width" constant="101" id="ev7-dP-ATy"/>
-                                <constraint firstAttribute="height" constant="40" id="t59-L7-dVL"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="Language" backgroundImage="英文切换背景3x.png">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="MTF-YW-PZa" firstAttribute="top" secondItem="1WG-4W-PLV" secondAttribute="top" id="GyG-rh-VBT"/>
                         <constraint firstItem="MTF-YW-PZa" firstAttribute="leading" secondItem="1WG-4W-PLV" secondAttribute="leading" id="Ivv-0k-4oN"/>
                         <constraint firstAttribute="trailing" secondItem="MTF-YW-PZa" secondAttribute="trailing" id="Y7F-tM-lNX"/>
-                        <constraint firstItem="wYg-EJ-9B0" firstAttribute="centerX" secondItem="1NF-Ck-p21" secondAttribute="centerX" constant="-2.5" id="dqJ-Tj-N8F"/>
                         <constraint firstItem="MTF-YW-PZa" firstAttribute="centerX" secondItem="1WG-4W-PLV" secondAttribute="centerX" id="eWW-Ok-jeV"/>
-                        <constraint firstItem="wYg-EJ-9B0" firstAttribute="top" secondItem="1NF-Ck-p21" secondAttribute="bottom" constant="58" id="gjf-0B-pnK"/>
                         <constraint firstAttribute="bottom" secondItem="MTF-YW-PZa" secondAttribute="bottom" constant="-83" id="hnl-JU-I7b"/>
                     </constraints>
                 </scrollView>
@@ -273,28 +241,13 @@
                 <constraint firstItem="1WG-4W-PLV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pBm-EB-9Tm"/>
             </constraints>
             <connections>
-                <outlet property="ContactUsButtonAction" destination="UiN-NP-kKV" id="rYG-PY-mhv"/>
-                <outlet property="ContactUsLabel" destination="d82-dM-PG3" id="AgH-XK-HR4"/>
-                <outlet property="CustomerInviteButtonAction" destination="pa8-bV-JXT" id="hc1-IJ-u73"/>
-                <outlet property="CustomerInviteLabel" destination="i0t-S8-FC9" id="e9E-D8-ItC"/>
-                <outlet property="HotelsInfoLabel" destination="yCG-Sp-g7M" id="er1-Pe-eng"/>
-                <outlet property="HotelsInforButtonAction" destination="aCv-if-rcI" id="cGS-MX-JJI"/>
-                <outlet property="HowArriveButtonAction" destination="YbR-ER-HQu" id="hnn-iY-O51"/>
-                <outlet property="HowArriveLabel" destination="6ZE-0l-NAp" id="D53-eg-EUD"/>
-                <outlet property="LanguageButton" destination="wYg-EJ-9B0" id="etb-kp-ckG"/>
+                <outlet property="CheGuanLiButton" destination="Obg-pz-er2" id="Xau-Pb-ilf"/>
+                <outlet property="DianPuSZButton" destination="kpm-xo-NOW" id="oaj-lL-y1Q"/>
+                <outlet property="FaBuCheButton" destination="NQf-pF-ZKk" id="XSc-r4-U4k"/>
                 <outlet property="MainContentView" destination="MTF-YW-PZa" id="HL2-AU-7ar"/>
                 <outlet property="MainContentViewHight" destination="hnl-JU-I7b" id="RW1-hP-a3f"/>
                 <outlet property="MainScrollView" destination="1WG-4W-PLV" id="Dc4-9S-bNp"/>
-                <outlet property="MoreInfoLabel" destination="UbR-NK-ICF" id="ZlH-3S-lAW"/>
-                <outlet property="MoreInforButtonAction" destination="1NF-Ck-p21" id="SBp-ah-1jX"/>
-                <outlet property="SearchBarLabel" destination="62G-TL-X7O" id="Jp5-5q-HDb"/>
-                <outlet property="SearchButtonAction" destination="vOO-wd-wiY" id="3Jc-W8-OeW"/>
-                <outlet property="ZhanPinButton" destination="Obg-pz-er2" id="6iZ-Bf-la1"/>
-                <outlet property="ZhanPinLabel" destination="N6d-JE-p8n" id="Yaa-mw-Hro"/>
-                <outlet property="ZhanShangButton" destination="NQf-pF-ZKk" id="ZDK-L8-a3v"/>
-                <outlet property="ZhanShangLabel" destination="Ogo-mV-Vv3" id="3Xt-ZK-BzG"/>
-                <outlet property="ZhanWeiMapButton" destination="kpm-xo-NOW" id="UQb-g0-EGW"/>
-                <outlet property="ZhanWeiMapLabel" destination="eLQ-Y2-7qN" id="o96-Jy-JdH"/>
+                <outlet property="ShangJiaPosButton" destination="YbR-ER-HQu" id="0pr-wI-Jmb"/>
             </connections>
             <point key="canvasLocation" x="35.5" y="80.5"/>
         </view>
@@ -302,13 +255,9 @@
     <resources>
         <image name="交通示意图.png" width="74" height="74"/>
         <image name="客户邀请.png" width="74" height="74"/>
-        <image name="展品.png" width="74" height="74"/>
-        <image name="展商名录.png" width="74" height="74"/>
-        <image name="展馆平面图.png" width="74" height="74"/>
         <image name="搜索.png" width="74" height="74"/>
         <image name="更多.png" width="74" height="74"/>
         <image name="联系我们.png" width="74" height="74"/>
-        <image name="英文切换背景3x.png" width="273" height="102"/>
         <image name="酒店信息.png" width="74" height="74"/>
     </resources>
 </document>

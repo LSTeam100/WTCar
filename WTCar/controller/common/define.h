@@ -8,7 +8,13 @@
 
 #ifndef UPMeilin_define_h
 #define UPMeilin_define_h
+// 屏幕宽度
+#define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 
+// 屏幕高度
+#define SCREEN_HEIGHT   [[UIScreen mainScreen] bounds].size.height
+#define IOS7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending)
+#define IOS9_OR_LATER    ([[[UIDevice currentDevice] systemVersion] compare:@"9.0"] != NSOrderedAscending)
 
 #pragma mark -获取颜色
 

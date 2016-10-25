@@ -7,7 +7,7 @@
 //
 
 #import "WTCMineViewController.h"
-
+#import "SettingViewController.h"
 @interface WTCMineViewController ()
 
 @end
@@ -17,9 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
+    UIButton*testButton=[[UIButton alloc]initWithFrame:CGRectMake(160, 50, 70, 70)];
+    testButton.backgroundColor= [UIColor redColor];
+    [testButton addTarget:self action:@selector(clickTestButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:testButton];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)clickTestButton
+{
+    SettingViewController *settingViewController = [SettingViewController new];
+    [self.navigationController pushViewController:settingViewController animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

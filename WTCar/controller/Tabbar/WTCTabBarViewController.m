@@ -28,7 +28,12 @@
 }
 -(void)setControllers
 {
+
     WTCCarBrandViewController *home=[[WTCCarBrandViewController alloc]init];
+
+//    WTCCarManageController *home=[[WTCCarManageController alloc]init];
+//    WTCHomeViewController *home = [[WTCHomeViewController alloc]init];
+
     UINavigationController *homeNav=[[UINavigationController alloc]initWithRootViewController:home];
     WTCShareViewController *share=[[WTCShareViewController alloc]initWithNibName:@"WTCShareViewController" bundle:nil];
     UINavigationController *shareNav=[[UINavigationController alloc]initWithRootViewController:share];

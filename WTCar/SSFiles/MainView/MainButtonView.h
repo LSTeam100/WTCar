@@ -12,29 +12,10 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *MainScrollView;
 @property (weak, nonatomic) IBOutlet UIView *MainContentView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *MainContentViewHight;
-//地图
-@property (weak, nonatomic) IBOutlet UIButton *ZhanWeiMapButton;
+@property (weak, nonatomic) IBOutlet UIButton *FaBuCheButton;
+@property (weak, nonatomic) IBOutlet UIButton *CheGuanLiButton;
+@property (weak, nonatomic) IBOutlet UIButton *DianPuSZButton;
+@property (weak, nonatomic) IBOutlet UIButton *ShangJiaPosButton;
 
-//展商按钮
-@property (weak, nonatomic) IBOutlet UIButton *ZhanShangButton;
-//展品按钮
-@property (weak, nonatomic) IBOutlet UIButton *ZhanPinButton;
-
-@property (weak, nonatomic) IBOutlet UIButton *CustomerInviteButtonAction;
-@property (weak, nonatomic) IBOutlet UIButton *HowArriveButtonAction;
-@property (weak, nonatomic) IBOutlet UIButton *HotelsInforButtonAction;
-@property (weak, nonatomic) IBOutlet UIButton *SearchButtonAction;
-@property (weak, nonatomic) IBOutlet UIButton *MoreInforButtonAction;
-@property (weak, nonatomic) IBOutlet UIButton *ContactUsButtonAction;
-@property (weak, nonatomic) IBOutlet UIButton *LanguageButton;
-@property (weak, nonatomic) IBOutlet UILabel *ZhanShangLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ZhanPinLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ZhanWeiMapLabel;
-@property (weak, nonatomic) IBOutlet UILabel *HowArriveLabel;
-@property (weak, nonatomic) IBOutlet UILabel *CustomerInviteLabel;
-@property (weak, nonatomic) IBOutlet UILabel *HotelsInfoLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ContactUsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *MoreInfoLabel;
-@property (weak, nonatomic) IBOutlet UILabel *SearchBarLabel;
 
 @end
