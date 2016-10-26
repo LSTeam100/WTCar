@@ -58,6 +58,10 @@
 		0451EDFD1DBE43210026D046 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0451EDFB1DBE43210026D046 /* SettingTableViewCell.xib */; };
 		0451EDFF1DBE448D0026D046 /* Back-icon-拷贝-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0451EDFE1DBE448D0026D046 /* Back-icon-拷贝-5.png */; };
 		0451EE011DBE69890026D046 /* u718.png in Resources */ = {isa = PBXBuildFile; fileRef = 0451EE001DBE69890026D046 /* u718.png */; };
+		18BF6ED51DC09E7E003BF410 /* WTCAddCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BF6ECF1DC09E7E003BF410 /* WTCAddCarViewController.xib */; };
+		18BF6ED61DC09E7E003BF410 /* WTCAddCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BF6ED01DC09E7E003BF410 /* WTCAddCarViewController.m */; };
+		18BF6ED71DC09E7E003BF410 /* WTCAddCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BF6ED21DC09E7E003BF410 /* WTCAddCarTableViewCell.xib */; };
+		18BF6ED81DC09E7E003BF410 /* WTCAddCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BF6ED31DC09E7E003BF410 /* WTCAddCarTableViewCell.m */; };
 		18D882D51DBB153800F19129 /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D882D01DBB153800F19129 /* RDVTabBar.m */; };
 		18D882D61DBB153800F19129 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D882D21DBB153800F19129 /* RDVTabBarController.m */; };
 		18D882D71DBB153800F19129 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D882D41DBB153800F19129 /* RDVTabBarItem.m */; };
@@ -216,6 +220,12 @@
 		0451EDFB1DBE43210026D046 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		0451EDFE1DBE448D0026D046 /* Back-icon-拷贝-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-icon-拷贝-5.png"; sourceTree = "<group>"; };
 		0451EE001DBE69890026D046 /* u718.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u718.png; sourceTree = "<group>"; };
+		18BF6ECF1DC09E7E003BF410 /* WTCAddCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCAddCarViewController.xib; sourceTree = "<group>"; };
+		18BF6ED01DC09E7E003BF410 /* WTCAddCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCAddCarViewController.m; sourceTree = "<group>"; };
+		18BF6ED11DC09E7E003BF410 /* WTCAddCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCAddCarViewController.h; sourceTree = "<group>"; };
+		18BF6ED21DC09E7E003BF410 /* WTCAddCarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCAddCarTableViewCell.xib; sourceTree = "<group>"; };
+		18BF6ED31DC09E7E003BF410 /* WTCAddCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCAddCarTableViewCell.m; sourceTree = "<group>"; };
+		18BF6ED41DC09E7E003BF410 /* WTCAddCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCAddCarTableViewCell.h; sourceTree = "<group>"; };
 		18D882CF1DBB153800F19129 /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
 		18D882D01DBB153800F19129 /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
 		18D882D11DBB153800F19129 /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
@@ -588,6 +598,12 @@
 		18D882F71DBB1FDE00F19129 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				18BF6ECF1DC09E7E003BF410 /* WTCAddCarViewController.xib */,
+				18BF6ED01DC09E7E003BF410 /* WTCAddCarViewController.m */,
+				18BF6ED11DC09E7E003BF410 /* WTCAddCarViewController.h */,
+				18BF6ED21DC09E7E003BF410 /* WTCAddCarTableViewCell.xib */,
+				18BF6ED31DC09E7E003BF410 /* WTCAddCarTableViewCell.m */,
+				18BF6ED41DC09E7E003BF410 /* WTCAddCarTableViewCell.h */,
 				18D883071DBB20A600F19129 /* WTCHomeViewController.h */,
 				18D883081DBB20A600F19129 /* WTCHomeViewController.m */,
 				18D883091DBB20A600F19129 /* WTCHomeViewController.xib */,
@@ -600,18 +616,15 @@
 				18D883901DBB6F9500F19129 /* WTCPublishCarViewController.h */,
 				18D883911DBB6F9500F19129 /* WTCPublishCarViewController.m */,
 				18D883921DBB6F9500F19129 /* WTCPublishCarViewController.xib */,
-
 				18D883A41DBB854500F19129 /* WTCCarBrandViewController.h */,
 				18D883A51DBB854500F19129 /* WTCCarBrandViewController.m */,
 				18D883A61DBB854500F19129 /* WTCCarBrandViewController.xib */,
-
 				0451EDD41DBCA0200026D046 /* WTCShopSettingViewController.h */,
 				0451EDD51DBCA0200026D046 /* WTCShopSettingViewController.m */,
 				0451EDD61DBCA0200026D046 /* WTCShopSettingViewController.xib */,
 				0451EDDE1DBCA0850026D046 /* WTCBusinessPosViewController.h */,
 				0451EDDF1DBCA0850026D046 /* WTCBusinessPosViewController.m */,
 				0451EDE01DBCA0850026D046 /* WTCBusinessPosViewController.xib */,
-
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -1022,11 +1035,8 @@
 				0451EDEA1DBCB0270026D046 /* 2_banner_en.png in Resources */,
 				0451EDE81DBCB0270026D046 /* 1_banner_en.png in Resources */,
 				18D883871DBB638000F19129 /* WTCCarManageController.xib in Resources */,
-
 				18D883A81DBB854500F19129 /* WTCCarBrandViewController.xib in Resources */,
-
 				0451EDC21DBC89BA0026D046 /* 客户邀请.png in Resources */,
-
 				18F80E8D1DB5F30400FF1830 /* Assets.xcassets in Resources */,
 				0451EDB81DBC89BA0026D046 /* Back-icon.png in Resources */,
 				0451EDCF1DBC89BA0026D046 /* 酒店信息@2x.png in Resources */,
@@ -1051,6 +1061,7 @@
 				0451EDD81DBCA0200026D046 /* WTCShopSettingViewController.xib in Resources */,
 				0451EDC61DBC89BA0026D046 /* 搜索@2x.png in Resources */,
 				0451EDBE1DBC89BA0026D046 /* 交通示意图@3x.png in Resources */,
+				18BF6ED51DC09E7E003BF410 /* WTCAddCarViewController.xib in Resources */,
 				0451EDBF1DBC89BA0026D046 /* 同期活动.png in Resources */,
 				0451EDC51DBC89BA0026D046 /* 搜索.png in Resources */,
 				0451EDC71DBC89BA0026D046 /* 搜索@3x.png in Resources */,
@@ -1062,6 +1073,7 @@
 				18D8838F1DBB674900F19129 /* WTCCarManageTableViewCell.xib in Resources */,
 				0451EDBB1DBC89BA0026D046 /* Coffee.png in Resources */,
 				0451EDF41DBCC1A20026D046 /* MainButtonView.xib in Resources */,
+				18BF6ED71DC09E7E003BF410 /* WTCAddCarTableViewCell.xib in Resources */,
 				0451EDBA1DBC89BA0026D046 /* Back-icon@3x.png in Resources */,
 				18D882FC1DBB202700F19129 /* WTCShareViewController.xib in Resources */,
 				0451EDCB1DBC89BA0026D046 /* 联系我们.png in Resources */,
@@ -1102,14 +1114,13 @@
 				18D882FB1DBB202700F19129 /* WTCShareViewController.m in Sources */,
 				18D882ED1DBB1B8300F19129 /* WTCTabBarViewController.m in Sources */,
 				18D8837D1DBB49F500F19129 /* UIButton+WebCache.m in Sources */,
+				18BF6ED61DC09E7E003BF410 /* WTCAddCarViewController.m in Sources */,
 				18D883931DBB6F9500F19129 /* WTCPublishCarViewController.m in Sources */,
 				18D883481DBB49B200F19129 /* MJRefreshHeader.m in Sources */,
-
 				18D8839A1DBB74A400F19129 /* ChineseString.m in Sources */,
-
 				0451ED8C1DBC6FA80026D046 /* iCarousel.m in Sources */,
 				0451ED8D1DBC6FA80026D046 /* ScrollImageItem.m in Sources */,
-
+				18BF6ED81DC09E7E003BF410 /* WTCAddCarTableViewCell.m in Sources */,
 				18D883751DBB49F500F19129 /* NSData+ImageContentType.m in Sources */,
 				0451EDF81DBE3B720026D046 /* SettingViewController.m in Sources */,
 				18D883781DBB49F500F19129 /* SDWebImageDecoder.m in Sources */,
@@ -1150,11 +1161,8 @@
 				0451EDE11DBCA0850026D046 /* WTCBusinessPosViewController.m in Sources */,
 				18D8834C1DBB49B200F19129 /* UIScrollView+MJRefresh.m in Sources */,
 				18D883821DBB49F500F19129 /* UIView+WebCacheOperation.m in Sources */,
-
 				18D883AE1DBC738E00F19129 /* MultiTablesView.m in Sources */,
-
 				0451EDD71DBCA0200026D046 /* WTCShopSettingViewController.m in Sources */,
-
 				18D883051DBB207D00F19129 /* WTCMineViewController.m in Sources */,
 				18D8830A1DBB20A600F19129 /* WTCHomeViewController.m in Sources */,
 				18D8838A1DBB63E100F19129 /* WTCBaseViewController.m in Sources */,
