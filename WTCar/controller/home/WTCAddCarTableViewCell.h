@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCAddCarTableViewCell : UITableViewCell
-
+@property(nonatomic,weak)IBOutlet UILabel *nameLabel;
+@property(nonatomic,weak)IBOutlet UITextField *infoField;
 @end

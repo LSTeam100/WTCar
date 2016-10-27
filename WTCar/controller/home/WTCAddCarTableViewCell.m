@@ -7,14 +7,24 @@
 //
 
 #import "WTCAddCarTableViewCell.h"
+#import "define.h"
+
+
 
 @implementation WTCAddCarTableViewCell
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
     // Initialization code
 }
+-(void)layoutSubviews
+{
+    self.infoField.borderStyle = UITextBorderStyleNone;
+    
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

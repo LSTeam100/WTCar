@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCAddCarViewController">
             <connections>
+                <outlet property="commitBtn" destination="gm5-Ld-6Nk" id="uDT-zp-P1w"/>
                 <outlet property="tableView" destination="PJN-HW-nvN" id="b7A-W8-Ojm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,13 +20,26 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PJN-HW-nvN">
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bsU-fk-76w"/>
+                        <outlet property="delegate" destination="-1" id="Hez-v5-cJQ"/>
+                    </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-Ld-6Nk">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="CqU-uE-iX7"/>
+                        <constraint firstAttribute="height" constant="40" id="xRj-Oz-h4U"/>
+                    </constraints>
+                    <state key="normal" title="提交"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="PJN-HW-nvN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0Qv-0A-XDf"/>
-                <constraint firstAttribute="bottom" secondItem="PJN-HW-nvN" secondAttribute="bottom" id="EIQ-RG-N0M"/>
-                <constraint firstItem="PJN-HW-nvN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ljt-l8-DcL"/>
+                <constraint firstAttribute="bottom" secondItem="PJN-HW-nvN" secondAttribute="bottom" constant="80" id="EIQ-RG-N0M"/>
+                <constraint firstItem="PJN-HW-nvN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="Ljt-l8-DcL"/>
+                <constraint firstItem="gm5-Ld-6Nk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hhg-NP-s8Y"/>
+                <constraint firstAttribute="bottom" secondItem="gm5-Ld-6Nk" secondAttribute="bottom" constant="20" id="j90-sg-Elh"/>
                 <constraint firstAttribute="trailing" secondItem="PJN-HW-nvN" secondAttribute="trailing" id="mjV-iD-fPF"/>
             </constraints>
         </view>

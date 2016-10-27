@@ -12,9 +12,9 @@
 #import "WTCShareViewController.h"
 #import "WTCTabBarItem.h"
 #import <objc/runtime.h>
-
 #import "WTCCarManageController.h"
 #import "WTCCarBrandViewController.h"
+#import "WTCAddCarViewController.h"
 @interface WTCTabBarViewController ()
 
 @end
@@ -29,7 +29,7 @@
 -(void)setControllers
 {
 
-    WTCCarBrandViewController *home=[[WTCCarBrandViewController alloc]init];
+    WTCAddCarViewController *home=[[WTCAddCarViewController alloc]init];
 
 //    WTCCarManageController *home=[[WTCCarManageController alloc]init];
 //    WTCHomeViewController *home = [[WTCHomeViewController alloc]init];
