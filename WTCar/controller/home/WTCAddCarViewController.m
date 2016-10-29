@@ -15,6 +15,8 @@
 #import "KKDateTimePicker.h"
 #import "KKRangePicker.h"
 #import "ACEExpandableTextCell.h"
+#import "WTCCarBrandViewController.h"
+#import "WTCCarCategoryViewController.h"
 static NSString *collectionViewCellId = @"collectionViewCellId";
 static CGFloat imageSize = 80;
 
@@ -222,7 +224,13 @@ typedef enum
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     textField.returnKeyType = UIReturnKeyDone;
-    if (textField.tag == 1) {
+    if (textField.tag == 0) {
+        WTCCarCategoryViewController *category = [[WTCCarCategoryViewController alloc]init];
+        [self.navigationController pushViewController:category animated:YES];
+        
+        return NO;
+    }
+    else if (textField.tag == 1) {
         [KKAreaPicker showPickerWithTitle:@"省市选择" pickerType:KKAreaPickerTypeProviceCity defaultValue:nil onCancel:^(KKAreaPicker *picker) {
             textField.inputView=picker;
         } onCommit:^(KKAreaPicker *picker, KKAdrress *address) {
@@ -245,10 +253,10 @@ typedef enum
         return YES;
     }
 }
-//- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
-//        [theTextField resignFirstResponder];
-//    return YES;
-//}
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+        [theTextField resignFirstResponder];
+    return YES;
+}
 -(NSString *)dateToString:(NSDate *)date
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

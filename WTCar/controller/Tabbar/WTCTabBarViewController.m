@@ -16,6 +16,7 @@
 #import "WTCCarBrandViewController.h"
 #import "WTCAddCarViewController.h"
 #import "WTCMapViewController.h"
+#import "WTCCarCategoryViewController.h"
 @interface WTCTabBarViewController ()
 
 @end
@@ -30,7 +31,7 @@
 -(void)setControllers
 {
 
-    WTCMapViewController *home=[[WTCMapViewController alloc]init];
+    WTCAddCarViewController *home=[[WTCAddCarViewController alloc]init];
 
 //    WTCCarManageController *home=[[WTCCarManageController alloc]init];
 //    WTCHomeViewController *home = [[WTCHomeViewController alloc]init];

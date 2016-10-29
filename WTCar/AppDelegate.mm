@@ -21,7 +21,11 @@ BMKMapManager* _mapManager;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 要使用百度地图，请先启动BaiduMapManager
     [NSThread detachNewThreadSelector:@selector(asynInitBaiduMap) toTarget:self withObject:nil];
-   
+//    _mapManager = [[BMKMapManager alloc]init];
+//    BOOL ret = [_mapManager start:@"0Au4nrfn0pFtwD3DHQlrOsdlNMRxqK3S" generalDelegate:self];
+//    if (!ret) {
+//        NSLog(@"manager start failed!");
+//    }
     
     ViewController *vc=[[ViewController alloc]init];
     UINavigationController *navi=[[UINavigationController alloc]initWithRootViewController:vc];
@@ -33,7 +37,7 @@ BMKMapManager* _mapManager;
 -(void)asynInitBaiduMap
 {
     _mapManager = [[BMKMapManager alloc]init];
-    BOOL ret = [_mapManager start:@"0Au4nrfn0pFtwD3DHQlrOsdlNMRxqK3S" generalDelegate:self];
+    BOOL ret = [_mapManager start:@"MGNoGB9zksrBhrQvI6vneWQK" generalDelegate:self];
     if (!ret) {
         NSLog(@"manager start failed!");
     }

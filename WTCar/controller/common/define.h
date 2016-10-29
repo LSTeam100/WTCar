@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 duanran. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
+
 #ifndef UPMeilin_define_h
 #define UPMeilin_define_h
 // 屏幕宽度
@@ -17,6 +20,7 @@
 #define IOS9_OR_LATER    ([[[UIDevice currentDevice] systemVersion] compare:@"9.0"] != NSOrderedAscending)
 
 #pragma mark -获取颜色
+
 
 #define WXPayNotification     @"WXPayNotification"
 //static NSString * const UPMShopOrderNotification=@"com.upmeilin.hohoda.upmshopordernotification";

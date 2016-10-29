@@ -12,16 +12,32 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="119.5"/>
+                <frame key="frameInset" width="320" height="119"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXk-wi-0Qu">
-                        <frame key="frameInset" minX="17" minY="14" width="97" height="63"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_shop_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="SXk-wi-0Qu">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="vaN-0x-5Eq"/>
+                            <constraint firstAttribute="height" constant="60" id="wMD-LY-zOl"/>
+                        </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-bP-1tV">
+                        <frame key="frameInset" minX="118" minY="10" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="SXk-wi-0Qu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ViI-Ou-Asb"/>
+                    <constraint firstItem="SXk-wi-0Qu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="f2V-69-TkC"/>
+                </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="51" y="-11"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="img_shop_default.png" width="320" height="180"/>
+    </resources>
 </document>
