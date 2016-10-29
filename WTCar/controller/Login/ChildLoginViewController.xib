@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChildLoginViewController">
+            <connections>
+                <outlet property="ChildTeleNumTextField" destination="ifc-tm-0kZ" id="jD2-GB-H2k"/>
+                <outlet property="KeyTextField" destination="qZ7-Ac-6fW" id="dW4-tj-V77"/>
+                <outlet property="MainTeleNumTextField" destination="w7r-yd-Pej" id="IBQ-ia-q8P"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入主账号手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-yd-Pej">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Y9M-3F-mtc"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入秘匙" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qZ7-Ac-6fW">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="uop-em-Ujh"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入子账号手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifc-tm-0kZ">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="012-oI-Ilv"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NR-rT-P45">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="343" id="A6o-KG-j6g"/>
+                        <constraint firstAttribute="height" constant="30" id="sac-Jl-dLd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="LoginButtonClick:" destination="-1" eventType="touchUpInside" id="2QU-ls-lgS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qZ7-Ac-6fW" firstAttribute="top" secondItem="w7r-yd-Pej" secondAttribute="bottom" constant="40" id="7Eh-FC-gGd"/>
+                <constraint firstItem="1NR-rT-P45" firstAttribute="top" secondItem="ifc-tm-0kZ" secondAttribute="bottom" constant="57" id="Cin-4w-i4g"/>
+                <constraint firstItem="ifc-tm-0kZ" firstAttribute="width" secondItem="qZ7-Ac-6fW" secondAttribute="width" id="G9M-cx-8UC"/>
+                <constraint firstItem="w7r-yd-Pej" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Jfl-ix-aH0"/>
+                <constraint firstItem="qZ7-Ac-6fW" firstAttribute="width" secondItem="w7r-yd-Pej" secondAttribute="width" id="KnL-3p-48s"/>
+                <constraint firstItem="w7r-yd-Pej" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="QUO-Kd-KMK"/>
+                <constraint firstItem="qZ7-Ac-6fW" firstAttribute="centerX" secondItem="w7r-yd-Pej" secondAttribute="centerX" id="SZz-JV-CQY"/>
+                <constraint firstAttribute="trailing" secondItem="w7r-yd-Pej" secondAttribute="trailing" constant="16" id="Vkx-2f-esh"/>
+                <constraint firstItem="ifc-tm-0kZ" firstAttribute="top" secondItem="qZ7-Ac-6fW" secondAttribute="bottom" constant="40" id="d0b-4Y-r3o"/>
+                <constraint firstItem="ifc-tm-0kZ" firstAttribute="centerX" secondItem="qZ7-Ac-6fW" secondAttribute="centerX" id="lOF-RB-JY9"/>
+                <constraint firstItem="1NR-rT-P45" firstAttribute="centerX" secondItem="ifc-tm-0kZ" secondAttribute="centerX" id="lYx-EF-8Gi"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

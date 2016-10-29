@@ -7,6 +7,7 @@
 //
 #import "SettingViewController.h"
 #import "SettingTableViewCell.h"
+#import "AccountSafetyViewController.h"
 @interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat cellHeight;
@@ -103,6 +104,24 @@
 
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0) {
+
+    }else if (indexPath.row == 1){
+
+    }else if (indexPath.row == 2){
+        AccountSafetyViewController *accountSafetyViewController = [AccountSafetyViewController new];
+        [self.navigationController pushViewController:accountSafetyViewController animated:YES];
+    }else if (indexPath.row == 3){
+        [self callPhone:@"01083065377"];
+    }else if (indexPath.row == 4){
+ 
+    }else if (indexPath.row == 5){
+ 
+    }
+    
+}
 
 -(void)makeLogoutButton{
     UIButton *logOutButton = [[UIButton alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(_SettingTableView.frame)+cellHeight, SCREEN_WIDTH-20, 28)];
@@ -115,7 +134,18 @@
     [logOutButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     [self.view addSubview:logOutButton];
 }
-
+- (void)callPhone:(NSString *)phoneNumber
+{
+    //phoneNumber = "18369......"
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",phoneNumber];
+    UIWebView * callWebview = [[UIWebView alloc] init];
+    //    NSURL *telURL =[NSURL URLWithString:@"tel:10086"];
+    //    [callWebview loadRequest:[NSURLRequest requestWithURL:telURL]];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [self.view addSubview:callWebview];
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042141F01DC4CCBC00F1A619 /* TTPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042141EF1DC4CCBC00F1A619 /* TTPasswordView.m */; };
+		042141F31DC4CE5B00F1A619 /* AccountSafetyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042141F21DC4CE5B00F1A619 /* AccountSafetyViewController.m */; };
+		042141F71DC4D0AE00F1A619 /* AccountSafetyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042141F51DC4D0AE00F1A619 /* AccountSafetyTableViewCell.m */; };
+		042141F81DC4D0AE00F1A619 /* AccountSafetyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042141F61DC4D0AE00F1A619 /* AccountSafetyTableViewCell.xib */; };
+		042142011DC4D86300F1A619 /* SettingPayCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042141FF1DC4D86300F1A619 /* SettingPayCodeViewController.m */; };
+		042142021DC4D86300F1A619 /* SettingPayCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042142001DC4D86300F1A619 /* SettingPayCodeViewController.xib */; };
+		042142071DC4E53D00F1A619 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042142051DC4E53D00F1A619 /* LoginViewController.m */; };
+		042142081DC4E53D00F1A619 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042142061DC4E53D00F1A619 /* LoginViewController.xib */; };
+		0421420C1DC4E8FB00F1A619 /* RegisterFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0421420A1DC4E8FB00F1A619 /* RegisterFirstViewController.m */; };
+		0421420D1DC4E8FB00F1A619 /* RegisterFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0421420B1DC4E8FB00F1A619 /* RegisterFirstViewController.xib */; };
+		042142111DC4E99D00F1A619 /* ResgisterSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0421420F1DC4E99D00F1A619 /* ResgisterSecondViewController.m */; };
+		042142121DC4E99D00F1A619 /* ResgisterSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042142101DC4E99D00F1A619 /* ResgisterSecondViewController.xib */; };
+		042142161DC4EC4100F1A619 /* RegisterThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042142141DC4EC4100F1A619 /* RegisterThreeViewController.m */; };
+		042142171DC4EC4100F1A619 /* RegisterThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042142151DC4EC4100F1A619 /* RegisterThreeViewController.xib */; };
+		0421421B1DC4EF3200F1A619 /* ChildLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042142191DC4EF3200F1A619 /* ChildLoginViewController.m */; };
+		0421421C1DC4EF3200F1A619 /* ChildLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0421421A1DC4EF3200F1A619 /* ChildLoginViewController.xib */; };
+		042142211DC4F14D00F1A619 /* ForgetCodeFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0421421F1DC4F14D00F1A619 /* ForgetCodeFirstViewController.m */; };
+		042142221DC4F14D00F1A619 /* ForgetCodeFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042142201DC4F14D00F1A619 /* ForgetCodeFirstViewController.xib */; };
+		042142261DC4F16700F1A619 /* ForgetCodeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042142241DC4F16700F1A619 /* ForgetCodeSecondViewController.m */; };
+		042142271DC4F16700F1A619 /* ForgetCodeSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042142251DC4F16700F1A619 /* ForgetCodeSecondViewController.xib */; };
+		0421422B1DC4F18D00F1A619 /* ForgetCodeThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042142291DC4F18D00F1A619 /* ForgetCodeThreeViewController.m */; };
+		0421422C1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0421422A1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib */; };
 		0451ED8C1DBC6FA80026D046 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451ED861DBC6FA80026D046 /* iCarousel.m */; };
 		0451ED8D1DBC6FA80026D046 /* ScrollImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451ED881DBC6FA80026D046 /* ScrollImageItem.m */; };
 		0451EDB21DBC89BA0026D046 /* 6_lit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0451ED901DBC89BA0026D046 /* 6_lit.png */; };
@@ -222,6 +244,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042141EE1DC4CCBC00F1A619 /* TTPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPasswordView.h; sourceTree = "<group>"; };
+		042141EF1DC4CCBC00F1A619 /* TTPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPasswordView.m; sourceTree = "<group>"; };
+		042141F11DC4CE5B00F1A619 /* AccountSafetyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSafetyViewController.h; sourceTree = "<group>"; };
+		042141F21DC4CE5B00F1A619 /* AccountSafetyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSafetyViewController.m; sourceTree = "<group>"; };
+		042141F41DC4D0AE00F1A619 /* AccountSafetyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSafetyTableViewCell.h; sourceTree = "<group>"; };
+		042141F51DC4D0AE00F1A619 /* AccountSafetyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSafetyTableViewCell.m; sourceTree = "<group>"; };
+		042141F61DC4D0AE00F1A619 /* AccountSafetyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountSafetyTableViewCell.xib; sourceTree = "<group>"; };
+		042141FE1DC4D86300F1A619 /* SettingPayCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingPayCodeViewController.h; sourceTree = "<group>"; };
+		042141FF1DC4D86300F1A619 /* SettingPayCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingPayCodeViewController.m; sourceTree = "<group>"; };
+		042142001DC4D86300F1A619 /* SettingPayCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingPayCodeViewController.xib; sourceTree = "<group>"; };
+		042142041DC4E53D00F1A619 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		042142051DC4E53D00F1A619 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		042142061DC4E53D00F1A619 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		042142091DC4E8FB00F1A619 /* RegisterFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFirstViewController.h; sourceTree = "<group>"; };
+		0421420A1DC4E8FB00F1A619 /* RegisterFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstViewController.m; sourceTree = "<group>"; };
+		0421420B1DC4E8FB00F1A619 /* RegisterFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFirstViewController.xib; sourceTree = "<group>"; };
+		0421420E1DC4E99D00F1A619 /* ResgisterSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResgisterSecondViewController.h; sourceTree = "<group>"; };
+		0421420F1DC4E99D00F1A619 /* ResgisterSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResgisterSecondViewController.m; sourceTree = "<group>"; };
+		042142101DC4E99D00F1A619 /* ResgisterSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResgisterSecondViewController.xib; sourceTree = "<group>"; };
+		042142131DC4EC4100F1A619 /* RegisterThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterThreeViewController.h; sourceTree = "<group>"; };
+		042142141DC4EC4100F1A619 /* RegisterThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterThreeViewController.m; sourceTree = "<group>"; };
+		042142151DC4EC4100F1A619 /* RegisterThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterThreeViewController.xib; sourceTree = "<group>"; };
+		042142181DC4EF3200F1A619 /* ChildLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildLoginViewController.h; sourceTree = "<group>"; };
+		042142191DC4EF3200F1A619 /* ChildLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildLoginViewController.m; sourceTree = "<group>"; };
+		0421421A1DC4EF3200F1A619 /* ChildLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildLoginViewController.xib; sourceTree = "<group>"; };
+		0421421E1DC4F14D00F1A619 /* ForgetCodeFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetCodeFirstViewController.h; sourceTree = "<group>"; };
+		0421421F1DC4F14D00F1A619 /* ForgetCodeFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeFirstViewController.m; sourceTree = "<group>"; };
+		042142201DC4F14D00F1A619 /* ForgetCodeFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetCodeFirstViewController.xib; sourceTree = "<group>"; };
+		042142231DC4F16700F1A619 /* ForgetCodeSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetCodeSecondViewController.h; sourceTree = "<group>"; };
+		042142241DC4F16700F1A619 /* ForgetCodeSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeSecondViewController.m; sourceTree = "<group>"; };
+		042142251DC4F16700F1A619 /* ForgetCodeSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetCodeSecondViewController.xib; sourceTree = "<group>"; };
+		042142281DC4F18D00F1A619 /* ForgetCodeThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetCodeThreeViewController.h; sourceTree = "<group>"; };
+		042142291DC4F18D00F1A619 /* ForgetCodeThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeThreeViewController.m; sourceTree = "<group>"; };
+		0421422A1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetCodeThreeViewController.xib; sourceTree = "<group>"; };
 		0451ED851DBC6FA80026D046 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		0451ED861DBC6FA80026D046 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		0451ED871DBC6FA80026D046 /* ScrollImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImageItem.h; sourceTree = "<group>"; };
@@ -578,6 +634,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042141ED1DC4CCBC00F1A619 /* SettingCode */ = {
+			isa = PBXGroup;
+			children = (
+				042141EE1DC4CCBC00F1A619 /* TTPasswordView.h */,
+				042141EF1DC4CCBC00F1A619 /* TTPasswordView.m */,
+			);
+			path = SettingCode;
+			sourceTree = "<group>";
+		};
+		042142031DC4E46400F1A619 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				042142041DC4E53D00F1A619 /* LoginViewController.h */,
+				042142051DC4E53D00F1A619 /* LoginViewController.m */,
+				042142061DC4E53D00F1A619 /* LoginViewController.xib */,
+				042142091DC4E8FB00F1A619 /* RegisterFirstViewController.h */,
+				0421420A1DC4E8FB00F1A619 /* RegisterFirstViewController.m */,
+				0421420B1DC4E8FB00F1A619 /* RegisterFirstViewController.xib */,
+				0421420E1DC4E99D00F1A619 /* ResgisterSecondViewController.h */,
+				0421420F1DC4E99D00F1A619 /* ResgisterSecondViewController.m */,
+				042142101DC4E99D00F1A619 /* ResgisterSecondViewController.xib */,
+				042142131DC4EC4100F1A619 /* RegisterThreeViewController.h */,
+				042142141DC4EC4100F1A619 /* RegisterThreeViewController.m */,
+				042142151DC4EC4100F1A619 /* RegisterThreeViewController.xib */,
+				042142181DC4EF3200F1A619 /* ChildLoginViewController.h */,
+				042142191DC4EF3200F1A619 /* ChildLoginViewController.m */,
+				0421421A1DC4EF3200F1A619 /* ChildLoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0421421D1DC4F13000F1A619 /* Forgetcode */ = {
+			isa = PBXGroup;
+			children = (
+				0421421E1DC4F14D00F1A619 /* ForgetCodeFirstViewController.h */,
+				0421421F1DC4F14D00F1A619 /* ForgetCodeFirstViewController.m */,
+				042142201DC4F14D00F1A619 /* ForgetCodeFirstViewController.xib */,
+				042142231DC4F16700F1A619 /* ForgetCodeSecondViewController.h */,
+				042142241DC4F16700F1A619 /* ForgetCodeSecondViewController.m */,
+				042142251DC4F16700F1A619 /* ForgetCodeSecondViewController.xib */,
+				042142281DC4F18D00F1A619 /* ForgetCodeThreeViewController.h */,
+				042142291DC4F18D00F1A619 /* ForgetCodeThreeViewController.m */,
+				0421422A1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib */,
+			);
+			path = Forgetcode;
+			sourceTree = "<group>";
+		};
 		0451ED7E1DBC6FA80026D046 /* SSFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,6 +705,7 @@
 		0451ED831DBC6FA80026D046 /* SSFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				042141ED1DC4CCBC00F1A619 /* SettingCode */,
 				0451ED841DBC6FA80026D046 /* iCarousel */,
 				0451ED891DBC6FA80026D046 /* SDWebImage */,
 			);
@@ -692,6 +796,14 @@
 				0451EDF91DBE43210026D046 /* SettingTableViewCell.h */,
 				0451EDFA1DBE43210026D046 /* SettingTableViewCell.m */,
 				0451EDFB1DBE43210026D046 /* SettingTableViewCell.xib */,
+				042141F11DC4CE5B00F1A619 /* AccountSafetyViewController.h */,
+				042141F21DC4CE5B00F1A619 /* AccountSafetyViewController.m */,
+				042141F41DC4D0AE00F1A619 /* AccountSafetyTableViewCell.h */,
+				042141F51DC4D0AE00F1A619 /* AccountSafetyTableViewCell.m */,
+				042141F61DC4D0AE00F1A619 /* AccountSafetyTableViewCell.xib */,
+				042141FE1DC4D86300F1A619 /* SettingPayCodeViewController.h */,
+				042141FF1DC4D86300F1A619 /* SettingPayCodeViewController.m */,
+				042142001DC4D86300F1A619 /* SettingPayCodeViewController.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -839,6 +951,8 @@
 		18D882CD1DBB13FA00F19129 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0421421D1DC4F13000F1A619 /* Forgetcode */,
+				042142031DC4E46400F1A619 /* Login */,
 				18D882F51DBB1FDE00F19129 /* share */,
 				18D882F61DBB1FDE00F19129 /* mine */,
 				18D882F71DBB1FDE00F19129 /* home */,
@@ -1347,6 +1461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0451EDCA1DBC89BA0026D046 /* 更多@3x.png in Resources */,
+				0421422C1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib in Resources */,
 				0451EE011DBE69890026D046 /* u718.png in Resources */,
 				0451EDCC1DBC89BA0026D046 /* 联系我们@2x.png in Resources */,
 				0451EDB21DBC89BA0026D046 /* 6_lit.png in Resources */,
@@ -1356,10 +1471,14 @@
 				0451EDCD1DBC89BA0026D046 /* 联系我们@3x.png in Resources */,
 				18D883941DBB6F9500F19129 /* WTCPublishCarViewController.xib in Resources */,
 				0451EDE21DBCA0850026D046 /* WTCBusinessPosViewController.xib in Resources */,
+				042142081DC4E53D00F1A619 /* LoginViewController.xib in Resources */,
 				0451EDB91DBC89BA0026D046 /* Back-icon@2x.png in Resources */,
 				185EAF441DC49105008C1471 /* img_shop_default@3x.png in Resources */,
 				0451EDE91DBCB0270026D046 /* 2_banner_ch.png in Resources */,
+				042142121DC4E99D00F1A619 /* ResgisterSecondViewController.xib in Resources */,
 				18BF6F381DC1DB7C003BF410 /* KKPickerProvice.plist in Resources */,
+				042142021DC4D86300F1A619 /* SettingPayCodeViewController.xib in Resources */,
+				042141F81DC4D0AE00F1A619 /* AccountSafetyTableViewCell.xib in Resources */,
 				0451EDEA1DBCB0270026D046 /* 2_banner_en.png in Resources */,
 				0451EDE81DBCB0270026D046 /* 1_banner_en.png in Resources */,
 				18D883871DBB638000F19129 /* WTCCarManageController.xib in Resources */,
@@ -1370,6 +1489,7 @@
 				18F80E8D1DB5F30400FF1830 /* Assets.xcassets in Resources */,
 				0451EDB81DBC89BA0026D046 /* Back-icon.png in Resources */,
 				0451EDCF1DBC89BA0026D046 /* 酒店信息@2x.png in Resources */,
+				042142271DC4F16700F1A619 /* ForgetCodeSecondViewController.xib in Resources */,
 				0451EDCE1DBC89BA0026D046 /* 酒店信息.png in Resources */,
 				0451EDD11DBC89BA0026D046 /* 餐饮服务.png in Resources */,
 				0451EDC81DBC89BA0026D046 /* 更多.png in Resources */,
@@ -1381,10 +1501,12 @@
 				18D8830B1DBB20A600F19129 /* WTCHomeViewController.xib in Resources */,
 				0451EDC01DBC89BA0026D046 /* 同期活动@2x.png in Resources */,
 				185EAF451DC49105008C1471 /* img_shop_default@2x.png in Resources */,
+				0421420D1DC4E8FB00F1A619 /* RegisterFirstViewController.xib in Resources */,
 				0451EDBD1DBC89BA0026D046 /* 交通示意图@2x.png in Resources */,
 				0451EDD31DBC89BA0026D046 /* 餐饮服务@3x.png in Resources */,
 				0451EDC41DBC89BA0026D046 /* 客户邀请@3x.png in Resources */,
 				0451EDB71DBC89BA0026D046 /* b9.png in Resources */,
+				042142171DC4EC4100F1A619 /* RegisterThreeViewController.xib in Resources */,
 				0451EDE71DBCB0270026D046 /* 1_banner_ch.png in Resources */,
 				0451EDC91DBC89BA0026D046 /* 更多@2x.png in Resources */,
 				0451EDB41DBC89BA0026D046 /* 6_lit@3x.png in Resources */,
@@ -1393,6 +1515,7 @@
 				185EAF391DC34142008C1471 /* WTCMapViewController.xib in Resources */,
 				0451EDC61DBC89BA0026D046 /* 搜索@2x.png in Resources */,
 				0451EDBE1DBC89BA0026D046 /* 交通示意图@3x.png in Resources */,
+				0421421C1DC4EF3200F1A619 /* ChildLoginViewController.xib in Resources */,
 				18BF6ED51DC09E7E003BF410 /* WTCAddCarViewController.xib in Resources */,
 				0451EDBF1DBC89BA0026D046 /* 同期活动.png in Resources */,
 				0451EDC51DBC89BA0026D046 /* 搜索.png in Resources */,
@@ -1406,6 +1529,7 @@
 				0451EDC11DBC89BA0026D046 /* 同期活动@3x.png in Resources */,
 				18BF6F151DC1D3A3003BF410 /* ImagesPicker.xcassets in Resources */,
 				18BF6F361DC1DB7C003BF410 /* KKPickerArea.plist in Resources */,
+				042142221DC4F14D00F1A619 /* ForgetCodeFirstViewController.xib in Resources */,
 				18D8838F1DBB674900F19129 /* WTCCarManageTableViewCell.xib in Resources */,
 				0451EDBB1DBC89BA0026D046 /* Coffee.png in Resources */,
 				185EAF411DC4576D008C1471 /* WTCCarCategoryViewController.xib in Resources */,
@@ -1441,8 +1565,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BF6F0B1DC1D3A3003BF410 /* DNImageFlowViewController.m in Sources */,
+				0421422B1DC4F18D00F1A619 /* ForgetCodeThreeViewController.m in Sources */,
 				18BF6F111DC1D3A3003BF410 /* UIColor+Hex.m in Sources */,
 				18D882EB1DBB1B8300F19129 /* WTCTabBar.m in Sources */,
+				042141F71DC4D0AE00F1A619 /* AccountSafetyTableViewCell.m in Sources */,
 				18BF6F1A1DC1D3A3003BF410 /* DNSendButton.m in Sources */,
 				18D883511DBB49B200F19129 /* MJProperty.m in Sources */,
 				18BF6F351DC1DB7C003BF410 /* KKPickerAbstract.m in Sources */,
@@ -1458,10 +1584,12 @@
 				18D882DA1DBB172B00F19129 /* BaseViewController.m in Sources */,
 				18D882FB1DBB202700F19129 /* WTCShareViewController.m in Sources */,
 				18BF6F1B1DC1D3A3003BF410 /* DNUnAuthorizedTipsView.m in Sources */,
+				0421420C1DC4E8FB00F1A619 /* RegisterFirstViewController.m in Sources */,
 				18BF6F0E1DC1D3A3003BF410 /* DNPhotoBrowser.m in Sources */,
 				18D882ED1DBB1B8300F19129 /* WTCTabBarViewController.m in Sources */,
 				18D8837D1DBB49F500F19129 /* UIButton+WebCache.m in Sources */,
 				18BF6ED61DC09E7E003BF410 /* WTCAddCarViewController.m in Sources */,
+				042142261DC4F16700F1A619 /* ForgetCodeSecondViewController.m in Sources */,
 				18D883931DBB6F9500F19129 /* WTCPublishCarViewController.m in Sources */,
 				18D883481DBB49B200F19129 /* MJRefreshHeader.m in Sources */,
 				18BF6F0C1DC1D3A3003BF410 /* DNImagePickerController.m in Sources */,
@@ -1469,6 +1597,8 @@
 				18BF6F3A1DC1DB7C003BF410 /* KKStringPicker.m in Sources */,
 				0451ED8C1DBC6FA80026D046 /* iCarousel.m in Sources */,
 				0451ED8D1DBC6FA80026D046 /* ScrollImageItem.m in Sources */,
+				042141F01DC4CCBC00F1A619 /* TTPasswordView.m in Sources */,
+				042142011DC4D86300F1A619 /* SettingPayCodeViewController.m in Sources */,
 				18BF6F121DC1D3A3003BF410 /* UIView+DNImagePicker.m in Sources */,
 				18BF6ED81DC09E7E003BF410 /* WTCAddCarTableViewCell.m in Sources */,
 				18D883751DBB49F500F19129 /* NSData+ImageContentType.m in Sources */,
@@ -1496,11 +1626,13 @@
 				18D883521DBB49B200F19129 /* MJType.m in Sources */,
 				0451EDF31DBCC1A20026D046 /* MainButtonView.m in Sources */,
 				18D8838E1DBB674900F19129 /* WTCCarManageTableViewCell.m in Sources */,
+				042142211DC4F14D00F1A619 /* ForgetCodeFirstViewController.m in Sources */,
 				18BF6F341DC1DB7C003BF410 /* KKMultiStringPicker.m in Sources */,
 				18D8839B1DBB74A400F19129 /* pinyin.m in Sources */,
 				18D8837C1DBB49F500F19129 /* SDWebImagePrefetcher.m in Sources */,
 				18D883461DBB49B200F19129 /* MJRefreshGifFooter.m in Sources */,
 				18BF6F321DC1DB7C003BF410 /* KKAreaPicker.m in Sources */,
+				042142071DC4E53D00F1A619 /* LoginViewController.m in Sources */,
 				18D883A71DBB854500F19129 /* WTCCarBrandViewController.m in Sources */,
 				18D882EC1DBB1B8300F19129 /* WTCTabBarItem.m in Sources */,
 				18D883801DBB49F500F19129 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1512,6 +1644,7 @@
 				18BF6F101DC1D3A3003BF410 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
 				18F80EC81DB60CE700FF1830 /* AFSecurityPolicy.m in Sources */,
 				18D883861DBB638000F19129 /* WTCCarManageController.m in Sources */,
+				042142111DC4E99D00F1A619 /* ResgisterSecondViewController.m in Sources */,
 				18D8837F1DBB49F500F19129 /* UIImage+MultiFormat.m in Sources */,
 				18D8837E1DBB49F500F19129 /* UIImage+GIF.m in Sources */,
 				18D883561DBB49B200F19129 /* NSString+MJExtension.m in Sources */,
@@ -1519,6 +1652,7 @@
 				185EAF401DC4576D008C1471 /* WTCCarCategoryViewController.m in Sources */,
 				185EAF381DC34142008C1471 /* WTCMapViewController.m in Sources */,
 				18F80ECA1DB60CE700FF1830 /* AFURLResponseSerialization.m in Sources */,
+				042142161DC4EC4100F1A619 /* RegisterThreeViewController.m in Sources */,
 				18BF6F0A1DC1D3A3003BF410 /* DNAsset.m in Sources */,
 				18F80EC61DB60CE700FF1830 /* AFHTTPSessionManager.m in Sources */,
 				0451EDE11DBCA0850026D046 /* WTCBusinessPosViewController.m in Sources */,
@@ -1528,6 +1662,7 @@
 				18D883AE1DBC738E00F19129 /* MultiTablesView.m in Sources */,
 				0451EDD71DBCA0200026D046 /* WTCShopSettingViewController.m in Sources */,
 				18D883051DBB207D00F19129 /* WTCMineViewController.m in Sources */,
+				0421421B1DC4EF3200F1A619 /* ChildLoginViewController.m in Sources */,
 				18BF6F1E1DC1D3A3003BF410 /* KKPhotoPickerManager.m in Sources */,
 				18D8830A1DBB20A600F19129 /* WTCHomeViewController.m in Sources */,
 				18D8838A1DBB63E100F19129 /* WTCBaseViewController.m in Sources */,
@@ -1537,6 +1672,7 @@
 				18D883791DBB49F500F19129 /* SDWebImageDownloader.m in Sources */,
 				18BF6F131DC1D3A3003BF410 /* UIViewController+DNImagePicker.m in Sources */,
 				18D883471DBB49B200F19129 /* MJRefreshGifHeader.m in Sources */,
+				042141F31DC4CE5B00F1A619 /* AccountSafetyViewController.m in Sources */,
 				18D8834B1DBB49B200F19129 /* UIScrollView+MJExtension.m in Sources */,
 				18BF6F161DC1D3A3003BF410 /* DNAssetsViewCell.m in Sources */,
 				18D883551DBB49B200F19129 /* NSObject+MJProperty.m in Sources */,

@@ -19,6 +19,12 @@
 #define IOS7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending)
 #define IOS9_OR_LATER    ([[[UIDevice currentDevice] systemVersion] compare:@"9.0"] != NSOrderedAscending)
 
+#define UIColorFromRGB(rgbValue)\
+\
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
 #pragma mark -获取颜色
 
 
