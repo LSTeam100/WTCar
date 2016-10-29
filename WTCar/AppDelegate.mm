@@ -8,14 +8,21 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-@interface AppDelegate ()
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
 
+@interface AppDelegate (){
+BMKMapManager* _mapManager;
+}
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 要使用百度地图，请先启动BaiduMapManager
+    [NSThread detachNewThreadSelector:@selector(asynInitBaiduMap) toTarget:self withObject:nil];
+   
+    
     ViewController *vc=[[ViewController alloc]init];
     UINavigationController *navi=[[UINavigationController alloc]initWithRootViewController:vc];
     self.window.rootViewController=navi;
@@ -23,7 +30,34 @@
     // Override point for customization after application launch.
     return YES;
 }
+-(void)asynInitBaiduMap
+{
+    _mapManager = [[BMKMapManager alloc]init];
+    BOOL ret = [_mapManager start:@"0Au4nrfn0pFtwD3DHQlrOsdlNMRxqK3S" generalDelegate:self];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+}
+- (void)onGetNetworkState:(int)iError
+{
+    if (0 == iError) {
+        NSLog(@"联网成功");
+    }
+    else{
+        NSLog(@"onGetNetworkState %d",iError);
+    }
+    
+}
 
+- (void)onGetPermissionState:(int)iError
+{
+    if (0 == iError) {
+        NSLog(@"授权成功");
+    }
+    else {
+        NSLog(@"onGetPermissionState %d",iError);
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
