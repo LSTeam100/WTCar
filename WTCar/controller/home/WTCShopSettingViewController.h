@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCShopSettingViewController : UIViewController
+- (IBAction)editeShopInfoButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *mainShopImageView;
+@property (weak, nonatomic) IBOutlet UIButton *editShopImageButton;
 
 @end
