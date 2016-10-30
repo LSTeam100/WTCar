@@ -95,6 +95,33 @@
 		185EAF411DC4576D008C1471 /* WTCCarCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EAF3F1DC4576D008C1471 /* WTCCarCategoryViewController.xib */; };
 		185EAF441DC49105008C1471 /* img_shop_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185EAF421DC49105008C1471 /* img_shop_default@3x.png */; };
 		185EAF451DC49105008C1471 /* img_shop_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185EAF431DC49105008C1471 /* img_shop_default@2x.png */; };
+		185EAF491DC597DE008C1471 /* WTCCollectMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAF471DC597DE008C1471 /* WTCCollectMoneyViewController.m */; };
+		185EAF4A1DC597DE008C1471 /* WTCCollectMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EAF481DC597DE008C1471 /* WTCCollectMoneyViewController.xib */; };
+		185EAF4E1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAF4C1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.m */; };
+		185EAF4F1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EAF4D1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.xib */; };
+		185EAF531DC5D448008C1471 /* BRPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAF521DC5D448008C1471 /* BRPlaceholderTextView.m */; };
+		185EAF571DC5D852008C1471 /* WTCCarShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAF551DC5D852008C1471 /* WTCCarShareViewController.m */; };
+		185EAF581DC5D852008C1471 /* WTCCarShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EAF561DC5D852008C1471 /* WTCCarShareViewController.xib */; };
+		185EAF5C1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAF5A1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.m */; };
+		185EAF5D1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EAF5B1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.xib */; };
+		185EAF611DC5E881008C1471 /* SharedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAF601DC5E881008C1471 /* SharedItem.m */; };
+		185EAFD31DC5EDFB008C1471 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAFA81DC5EDFB008C1471 /* libSocialQQ.a */; };
+		185EAFD41DC5EDFB008C1471 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAFA91DC5EDFB008C1471 /* TencentOpenAPI.framework */; };
+		185EAFD51DC5EDFB008C1471 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185EAFAA1DC5EDFB008C1471 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		185EAFD61DC5EDFB008C1471 /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAFAD1DC5EDFB008C1471 /* libSocialSina.a */; };
+		185EAFD71DC5EDFB008C1471 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAFAE1DC5EDFB008C1471 /* libWeiboSDK.a */; };
+		185EAFD81DC5EDFB008C1471 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185EAFB91DC5EDFB008C1471 /* WeiboSDK.bundle */; };
+		185EAFD91DC5EDFB008C1471 /* libSocialWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAFBD1DC5EDFB008C1471 /* libSocialWeChat.a */; };
+		185EAFDA1DC5EDFB008C1471 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAFBE1DC5EDFB008C1471 /* libWeChatSDK.a */; };
+		185EAFDB1DC5EDFB008C1471 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 185EAFBF1DC5EDFB008C1471 /* read_me.txt */; };
+		185EAFDC1DC5EDFB008C1471 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 185EAFC01DC5EDFB008C1471 /* README.txt */; };
+		185EAFDD1DC5EDFC008C1471 /* UMSocialCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAFC61DC5EDFB008C1471 /* UMSocialCore.framework */; };
+		185EAFDE1DC5EDFC008C1471 /* UMSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAFC71DC5EDFB008C1471 /* UMSocialNetwork.framework */; };
+		185EAFDF1DC5EDFC008C1471 /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185EAFCA1DC5EDFB008C1471 /* UMSocialSDKResources.bundle */; };
+		185EAFE01DC5EDFC008C1471 /* UMShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAFCC1DC5EDFB008C1471 /* UMShareMenuItem.m */; };
+		185EAFE11DC5EDFC008C1471 /* UMShareMenuSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAFCE1DC5EDFB008C1471 /* UMShareMenuSelectionView.m */; };
+		185EAFE21DC5EDFC008C1471 /* UMSocialShareScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAFD01DC5EDFB008C1471 /* UMSocialShareScrollView.m */; };
+		185EAFE31DC5EDFC008C1471 /* UMSocialUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EAFD21DC5EDFB008C1471 /* UMSocialUIManager.m */; };
 		186BABDF1DC1FED900F877DA /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BABDD1DC1FED900F877DA /* SZTextView.m */; };
 		18BF087B1DC337B800FD679D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087A1DC337B800FD679D /* CoreLocation.framework */; };
 		18BF087D1DC337C500FD679D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087C1DC337C500FD679D /* QuartzCore.framework */; };
@@ -355,6 +382,60 @@
 		185EAF3F1DC4576D008C1471 /* WTCCarCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCarCategoryViewController.xib; sourceTree = "<group>"; };
 		185EAF421DC49105008C1471 /* img_shop_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_shop_default@3x.png"; sourceTree = "<group>"; };
 		185EAF431DC49105008C1471 /* img_shop_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_shop_default@2x.png"; sourceTree = "<group>"; };
+		185EAF461DC597DE008C1471 /* WTCCollectMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCollectMoneyViewController.h; sourceTree = "<group>"; };
+		185EAF471DC597DE008C1471 /* WTCCollectMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCollectMoneyViewController.m; sourceTree = "<group>"; };
+		185EAF481DC597DE008C1471 /* WTCCollectMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCollectMoneyViewController.xib; sourceTree = "<group>"; };
+		185EAF4B1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCommitBuyCarMoneyTableViewCell.h; sourceTree = "<group>"; };
+		185EAF4C1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCommitBuyCarMoneyTableViewCell.m; sourceTree = "<group>"; };
+		185EAF4D1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCommitBuyCarMoneyTableViewCell.xib; sourceTree = "<group>"; };
+		185EAF511DC5D448008C1471 /* BRPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPlaceholderTextView.h; sourceTree = "<group>"; };
+		185EAF521DC5D448008C1471 /* BRPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPlaceholderTextView.m; sourceTree = "<group>"; };
+		185EAF541DC5D852008C1471 /* WTCCarShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarShareViewController.h; sourceTree = "<group>"; };
+		185EAF551DC5D852008C1471 /* WTCCarShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarShareViewController.m; sourceTree = "<group>"; };
+		185EAF561DC5D852008C1471 /* WTCCarShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCarShareViewController.xib; sourceTree = "<group>"; };
+		185EAF591DC5DAE9008C1471 /* WTCCarShanreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarShanreTableViewCell.h; sourceTree = "<group>"; };
+		185EAF5A1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarShanreTableViewCell.m; sourceTree = "<group>"; };
+		185EAF5B1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCarShanreTableViewCell.xib; sourceTree = "<group>"; };
+		185EAF5F1DC5E881008C1471 /* SharedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedItem.h; sourceTree = "<group>"; };
+		185EAF601DC5E881008C1471 /* SharedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedItem.m; sourceTree = "<group>"; };
+		185EAFA81DC5EDFB008C1471 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
+		185EAFA91DC5EDFB008C1471 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		185EAFAA1DC5EDFB008C1471 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		185EAFAB1DC5EDFB008C1471 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
+		185EAFAD1DC5EDFB008C1471 /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
+		185EAFAE1DC5EDFB008C1471 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		185EAFAF1DC5EDFB008C1471 /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
+		185EAFB01DC5EDFB008C1471 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
+		185EAFB11DC5EDFB008C1471 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
+		185EAFB21DC5EDFB008C1471 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
+		185EAFB31DC5EDFB008C1471 /* WBHttpRequest+WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboUser.h"; sourceTree = "<group>"; };
+		185EAFB41DC5EDFB008C1471 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
+		185EAFB51DC5EDFB008C1471 /* WBSDKBasicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKBasicButton.h; sourceTree = "<group>"; };
+		185EAFB61DC5EDFB008C1471 /* WBSDKCommentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKCommentButton.h; sourceTree = "<group>"; };
+		185EAFB71DC5EDFB008C1471 /* WBSDKRelationshipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKRelationshipButton.h; sourceTree = "<group>"; };
+		185EAFB81DC5EDFB008C1471 /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
+		185EAFB91DC5EDFB008C1471 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		185EAFBA1DC5EDFB008C1471 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		185EAFBB1DC5EDFB008C1471 /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
+		185EAFBD1DC5EDFB008C1471 /* libSocialWeChat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWeChat.a; sourceTree = "<group>"; };
+		185EAFBE1DC5EDFB008C1471 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		185EAFBF1DC5EDFB008C1471 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		185EAFC01DC5EDFB008C1471 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		185EAFC11DC5EDFB008C1471 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		185EAFC21DC5EDFB008C1471 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		185EAFC31DC5EDFB008C1471 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		185EAFC41DC5EDFB008C1471 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		185EAFC61DC5EDFB008C1471 /* UMSocialCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMSocialCore.framework; sourceTree = "<group>"; };
+		185EAFC71DC5EDFB008C1471 /* UMSocialNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMSocialNetwork.framework; sourceTree = "<group>"; };
+		185EAFCA1DC5EDFB008C1471 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
+		185EAFCB1DC5EDFB008C1471 /* UMShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMShareMenuItem.h; sourceTree = "<group>"; };
+		185EAFCC1DC5EDFB008C1471 /* UMShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMShareMenuItem.m; sourceTree = "<group>"; };
+		185EAFCD1DC5EDFB008C1471 /* UMShareMenuSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMShareMenuSelectionView.h; sourceTree = "<group>"; };
+		185EAFCE1DC5EDFB008C1471 /* UMShareMenuSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMShareMenuSelectionView.m; sourceTree = "<group>"; };
+		185EAFCF1DC5EDFB008C1471 /* UMSocialShareScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialShareScrollView.h; sourceTree = "<group>"; };
+		185EAFD01DC5EDFB008C1471 /* UMSocialShareScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMSocialShareScrollView.m; sourceTree = "<group>"; };
+		185EAFD11DC5EDFB008C1471 /* UMSocialUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialUIManager.h; sourceTree = "<group>"; };
+		185EAFD21DC5EDFB008C1471 /* UMSocialUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMSocialUIManager.m; sourceTree = "<group>"; };
 		186BABDD1DC1FED900F877DA /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
 		186BABDE1DC1FED900F877DA /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
 		18BF087A1DC337B800FD679D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -597,20 +678,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BF08891DC3382900FD679D /* libstdc++.6.0.9.tbd in Frameworks */,
+				185EAFD71DC5EDFB008C1471 /* libWeiboSDK.a in Frameworks */,
+				185EAFDA1DC5EDFB008C1471 /* libWeChatSDK.a in Frameworks */,
+				185EAFD91DC5EDFB008C1471 /* libSocialWeChat.a in Frameworks */,
 				18BF08871DC3381A00FD679D /* CoreTelephony.framework in Frameworks */,
 				185EAF311DC33EEA008C1471 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				18BF08851DC3380500FD679D /* libsqlite3.0.tbd in Frameworks */,
 				18BF08831DC337F400FD679D /* Security.framework in Frameworks */,
+				185EAFD41DC5EDFB008C1471 /* TencentOpenAPI.framework in Frameworks */,
 				18BF6F421DC1DF66003BF410 /* CoreGraphics.framework in Frameworks */,
+				185EAFDD1DC5EDFC008C1471 /* UMSocialCore.framework in Frameworks */,
 				185EAF2D1DC33EEA008C1471 /* BaiduMapAPI_Location.framework in Frameworks */,
 				18BF08811DC337DE00FD679D /* SystemConfiguration.framework in Frameworks */,
 				185EAF301DC33EEA008C1471 /* BaiduMapAPI_Search.framework in Frameworks */,
+				185EAFDE1DC5EDFC008C1471 /* UMSocialNetwork.framework in Frameworks */,
 				185EAF2C1DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				185EAF2E1DC33EEA008C1471 /* BaiduMapAPI_Map.framework in Frameworks */,
+				185EAFD31DC5EDFB008C1471 /* libSocialQQ.a in Frameworks */,
 				18BF087F1DC337D100FD679D /* OpenGLES.framework in Frameworks */,
 				18BF087D1DC337C500FD679D /* QuartzCore.framework in Frameworks */,
 				18BF087B1DC337B800FD679D /* CoreLocation.framework in Frameworks */,
 				185EAF2B1DC33EEA008C1471 /* BaiduMapAPI_Base.framework in Frameworks */,
+				185EAFD61DC5EDFB008C1471 /* libSocialSina.a in Frameworks */,
 				185EAF2F1DC33EEA008C1471 /* BaiduMapAPI_Radar.framework in Frameworks */,
 				18BF6F401DC1DF5C003BF410 /* Foundation.framework in Frameworks */,
 				18BF6F3E1DC1DF51003BF410 /* UIKit.framework in Frameworks */,
@@ -831,6 +920,125 @@
 				185EAF2A1DC33EEA008C1471 /* BaiduMapAPI_Utils.framework */,
 			);
 			path = BaiduMapAPI;
+			sourceTree = "<group>";
+		};
+		185EAF501DC5D448008C1471 /* PlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				185EAF511DC5D448008C1471 /* BRPlaceholderTextView.h */,
+				185EAF521DC5D448008C1471 /* BRPlaceholderTextView.m */,
+			);
+			path = PlaceholderTextView;
+			sourceTree = "<group>";
+		};
+		185EAF5E1DC5E881008C1471 /* SharedItem */ = {
+			isa = PBXGroup;
+			children = (
+				185EAF5F1DC5E881008C1471 /* SharedItem.h */,
+				185EAF601DC5E881008C1471 /* SharedItem.m */,
+			);
+			path = SharedItem;
+			sourceTree = "<group>";
+		};
+		185EAFA51DC5EDFB008C1471 /* UMSocial */ = {
+			isa = PBXGroup;
+			children = (
+				185EAFA61DC5EDFB008C1471 /* SocialLibraries */,
+				185EAFC51DC5EDFB008C1471 /* UMSocialSDK */,
+				185EAFC81DC5EDFB008C1471 /* UMSocialUI */,
+			);
+			path = UMSocial;
+			sourceTree = "<group>";
+		};
+		185EAFA61DC5EDFB008C1471 /* SocialLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				185EAFA71DC5EDFB008C1471 /* QQ */,
+				185EAFAC1DC5EDFB008C1471 /* Sina */,
+				185EAFBC1DC5EDFB008C1471 /* WeChat */,
+			);
+			path = SocialLibraries;
+			sourceTree = "<group>";
+		};
+		185EAFA71DC5EDFB008C1471 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				185EAFA81DC5EDFB008C1471 /* libSocialQQ.a */,
+				185EAFA91DC5EDFB008C1471 /* TencentOpenAPI.framework */,
+				185EAFAA1DC5EDFB008C1471 /* TencentOpenApi_IOS_Bundle.bundle */,
+				185EAFAB1DC5EDFB008C1471 /* UMSocialQQHandler.h */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		185EAFAC1DC5EDFB008C1471 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				185EAFAD1DC5EDFB008C1471 /* libSocialSina.a */,
+				185EAFAE1DC5EDFB008C1471 /* libWeiboSDK.a */,
+				185EAFAF1DC5EDFB008C1471 /* UMSocialSinaHandler.h */,
+				185EAFB01DC5EDFB008C1471 /* WBHttpRequest+WeiboGame.h */,
+				185EAFB11DC5EDFB008C1471 /* WBHttpRequest+WeiboShare.h */,
+				185EAFB21DC5EDFB008C1471 /* WBHttpRequest+WeiboToken.h */,
+				185EAFB31DC5EDFB008C1471 /* WBHttpRequest+WeiboUser.h */,
+				185EAFB41DC5EDFB008C1471 /* WBHttpRequest.h */,
+				185EAFB51DC5EDFB008C1471 /* WBSDKBasicButton.h */,
+				185EAFB61DC5EDFB008C1471 /* WBSDKCommentButton.h */,
+				185EAFB71DC5EDFB008C1471 /* WBSDKRelationshipButton.h */,
+				185EAFB81DC5EDFB008C1471 /* WeiboSDK+Statistics.h */,
+				185EAFB91DC5EDFB008C1471 /* WeiboSDK.bundle */,
+				185EAFBA1DC5EDFB008C1471 /* WeiboSDK.h */,
+				185EAFBB1DC5EDFB008C1471 /* WeiboUser.h */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		185EAFBC1DC5EDFB008C1471 /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				185EAFBD1DC5EDFB008C1471 /* libSocialWeChat.a */,
+				185EAFBE1DC5EDFB008C1471 /* libWeChatSDK.a */,
+				185EAFBF1DC5EDFB008C1471 /* read_me.txt */,
+				185EAFC01DC5EDFB008C1471 /* README.txt */,
+				185EAFC11DC5EDFB008C1471 /* UMSocialWechatHandler.h */,
+				185EAFC21DC5EDFB008C1471 /* WechatAuthSDK.h */,
+				185EAFC31DC5EDFB008C1471 /* WXApi.h */,
+				185EAFC41DC5EDFB008C1471 /* WXApiObject.h */,
+			);
+			path = WeChat;
+			sourceTree = "<group>";
+		};
+		185EAFC51DC5EDFB008C1471 /* UMSocialSDK */ = {
+			isa = PBXGroup;
+			children = (
+				185EAFC61DC5EDFB008C1471 /* UMSocialCore.framework */,
+				185EAFC71DC5EDFB008C1471 /* UMSocialNetwork.framework */,
+			);
+			path = UMSocialSDK;
+			sourceTree = "<group>";
+		};
+		185EAFC81DC5EDFB008C1471 /* UMSocialUI */ = {
+			isa = PBXGroup;
+			children = (
+				185EAFC91DC5EDFB008C1471 /* Resource */,
+				185EAFCB1DC5EDFB008C1471 /* UMShareMenuItem.h */,
+				185EAFCC1DC5EDFB008C1471 /* UMShareMenuItem.m */,
+				185EAFCD1DC5EDFB008C1471 /* UMShareMenuSelectionView.h */,
+				185EAFCE1DC5EDFB008C1471 /* UMShareMenuSelectionView.m */,
+				185EAFCF1DC5EDFB008C1471 /* UMSocialShareScrollView.h */,
+				185EAFD01DC5EDFB008C1471 /* UMSocialShareScrollView.m */,
+				185EAFD11DC5EDFB008C1471 /* UMSocialUIManager.h */,
+				185EAFD21DC5EDFB008C1471 /* UMSocialUIManager.m */,
+			);
+			path = UMSocialUI;
+			sourceTree = "<group>";
+		};
+		185EAFC91DC5EDFB008C1471 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				185EAFCA1DC5EDFB008C1471 /* UMSocialSDKResources.bundle */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		18BF6ED91DC1D3A3003BF410 /* KKImageUpload */ = {
@@ -1058,6 +1266,18 @@
 				185EAF3D1DC4576D008C1471 /* WTCCarCategoryViewController.h */,
 				185EAF3E1DC4576D008C1471 /* WTCCarCategoryViewController.m */,
 				185EAF3F1DC4576D008C1471 /* WTCCarCategoryViewController.xib */,
+				185EAF461DC597DE008C1471 /* WTCCollectMoneyViewController.h */,
+				185EAF471DC597DE008C1471 /* WTCCollectMoneyViewController.m */,
+				185EAF481DC597DE008C1471 /* WTCCollectMoneyViewController.xib */,
+				185EAF4B1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.h */,
+				185EAF4C1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.m */,
+				185EAF4D1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.xib */,
+				185EAF541DC5D852008C1471 /* WTCCarShareViewController.h */,
+				185EAF551DC5D852008C1471 /* WTCCarShareViewController.m */,
+				185EAF561DC5D852008C1471 /* WTCCarShareViewController.xib */,
+				185EAF591DC5DAE9008C1471 /* WTCCarShanreTableViewCell.h */,
+				185EAF5A1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.m */,
+				185EAF5B1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -1316,6 +1536,9 @@
 		18F80EB71DB5F5C400FF1830 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				185EAFA51DC5EDFB008C1471 /* UMSocial */,
+				185EAF5E1DC5E881008C1471 /* SharedItem */,
+				185EAF501DC5D448008C1471 /* PlaceholderTextView */,
 				185EAF231DC33EEA008C1471 /* BaiduMapAPI */,
 				1836DEEA1DC1FA81005C5A9E /* ACEExpandableTextCell */,
 				18BF6F201DC1DB7C003BF410 /* KKPicker */,
@@ -1461,19 +1684,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				0451EDCA1DBC89BA0026D046 /* 更多@3x.png in Resources */,
+				185EAFDF1DC5EDFC008C1471 /* UMSocialSDKResources.bundle in Resources */,
 				0421422C1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib in Resources */,
 				0451EE011DBE69890026D046 /* u718.png in Resources */,
 				0451EDCC1DBC89BA0026D046 /* 联系我们@2x.png in Resources */,
 				0451EDB21DBC89BA0026D046 /* 6_lit.png in Resources */,
 				0451EDD21DBC89BA0026D046 /* 餐饮服务@2x.png in Resources */,
 				18D883061DBB207D00F19129 /* WTCMineViewController.xib in Resources */,
+				185EAFDB1DC5EDFB008C1471 /* read_me.txt in Resources */,
 				18F80E901DB5F30400FF1830 /* LaunchScreen.storyboard in Resources */,
+				185EAF581DC5D852008C1471 /* WTCCarShareViewController.xib in Resources */,
 				0451EDCD1DBC89BA0026D046 /* 联系我们@3x.png in Resources */,
 				18D883941DBB6F9500F19129 /* WTCPublishCarViewController.xib in Resources */,
 				0451EDE21DBCA0850026D046 /* WTCBusinessPosViewController.xib in Resources */,
 				042142081DC4E53D00F1A619 /* LoginViewController.xib in Resources */,
 				0451EDB91DBC89BA0026D046 /* Back-icon@2x.png in Resources */,
 				185EAF441DC49105008C1471 /* img_shop_default@3x.png in Resources */,
+				185EAF4F1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.xib in Resources */,
 				0451EDE91DBCB0270026D046 /* 2_banner_ch.png in Resources */,
 				042142121DC4E99D00F1A619 /* ResgisterSecondViewController.xib in Resources */,
 				18BF6F381DC1DB7C003BF410 /* KKPickerProvice.plist in Resources */,
@@ -1484,6 +1711,7 @@
 				18D883871DBB638000F19129 /* WTCCarManageController.xib in Resources */,
 				18D883A81DBB854500F19129 /* WTCCarBrandViewController.xib in Resources */,
 				18BF6F141DC1D3A3003BF410 /* imageResources.xcassets in Resources */,
+				185EAF5D1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.xib in Resources */,
 				18BF6F0F1DC1D3A3003BF410 /* DNImagePicker.strings in Resources */,
 				0451EDC21DBC89BA0026D046 /* 客户邀请.png in Resources */,
 				18F80E8D1DB5F30400FF1830 /* Assets.xcassets in Resources */,
@@ -1497,10 +1725,12 @@
 				0451EDFD1DBE43210026D046 /* SettingTableViewCell.xib in Resources */,
 				18D883411DBB49B200F19129 /* LICENSE in Resources */,
 				18F80E8B1DB5F30400FF1830 /* Main.storyboard in Resources */,
+				185EAF4A1DC597DE008C1471 /* WTCCollectMoneyViewController.xib in Resources */,
 				0451EDB31DBC89BA0026D046 /* 6_lit@2x.png in Resources */,
 				18D8830B1DBB20A600F19129 /* WTCHomeViewController.xib in Resources */,
 				0451EDC01DBC89BA0026D046 /* 同期活动@2x.png in Resources */,
 				185EAF451DC49105008C1471 /* img_shop_default@2x.png in Resources */,
+				185EAFDC1DC5EDFB008C1471 /* README.txt in Resources */,
 				0421420D1DC4E8FB00F1A619 /* RegisterFirstViewController.xib in Resources */,
 				0451EDBD1DBC89BA0026D046 /* 交通示意图@2x.png in Resources */,
 				0451EDD31DBC89BA0026D046 /* 餐饮服务@3x.png in Resources */,
@@ -1509,6 +1739,7 @@
 				042142171DC4EC4100F1A619 /* RegisterThreeViewController.xib in Resources */,
 				0451EDE71DBCB0270026D046 /* 1_banner_ch.png in Resources */,
 				0451EDC91DBC89BA0026D046 /* 更多@2x.png in Resources */,
+				185EAFD81DC5EDFB008C1471 /* WeiboSDK.bundle in Resources */,
 				0451EDB41DBC89BA0026D046 /* 6_lit@3x.png in Resources */,
 				0451EDBC1DBC89BA0026D046 /* 交通示意图.png in Resources */,
 				0451EDD81DBCA0200026D046 /* WTCShopSettingViewController.xib in Resources */,
@@ -1524,6 +1755,7 @@
 				0451EDC31DBC89BA0026D046 /* 客户邀请@2x.png in Resources */,
 				0451EDB51DBC89BA0026D046 /* b1.png in Resources */,
 				185EAF3B1DC3627A008C1471 /* mapapi.bundle in Resources */,
+				185EAFD51DC5EDFB008C1471 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				18D883421DBB49B200F19129 /* MJRefresh.bundle in Resources */,
 				0451EDFF1DBE448D0026D046 /* Back-icon-拷贝-5.png in Resources */,
 				0451EDC11DBC89BA0026D046 /* 同期活动@3x.png in Resources */,
@@ -1568,6 +1800,7 @@
 				0421422B1DC4F18D00F1A619 /* ForgetCodeThreeViewController.m in Sources */,
 				18BF6F111DC1D3A3003BF410 /* UIColor+Hex.m in Sources */,
 				18D882EB1DBB1B8300F19129 /* WTCTabBar.m in Sources */,
+				185EAF611DC5E881008C1471 /* SharedItem.m in Sources */,
 				042141F71DC4D0AE00F1A619 /* AccountSafetyTableViewCell.m in Sources */,
 				18BF6F1A1DC1D3A3003BF410 /* DNSendButton.m in Sources */,
 				18D883511DBB49B200F19129 /* MJProperty.m in Sources */,
@@ -1581,10 +1814,13 @@
 				18D883531DBB49B200F19129 /* NSObject+MJCoding.m in Sources */,
 				0451EDFC1DBE43210026D046 /* SettingTableViewCell.m in Sources */,
 				18BF6F191DC1D3A3003BF410 /* DNFullImageButton.m in Sources */,
+				185EAF531DC5D448008C1471 /* BRPlaceholderTextView.m in Sources */,
 				18D882DA1DBB172B00F19129 /* BaseViewController.m in Sources */,
 				18D882FB1DBB202700F19129 /* WTCShareViewController.m in Sources */,
+				185EAFE11DC5EDFC008C1471 /* UMShareMenuSelectionView.m in Sources */,
 				18BF6F1B1DC1D3A3003BF410 /* DNUnAuthorizedTipsView.m in Sources */,
 				0421420C1DC4E8FB00F1A619 /* RegisterFirstViewController.m in Sources */,
+				185EAFE21DC5EDFC008C1471 /* UMSocialShareScrollView.m in Sources */,
 				18BF6F0E1DC1D3A3003BF410 /* DNPhotoBrowser.m in Sources */,
 				18D882ED1DBB1B8300F19129 /* WTCTabBarViewController.m in Sources */,
 				18D8837D1DBB49F500F19129 /* UIButton+WebCache.m in Sources */,
@@ -1599,6 +1835,7 @@
 				0451ED8D1DBC6FA80026D046 /* ScrollImageItem.m in Sources */,
 				042141F01DC4CCBC00F1A619 /* TTPasswordView.m in Sources */,
 				042142011DC4D86300F1A619 /* SettingPayCodeViewController.m in Sources */,
+				185EAFE01DC5EDFC008C1471 /* UMShareMenuItem.m in Sources */,
 				18BF6F121DC1D3A3003BF410 /* UIView+DNImagePicker.m in Sources */,
 				18BF6ED81DC09E7E003BF410 /* WTCAddCarTableViewCell.m in Sources */,
 				18D883751DBB49F500F19129 /* NSData+ImageContentType.m in Sources */,
@@ -1623,9 +1860,11 @@
 				18D883761DBB49F500F19129 /* SDImageCache.m in Sources */,
 				18BF6F331DC1DB7C003BF410 /* KKDateTimePicker.m in Sources */,
 				18BF6F181DC1D3A3003BF410 /* DNBrowserCell.m in Sources */,
+				185EAF491DC597DE008C1471 /* WTCCollectMoneyViewController.m in Sources */,
 				18D883521DBB49B200F19129 /* MJType.m in Sources */,
 				0451EDF31DBCC1A20026D046 /* MainButtonView.m in Sources */,
 				18D8838E1DBB674900F19129 /* WTCCarManageTableViewCell.m in Sources */,
+				185EAF5C1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.m in Sources */,
 				042142211DC4F14D00F1A619 /* ForgetCodeFirstViewController.m in Sources */,
 				18BF6F341DC1DB7C003BF410 /* KKMultiStringPicker.m in Sources */,
 				18D8839B1DBB74A400F19129 /* pinyin.m in Sources */,
@@ -1641,6 +1880,7 @@
 				18F80EC71DB60CE700FF1830 /* AFNetworkReachabilityManager.m in Sources */,
 				18D883491DBB49B200F19129 /* MJRefreshLegendFooter.m in Sources */,
 				18F80E821DB5F30400FF1830 /* main.m in Sources */,
+				185EAF571DC5D852008C1471 /* WTCCarShareViewController.m in Sources */,
 				18BF6F101DC1D3A3003BF410 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
 				18F80EC81DB60CE700FF1830 /* AFSecurityPolicy.m in Sources */,
 				18D883861DBB638000F19129 /* WTCCarManageController.m in Sources */,
@@ -1649,6 +1889,7 @@
 				18D8837E1DBB49F500F19129 /* UIImage+GIF.m in Sources */,
 				18D883561DBB49B200F19129 /* NSString+MJExtension.m in Sources */,
 				18F80EC91DB60CE700FF1830 /* AFURLRequestSerialization.m in Sources */,
+				185EAFE31DC5EDFC008C1471 /* UMSocialUIManager.m in Sources */,
 				185EAF401DC4576D008C1471 /* WTCCarCategoryViewController.m in Sources */,
 				185EAF381DC34142008C1471 /* WTCMapViewController.m in Sources */,
 				18F80ECA1DB60CE700FF1830 /* AFURLResponseSerialization.m in Sources */,
@@ -1660,6 +1901,7 @@
 				1836DEED1DC1FA81005C5A9E /* ACEExpandableTextCell.m in Sources */,
 				18D883821DBB49F500F19129 /* UIView+WebCacheOperation.m in Sources */,
 				18D883AE1DBC738E00F19129 /* MultiTablesView.m in Sources */,
+				185EAF4E1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.m in Sources */,
 				0451EDD71DBCA0200026D046 /* WTCShopSettingViewController.m in Sources */,
 				18D883051DBB207D00F19129 /* WTCMineViewController.m in Sources */,
 				0421421B1DC4EF3200F1A619 /* ChildLoginViewController.m in Sources */,
@@ -1842,6 +2084,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTCar/lib/BaiduMapAPI",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/UMSocialSDK",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTCar/WTCar.pch";
 				INFOPLIST_FILE = WTCar/Info.plist;
@@ -1849,6 +2093,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTCar/lib/BaiduMapAPI/BaiduMapAPI_Map.framework",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/WeChat",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCar;
@@ -1864,6 +2111,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTCar/lib/BaiduMapAPI",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/UMSocialSDK",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTCar/WTCar.pch";
 				INFOPLIST_FILE = WTCar/Info.plist;
@@ -1871,6 +2120,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTCar/lib/BaiduMapAPI/BaiduMapAPI_Map.framework",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/WeChat",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCar;

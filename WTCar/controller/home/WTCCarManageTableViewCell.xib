@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,19 +22,73 @@
                             <constraint firstAttribute="height" constant="60" id="wMD-LY-zOl"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-bP-1tV">
-                        <frame key="frameInset" minX="118" minY="10" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-bP-1tV">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsD-kP-3WO">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ze-wK-ObE">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8y-Rp-noi">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d0-xa-JLY">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJm-XS-lcS">
+                        <state key="normal" title="收款"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-mK-jVK">
+                        <state key="normal" title="分享"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73L-0i-aOt">
+                        <state key="normal" title="管理"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="IdT-mK-jVK" firstAttribute="leading" secondItem="vJm-XS-lcS" secondAttribute="trailing" constant="28" id="37h-BL-QZn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9d0-xa-JLY" secondAttribute="trailing" constant="4" id="94R-E3-6DP"/>
+                    <constraint firstItem="4Ze-wK-ObE" firstAttribute="top" secondItem="6TD-bP-1tV" secondAttribute="bottom" constant="18" id="AsY-YG-MOo"/>
+                    <constraint firstItem="4Ze-wK-ObE" firstAttribute="leading" secondItem="SXk-wi-0Qu" secondAttribute="trailing" constant="10" id="CzA-cm-o0x"/>
+                    <constraint firstItem="73L-0i-aOt" firstAttribute="leading" secondItem="IdT-mK-jVK" secondAttribute="trailing" constant="26" id="IiS-Ei-Ew0"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="vJm-XS-lcS" secondAttribute="bottom" constant="-3" id="Sz1-7P-Qf7"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="73L-0i-aOt" secondAttribute="bottom" constant="-3" id="TKC-z4-Ies"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="IdT-mK-jVK" secondAttribute="bottom" constant="-3" id="USo-K3-izu"/>
                     <constraint firstItem="SXk-wi-0Qu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ViI-Ou-Asb"/>
+                    <constraint firstItem="KsD-kP-3WO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="22" id="XAq-e3-Vmj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="b8y-Rp-noi" secondAttribute="bottom" constant="1" id="cbW-9a-BqD"/>
                     <constraint firstItem="SXk-wi-0Qu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="f2V-69-TkC"/>
+                    <constraint firstItem="KsD-kP-3WO" firstAttribute="leading" secondItem="SXk-wi-0Qu" secondAttribute="trailing" constant="10" id="gob-UF-Pf5"/>
+                    <constraint firstItem="6TD-bP-1tV" firstAttribute="leading" secondItem="SXk-wi-0Qu" secondAttribute="trailing" constant="10" id="iq3-Rj-YIy"/>
+                    <constraint firstItem="9d0-xa-JLY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="41" id="jdp-3o-ghm"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="73L-0i-aOt" secondAttribute="trailing" constant="7" id="mt7-Bm-RP8"/>
+                    <constraint firstItem="b8y-Rp-noi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="mxm-wy-Htf"/>
+                    <constraint firstItem="6TD-bP-1tV" firstAttribute="top" secondItem="SXk-wi-0Qu" secondAttribute="top" id="vVc-4k-yZx"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="browserNumLabel" destination="b8y-Rp-noi" id="0Gj-zz-XjX"/>
+                <outlet property="carImageView" destination="SXk-wi-0Qu" id="i2a-UF-gwv"/>
+                <outlet property="collectPayBtn" destination="vJm-XS-lcS" id="Fer-WF-ZvH"/>
+                <outlet property="dateLabel" destination="KsD-kP-3WO" id="0FW-RS-21K"/>
+                <outlet property="manageBtn" destination="73L-0i-aOt" id="V8F-ii-g2N"/>
+                <outlet property="nameLabel" destination="6TD-bP-1tV" id="lsl-5N-dhv"/>
+                <outlet property="priceLabel" destination="4Ze-wK-ObE" id="aUW-id-hXG"/>
+                <outlet property="sellLabel" destination="9d0-xa-JLY" id="TiT-6I-3QF"/>
+                <outlet property="shareBtn" destination="IdT-mK-jVK" id="Yeg-Dw-6Su"/>
+            </connections>
             <point key="canvasLocation" x="51" y="-11"/>
         </tableViewCell>
     </objects>

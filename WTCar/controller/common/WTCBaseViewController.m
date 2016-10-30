@@ -7,7 +7,7 @@
 //
 
 #import "WTCBaseViewController.h"
-
+#import "WTCTabBarViewController.h"
 @interface WTCBaseViewController ()
 
 @end
@@ -16,9 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self setupNavBar];
+    [self setupTabar];
+    
     // Do any additional setup after loading the view.
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self WTCTabBarController] setTabBarHidden:YES animated:YES];
 
+
+}
+-(void)setupTabar
+{
+    self.tabBarController.hidesBottomBarWhenPushed = YES;
+}
+-(void)setupNavBar{
+    [self.navigationController.navigationBar setTranslucent:NO];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

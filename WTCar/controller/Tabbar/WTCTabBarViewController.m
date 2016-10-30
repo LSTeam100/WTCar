@@ -102,10 +102,19 @@
     objc_setAssociatedObject(self, @selector(WTCTabBarController), WTCTabBarController, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (WTCTabBarViewController *)WTCTabBarController{
-    WTCTabBarViewController *tabBarController = objc_getAssociatedObject(self, @selector(WTCTabBarController));
+//- (WTCTabBarViewController *)WTCTabBarController{
+//    WTCTabBarViewController *tabBarController = objc_getAssociatedObject(self, @selector(WTCTabBarController));
+//    if (!tabBarController && self.parentViewController) {
+//        tabBarController = self.parentViewController.WTCTabBarController;
+//    }
+//    return tabBarController;
+//}
+
+
+- (RDVTabBarController *)WTCTabBarController{
+    RDVTabBarController *tabBarController = objc_getAssociatedObject(self, @selector(WTCTabBarController));
     if (!tabBarController && self.parentViewController) {
-        tabBarController = self.parentViewController.WTCTabBarController;
+        tabBarController = self.parentViewController.rdv_tabBarController;
     }
     return tabBarController;
 }

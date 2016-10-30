@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
-
+#import "UMSocialUIManager.h"
 @interface AppDelegate (){
 BMKMapManager* _mapManager;
 }
@@ -21,11 +21,7 @@ BMKMapManager* _mapManager;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 要使用百度地图，请先启动BaiduMapManager
     [NSThread detachNewThreadSelector:@selector(asynInitBaiduMap) toTarget:self withObject:nil];
-//    _mapManager = [[BMKMapManager alloc]init];
-//    BOOL ret = [_mapManager start:@"0Au4nrfn0pFtwD3DHQlrOsdlNMRxqK3S" generalDelegate:self];
-//    if (!ret) {
-//        NSLog(@"manager start failed!");
-//    }
+    [self registerUMShare];
     
     ViewController *vc=[[ViewController alloc]init];
     UINavigationController *navi=[[UINavigationController alloc]initWithRootViewController:vc];
@@ -33,6 +29,13 @@ BMKMapManager* _mapManager;
 
     // Override point for customization after application launch.
     return YES;
+}
+-(void)registerUMShare
+{
+    [[UMSocialManager defaultManager] setUmSocialAppkey:@"57b432afe0f55a9832001a0a"];
+    //设置微信的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wxdc1e388c3822c80b" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:@"http://mobile.umeng.com/social"];
+
 }
 -(void)asynInitBaiduMap
 {
@@ -62,7 +65,14 @@ BMKMapManager* _mapManager;
         NSLog(@"onGetPermissionState %d",iError);
     }
 }
-
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+    if (!result) {
+        // 其他如支付等SDK的回调
+    }
+    return result;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

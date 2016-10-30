@@ -12,6 +12,7 @@
 #import "WTCPublishCarViewController.h"
 #import "WTCBusinessPosViewController.h"
 #import "WTCShopSettingViewController.h"
+#import "WTCAddCarViewController.h"
 @interface WTCHomeViewController ()
 {
     CGFloat carouselHeight;
@@ -48,7 +49,12 @@
     self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view from its nib.
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
 
+}
 -(void)viewDidAppear:(BOOL)animated
 {
     [self startScroll];
@@ -245,7 +251,7 @@
 //Button跳转
 -(void)FaBucheButtonClick
 {
-    WTCPublishCarViewController *pubCarViewController = [WTCPublishCarViewController new];
+    WTCAddCarViewController *pubCarViewController = [WTCAddCarViewController new];
     [self.navigationController pushViewController:pubCarViewController animated:YES];
 }
 
