@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCShopSettingViewController">
             <connections>
+                <outlet property="editShopImageButton" destination="1X8-UP-Hi6" id="2es-Vx-bF8"/>
+                <outlet property="mainShopImageView" destination="Hme-Nl-zNc" id="NTo-P7-JdO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +17,63 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYz-aE-eSM">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="T57-8y-OaI"/>
+                    </constraints>
+                    <state key="normal" title="编辑店铺信息">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="editeShopInfoButtonClick:" destination="-1" eventType="touchUpInside" id="fdk-8n-f94"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-Nl-zNc">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="144" id="efv-GN-osB"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X8-UP-Hi6">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="qn5-YI-hLj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PoG-Nr-7ME">
+                    <frame key="frameInset" minX="16" minY="230" width="308" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="梧桐汽车网" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isg-16-1jH">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="G48-ZA-a6w"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1X8-UP-Hi6" firstAttribute="top" secondItem="OYz-aE-eSM" secondAttribute="bottom" constant="8" id="BIz-1e-bTT"/>
+                <constraint firstItem="Isg-16-1jH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Def-TY-qMm"/>
+                <constraint firstItem="1X8-UP-Hi6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="DoT-FA-u0K"/>
+                <constraint firstItem="OYz-aE-eSM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c4h-RL-XT3"/>
+                <constraint firstAttribute="trailing" secondItem="OYz-aE-eSM" secondAttribute="trailing" id="edO-Eb-gaN"/>
+                <constraint firstAttribute="trailing" secondItem="1X8-UP-Hi6" secondAttribute="trailing" constant="16" id="lxM-fK-wL2"/>
+                <constraint firstItem="OYz-aE-eSM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r3Q-Os-rgQ"/>
+                <constraint firstItem="Hme-Nl-zNc" firstAttribute="top" secondItem="OYz-aE-eSM" secondAttribute="bottom" id="rBO-mA-ryw"/>
+                <constraint firstItem="Isg-16-1jH" firstAttribute="top" secondItem="Hme-Nl-zNc" secondAttribute="bottom" id="rWn-Jk-O4Q"/>
+                <constraint firstItem="Hme-Nl-zNc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tu4-QI-dZS"/>
+                <constraint firstAttribute="trailing" secondItem="Hme-Nl-zNc" secondAttribute="trailing" id="wef-eJ-3oJ"/>
+                <constraint firstAttribute="trailing" secondItem="Isg-16-1jH" secondAttribute="trailing" constant="16" id="zPO-Od-8U0"/>
+            </constraints>
+            <point key="canvasLocation" x="48.5" y="59.5"/>
         </view>
     </objects>
 </document>

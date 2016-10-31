@@ -1,18 +1,18 @@
 //
-//  WTCShopSettingViewController.m
+//  WTCPeoNameVerityViewController.m
 //  WTCar
 //
-//  Created by MacBookPro on 2016/10/23.
+//  Created by MacBookPro on 2016/10/30.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCShopSettingViewController.h"
-#import "WTCMyDetailViewController.h"
-@interface WTCShopSettingViewController ()
+#import "WTCPeoNameVerityViewController.h"
+
+@interface WTCPeoNameVerityViewController ()
 
 @end
 
-@implementation WTCShopSettingViewController
+@implementation WTCPeoNameVerityViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,8 +34,4 @@
 }
 */
 
-- (IBAction)editeShopInfoButtonClick:(id)sender {
-    WTCMyDetailViewController *myDetailViewController = [WTCMyDetailViewController new];
-    [self.navigationController pushViewController:myDetailViewController animated:YES];
-}
 @end

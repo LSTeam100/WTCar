@@ -125,7 +125,7 @@
 /**
  *  平台的特性
  *
- *  @return @see
+ *
  */
 -(UMSocialPlatformFeature)umSocial_SupportedFeatures;
 
