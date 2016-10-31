@@ -8,17 +8,19 @@
 
 #import "WTCCarManageController.h"
 #import "WTCCarManageTableViewCell.h"
+#import "WTCCarShareViewController.h"
 typedef enum
 {
-    offline               = 0,
-    sale                  = 1,
-    saleOut               = 2
+    CarMangeTypeOffline               = 0,
+    CarMangeTypeSale                  = 1,
+    CarMangeTypeSaleOut               = 2
 }
 CarMangeType;
 
 @interface WTCCarManageController ()
 {
     NSArray *carInfoArr;
+    CarMangeType carMangeType;
     
     
 }
@@ -50,17 +52,33 @@ CarMangeType;
 }
 -(void)onSegmentSelectedChanged:(UISegmentedControl *)Seg{
     NSInteger index = Seg.selectedSegmentIndex;
+    
+    if (index == CarMangeTypeOffline) {
+        carMangeType = CarMangeTypeOffline;
+    }
+    else if (index == CarMangeTypeSale)
+    {
+        carMangeType = CarMangeTypeSale;
+    }
+    else
+    {
+        carMangeType = CarMangeTypeSaleOut;
+    }
+    
+    
+    [self.tableview reloadData];
+    
     NSLog(@"index=%ld",(long)index);
 
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 120;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return carInfoArr.count;
+    return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,13 +87,36 @@ CarMangeType;
     WTCCarManageTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell==nil) {
         cell=[[[NSBundle mainBundle]loadNibNamed:@"WTCCarManageTableViewCell" owner:self options:nil] objectAtIndex:0];
+        
+        [cell.shareBtn addTarget:self action:@selector(navitoShareController) forControlEvents:UIControlEventTouchUpInside];
     }
+    
+    if (carMangeType == CarMangeTypeOffline) {
+        cell.collectPayBtn.hidden = NO;
+        cell.shareBtn.hidden = NO;
+        cell.manageBtn.hidden = NO;
+    }
+    else if (carMangeType == CarMangeTypeSale){
+        cell.collectPayBtn.hidden = YES;
+        cell.shareBtn.hidden = YES;
+        cell.manageBtn.hidden = NO;
+    }
+    else{
+        cell.collectPayBtn.hidden = YES;
+        cell.shareBtn.hidden = YES;
+        cell.manageBtn.hidden = NO;
+    }
+    
     return cell;
 }
-
+-(void)navitoShareController
+{
+    WTCCarShareViewController *shareController = [WTCCarShareViewController new];
+    [self.navigationController pushViewController:shareController animated:YES];
+}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

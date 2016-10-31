@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WTCCarManageController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+#import "WTCBaseViewController.h"
+@interface WTCCarManageController : WTCBaseViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UISegmentedControl *segmentedControl;
 @property(nonatomic,strong)IBOutlet UITableView *tableview;
 @end

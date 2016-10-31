@@ -7,9 +7,12 @@
 //
 
 #import "WTCShareViewController.h"
-
-@interface WTCShareViewController ()
-
+#import "WTCShareTableViewCell.h"
+@interface WTCShareViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,weak)IBOutlet UITableView *tableView;
+@property(nonatomic,weak)IBOutlet UIButton *allSelectBtn;
+@property(nonatomic,weak)IBOutlet UILabel *allCarNum;
+@property(nonatomic,weak)IBOutlet UIButton *shareBtn;
 @end
 
 @implementation WTCShareViewController
@@ -17,9 +20,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    self.title = @"分享";
     // Do any additional setup after loading the view from its nib.
 }
-
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifer = @"WTCShareTableViewCell";
+    WTCShareTableViewCell *cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+    if (cell == nil) {
+        NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"WTCShareTableViewCell" owner:self options:nil];
+        cell = [cellArr objectAtIndex:0];
+    }
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -17,6 +17,7 @@
 #import "ACEExpandableTextCell.h"
 #import "WTCCarBrandViewController.h"
 #import "WTCCarCategoryViewController.h"
+#import "WTCTabBarViewController.h"
 static NSString *collectionViewCellId = @"collectionViewCellId";
 static CGFloat imageSize = 80;
 
@@ -47,9 +48,14 @@ typedef enum
     [super viewDidLoad];
     [self setCollectionView];
     self.imageArray = [NSMutableArray array];
+    self.title = @"发车";
     infoArr = @[@"品牌车系",@"所在地",@"里程",@"初次上牌时间",@"价格车辆描述"];
     self.cellData = [NSMutableArray arrayWithArray:@[ @"Existing text", @""]];
-
+    
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 
 }
 #pragma mark-设置图片选择
