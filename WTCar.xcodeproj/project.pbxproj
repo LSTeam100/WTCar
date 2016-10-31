@@ -140,6 +140,16 @@
 		185EB00B1DC64195008C1471 /* WTCPOSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB0091DC64195008C1471 /* WTCPOSViewController.xib */; };
 		185EB00F1DC647E8008C1471 /* WTCOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EB00D1DC647E8008C1471 /* WTCOrderTableViewCell.m */; };
 		185EB0101DC647E8008C1471 /* WTCOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB00E1DC647E8008C1471 /* WTCOrderTableViewCell.xib */; };
+		185EB0141DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EB0121DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.m */; };
+		185EB0151DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB0131DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.xib */; };
+		185EB0191DC78A25008C1471 /* WTCCashierDeskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EB0171DC78A25008C1471 /* WTCCashierDeskViewController.m */; };
+		185EB01A1DC78A25008C1471 /* WTCCashierDeskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB0181DC78A25008C1471 /* WTCCashierDeskViewController.xib */; };
+		185EB01E1DC78E40008C1471 /* CaiserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EB01C1DC78E40008C1471 /* CaiserTableViewCell.m */; };
+		185EB01F1DC78E40008C1471 /* CaiserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB01D1DC78E40008C1471 /* CaiserTableViewCell.xib */; };
+		185EB0231DC790E9008C1471 /* POSImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EB0211DC790E8008C1471 /* POSImageTableViewCell.m */; };
+		185EB0241DC790E9008C1471 /* POSImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB0221DC790E8008C1471 /* POSImageTableViewCell.xib */; };
+		185EB0281DC7918F008C1471 /* POSHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EB0261DC7918F008C1471 /* POSHistoryTableViewCell.m */; };
+		185EB0291DC7918F008C1471 /* POSHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB0271DC7918F008C1471 /* POSHistoryTableViewCell.xib */; };
 		186BABDF1DC1FED900F877DA /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BABDD1DC1FED900F877DA /* SZTextView.m */; };
 		18BF087B1DC337B800FD679D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087A1DC337B800FD679D /* CoreLocation.framework */; };
 		18BF087D1DC337C500FD679D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087C1DC337C500FD679D /* QuartzCore.framework */; };
@@ -481,6 +491,21 @@
 		185EB00C1DC647E8008C1471 /* WTCOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCOrderTableViewCell.h; sourceTree = "<group>"; };
 		185EB00D1DC647E8008C1471 /* WTCOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCOrderTableViewCell.m; sourceTree = "<group>"; };
 		185EB00E1DC647E8008C1471 /* WTCOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCOrderTableViewCell.xib; sourceTree = "<group>"; };
+		185EB0111DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCPOSCarInfoTableViewCell.h; sourceTree = "<group>"; };
+		185EB0121DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCPOSCarInfoTableViewCell.m; sourceTree = "<group>"; };
+		185EB0131DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCPOSCarInfoTableViewCell.xib; sourceTree = "<group>"; };
+		185EB0161DC78A25008C1471 /* WTCCashierDeskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCashierDeskViewController.h; sourceTree = "<group>"; };
+		185EB0171DC78A25008C1471 /* WTCCashierDeskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCashierDeskViewController.m; sourceTree = "<group>"; };
+		185EB0181DC78A25008C1471 /* WTCCashierDeskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCashierDeskViewController.xib; sourceTree = "<group>"; };
+		185EB01B1DC78E40008C1471 /* CaiserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaiserTableViewCell.h; sourceTree = "<group>"; };
+		185EB01C1DC78E40008C1471 /* CaiserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaiserTableViewCell.m; sourceTree = "<group>"; };
+		185EB01D1DC78E40008C1471 /* CaiserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaiserTableViewCell.xib; sourceTree = "<group>"; };
+		185EB0201DC790E8008C1471 /* POSImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSImageTableViewCell.h; sourceTree = "<group>"; };
+		185EB0211DC790E8008C1471 /* POSImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSImageTableViewCell.m; sourceTree = "<group>"; };
+		185EB0221DC790E8008C1471 /* POSImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POSImageTableViewCell.xib; sourceTree = "<group>"; };
+		185EB0251DC7918F008C1471 /* POSHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSHistoryTableViewCell.h; sourceTree = "<group>"; };
+		185EB0261DC7918F008C1471 /* POSHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSHistoryTableViewCell.m; sourceTree = "<group>"; };
+		185EB0271DC7918F008C1471 /* POSHistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POSHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		186BABDD1DC1FED900F877DA /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
 		186BABDE1DC1FED900F877DA /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
 		18BF087A1DC337B800FD679D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -1350,6 +1375,21 @@
 				185EB00C1DC647E8008C1471 /* WTCOrderTableViewCell.h */,
 				185EB00D1DC647E8008C1471 /* WTCOrderTableViewCell.m */,
 				185EB00E1DC647E8008C1471 /* WTCOrderTableViewCell.xib */,
+				185EB0111DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.h */,
+				185EB0121DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.m */,
+				185EB0131DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.xib */,
+				185EB0161DC78A25008C1471 /* WTCCashierDeskViewController.h */,
+				185EB0171DC78A25008C1471 /* WTCCashierDeskViewController.m */,
+				185EB0181DC78A25008C1471 /* WTCCashierDeskViewController.xib */,
+				185EB01B1DC78E40008C1471 /* CaiserTableViewCell.h */,
+				185EB01C1DC78E40008C1471 /* CaiserTableViewCell.m */,
+				185EB01D1DC78E40008C1471 /* CaiserTableViewCell.xib */,
+				185EB0201DC790E8008C1471 /* POSImageTableViewCell.h */,
+				185EB0211DC790E8008C1471 /* POSImageTableViewCell.m */,
+				185EB0221DC790E8008C1471 /* POSImageTableViewCell.xib */,
+				185EB0251DC7918F008C1471 /* POSHistoryTableViewCell.h */,
+				185EB0261DC7918F008C1471 /* POSHistoryTableViewCell.m */,
+				185EB0271DC7918F008C1471 /* POSHistoryTableViewCell.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -1773,6 +1813,7 @@
 				185EAFFC1DC62EAB008C1471 /* WTCMineDetailViewController.xib in Resources */,
 				0451EDE21DBCA0850026D046 /* WTCBusinessPosViewController.xib in Resources */,
 				042142081DC4E53D00F1A619 /* LoginViewController.xib in Resources */,
+				185EB0291DC7918F008C1471 /* POSHistoryTableViewCell.xib in Resources */,
 				0451EDB91DBC89BA0026D046 /* Back-icon@2x.png in Resources */,
 				185EAF441DC49105008C1471 /* img_shop_default@3x.png in Resources */,
 				185EAF4F1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.xib in Resources */,
@@ -1792,8 +1833,11 @@
 				18BF6F0F1DC1D3A3003BF410 /* DNImagePicker.strings in Resources */,
 				0451EDC21DBC89BA0026D046 /* 客户邀请.png in Resources */,
 				18F80E8D1DB5F30400FF1830 /* Assets.xcassets in Resources */,
+				185EB0151DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.xib in Resources */,
+				185EB01F1DC78E40008C1471 /* CaiserTableViewCell.xib in Resources */,
 				185EB0101DC647E8008C1471 /* WTCOrderTableViewCell.xib in Resources */,
 				0451EDB81DBC89BA0026D046 /* Back-icon.png in Resources */,
+				185EB01A1DC78A25008C1471 /* WTCCashierDeskViewController.xib in Resources */,
 				0451EDCF1DBC89BA0026D046 /* 酒店信息@2x.png in Resources */,
 				042142271DC4F16700F1A619 /* ForgetCodeSecondViewController.xib in Resources */,
 				0451EDCE1DBC89BA0026D046 /* 酒店信息.png in Resources */,
@@ -1838,6 +1882,7 @@
 				185EAFF21DC62308008C1471 /* MoneyInfoTableViewCell.xib in Resources */,
 				185EAFD51DC5EDFB008C1471 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				18D883421DBB49B200F19129 /* MJRefresh.bundle in Resources */,
+				185EB0241DC790E9008C1471 /* POSImageTableViewCell.xib in Resources */,
 				0451EDFF1DBE448D0026D046 /* Back-icon-拷贝-5.png in Resources */,
 				0451EDC11DBC89BA0026D046 /* 同期活动@3x.png in Resources */,
 				18BF6F151DC1D3A3003BF410 /* ImagesPicker.xcassets in Resources */,
@@ -1888,6 +1933,7 @@
 				18BF6F351DC1DB7C003BF410 /* KKPickerAbstract.m in Sources */,
 				18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */,
 				18BF6F1D1DC1D3A3003BF410 /* MWTapDetectingImageView.m in Sources */,
+				185EB01E1DC78E40008C1471 /* CaiserTableViewCell.m in Sources */,
 				18D883AF1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m in Sources */,
 				18BF6F1C1DC1D3A3003BF410 /* JKPromptView.m in Sources */,
 				18D883101DBB484400F19129 /* MBProgressHUD.m in Sources */,
@@ -1898,6 +1944,7 @@
 				185EAF531DC5D448008C1471 /* BRPlaceholderTextView.m in Sources */,
 				18D882DA1DBB172B00F19129 /* BaseViewController.m in Sources */,
 				18D882FB1DBB202700F19129 /* WTCShareViewController.m in Sources */,
+				185EB0281DC7918F008C1471 /* POSHistoryTableViewCell.m in Sources */,
 				185EAFE11DC5EDFC008C1471 /* UMShareMenuSelectionView.m in Sources */,
 				185EAFE71DC5FC1C008C1471 /* WTCShareTableViewCell.m in Sources */,
 				185EAFF61DC6265F008C1471 /* WTCProfileInfoTableViewCell.m in Sources */,
@@ -1913,6 +1960,7 @@
 				18D883931DBB6F9500F19129 /* WTCPublishCarViewController.m in Sources */,
 				18D883481DBB49B200F19129 /* MJRefreshHeader.m in Sources */,
 				18BF6F0C1DC1D3A3003BF410 /* DNImagePickerController.m in Sources */,
+				185EB0191DC78A25008C1471 /* WTCCashierDeskViewController.m in Sources */,
 				18D8839A1DBB74A400F19129 /* ChineseString.m in Sources */,
 				18BF6F3A1DC1DB7C003BF410 /* KKStringPicker.m in Sources */,
 				0451ED8C1DBC6FA80026D046 /* iCarousel.m in Sources */,
@@ -1965,6 +2013,7 @@
 				18F80E851DB5F30400FF1830 /* AppDelegate.mm in Sources */,
 				18D8834E1DBB49B200F19129 /* README.md in Sources */,
 				185EB00A1DC64195008C1471 /* WTCPOSViewController.m in Sources */,
+				185EB0231DC790E9008C1471 /* POSImageTableViewCell.m in Sources */,
 				18F80EC71DB60CE700FF1830 /* AFNetworkReachabilityManager.m in Sources */,
 				18D883491DBB49B200F19129 /* MJRefreshLegendFooter.m in Sources */,
 				18F80E821DB5F30400FF1830 /* main.m in Sources */,
@@ -1976,6 +2025,7 @@
 				18D8837F1DBB49F500F19129 /* UIImage+MultiFormat.m in Sources */,
 				18D8837E1DBB49F500F19129 /* UIImage+GIF.m in Sources */,
 				18D883561DBB49B200F19129 /* NSString+MJExtension.m in Sources */,
+				185EB0141DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.m in Sources */,
 				18F80EC91DB60CE700FF1830 /* AFURLRequestSerialization.m in Sources */,
 				185EAFE31DC5EDFC008C1471 /* UMSocialUIManager.m in Sources */,
 				185EAF401DC4576D008C1471 /* WTCCarCategoryViewController.m in Sources */,

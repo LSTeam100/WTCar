@@ -44,6 +44,9 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHu-fy-VRY">
                             <state key="normal" title="分享"/>
+                            <connections>
+                                <action selector="share:" destination="-1" eventType="touchUpInside" id="qfB-Fj-rr4"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

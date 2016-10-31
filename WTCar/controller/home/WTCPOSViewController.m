@@ -8,6 +8,7 @@
 
 #import "WTCPOSViewController.h"
 #import "WTCOrderTableViewCell.h"
+#import "WTCPOSCarInfoTableViewCell.h"
 @interface WTCPOSViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 @property(nonatomic,weak)IBOutlet UIButton *waitPayBtn;
@@ -45,14 +46,13 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifer = @"poscell";
-    WTCOrderTableViewCell *cell = nil;
-    cell = [tableView dequeueReusableCellWithIdentifier:identifer];
-    if (cell == nil) {
-        NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"WTCOrderTableViewCell" owner:self options:nil];
-        cell = [cellArr objectAtIndex:0];
+    if (indexPath.section == 0) {
+        return [self getOrdertCell:tableView AtIndex:indexPath];
     }
-    return cell;
+    else
+    {
+        return [self getPosCarinfo:tableView AtIndex:indexPath];
+    }
     
 }
 
@@ -67,6 +67,40 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+}
+-(UITableViewCell *)getOrdertCell:(UITableView *)tableView AtIndex:(NSIndexPath *)atIndex
+{
+    static NSString *identifer = @"WTCOrderTableViewCell";
+    WTCOrderTableViewCell *cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"WTCOrderTableViewCell" owner:self options:nil]objectAtIndex:0];
+    }
+    return cell;
+}
+-(UITableViewCell *)getPosCarinfo:(UITableView *)tableView AtIndex:(NSIndexPath*)atIndex
+{
+    if (atIndex.row == 0) {
+        static NSString *identifer = @"WTCPOSCarInfoTableViewCell";
+        WTCPOSCarInfoTableViewCell *cell = nil;
+        cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+        if (cell == nil) {
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"WTCOrderTableViewCell" owner:self options:nil]objectAtIndex:0];
+        }
+        return cell;
+    }
+    else
+    {
+        static NSString *identifer = @"carSumMoneyCell";
+        UITableViewCell *cell = nil;
+        cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+        }
+        cell.textLabel.text =[NSString stringWithFormat:@"收款金额：128万元"];
+        return cell;
+    }
     
 }
 - (void)didReceiveMemoryWarning {
