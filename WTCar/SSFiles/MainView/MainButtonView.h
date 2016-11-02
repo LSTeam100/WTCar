@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *CheGuanLiButton;
 @property (weak, nonatomic) IBOutlet UIButton *DianPuSZButton;
 @property (weak, nonatomic) IBOutlet UIButton *ShangJiaPosButton;
+@property(weak,nonatomic)IBOutlet UIButton *loanButton;
 
 
 @end

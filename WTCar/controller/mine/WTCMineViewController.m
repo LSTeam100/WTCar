@@ -13,7 +13,12 @@
 #import "HeadTableViewCell.h"
 #import "MoneyInfoTableViewCell.h"
 #import "WTCMineDetailViewController.h"
+#import "WTCNotGetPOSViewController.h"
+
 @interface WTCMineViewController ()<UITableViewDataSource,UITableViewDelegate>
+{
+    NSArray *posInfoArr;
+}
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 @end
 
@@ -26,6 +31,7 @@
 //    testButton.backgroundColor= [UIColor redColor];
 //    [testButton addTarget:self action:@selector(clickTestButton) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:testButton];
+    posInfoArr = @[@"pos收款",@"提现",@"账单",@"我的银行卡",@"子账户",@"推荐好友",@"设置"];
     self.title = @"我的";
     // Do any additional setup after loading the view from its nib.
 }
@@ -70,6 +76,7 @@
         NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"WTCProfileInfoTableViewCell" owner:self options:nil];
         cell = [cellArr objectAtIndex:0];
     }
+//    cell.headTitle.text = [posInfoArr objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -100,12 +107,43 @@
     SettingViewController *settingViewController = [SettingViewController new];
     [self.navigationController pushViewController:settingViewController animated:YES];
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
         WTCMineDetailViewController *detail = [[WTCMineDetailViewController alloc]init];
         [self.navigationController pushViewController:detail animated:YES];
     }
+    else if(indexPath.row == 2)
+    {
+        WTCNotGetPOSViewController *posViewController = [[WTCNotGetPOSViewController alloc]init];
+        [self.navigationController pushViewController:posViewController animated:YES];
+    }
+    else if (indexPath.row == 3)
+    {
+        
+    }
+    else if (indexPath.row == 4)
+    {
+        
+    }
+    else if (indexPath.row == 5)
+    {
+        
+    }
+    else if (indexPath.row == 6)
+    {
+        
+    }
+    else if (indexPath.row == 7)
+    {
+        
+    }
+    else if (indexPath.row == 8)
+    {
+        
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 - (void)didReceiveMemoryWarning {

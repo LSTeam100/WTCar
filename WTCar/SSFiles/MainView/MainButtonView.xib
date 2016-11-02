@@ -248,6 +248,7 @@
                 <outlet property="MainContentViewHight" destination="hnl-JU-I7b" id="RW1-hP-a3f"/>
                 <outlet property="MainScrollView" destination="1WG-4W-PLV" id="Dc4-9S-bNp"/>
                 <outlet property="ShangJiaPosButton" destination="YbR-ER-HQu" id="0pr-wI-Jmb"/>
+                <outlet property="loanButton" destination="pa8-bV-JXT" id="RB0-20-7O8"/>
             </connections>
             <point key="canvasLocation" x="35.5" y="80.5"/>
         </view>

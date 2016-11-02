@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LoanServiceViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface LoanServiceViewController : WTCBaseViewController
 
 @end

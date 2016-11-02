@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "WTCTabBarViewController.h"
+#import "LoginViewController.h"
 @interface ViewController ()
 
 @end
@@ -18,8 +19,31 @@
     [super viewDidLoad];
     UIView *myView = [[UIView alloc]init];
     myView.backgroundColor =[UIColor blackColor];
-    WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
-    [self.navigationController pushViewController:upmTabbar animated:YES];
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    NSString *leadPage=[userDefault objectForKey:@"leadPage"];
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey];
+    
+    if ([leadPage isEqualToString:version]) {
+        WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
+        [self.navigationController pushViewController:upmTabbar animated:YES];
+    }
+    else
+    {
+        NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+        NSString *loginToken=[userDefault objectForKey:@"loginToken"];
+        if (loginToken == NULL) {
+//            LoginViewController *login = [[LoginViewController alloc]init];
+//            [self.navigationController pushViewController:login animated:YES];
+            WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
+            [self.navigationController pushViewController:upmTabbar animated:YES];
+        }
+        else{
+            WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
+            [self.navigationController pushViewController:upmTabbar animated:YES];
+        }
+    }
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
