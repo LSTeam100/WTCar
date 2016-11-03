@@ -11,9 +11,11 @@
 #import "SettingPayCodeViewController.h"
 @interface AccountSafetyViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
-    CGFloat cellHeight;
+    CGFloat cellHeight;//cell高度
 }
+//账户安全tableVIew
 @property (nonatomic,strong)UITableView *AccountSafetyTableView;
+//cell标题的数组
 @property (nonatomic,strong)NSArray *cellTextArray;
 
 @end
@@ -31,6 +33,7 @@
     cellHeight = 42;
     
 }
+//设置tableView
 -(void)makeTableView{
     _AccountSafetyTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 60,SCREEN_WIDTH, cellHeight*5) style:UITableViewStylePlain];
     [self.view addSubview:_AccountSafetyTableView];

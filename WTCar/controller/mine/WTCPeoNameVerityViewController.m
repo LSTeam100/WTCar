@@ -34,4 +34,6 @@
 }
 */
 
+- (IBAction)ConfirmNameButtonClick:(id)sender {
+}
 @end

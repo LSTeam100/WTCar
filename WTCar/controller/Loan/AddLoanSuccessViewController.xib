@@ -16,26 +16,40 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUg-zu-TBV">
-                    <frame key="frameInset" minX="67" minY="20" width="240" height="240"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bUg-zu-TBV">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="DnV-1A-Xor"/>
+                        <constraint firstAttribute="height" constant="240" id="oEj-QA-C6J"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="恭喜您已申请配资服务成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLV-hA-Q6L">
-                    <frame key="frameInset" minX="67" minY="306" width="240" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜您已申请配资服务成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLV-hA-Q6L">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="iQG-7C-XSD"/>
+                        <constraint firstAttribute="width" constant="240" id="tDC-P3-OMf"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="七个工作日之内我们相关工作人员会联系您，请耐心等待" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-Fc-muo">
-                    <frame key="frameInset" minX="16" minY="335" width="343" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="七个工作日之内我们相关工作人员会联系您，请耐心等待" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-Fc-muo">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Qgb-Wc-LKk"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DLV-hA-Q6L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8su-Lc-1JZ"/>
+                <constraint firstItem="oNZ-Fc-muo" firstAttribute="top" secondItem="DLV-hA-Q6L" secondAttribute="bottom" constant="8" id="Job-wa-aJk"/>
+                <constraint firstItem="bUg-zu-TBV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="O1H-Mu-Cel"/>
+                <constraint firstItem="bUg-zu-TBV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yg0-cG-fbf"/>
+                <constraint firstAttribute="trailing" secondItem="oNZ-Fc-muo" secondAttribute="trailing" constant="16" id="m0R-Gm-61X"/>
+                <constraint firstItem="oNZ-Fc-muo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="nN5-bU-Gyt"/>
+                <constraint firstItem="DLV-hA-Q6L" firstAttribute="top" secondItem="bUg-zu-TBV" secondAttribute="bottom" constant="46" id="wbR-Ai-M6Y"/>
+            </constraints>
             <point key="canvasLocation" x="32.5" y="56.5"/>
         </view>
     </objects>

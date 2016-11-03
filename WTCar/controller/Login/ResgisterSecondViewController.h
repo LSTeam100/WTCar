@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ResgisterSecondViewController : UIViewController
+//输入验证码
 @property (weak, nonatomic) IBOutlet UITextField *verityCodeTextField;
+//获取验证码
 @property (weak, nonatomic) IBOutlet UIButton *getVerityCodeButton;
+//验证码提交
 - (IBAction)SubmitButtonClick:(id)sender;
 
 @end

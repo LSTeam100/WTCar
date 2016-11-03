@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCGetPOSNotOpenViewController : UIViewController
+//开通POS
+- (IBAction)GetPOSToOpenButtonClick:(id)sender;
 
 @end

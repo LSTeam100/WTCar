@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCCarShopNameViewController : UIViewController
+- (IBAction)SaveCarShopNameButtonClick:(id)sender;
 
 @end

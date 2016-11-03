@@ -18,8 +18,11 @@
  *  第一次输入的密码
  */
 @property(nonatomic,copy)NSString *firstCode;
+//第一次输入密码标题
 @property (weak, nonatomic) IBOutlet UILabel *FirstCodeLabel;
+//第二次输入密码标题
 @property (weak, nonatomic) IBOutlet UILabel *SecCodeLabel;
+//密码修改完成
 - (IBAction)ConfirmButtonClick:(id)sender;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "RegisterFirstViewController.h"
-
+#import "ResgisterSecondViewController.h"
 @interface RegisterFirstViewController ()
 
 @end
@@ -35,5 +35,7 @@
 */
 
 - (IBAction)NextStepButtonClick:(id)sender {
+    ResgisterSecondViewController *registerSecondViewCon = [ResgisterSecondViewController new];
+    [self.navigationController pushViewController:registerSecondViewCon animated:YES];
 }
 @end

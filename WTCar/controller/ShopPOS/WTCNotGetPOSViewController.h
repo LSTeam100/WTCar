@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCNotGetPOSViewController : UIViewController
+//获取店铺POS
+- (IBAction)ToGetPOSButtonClick:(id)sender;
 
 @end

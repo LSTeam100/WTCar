@@ -16,32 +16,53 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FrM-O2-ywL">
-                    <frame key="frameInset" minX="16" minY="20" width="272" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FrM-O2-ywL">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0z1-09-7oP"/>
+                    </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDa-Yj-q28">
-                    <frame key="frameInset" minX="304" minY="23" width="30" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDa-Yj-q28">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="EIX-k7-cJh"/>
+                        <constraint firstAttribute="height" constant="25" id="MkJ-g0-tNx"/>
+                    </constraints>
                     <state key="normal" image="6_lit.png"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auO-Cm-hvO">
-                    <frame key="frameInset" minX="16" minY="99" width="343" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auO-Cm-hvO">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ITw-tL-ctd"/>
+                    </constraints>
                     <state key="normal" title="保存">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="SaveCarShopNameButtonClick:" destination="-1" eventType="touchUpInside" id="P66-cP-ehp"/>
+                    </connections>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nc1-R0-Xae">
-                    <frame key="frameInset" minX="16" minY="49" width="343" height="1"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc1-R0-Xae">
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="fZC-pz-iLl"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FrM-O2-ywL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Cof-9t-y6k"/>
+                <constraint firstItem="yDa-Yj-q28" firstAttribute="leading" secondItem="FrM-O2-ywL" secondAttribute="trailing" constant="16" id="EyJ-db-CdL"/>
+                <constraint firstAttribute="trailing" secondItem="yDa-Yj-q28" secondAttribute="trailing" constant="41" id="FnM-O8-Wat"/>
+                <constraint firstItem="auO-Cm-hvO" firstAttribute="top" secondItem="nc1-R0-Xae" secondAttribute="bottom" constant="49" id="Gtp-zP-4fb"/>
+                <constraint firstItem="nc1-R0-Xae" firstAttribute="top" secondItem="yDa-Yj-q28" secondAttribute="bottom" constant="1" id="RXE-jo-SzL"/>
+                <constraint firstItem="nc1-R0-Xae" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="U9T-h7-5EI"/>
+                <constraint firstItem="auO-Cm-hvO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="f6V-9S-gCJ"/>
+                <constraint firstAttribute="trailing" secondItem="nc1-R0-Xae" secondAttribute="trailing" constant="16" id="gCI-DC-KC3"/>
+                <constraint firstItem="FrM-O2-ywL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="uDj-Sb-uyC"/>
+                <constraint firstAttribute="trailing" secondItem="auO-Cm-hvO" secondAttribute="trailing" constant="16" id="uGS-xl-X3y"/>
+                <constraint firstItem="yDa-Yj-q28" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="zaa-wc-uuF"/>
+            </constraints>
         </view>
     </objects>
     <resources>

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface LoanServiceViewController : UIViewController
+//已申请配资的标题
+@property (weak, nonatomic) IBOutlet UILabel *LoanTitleLabel;
 
 @end

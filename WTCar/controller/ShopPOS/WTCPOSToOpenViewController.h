@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCPOSToOpenViewController : UIViewController
+//保存POS机密码
+- (IBAction)savePOSOpenCodeButtonClick:(id)sender;
+//POS机账号
+@property (weak, nonatomic) IBOutlet UITextField *POSIDTextField;
+//设置POS机密码
+@property (weak, nonatomic) IBOutlet UITextField *SetPOSPasswordTextField;
+//确认POS机密码
+@property (weak, nonatomic) IBOutlet UITextField *ConfirmPOSPasswordTextField;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "WTCNotGetPOSViewController.h"
-
+#import "WTCPOSToOpenViewController.h"
 @interface WTCNotGetPOSViewController ()
 
 @end
@@ -34,4 +34,8 @@
 }
 */
 
+- (IBAction)ToGetPOSButtonClick:(id)sender {
+    WTCPOSToOpenViewController *POSToOpenViewCon = [WTCPOSToOpenViewController new];
+    [self.navigationController pushViewController:POSToOpenViewCon animated:YES];
+}
 @end

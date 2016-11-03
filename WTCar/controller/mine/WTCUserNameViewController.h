@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCUserNameViewController : UIViewController
+- (IBAction)SaveUserNameButtonClick:(id)sender;
 
 @end

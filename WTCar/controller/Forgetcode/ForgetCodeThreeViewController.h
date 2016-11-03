@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ForgetCodeThreeViewController : UIViewController
+//手机号
 @property (weak, nonatomic) IBOutlet UITextField *TeleNumTextField;
+//设置登陆密码
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextField;
+//完成按钮
 @property (weak, nonatomic) IBOutlet UIButton *completeButton;
 
 @end

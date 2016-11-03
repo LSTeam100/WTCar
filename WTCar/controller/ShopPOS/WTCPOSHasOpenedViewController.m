@@ -7,7 +7,7 @@
 //
 
 #import "WTCPOSHasOpenedViewController.h"
-
+#import "WTCPOSChangePasswordViewController.h"
 @interface WTCPOSHasOpenedViewController ()
 
 @end
@@ -34,4 +34,8 @@
 }
 */
 
+- (IBAction)ChangePOSLogCodeButtonClick:(id)sender {
+    WTCPOSChangePasswordViewController *POSChangeCodeViewCon = [WTCPOSChangePasswordViewController new];
+    [self.navigationController pushViewController:POSChangeCodeViewCon animated:YES];
+}
 @end

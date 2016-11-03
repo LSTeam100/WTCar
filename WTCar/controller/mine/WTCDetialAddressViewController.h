@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCDetialAddressViewController : UIViewController
+- (IBAction)SaveDetialAddressButtonClick:(id)sender;
 
 @end

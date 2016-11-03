@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCBusinessVerityViewController : UIViewController
+- (IBAction)ConfirmBusinessButtonClick:(id)sender;
 
 @end
