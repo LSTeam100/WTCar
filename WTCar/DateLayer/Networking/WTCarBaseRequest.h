@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-static NSString * const BaseAddress = @"http://api.umeilin.com";
+#import "WTCarResponse.h"
+
+static NSString * const BaseAddress = @"http://carsok.utonw.com/carsokApi";
 
 @interface WTCarBaseRequest : NSObject
 typedef void(^onSuccessCallback)(WTCarBaseRequest* request);
@@ -15,8 +17,7 @@ typedef void(^onFailureCallback)(WTCarBaseRequest* request);
 
 -(id)initWithSuccessCallback: (onSuccessCallback)success failureCallback:(onFailureCallback) failed;
 
--(id)initWithSessionId:(NSString *)sessionId successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
-
+-(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 -(NSString*)getMethod;
 
 -(NSString*)getURL;
@@ -25,12 +26,11 @@ typedef void(^onFailureCallback)(WTCarBaseRequest* request);
 
 -(void)setParameters:(NSDictionary *)parameters;
 
-//-(UPMResponse *)getResponse;
+-(WTCarResponse *)getResponse;
 
 -(void)start;
 
--(void)updateSessionId:(NSString *)sessionId;
-
+-(void)updateToken:(NSString *)token;
 -(onFailureCallback)failCallback;
 
 

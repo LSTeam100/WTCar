@@ -24,18 +24,22 @@
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey];
     
     if ([leadPage isEqualToString:version]) {
-        WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
-        [self.navigationController pushViewController:upmTabbar animated:YES];
+        LoginViewController *login = [[LoginViewController alloc]init];
+        [self.navigationController pushViewController:login animated:YES];
+//        WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
+//        [self.navigationController pushViewController:upmTabbar animated:YES];
     }
     else
     {
         NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
-        NSString *loginToken=[userDefault objectForKey:@"loginToken"];
+        NSString *loginToken=[userDefault objectForKey:@"token"];
         if (loginToken == NULL) {
 //            LoginViewController *login = [[LoginViewController alloc]init];
 //            [self.navigationController pushViewController:login animated:YES];
-            WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
-            [self.navigationController pushViewController:upmTabbar animated:YES];
+//            WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
+//            [self.navigationController pushViewController:upmTabbar animated:YES];
+            LoginViewController *login = [[LoginViewController alloc]init];
+            [self.navigationController pushViewController:login animated:YES];
         }
         else{
             WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];

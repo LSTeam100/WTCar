@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LoginViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface LoginViewController : WTCBaseViewController
 @property (weak, nonatomic) IBOutlet UITextField *TeleNumTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextField;
 - (IBAction)LoginButtonClick:(id)sender;

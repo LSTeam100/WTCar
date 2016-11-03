@@ -188,6 +188,8 @@
 		185EB0241DC790E9008C1471 /* POSImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB0221DC790E8008C1471 /* POSImageTableViewCell.xib */; };
 		185EB0281DC7918F008C1471 /* POSHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EB0261DC7918F008C1471 /* POSHistoryTableViewCell.m */; };
 		185EB0291DC7918F008C1471 /* POSHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EB0271DC7918F008C1471 /* POSHistoryTableViewCell.xib */; };
+		186B746C1DCB09D800248894 /* WTCLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B746B1DCB09D800248894 /* WTCLoginRequest.m */; };
+		186B746F1DCB0E7300248894 /* WTCLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B746E1DCB0E7300248894 /* WTCLoginResult.m */; };
 		186BABDF1DC1FED900F877DA /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BABDD1DC1FED900F877DA /* SZTextView.m */; };
 		18BF087B1DC337B800FD679D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087A1DC337B800FD679D /* CoreLocation.framework */; };
 		18BF087D1DC337C500FD679D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087C1DC337C500FD679D /* QuartzCore.framework */; };
@@ -601,6 +603,10 @@
 		185EB0251DC7918F008C1471 /* POSHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSHistoryTableViewCell.h; sourceTree = "<group>"; };
 		185EB0261DC7918F008C1471 /* POSHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSHistoryTableViewCell.m; sourceTree = "<group>"; };
 		185EB0271DC7918F008C1471 /* POSHistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POSHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		186B746A1DCB09D800248894 /* WTCLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCLoginRequest.h; sourceTree = "<group>"; };
+		186B746B1DCB09D800248894 /* WTCLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCLoginRequest.m; sourceTree = "<group>"; };
+		186B746D1DCB0E7300248894 /* WTCLoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCLoginResult.h; sourceTree = "<group>"; };
+		186B746E1DCB0E7300248894 /* WTCLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCLoginResult.m; sourceTree = "<group>"; };
 		186BABDD1DC1FED900F877DA /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
 		186BABDE1DC1FED900F877DA /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
 		18BF087A1DC337B800FD679D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -1801,6 +1807,8 @@
 			children = (
 				18E6486E1DB6276800B11D8F /* WTCarResponse.h */,
 				18E6486F1DB6276800B11D8F /* WTCarResponse.m */,
+				186B746D1DCB0E7300248894 /* WTCLoginResult.h */,
+				186B746E1DCB0E7300248894 /* WTCLoginResult.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1810,6 +1818,8 @@
 			children = (
 				18E6486B1DB6103900B11D8F /* WTCarBaseRequest.h */,
 				18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */,
+				186B746A1DCB09D800248894 /* WTCLoginRequest.h */,
+				186B746B1DCB09D800248894 /* WTCLoginRequest.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -2128,6 +2138,7 @@
 				18D883511DBB49B200F19129 /* MJProperty.m in Sources */,
 				18BF6F351DC1DB7C003BF410 /* KKPickerAbstract.m in Sources */,
 				18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */,
+				186B746F1DCB0E7300248894 /* WTCLoginResult.m in Sources */,
 				18BF6F1D1DC1D3A3003BF410 /* MWTapDetectingImageView.m in Sources */,
 				185EB01E1DC78E40008C1471 /* CaiserTableViewCell.m in Sources */,
 				18D883AF1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m in Sources */,
@@ -2222,6 +2233,7 @@
 				0488DBBE1DC619CA0018155D /* WTCMyDetailViewController.m in Sources */,
 				18D883491DBB49B200F19129 /* MJRefreshLegendFooter.m in Sources */,
 				18F80E821DB5F30400FF1830 /* main.m in Sources */,
+				186B746C1DCB09D800248894 /* WTCLoginRequest.m in Sources */,
 				185EAF571DC5D852008C1471 /* WTCCarShareViewController.m in Sources */,
 				18BF6F101DC1D3A3003BF410 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
 				18F80EC81DB60CE700FF1830 /* AFSecurityPolicy.m in Sources */,

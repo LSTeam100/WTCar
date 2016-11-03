@@ -7,7 +7,10 @@
 //
 
 #import "LoginViewController.h"
-
+#import "WTCLoginRequest.h"
+#import "WTCLoginResult.h"
+#import "MBProgressHUD.h"
+#import "WTCTabBarViewController.h"
 @interface LoginViewController ()
 @end
 
@@ -16,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = YES;
+    self.TeleNumTextField.text = @"15102373847";
+    self.passWordTextField.text = @"123456";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -35,6 +40,42 @@
 */
 
 - (IBAction)LoginButtonClick:(id)sender {
+    NSString *mobilePhone = self.TeleNumTextField.text;
+    NSString *password = self.passWordTextField.text;
+    if (self.TeleNumTextField.text.length == 0) {
+        
+    }
+    else if(self.passWordTextField.text.length == 0){
+        
+    }
+    else
+    {
+        WTCLoginRequest *request = [[WTCLoginRequest alloc]initWithLoginName:mobilePhone password:password successCallback:^(WTCarBaseRequest *request) {
+            WTCLoginResult *loginResult = [request getResponse].data;
+            NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+            [userDefault setValue:mobilePhone forKey:@"loginName"];
+            [userDefault setValue:password forKey:@"password"];
+            NSString *token=loginResult.token;
+            [userDefault setValue:token forKey:@"token"];
+            
+            WTCTabBarViewController *wtcTabbar=[[WTCTabBarViewController alloc]init];
+            [self.navigationController pushViewController:wtcTabbar animated:YES];
+//            UINavigationController *parentVc= (UINavigationController *)[self presentingViewController];
+//            
+//            [parentVc popToRootViewControllerAnimated:NO];
+//            WTCTabBarViewController *wtcTabbar=[[WTCTabBarViewController alloc]init];
+//            [parentVc pushViewController:wtcTabbar animated:YES];
+            
+            
+            
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+        }];
+        [request start];
+    }
+    
+    
+    
 }
 
 - (IBAction)childAccountLoginButtonClick:(id)sender {

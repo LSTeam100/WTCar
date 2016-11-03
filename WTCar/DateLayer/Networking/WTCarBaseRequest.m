@@ -8,7 +8,6 @@
 
 #import "WTCarBaseRequest.h"
 #import "AFNetworking.h"
-#import "WTCarResponse.h"
 @interface WTCarBaseRequest ()
 {
     onSuccessCallback _onSuccess;
@@ -30,10 +29,10 @@
     return self;
 }
 
--(id)initWithSessionId:(NSString *)sessionId successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
+-(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
     self=[self initWithSuccessCallback:success failureCallback:failed];
     if(self){
-        _headers=@{@"session-id":sessionId};
+        _headers=@{@"token":token};
     }
     return self;
 }
@@ -47,9 +46,9 @@
     return @"GET";
 }
 
--(void)updateSessionId:(NSString *)sessionId{
-    if(sessionId!=nil && sessionId.length>0){
-        _headers=@{@"session-id":sessionId};
+-(void)updateToken:(NSString *)token{
+    if(token!=nil && token.length>0){
+        _headers=@{@"token":token};
     }
 }
 
@@ -65,10 +64,12 @@
     return _response;
 }
 
+
+
 -(void)processResponse:(NSDictionary *)responseDictionary{
     _response=[[WTCarResponse alloc]init];
     if(responseDictionary!=nil){
-        NSNumber *statusCode=(NSNumber *)responseDictionary[@"returnCode"];
+        NSNumber *statusCode=(NSNumber *)responseDictionary[@"retCode"];
         _response.statusCode=[statusCode intValue];
     }
 }
@@ -98,12 +99,14 @@
     
     [manager GET:url parameters:_parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSDictionary * result=responseObject;
+        [self processResponse:result];
+
         if([_response isSucceed]){
             if(_onSuccess!=nil){
                 _onSuccess(self);
             }
         }else{
-            [_response setErrorMessage:result[@"errorMessage"]];
+            [_response setErrorMessage:result[@"retMsg"]];
             if(_onFailure!=nil){
                 _onFailure(self);
             }
@@ -135,12 +138,13 @@
     manager.securityPolicy.allowInvalidCertificates=YES;
     [manager POST:url parameters:_parameters progress:nil success:^(NSURLSessionDataTask *  task, id  responseObject) {
         NSDictionary * result=responseObject;
+        [self processResponse:result];
         if([_response isSucceed]){
             if(_onSuccess!=nil){
                 _onSuccess(self);
             }
         }else{
-            [_response setErrorMessage:result[@"errorMessage"]];
+            [_response setErrorMessage:result[@"retMsg"]];
             if(_onFailure!=nil){
                 _onFailure(self);
             }

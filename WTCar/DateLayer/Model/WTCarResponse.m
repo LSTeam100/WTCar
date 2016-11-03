@@ -10,6 +10,6 @@
 
 @implementation WTCarResponse
 -(BOOL) isSucceed{
-    return self.statusCode==200;
+    return self.statusCode==0000;
 }
 @end

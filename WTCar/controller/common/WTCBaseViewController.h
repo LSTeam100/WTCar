@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WTCarBaseRequest.h"
 @interface WTCBaseViewController : UIViewController
+-(void)setBusyIndicatorVisible:(BOOL)visible;
+
+-(BOOL)handleResponseError:(WTCBaseViewController *)currentController
+                   request:(WTCarBaseRequest *)request
+       treatErrorAsUnknown:(BOOL) treated;
+
+-(void)setSigleButtonBg:(UIButton *)button;
+
+-(void)showDefaultFailureMessage;
+
+-(void)showMessage:(NSString *)message;
+
 
 @end

@@ -31,6 +31,8 @@ typedef enum
 {
     NSArray *infoArr;
     CGFloat _cellHeight[2];
+    UIToolbar *_inputAccessoryView;
+
 
 }
 
@@ -53,6 +55,24 @@ typedef enum
     self.cellData = [NSMutableArray arrayWithArray:@[ @"Existing text", @""]];
     
 }
+//-(UIToolbar *)inputAccessoryView
+// {
+//         if(!_inputAccessoryView)
+//             {
+//                     UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0,SCREEN_WIDTH, 44)];
+//                     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dodo)];
+//                     toolBar.items = [NSArray arrayWithObject:right];
+//                     return toolBar;
+//                 }
+//         return _inputAccessoryView;
+//}
+//- (BOOL) canBecomeFirstResponder {
+//    return YES;
+//}
+//-(void)dodo
+// {
+//    [self resignFirstResponder];
+//}
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
