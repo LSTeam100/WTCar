@@ -13,6 +13,7 @@
 #import "WTCBusinessPosViewController.h"
 #import "WTCShopSettingViewController.h"
 #import "WTCAddCarViewController.h"
+#import "LoanServiceViewController.h"
 @interface WTCHomeViewController ()
 {
     CGFloat carouselHeight;
@@ -88,6 +89,7 @@
     [_buttonView.DianPuSZButton addTarget:self action:@selector(DianPuSZButtonClick) forControlEvents:UIControlEventTouchUpInside];
     //商家Pos
     [_buttonView.ShangJiaPosButton addTarget:self action:@selector(ShangJPosButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [_buttonView.loanButton addTarget:self action:@selector(navitoLoanConTroller:) forControlEvents:UIControlEventTouchUpInside];
 }
 -(void)dataInit{
 
@@ -271,6 +273,11 @@
 {
     WTCBusinessPosViewController *BusinessPosViewController = [WTCBusinessPosViewController new];
     [self.navigationController pushViewController:BusinessPosViewController animated:YES];
+}
+-(void)navitoLoanConTroller:(id)sender
+{
+    LoanServiceViewController *loan = [[LoanServiceViewController alloc]init];
+    [self.navigationController pushViewController:loan animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

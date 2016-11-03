@@ -12,13 +12,13 @@
 #import "ChildLoginViewController.h"
 #import "ForgetCodeFirstViewController.h"
 @interface LoginViewController ()
-
 @end
 
 @implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view from its nib.
 }
 

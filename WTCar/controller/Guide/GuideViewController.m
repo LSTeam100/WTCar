@@ -85,7 +85,7 @@
         
         CGFloat height = CGRectGetHeight(self.view.frame) - offset;
         CGFloat width = CGRectGetWidth(self.view.frame);
-        UIImage *image = [UIImage imageNamed:@"new1.jpg"];
+        UIImage *image = [UIImage imageNamed:@"img_shop_default@2x"];
         width = (height / image.size.height) * image.size.width;
         
         offset = -22;
@@ -108,7 +108,7 @@
         imageView = (UIImageView *)[view viewWithTag:5002];
     }
     
-    NSString *imageName = [NSString stringWithFormat:@"new%d.jpg",index + 1];
+    NSString *imageName = [NSString stringWithFormat:@"img_shop_default@%dx",index + 1];
     imageView.image = [UIImage imageNamed:imageName];
     
     return view;

@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *DianPuSZButton;
 //商家POS
 @property (weak, nonatomic) IBOutlet UIButton *ShangJiaPosButton;
+@property(weak,nonatomic)IBOutlet UIButton *loanButton;
 
 
 @end

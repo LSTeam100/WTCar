@@ -48,6 +48,9 @@ CarMangeType;
     _segmentedControl.tintColor=[UIColor redColor];
     [_segmentedControl addTarget:self action:@selector(onSegmentSelectedChanged:)forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_segmentedControl];
+    
+    self.constraint.constant = -100;
+   
 
 }
 -(void)onSegmentSelectedChanged:(UISegmentedControl *)Seg{
@@ -89,6 +92,7 @@ CarMangeType;
         cell=[[[NSBundle mainBundle]loadNibNamed:@"WTCCarManageTableViewCell" owner:self options:nil] objectAtIndex:0];
         
         [cell.shareBtn addTarget:self action:@selector(navitoShareController) forControlEvents:UIControlEventTouchUpInside];
+        [cell.manageBtn addTarget:self action:@selector(showBottomeView) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (carMangeType == CarMangeTypeOffline) {
@@ -108,6 +112,18 @@ CarMangeType;
     }
     
     return cell;
+}
+-(void)showBottomeView
+{
+    self.constraint.constant = 0;
+}
+-(void)hidenBottomView
+{
+    self.constraint.constant = -100;
+}
+-(IBAction)hidenBottomView:(id)sender
+{
+    [self hidenBottomView];
 }
 -(void)navitoShareController
 {

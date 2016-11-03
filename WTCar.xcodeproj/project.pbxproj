@@ -304,6 +304,7 @@
 		18D883AF1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D883AD1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m */; };
 		18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */; };
 		18E648701DB6276800B11D8F /* WTCarResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486F1DB6276800B11D8F /* WTCarResponse.m */; };
+		18EF7BC91DC8EEF8005D2DFB /* WTCMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */; };
 		18F80E821DB5F30400FF1830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E811DB5F30400FF1830 /* main.m */; };
 		18F80E851DB5F30400FF1830 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E841DB5F30400FF1830 /* AppDelegate.mm */; };
 		18F80E881DB5F30400FF1830 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E871DB5F30400FF1830 /* ViewController.m */; };
@@ -809,6 +810,7 @@
 		18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarBaseRequest.m; sourceTree = "<group>"; };
 		18E6486E1DB6276800B11D8F /* WTCarResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCarResponse.h; sourceTree = "<group>"; };
 		18E6486F1DB6276800B11D8F /* WTCarResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarResponse.m; sourceTree = "<group>"; };
+		18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMineViewController.xib; sourceTree = "<group>"; };
 		18F80E7D1DB5F30400FF1830 /* WTCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F80E811DB5F30400FF1830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18F80E831DB5F30400FF1830 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1459,6 +1461,7 @@
 		18D882F61DBB1FDE00F19129 /* mine */ = {
 			isa = PBXGroup;
 			children = (
+				18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */,
 				18D883021DBB207D00F19129 /* WTCMineViewController.h */,
 				18D883031DBB207D00F19129 /* WTCMineViewController.m */,
 				0488DBB61DC5DA9E0018155D /* WTCMineViewTableViewCell.h */,
@@ -2011,6 +2014,7 @@
 				185EAF4F1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.xib in Resources */,
 				047442591DC80DE90067AE82 /* LoanServiceViewController.xib in Resources */,
 				185EAFE81DC5FC1C008C1471 /* WTCShareTableViewCell.xib in Resources */,
+				18EF7BC91DC8EEF8005D2DFB /* WTCMineViewController.xib in Resources */,
 				0451EDE91DBCB0270026D046 /* 2_banner_ch.png in Resources */,
 				042142121DC4E99D00F1A619 /* ResgisterSecondViewController.xib in Resources */,
 				042792831DCB936200216A60 /* GuideViewController.xib in Resources */,

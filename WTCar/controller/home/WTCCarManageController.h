@@ -11,4 +11,8 @@
 @interface WTCCarManageController : WTCBaseViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UISegmentedControl *segmentedControl;
 @property(nonatomic,strong)IBOutlet UITableView *tableview;
+@property(nonatomic,weak)IBOutlet UIView *mangeView;
+@property(nonatomic,weak)IBOutlet UIView *modifyView;
+@property(nonatomic,weak)IBOutlet UIButton *cancelBtn;
+@property(nonatomic,weak)IBOutlet NSLayoutConstraint *constraint;
 @end
