@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041D97D81DCB52EA0028B4EE /* LoanDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041D97D61DCB52EA0028B4EE /* LoanDetailTableViewCell.m */; };
+		041D97D91DCB52EA0028B4EE /* LoanDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041D97D71DCB52EA0028B4EE /* LoanDetailTableViewCell.xib */; };
 		042141F01DC4CCBC00F1A619 /* TTPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042141EF1DC4CCBC00F1A619 /* TTPasswordView.m */; };
 		042141F31DC4CE5B00F1A619 /* AccountSafetyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042141F21DC4CE5B00F1A619 /* AccountSafetyViewController.m */; };
 		042141F71DC4D0AE00F1A619 /* AccountSafetyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042141F51DC4D0AE00F1A619 /* AccountSafetyTableViewCell.m */; };
@@ -29,6 +31,8 @@
 		042142271DC4F16700F1A619 /* ForgetCodeSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042142251DC4F16700F1A619 /* ForgetCodeSecondViewController.xib */; };
 		0421422B1DC4F18D00F1A619 /* ForgetCodeThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042142291DC4F18D00F1A619 /* ForgetCodeThreeViewController.m */; };
 		0421422C1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0421422A1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib */; };
+		042792821DCB936200216A60 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042792801DCB936200216A60 /* GuideViewController.m */; };
+		042792831DCB936200216A60 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042792811DCB936200216A60 /* GuideViewController.xib */; };
 		043564E31DC72799008B1B5F /* WTCUserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043564E11DC72799008B1B5F /* WTCUserNameViewController.m */; };
 		043564E41DC72799008B1B5F /* WTCUserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043564E21DC72799008B1B5F /* WTCUserNameViewController.xib */; };
 		043564E81DC727C2008B1B5F /* WTCUserTeleNumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043564E61DC727C2008B1B5F /* WTCUserTeleNumViewController.m */; };
@@ -106,8 +110,6 @@
 		0474425E1DC80E190067AE82 /* AddLoanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474425C1DC80E190067AE82 /* AddLoanViewController.xib */; };
 		047442621DC80E340067AE82 /* AddLoanSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047442601DC80E340067AE82 /* AddLoanSuccessViewController.m */; };
 		047442631DC80E340067AE82 /* AddLoanSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047442611DC80E340067AE82 /* AddLoanSuccessViewController.xib */; };
-		047442671DC814740067AE82 /* WTCShopPOSCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047442651DC814740067AE82 /* WTCShopPOSCellTableViewCell.m */; };
-		047442681DC814740067AE82 /* WTCShopPOSCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047442661DC814740067AE82 /* WTCShopPOSCellTableViewCell.xib */; };
 		0488DBB31DC5C5FB0018155D /* ShopSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488DBB21DC5C5FB0018155D /* ShopSettingView.m */; };
 		0488DBB51DC5C7FC0018155D /* ShopSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBB41DC5C7FC0018155D /* ShopSettingView.xib */; };
 		0488DBB91DC5DA9E0018155D /* WTCMineViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488DBB71DC5DA9E0018155D /* WTCMineViewTableViewCell.m */; };
@@ -339,6 +341,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041D97D51DCB52EA0028B4EE /* LoanDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanDetailTableViewCell.h; sourceTree = "<group>"; };
+		041D97D61DCB52EA0028B4EE /* LoanDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetailTableViewCell.m; sourceTree = "<group>"; };
+		041D97D71DCB52EA0028B4EE /* LoanDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanDetailTableViewCell.xib; sourceTree = "<group>"; };
 		042141EE1DC4CCBC00F1A619 /* TTPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPasswordView.h; sourceTree = "<group>"; };
 		042141EF1DC4CCBC00F1A619 /* TTPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPasswordView.m; sourceTree = "<group>"; };
 		042141F11DC4CE5B00F1A619 /* AccountSafetyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSafetyViewController.h; sourceTree = "<group>"; };
@@ -373,6 +378,9 @@
 		042142281DC4F18D00F1A619 /* ForgetCodeThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetCodeThreeViewController.h; sourceTree = "<group>"; };
 		042142291DC4F18D00F1A619 /* ForgetCodeThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeThreeViewController.m; sourceTree = "<group>"; };
 		0421422A1DC4F18D00F1A619 /* ForgetCodeThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetCodeThreeViewController.xib; sourceTree = "<group>"; };
+		0427927F1DCB936200216A60 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		042792801DCB936200216A60 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		042792811DCB936200216A60 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
 		043564E01DC72799008B1B5F /* WTCUserNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCUserNameViewController.h; sourceTree = "<group>"; };
 		043564E11DC72799008B1B5F /* WTCUserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCUserNameViewController.m; sourceTree = "<group>"; };
 		043564E21DC72799008B1B5F /* WTCUserNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCUserNameViewController.xib; sourceTree = "<group>"; };
@@ -470,9 +478,6 @@
 		0474425F1DC80E340067AE82 /* AddLoanSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoanSuccessViewController.h; sourceTree = "<group>"; };
 		047442601DC80E340067AE82 /* AddLoanSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLoanSuccessViewController.m; sourceTree = "<group>"; };
 		047442611DC80E340067AE82 /* AddLoanSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLoanSuccessViewController.xib; sourceTree = "<group>"; };
-		047442641DC814740067AE82 /* WTCShopPOSCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCShopPOSCellTableViewCell.h; sourceTree = "<group>"; };
-		047442651DC814740067AE82 /* WTCShopPOSCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCShopPOSCellTableViewCell.m; sourceTree = "<group>"; };
-		047442661DC814740067AE82 /* WTCShopPOSCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCShopPOSCellTableViewCell.xib; sourceTree = "<group>"; };
 		0488DBB11DC5C5FB0018155D /* ShopSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSettingView.h; sourceTree = "<group>"; };
 		0488DBB21DC5C5FB0018155D /* ShopSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopSettingView.m; sourceTree = "<group>"; };
 		0488DBB41DC5C7FC0018155D /* ShopSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopSettingView.xib; sourceTree = "<group>"; };
@@ -941,6 +946,16 @@
 			path = Forgetcode;
 			sourceTree = "<group>";
 		};
+		0427927E1DCB926500216A60 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				0427927F1DCB936200216A60 /* GuideViewController.h */,
+				042792801DCB936200216A60 /* GuideViewController.m */,
+				042792811DCB936200216A60 /* GuideViewController.xib */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
 		0451ED7E1DBC6FA80026D046 /* SSFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -1087,9 +1102,6 @@
 				0474424F1DC80A040067AE82 /* WTCPOSChangePasswordViewController.h */,
 				047442501DC80A040067AE82 /* WTCPOSChangePasswordViewController.m */,
 				047442511DC80A040067AE82 /* WTCPOSChangePasswordViewController.xib */,
-				047442641DC814740067AE82 /* WTCShopPOSCellTableViewCell.h */,
-				047442651DC814740067AE82 /* WTCShopPOSCellTableViewCell.m */,
-				047442661DC814740067AE82 /* WTCShopPOSCellTableViewCell.xib */,
 			);
 			path = ShopPOS;
 			sourceTree = "<group>";
@@ -1106,6 +1118,9 @@
 				0474425F1DC80E340067AE82 /* AddLoanSuccessViewController.h */,
 				047442601DC80E340067AE82 /* AddLoanSuccessViewController.m */,
 				047442611DC80E340067AE82 /* AddLoanSuccessViewController.xib */,
+				041D97D51DCB52EA0028B4EE /* LoanDetailTableViewCell.h */,
+				041D97D61DCB52EA0028B4EE /* LoanDetailTableViewCell.m */,
+				041D97D71DCB52EA0028B4EE /* LoanDetailTableViewCell.xib */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -1382,6 +1397,7 @@
 		18D882CD1DBB13FA00F19129 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0427927E1DCB926500216A60 /* Guide */,
 				047442541DC80DB10067AE82 /* Loan */,
 				0474423A1DC808740067AE82 /* ShopPOS */,
 				0421421D1DC4F13000F1A619 /* Forgetcode */,
@@ -1998,7 +2014,6 @@
 				18D883941DBB6F9500F19129 /* WTCPublishCarViewController.xib in Resources */,
 				185EB00B1DC64195008C1471 /* WTCPOSViewController.xib in Resources */,
 				185EAFFC1DC62EAB008C1471 /* WTCMineDetailViewController.xib in Resources */,
-				047442681DC814740067AE82 /* WTCShopPOSCellTableViewCell.xib in Resources */,
 				0474423F1DC808A50067AE82 /* WTCNotGetPOSViewController.xib in Resources */,
 				043564F81DC72C54008B1B5F /* WTCCarShopIntroductionViewController.xib in Resources */,
 				0451EDE21DBCA0850026D046 /* WTCBusinessPosViewController.xib in Resources */,
@@ -2012,6 +2027,7 @@
 				18EF7BC91DC8EEF8005D2DFB /* WTCMineViewController.xib in Resources */,
 				0451EDE91DBCB0270026D046 /* 2_banner_ch.png in Resources */,
 				042142121DC4E99D00F1A619 /* ResgisterSecondViewController.xib in Resources */,
+				042792831DCB936200216A60 /* GuideViewController.xib in Resources */,
 				0488DBBF1DC619CA0018155D /* WTCMyDetailViewController.xib in Resources */,
 				18BF6F381DC1DB7C003BF410 /* KKPickerProvice.plist in Resources */,
 				042142021DC4D86300F1A619 /* SettingPayCodeViewController.xib in Resources */,
@@ -2025,6 +2041,7 @@
 				18BF6F141DC1D3A3003BF410 /* imageResources.xcassets in Resources */,
 				185EAF5D1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.xib in Resources */,
 				185EAFED1DC61EF5008C1471 /* HeadTableViewCell.xib in Resources */,
+				041D97D91DCB52EA0028B4EE /* LoanDetailTableViewCell.xib in Resources */,
 				0474424E1DC809B00067AE82 /* WTCPOSHasOpenedViewController.xib in Resources */,
 				18BF6F0F1DC1D3A3003BF410 /* DNImagePicker.strings in Resources */,
 				0451EDC21DBC89BA0026D046 /* 客户邀请.png in Resources */,
@@ -2164,6 +2181,7 @@
 				18D882ED1DBB1B8300F19129 /* WTCTabBarViewController.m in Sources */,
 				18D8837D1DBB49F500F19129 /* UIButton+WebCache.m in Sources */,
 				18BF6ED61DC09E7E003BF410 /* WTCAddCarViewController.m in Sources */,
+				042792821DCB936200216A60 /* GuideViewController.m in Sources */,
 				042142261DC4F16700F1A619 /* ForgetCodeSecondViewController.m in Sources */,
 				18D883931DBB6F9500F19129 /* WTCPublishCarViewController.m in Sources */,
 				0488DBC31DC64D0B0018155D /* WTCPeoNameVerityViewController.m in Sources */,
@@ -2213,7 +2231,6 @@
 				0451EDF31DBCC1A20026D046 /* MainButtonView.m in Sources */,
 				18D8838E1DBB674900F19129 /* WTCCarManageTableViewCell.m in Sources */,
 				185EAF5C1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.m in Sources */,
-				047442671DC814740067AE82 /* WTCShopPOSCellTableViewCell.m in Sources */,
 				042142211DC4F14D00F1A619 /* ForgetCodeFirstViewController.m in Sources */,
 				0488DBB31DC5C5FB0018155D /* ShopSettingView.m in Sources */,
 				18BF6F341DC1DB7C003BF410 /* KKMultiStringPicker.m in Sources */,
@@ -2278,6 +2295,7 @@
 				18D883471DBB49B200F19129 /* MJRefreshGifHeader.m in Sources */,
 				047442521DC80A040067AE82 /* WTCPOSChangePasswordViewController.m in Sources */,
 				042141F31DC4CE5B00F1A619 /* AccountSafetyViewController.m in Sources */,
+				041D97D81DCB52EA0028B4EE /* LoanDetailTableViewCell.m in Sources */,
 				18D8834B1DBB49B200F19129 /* UIScrollView+MJExtension.m in Sources */,
 				18BF6F161DC1D3A3003BF410 /* DNAssetsViewCell.m in Sources */,
 				043564ED1DC72BDF008B1B5F /* WTCCarShopNameViewController.m in Sources */,

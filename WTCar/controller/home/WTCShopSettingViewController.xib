@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCShopSettingViewController">
             <connections>
+                <outlet property="ShopIntroTextView" destination="PoG-Nr-7ME" id="GuN-Ar-1wm"/>
                 <outlet property="editShopImageButton" destination="1X8-UP-Hi6" id="2es-Vx-bF8"/>
                 <outlet property="mainShopImageView" destination="Hme-Nl-zNc" id="NTo-P7-JdO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

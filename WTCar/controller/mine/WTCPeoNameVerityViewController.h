@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCPeoNameVerityViewController : UIViewController
+- (IBAction)ConfirmNameButtonClick:(id)sender;
 
 @end

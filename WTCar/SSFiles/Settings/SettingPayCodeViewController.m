@@ -22,7 +22,7 @@
     [self addsubview];
     // Do any additional setup after loading the view from its nib.
 }
-
+//加载密码输入框
 -(void)addsubview
 {
     self.password = [[TTPasswordView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-256.5)/2,193.5, 256.5, 39)];

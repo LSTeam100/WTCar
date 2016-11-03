@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WTCBaseViewController.h"
-@interface LoanServiceViewController : WTCBaseViewController
+
+@interface LoanServiceViewController : UIViewController
+//已申请配资的标题
+@property (weak, nonatomic) IBOutlet UILabel *LoanTitleLabel;
+
 
 @end

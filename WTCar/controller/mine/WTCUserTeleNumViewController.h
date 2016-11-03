@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WTCUserTeleNumViewController : UIViewController
+- (IBAction)SaveUserTeleNumButtonClick:(id)sender;
 
 @end

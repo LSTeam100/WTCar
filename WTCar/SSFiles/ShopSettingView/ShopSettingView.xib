@@ -32,22 +32,16 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京朝阳路103号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oy-Aw-VCO">
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="x7U-7F-Ekl"/>
+                        <constraint firstAttribute="height" constant="21" id="4RE-Dt-nfq"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbu-tE-dZY">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="27" id="CqT-Wg-znm"/>
-                        <constraint firstAttribute="width" constant="36" id="sdC-u7-xfa"/>
-                    </constraints>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="woT-Rk-Wci">
                     <constraints>
-                        <constraint firstAttribute="height" constant="27" id="EgE-Zm-51g"/>
-                        <constraint firstAttribute="width" constant="36" id="e3W-pU-7yK"/>
+                        <constraint firstAttribute="width" constant="36" id="d4W-4r-Awm"/>
+                        <constraint firstAttribute="height" constant="27" id="mNr-t9-yny"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAX-ST-FHp">
@@ -59,39 +53,42 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhC-X2-Kj3">
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="mzO-PX-FFW"/>
+                        <constraint firstAttribute="height" constant="1" id="gwd-FC-NbF"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5p-iu-Bfc">
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="07S-ha-Mnr"/>
+                        <constraint firstAttribute="height" constant="1" id="phX-tV-7Nq"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="DhC-X2-Kj3" secondAttribute="trailing" constant="16" id="7qJ-eA-Xwa"/>
+                <constraint firstAttribute="trailing" secondItem="woT-Rk-Wci" secondAttribute="trailing" constant="16" id="5Sk-w4-ljn"/>
                 <constraint firstItem="yAX-ST-FHp" firstAttribute="top" secondItem="Do2-DM-izg" secondAttribute="top" constant="20" id="BYw-g2-BA5"/>
+                <constraint firstAttribute="trailing" secondItem="DhC-X2-Kj3" secondAttribute="trailing" constant="16" id="BtP-RR-eN5"/>
                 <constraint firstItem="ec9-ZJ-5jP" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="CgC-4C-cfD"/>
-                <constraint firstAttribute="trailing" secondItem="woT-Rk-Wci" secondAttribute="trailing" constant="16" id="MMg-am-GXK"/>
+                <constraint firstItem="DhC-X2-Kj3" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="DSh-XN-Dy8"/>
+                <constraint firstItem="DhC-X2-Kj3" firstAttribute="top" secondItem="G0g-m2-VM7" secondAttribute="bottom" constant="11" id="Lfc-75-BIE"/>
                 <constraint firstItem="G0g-m2-VM7" firstAttribute="centerY" secondItem="ec9-ZJ-5jP" secondAttribute="centerY" id="NAF-MD-t2k"/>
-                <constraint firstItem="woT-Rk-Wci" firstAttribute="centerY" secondItem="7oy-Aw-VCO" secondAttribute="centerY" id="Ox9-xJ-4zY"/>
-                <constraint firstItem="DhC-X2-Kj3" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="PUj-ei-Sea"/>
-                <constraint firstItem="dbu-tE-dZY" firstAttribute="centerY" secondItem="ec9-ZJ-5jP" secondAttribute="centerY" id="R0L-0V-oDm"/>
+                <constraint firstItem="7oy-Aw-VCO" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="Qvj-nk-mJ7"/>
+                <constraint firstItem="woT-Rk-Wci" firstAttribute="top" secondItem="DhC-X2-Kj3" secondAttribute="bottom" constant="7" id="R0N-Gy-Mc2"/>
+                <constraint firstItem="woT-Rk-Wci" firstAttribute="leading" secondItem="7oy-Aw-VCO" secondAttribute="trailing" constant="53" id="SEH-xK-Zah"/>
+                <constraint firstItem="7oy-Aw-VCO" firstAttribute="centerY" secondItem="woT-Rk-Wci" secondAttribute="centerY" id="UI0-5B-1Qr"/>
                 <constraint firstItem="ec9-ZJ-5jP" firstAttribute="top" secondItem="yAX-ST-FHp" secondAttribute="bottom" constant="7" id="Vcd-8r-ybN"/>
-                <constraint firstItem="S5p-iu-Bfc" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="WDU-pZ-pXR"/>
+                <constraint firstItem="S5p-iu-Bfc" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="YH8-sr-NaR"/>
                 <constraint firstItem="G0g-m2-VM7" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="65" id="Z4a-ue-Srp"/>
                 <constraint firstItem="yAX-ST-FHp" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="dHs-d9-fdY"/>
                 <constraint firstAttribute="trailing" secondItem="yAX-ST-FHp" secondAttribute="trailing" constant="16" id="gYV-w6-8Hs"/>
-                <constraint firstItem="woT-Rk-Wci" firstAttribute="leading" secondItem="7oy-Aw-VCO" secondAttribute="trailing" constant="53" id="jCc-Is-iiy"/>
-                <constraint firstAttribute="trailing" secondItem="dbu-tE-dZY" secondAttribute="trailing" constant="16" id="jwF-CN-Hhn"/>
-                <constraint firstItem="7oy-Aw-VCO" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="muj-3w-XhB"/>
-                <constraint firstItem="S5p-iu-Bfc" firstAttribute="top" secondItem="woT-Rk-Wci" secondAttribute="bottom" constant="5" id="nSs-pp-A8O"/>
-                <constraint firstItem="DhC-X2-Kj3" firstAttribute="top" secondItem="dbu-tE-dZY" secondAttribute="bottom" constant="8" id="r2H-T4-dCe"/>
-                <constraint firstAttribute="trailing" secondItem="S5p-iu-Bfc" secondAttribute="trailing" constant="16" id="rin-3h-w01"/>
-                <constraint firstItem="7oy-Aw-VCO" firstAttribute="top" secondItem="DhC-X2-Kj3" secondAttribute="bottom" constant="10" id="zlP-Ol-WBs"/>
+                <constraint firstAttribute="trailing" secondItem="S5p-iu-Bfc" secondAttribute="trailing" constant="16" id="iSz-jM-3Na"/>
+                <constraint firstItem="S5p-iu-Bfc" firstAttribute="top" secondItem="woT-Rk-Wci" secondAttribute="bottom" constant="5" id="mnM-6d-YGz"/>
             </constraints>
+            <connections>
+                <outlet property="ShopAddressLabel" destination="7oy-Aw-VCO" id="f52-ti-3fO"/>
+                <outlet property="ShopOwenerNameLabel" destination="ec9-ZJ-5jP" id="Way-lS-Iqn"/>
+                <outlet property="ShopOwenerTeleNumLabel" destination="G0g-m2-VM7" id="WL4-tG-VEP"/>
+            </connections>
             <point key="canvasLocation" x="60" y="44"/>
         </view>
     </objects>

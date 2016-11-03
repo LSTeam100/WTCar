@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AddLoanViewController : UIViewController
+//提交配资申请
+- (IBAction)confirmLoanButtonClick:(id)sender;
+//输入配资金额文本框
+@property (weak, nonatomic) IBOutlet UITextField *loanMoneyNumTextField;
 
 @end

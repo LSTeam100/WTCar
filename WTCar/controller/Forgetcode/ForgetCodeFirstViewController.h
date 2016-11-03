@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ForgetCodeFirstViewController : UIViewController
+//手机号输入栏
 @property (weak, nonatomic) IBOutlet UITextField *TeleNumTextField;
+//下一步
 - (IBAction)NextStepButtonClick:(id)sender;
 
 @end

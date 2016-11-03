@@ -7,7 +7,7 @@
 //
 
 #import "AddLoanViewController.h"
-
+#import "AddLoanSuccessViewController.h"
 @interface AddLoanViewController ()
 
 @end
@@ -34,4 +34,8 @@
 }
 */
 
+- (IBAction)confirmLoanButtonClick:(id)sender {
+    AddLoanSuccessViewController *addloanSuccessViewCon= [AddLoanSuccessViewController new];
+    [self.navigationController pushViewController:addloanSuccessViewCon animated:YES];
+}
 @end

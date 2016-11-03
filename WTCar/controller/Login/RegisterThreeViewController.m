@@ -7,7 +7,7 @@
 //
 
 #import "RegisterThreeViewController.h"
-
+#import "WTCHomeViewController.h"
 @interface RegisterThreeViewController ()
 
 @end
@@ -35,5 +35,7 @@
 */
 
 - (IBAction)confirmButtonClick:(id)sender {
+    WTCHomeViewController *homeViewController = [WTCHomeViewController new];
+    [self.navigationController pushViewController:homeViewController animated:YES];
 }
 @end

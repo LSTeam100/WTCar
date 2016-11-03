@@ -7,7 +7,7 @@
 //
 
 #import "ForgetCodeFirstViewController.h"
-
+#import "ForgetCodeSecondViewController.h"
 @interface ForgetCodeFirstViewController ()
 
 @end
@@ -35,5 +35,7 @@
 */
 
 - (IBAction)NextStepButtonClick:(id)sender {
+    ForgetCodeSecondViewController *forgetCOdeSecViewCon = [ForgetCodeSecondViewController new];
+    [self.navigationController pushViewController:forgetCOdeSecViewCon animated:YES];
 }
 @end

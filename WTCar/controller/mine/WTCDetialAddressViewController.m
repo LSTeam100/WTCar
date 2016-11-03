@@ -34,4 +34,6 @@
 }
 */
 
+- (IBAction)SaveDetialAddressButtonClick:(id)sender {
+}
 @end

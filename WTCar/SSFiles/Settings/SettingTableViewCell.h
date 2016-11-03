@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingTableViewCell : UITableViewCell
+
+//cell的名字
 @property (weak, nonatomic) IBOutlet UILabel *SettingLabel;
+//cell的指示箭头
 @property (weak, nonatomic) IBOutlet UIImageView *BackIconImageView;
 
 @end

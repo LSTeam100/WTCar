@@ -7,7 +7,7 @@
 //
 
 #import "ForgetCodeSecondViewController.h"
-
+#import "ForgetCodeThreeViewController.h"
 @interface ForgetCodeSecondViewController ()
 
 @end
@@ -35,5 +35,7 @@
 */
 
 - (IBAction)submitButtonClick:(id)sender {
+    ForgetCodeThreeViewController *forgetCodeThreeViewCon = [ForgetCodeThreeViewController new];
+    [self.navigationController pushViewController:forgetCodeThreeViewCon animated:YES];
 }
 @end

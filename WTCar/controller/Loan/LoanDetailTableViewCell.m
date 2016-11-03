@@ -1,14 +1,14 @@
 //
-//  WTCShopPOSCellTableViewCell.m
+//  LoanDetailTableViewCell.m
 //  WTCar
 //
-//  Created by MacBookPro on 2016/11/1.
+//  Created by MacBookPro on 2016/11/3.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCShopPOSCellTableViewCell.h"
+#import "LoanDetailTableViewCell.h"
 
-@implementation WTCShopPOSCellTableViewCell
+@implementation LoanDetailTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

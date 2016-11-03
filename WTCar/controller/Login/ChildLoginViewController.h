@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ChildLoginViewController : UIViewController
+//输入主账号手机号
 @property (weak, nonatomic) IBOutlet UITextField *MainTeleNumTextField;
+//输入密匙
 @property (weak, nonatomic) IBOutlet UITextField *KeyTextField;
+//输入子账户手机号
 @property (weak, nonatomic) IBOutlet UITextField *ChildTeleNumTextField;
+//子账户登录按钮
 - (IBAction)LoginButtonClick:(id)sender;
 
 @end

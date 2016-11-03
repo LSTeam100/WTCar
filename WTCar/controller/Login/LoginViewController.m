@@ -11,6 +11,10 @@
 #import "WTCLoginResult.h"
 #import "MBProgressHUD.h"
 #import "WTCTabBarViewController.h"
+#import "RegisterFirstViewController.h"
+#import "WTCHomeViewController.h"
+#import "ChildLoginViewController.h"
+#import "ForgetCodeFirstViewController.h"
 @interface LoginViewController ()
 @end
 
@@ -76,14 +80,22 @@
     
     
     
+//    WTCHomeViewController *homeViewController = [WTCHomeViewController new];
+//    [self.navigationController pushViewController:homeViewController animated:YES];
 }
 
 - (IBAction)childAccountLoginButtonClick:(id)sender {
+    ChildLoginViewController *childLoginViewCon = [ChildLoginViewController new];
+    [self.navigationController pushViewController:childLoginViewCon animated:YES];
 }
 
 - (IBAction)RegisterButtonClick:(id)sender {
+    RegisterFirstViewController *registerFirViewCon = [RegisterFirstViewController new];
+    [self.navigationController pushViewController:registerFirViewCon animated:YES];
 }
 
 - (IBAction)ForgetCodeButtonClick:(id)sender {
+    ForgetCodeFirstViewController *forgetCodefirViewCon = [ForgetCodeFirstViewController new];
+    [self.navigationController pushViewController:forgetCodefirViewCon animated:YES];
 }
 @end

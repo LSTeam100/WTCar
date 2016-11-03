@@ -7,7 +7,7 @@
 //
 
 #import "ForgetCodeThreeViewController.h"
-
+#import "LoginViewController.h"
 @interface ForgetCodeThreeViewController ()
 
 @end
@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [_completeButton addTarget:self action:@selector(compeleteToLogin) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +25,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)compeleToLogin
+{
+    LoginViewController *loginViewController = [LoginViewController new];
+    [self.navigationController pushViewController:loginViewController animated:YES];
+}
 /*
 #pragma mark - Navigation
 

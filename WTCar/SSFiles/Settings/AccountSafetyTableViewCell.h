@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AccountSafetyTableViewCell : UITableViewCell
+//cell标题
 @property (weak, nonatomic) IBOutlet UILabel *AccountSafetyLabel;
 
 @end

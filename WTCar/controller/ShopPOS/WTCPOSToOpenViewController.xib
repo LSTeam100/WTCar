@@ -8,6 +8,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCPOSToOpenViewController">
             <connections>
+                <outlet property="ConfirmPOSPasswordTextField" destination="W8R-90-GAv" id="Gp5-Ef-Mh9"/>
+                <outlet property="POSIDTextField" destination="sdy-UG-Nbs" id="ZNc-fQ-JW0"/>
+                <outlet property="SetPOSPasswordTextField" destination="CJ8-rZ-VM2" id="FgE-0v-zQe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,52 +19,85 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100001" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sdy-UG-Nbs">
-                    <frame key="frameInset" minX="16" minY="58" width="343" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100001" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sdy-UG-Nbs">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="09e-3u-eIO"/>
+                    </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请设置POS机密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-rZ-VM2">
-                    <frame key="frameInset" minX="16" minY="126" width="343" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请设置POS机密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-rZ-VM2">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="mIW-xg-vgN"/>
+                    </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请再次确认POS机密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8R-90-GAv">
-                    <frame key="frameInset" minX="16" minY="194" width="343" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请再次确认POS机密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8R-90-GAv">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="b80-k9-3An"/>
+                    </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-gd-me9">
-                    <frame key="frameInset" minX="16" minY="283" width="343" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-gd-me9">
                     <color key="backgroundColor" red="0.59687670920000002" green="0.95686274770000002" blue="0.50270967389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="v8J-nC-fGd"/>
+                    </constraints>
                     <state key="normal" title="保存">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="savePOSOpenCodeButtonClick:" destination="-1" eventType="touchUpInside" id="4xj-1c-iyl"/>
+                    </connections>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isR-oe-LP1">
-                    <frame key="frameInset" minX="16" minY="89" width="343" height="1"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isR-oe-LP1">
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="K55-dK-O0z"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9CN-44-Gid">
-                    <frame key="frameInset" minX="16" minY="156" width="343" height="1"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CN-44-Gid">
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="fc8-GB-mp8"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Px8-Rq-OPe">
-                    <frame key="frameInset" minX="16" minY="225" width="343" height="1"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Px8-Rq-OPe">
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="E9D-81-gn5"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Px8-Rq-OPe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="6Qh-AQ-bA9"/>
+                <constraint firstItem="eyv-gd-me9" firstAttribute="top" secondItem="Px8-Rq-OPe" secondAttribute="bottom" constant="58" id="8to-iD-CP5"/>
+                <constraint firstAttribute="trailing" secondItem="sdy-UG-Nbs" secondAttribute="trailing" constant="16" id="DyL-oI-I6C"/>
+                <constraint firstItem="Px8-Rq-OPe" firstAttribute="top" secondItem="W8R-90-GAv" secondAttribute="bottom" id="EvB-Sa-7RB"/>
+                <constraint firstAttribute="trailing" secondItem="9CN-44-Gid" secondAttribute="trailing" constant="16" id="M4Q-Yp-hfD"/>
+                <constraint firstItem="isR-oe-LP1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="NRS-Y4-wGk"/>
+                <constraint firstItem="CJ8-rZ-VM2" firstAttribute="top" secondItem="isR-oe-LP1" secondAttribute="bottom" constant="36" id="OeH-Jx-k0k"/>
+                <constraint firstAttribute="trailing" secondItem="isR-oe-LP1" secondAttribute="trailing" constant="16" id="OvP-dh-gD6"/>
+                <constraint firstAttribute="trailing" secondItem="eyv-gd-me9" secondAttribute="trailing" constant="16" id="R0j-Ig-BjV"/>
+                <constraint firstItem="9CN-44-Gid" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="SRW-3Y-fA5"/>
+                <constraint firstItem="isR-oe-LP1" firstAttribute="top" secondItem="sdy-UG-Nbs" secondAttribute="bottom" constant="1" id="Tjm-VV-7HN"/>
+                <constraint firstItem="eyv-gd-me9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="WHZ-UL-HpT"/>
+                <constraint firstItem="9CN-44-Gid" firstAttribute="top" secondItem="CJ8-rZ-VM2" secondAttribute="bottom" id="XO8-Tc-EJF"/>
+                <constraint firstAttribute="trailing" secondItem="W8R-90-GAv" secondAttribute="trailing" constant="16" id="ZW5-54-l3i"/>
+                <constraint firstItem="CJ8-rZ-VM2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="doO-VK-egi"/>
+                <constraint firstAttribute="trailing" secondItem="CJ8-rZ-VM2" secondAttribute="trailing" constant="16" id="fbK-zK-0pm"/>
+                <constraint firstAttribute="trailing" secondItem="Px8-Rq-OPe" secondAttribute="trailing" constant="16" id="iMp-7C-TcC"/>
+                <constraint firstItem="W8R-90-GAv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="kPf-F6-Zw3"/>
+                <constraint firstItem="sdy-UG-Nbs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="svt-dK-gEk"/>
+                <constraint firstItem="W8R-90-GAv" firstAttribute="top" secondItem="9CN-44-Gid" secondAttribute="bottom" constant="37" id="xyf-El-gvS"/>
+                <constraint firstItem="sdy-UG-Nbs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="zSg-Ho-TxA"/>
+            </constraints>
             <point key="canvasLocation" x="68.5" y="71.5"/>
         </view>
     </objects>

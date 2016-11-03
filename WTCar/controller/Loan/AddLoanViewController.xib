@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddLoanViewController">
             <connections>
+                <outlet property="loanMoneyNumTextField" destination="fkv-wg-N71" id="K2g-NJ-MDY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,42 +17,67 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UdC-lU-fHs">
-                    <frame key="frameInset" minY="20" width="375" height="70"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdC-lU-fHs">
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-wg-N71">
-                            <frame key="frameInset" minX="69" minY="20" width="211" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-wg-N71">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="7al-s7-ULQ"/>
+                            </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehL-el-DRk">
-                            <frame key="frameInset" minX="288" minY="25" width="79" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehL-el-DRk">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Zf9-9T-Aak"/>
+                                <constraint firstAttribute="width" constant="79" id="Zg6-Lj-EMg"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ehL-el-DRk" secondAttribute="trailing" constant="8" id="EL6-dj-aO9"/>
+                        <constraint firstItem="fkv-wg-N71" firstAttribute="top" secondItem="UdC-lU-fHs" secondAttribute="top" constant="20" id="Nxk-I6-8vS"/>
+                        <constraint firstItem="fkv-wg-N71" firstAttribute="leading" secondItem="UdC-lU-fHs" secondAttribute="leading" constant="69" id="PBL-Wt-OAD"/>
+                        <constraint firstItem="ehL-el-DRk" firstAttribute="leading" secondItem="fkv-wg-N71" secondAttribute="trailing" constant="8" id="PYO-LF-7IQ"/>
+                        <constraint firstAttribute="height" constant="70" id="lbC-xF-jXu"/>
+                        <constraint firstItem="ehL-el-DRk" firstAttribute="top" secondItem="UdC-lU-fHs" secondAttribute="top" constant="25" id="nKo-4P-qJF"/>
+                    </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVg-oP-gLH">
-                    <frame key="frameInset" minX="16" minY="133" width="343" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVg-oP-gLH">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="AT5-cb-XpU"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <state key="normal" title="确认">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="confirmLoanButtonClick:" destination="-1" eventType="touchUpInside" id="2Kh-Cv-bM4"/>
+                    </connections>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJ2-K6-IYr">
-                    <frame key="frameInset" minX="16" minY="88" width="343" height="1"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJ2-K6-IYr">
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="t6y-Yc-YCH"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wVg-oP-gLH" firstAttribute="top" secondItem="UdC-lU-fHs" secondAttribute="bottom" constant="43" id="6IJ-ED-VyI"/>
+                <constraint firstItem="wVg-oP-gLH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="E9t-EU-hrd"/>
+                <constraint firstItem="zJ2-K6-IYr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="EEz-S1-k6k"/>
+                <constraint firstItem="UdC-lU-fHs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="R65-xs-Z18"/>
+                <constraint firstItem="UdC-lU-fHs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iQK-At-qA5"/>
+                <constraint firstAttribute="trailing" secondItem="wVg-oP-gLH" secondAttribute="trailing" constant="16" id="jqm-dd-sNf"/>
+                <constraint firstAttribute="trailing" secondItem="UdC-lU-fHs" secondAttribute="trailing" id="lxr-RX-QGD"/>
+                <constraint firstAttribute="trailing" secondItem="zJ2-K6-IYr" secondAttribute="trailing" constant="16" id="orZ-KL-J97"/>
+                <constraint firstItem="zJ2-K6-IYr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="88" id="zq4-CM-8XU"/>
+            </constraints>
             <point key="canvasLocation" x="32.5" y="56.5"/>
         </view>
     </objects>
