@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationController.navigationBar.hidden = YES;
     self.TeleNumTextField.text = @"15102373847";
     self.passWordTextField.text = @"123456";
     // Do any additional setup after loading the view from its nib.

@@ -34,6 +34,7 @@
 //    WTCAddCarViewController *home=[[WTCAddCarViewController alloc]init];
 
 //    WTCCarManageController *home=[[WTCCarManageController alloc]init];
+
     WTCHomeViewController *home = [[WTCHomeViewController alloc]init];
 
     UINavigationController *homeNav=[[UINavigationController alloc]initWithRootViewController:home];
@@ -46,14 +47,17 @@
     
     UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"findClick", @"orderList", @"mine"];
-    NSArray *tabBarTitle = @[@"梧桐汽车",@"分享",@"我的"];
+    NSArray *tabBarItemImages = @[@"tabbar_home", @"tabbar_share", @"tabbar_mine"];
     
+    NSArray *tabBarTitle = @[@"梧桐汽车",@"分享",@"我的"];
     
     [self.tabBar setFrame:CGRectMake(CGRectGetMinX(self.tabBar.frame), CGRectGetMinY(self.tabBar.frame), CGRectGetWidth(self.tabBar.frame), 63)];
     NSInteger index = 0;
     for (WTCTabBarItem *item in self.tabBar.items) {
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
+        NSLog(@"%@",[NSString stringWithFormat:@"%@_normal",
+                    [tabBarItemImages objectAtIndex:index]]);
+                     
         UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
                                                       [tabBarItemImages objectAtIndex:index]]];
         UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",

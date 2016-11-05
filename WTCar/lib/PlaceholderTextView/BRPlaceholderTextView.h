@@ -39,7 +39,7 @@
 /**
  *  结束编辑 的 回调
  *
- *  @param begin <#begin description#>
+ *  @param begin begin description
  */
 -(void)addTextViewEndEvent:(void(^)(BRPlaceholderTextView*text))End;
 

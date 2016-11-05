@@ -139,6 +139,11 @@
     
    
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
+}
 -(BOOL)isHaveActivity
 {
     BOOL ret = false;

@@ -14,6 +14,7 @@
 #import "WTCShopSettingViewController.h"
 #import "WTCAddCarViewController.h"
 #import "LoanServiceViewController.h"
+#import "HomeNavigationBarView.h"
 @interface WTCHomeViewController ()
 {
     CGFloat carouselHeight;
@@ -45,9 +46,10 @@
     [self dataInit];
     [self bannerPicInit];
     [self buttonViewInit];
-
+//    HomeNavigationBarView *barview = [[HomeNavigationBarView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 66)];
+//    [self.navigationController.view addSubview:barview];
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.navigationController.view.backgroundColor= [UIColor redColor];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewWillAppear:(BOOL)animated

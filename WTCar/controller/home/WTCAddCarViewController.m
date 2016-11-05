@@ -18,6 +18,7 @@
 #import "WTCCarBrandViewController.h"
 #import "WTCCarCategoryViewController.h"
 #import "WTCTabBarViewController.h"
+#import "WTCCarDescribetionViewController.h"
 static NSString *collectionViewCellId = @"collectionViewCellId";
 static CGFloat imageSize = 80;
 
@@ -53,6 +54,7 @@ typedef enum
     self.title = @"发车";
     infoArr = @[@"品牌车系",@"所在地",@"里程",@"初次上牌时间",@"价格车辆描述"];
     self.cellData = [NSMutableArray arrayWithArray:@[ @"Existing text", @""]];
+    
     
 }
 //-(UIToolbar *)inputAccessoryView
@@ -164,7 +166,7 @@ typedef enum
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     //    layout.minimumInteritemSpacing = 10;
     layout.minimumLineSpacing = 10;
-    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,100, self.view.frame.size.width, imageSize + 20) collectionViewLayout:layout];
+    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,self.navigationController.navigationBar.frame.size.height +22, self.view.frame.size.width, imageSize + 20) collectionViewLayout:layout];
     self.collectionView = collectionView;
     [self.view addSubview:collectionView];
     
@@ -203,12 +205,23 @@ typedef enum
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 4) {
-        return [self getCarDescribtion:tableView atIndexPath:indexPath];
+        return [self getCarDes:tableView atIndexPath:indexPath];
     }
     else
     {
         return [self getCarInfo:tableView atIndexPath:indexPath];
     }
+}
+-(UITableViewCell *)getCarDes:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifer = @"desCell";
+    UITableViewCell *cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+    }
+    cell.textLabel.text = @"车辆描述";
+    return cell;
 }
 
 -(UITableViewCell *)getCarDescribtion:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
@@ -235,14 +248,10 @@ typedef enum
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row) {
-        case 1:
-            if (indexPath.row == 1) {
-                
-            }
-            break;
-        default:
-            break;
+    
+    if (indexPath.row == 4) {
+        WTCCarDescribetionViewController *desController = [[WTCCarDescribetionViewController alloc]init];
+        [self.navigationController pushViewController:desController animated:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 

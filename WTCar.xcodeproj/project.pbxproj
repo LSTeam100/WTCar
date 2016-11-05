@@ -193,6 +193,10 @@
 		186B746C1DCB09D800248894 /* WTCLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B746B1DCB09D800248894 /* WTCLoginRequest.m */; };
 		186B746F1DCB0E7300248894 /* WTCLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B746E1DCB0E7300248894 /* WTCLoginResult.m */; };
 		186BABDF1DC1FED900F877DA /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BABDD1DC1FED900F877DA /* SZTextView.m */; };
+		18ADE8C11DCC63F4009062F6 /* HomeNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */; };
+		18ADE8C31DCC641F009062F6 /* HomeNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */; };
+		18ADE8CF1DCC760B009062F6 /* WTCHotBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE8CD1DCC760B009062F6 /* WTCHotBrandTableViewCell.m */; };
+		18ADE8D01DCC760B009062F6 /* WTCHotBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ADE8CE1DCC760B009062F6 /* WTCHotBrandTableViewCell.xib */; };
 		18BF087B1DC337B800FD679D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087A1DC337B800FD679D /* CoreLocation.framework */; };
 		18BF087D1DC337C500FD679D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087C1DC337C500FD679D /* QuartzCore.framework */; };
 		18BF087F1DC337D100FD679D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF087E1DC337D100FD679D /* OpenGLES.framework */; };
@@ -306,6 +310,10 @@
 		18D883AF1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D883AD1DBC738E00F19129 /* UITableView+FixedTableHeaderView.m */; };
 		18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */; };
 		18E648701DB6276800B11D8F /* WTCarResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486F1DB6276800B11D8F /* WTCarResponse.m */; };
+		18E82D361DCC28A900D91501 /* WTCVerifyCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E82D351DCC28A900D91501 /* WTCVerifyCode.m */; };
+		18E82D3C1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E82D3B1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m */; };
+		18E82D401DCC30A500D91501 /* WTCCarDescribetionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E82D3E1DCC30A500D91501 /* WTCCarDescribetionViewController.m */; };
+		18E82D411DCC30A500D91501 /* WTCCarDescribetionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E82D3F1DCC30A500D91501 /* WTCCarDescribetionViewController.xib */; };
 		18EF7BC91DC8EEF8005D2DFB /* WTCMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */; };
 		18F80E821DB5F30400FF1830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E811DB5F30400FF1830 /* main.m */; };
 		18F80E851DB5F30400FF1830 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E841DB5F30400FF1830 /* AppDelegate.mm */; };
@@ -614,6 +622,12 @@
 		186B746E1DCB0E7300248894 /* WTCLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCLoginResult.m; sourceTree = "<group>"; };
 		186BABDD1DC1FED900F877DA /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
 		186BABDE1DC1FED900F877DA /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
+		18ADE8BF1DCC63F4009062F6 /* HomeNavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationBarView.h; sourceTree = "<group>"; };
+		18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationBarView.m; sourceTree = "<group>"; };
+		18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavigationBarView.xib; sourceTree = "<group>"; };
+		18ADE8CC1DCC760B009062F6 /* WTCHotBrandTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCHotBrandTableViewCell.h; sourceTree = "<group>"; };
+		18ADE8CD1DCC760B009062F6 /* WTCHotBrandTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCHotBrandTableViewCell.m; sourceTree = "<group>"; };
+		18ADE8CE1DCC760B009062F6 /* WTCHotBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCHotBrandTableViewCell.xib; sourceTree = "<group>"; };
 		18BF087A1DC337B800FD679D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		18BF087C1DC337C500FD679D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		18BF087E1DC337D100FD679D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -816,6 +830,13 @@
 		18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarBaseRequest.m; sourceTree = "<group>"; };
 		18E6486E1DB6276800B11D8F /* WTCarResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCarResponse.h; sourceTree = "<group>"; };
 		18E6486F1DB6276800B11D8F /* WTCarResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarResponse.m; sourceTree = "<group>"; };
+		18E82D341DCC28A900D91501 /* WTCVerifyCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCVerifyCode.h; sourceTree = "<group>"; };
+		18E82D351DCC28A900D91501 /* WTCVerifyCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCVerifyCode.m; sourceTree = "<group>"; };
+		18E82D3A1DCC2E5900D91501 /* WTCVerfiyCodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCVerfiyCodeRequest.h; sourceTree = "<group>"; };
+		18E82D3B1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCVerfiyCodeRequest.m; sourceTree = "<group>"; };
+		18E82D3D1DCC30A500D91501 /* WTCCarDescribetionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarDescribetionViewController.h; sourceTree = "<group>"; };
+		18E82D3E1DCC30A500D91501 /* WTCCarDescribetionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarDescribetionViewController.m; sourceTree = "<group>"; };
+		18E82D3F1DCC30A500D91501 /* WTCCarDescribetionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCarDescribetionViewController.xib; sourceTree = "<group>"; };
 		18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMineViewController.xib; sourceTree = "<group>"; };
 		18F80E7D1DB5F30400FF1830 /* WTCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F80E811DB5F30400FF1830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1447,6 +1468,9 @@
 				18D882F31DBB1E0200F19129 /* WTCNavigationBar.m */,
 				18D883881DBB63E100F19129 /* WTCBaseViewController.h */,
 				18D883891DBB63E100F19129 /* WTCBaseViewController.m */,
+				18ADE8BF1DCC63F4009062F6 /* HomeNavigationBarView.h */,
+				18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */,
+				18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -1588,6 +1612,12 @@
 				185EB0251DC7918F008C1471 /* POSHistoryTableViewCell.h */,
 				185EB0261DC7918F008C1471 /* POSHistoryTableViewCell.m */,
 				185EB0271DC7918F008C1471 /* POSHistoryTableViewCell.xib */,
+				18E82D3D1DCC30A500D91501 /* WTCCarDescribetionViewController.h */,
+				18E82D3E1DCC30A500D91501 /* WTCCarDescribetionViewController.m */,
+				18E82D3F1DCC30A500D91501 /* WTCCarDescribetionViewController.xib */,
+				18ADE8CC1DCC760B009062F6 /* WTCHotBrandTableViewCell.h */,
+				18ADE8CD1DCC760B009062F6 /* WTCHotBrandTableViewCell.m */,
+				18ADE8CE1DCC760B009062F6 /* WTCHotBrandTableViewCell.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -1825,6 +1855,8 @@
 				18E6486F1DB6276800B11D8F /* WTCarResponse.m */,
 				186B746D1DCB0E7300248894 /* WTCLoginResult.h */,
 				186B746E1DCB0E7300248894 /* WTCLoginResult.m */,
+				18E82D341DCC28A900D91501 /* WTCVerifyCode.h */,
+				18E82D351DCC28A900D91501 /* WTCVerifyCode.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1836,6 +1868,8 @@
 				18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */,
 				186B746A1DCB09D800248894 /* WTCLoginRequest.h */,
 				186B746B1DCB09D800248894 /* WTCLoginRequest.m */,
+				18E82D3A1DCC2E5900D91501 /* WTCVerfiyCodeRequest.h */,
+				18E82D3B1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -2012,6 +2046,7 @@
 				185EAF581DC5D852008C1471 /* WTCCarShareViewController.xib in Resources */,
 				0451EDCD1DBC89BA0026D046 /* 联系我们@3x.png in Resources */,
 				18D883941DBB6F9500F19129 /* WTCPublishCarViewController.xib in Resources */,
+				18E82D411DCC30A500D91501 /* WTCCarDescribetionViewController.xib in Resources */,
 				185EB00B1DC64195008C1471 /* WTCPOSViewController.xib in Resources */,
 				185EAFFC1DC62EAB008C1471 /* WTCMineDetailViewController.xib in Resources */,
 				0474423F1DC808A50067AE82 /* WTCNotGetPOSViewController.xib in Resources */,
@@ -2082,7 +2117,9 @@
 				0451EDB41DBC89BA0026D046 /* 6_lit@3x.png in Resources */,
 				0451EDBC1DBC89BA0026D046 /* 交通示意图.png in Resources */,
 				0488DBB51DC5C7FC0018155D /* ShopSettingView.xib in Resources */,
+				18ADE8C31DCC641F009062F6 /* HomeNavigationBarView.xib in Resources */,
 				0451EDD81DBCA0200026D046 /* WTCShopSettingViewController.xib in Resources */,
+				18ADE8D01DCC760B009062F6 /* WTCHotBrandTableViewCell.xib in Resources */,
 				185EAF391DC34142008C1471 /* WTCMapViewController.xib in Resources */,
 				0451EDC61DBC89BA0026D046 /* 搜索@2x.png in Resources */,
 				047442531DC80A040067AE82 /* WTCPOSChangePasswordViewController.xib in Resources */,
@@ -2200,6 +2237,7 @@
 				185EAFE01DC5EDFC008C1471 /* UMShareMenuItem.m in Sources */,
 				18BF6F121DC1D3A3003BF410 /* UIView+DNImagePicker.m in Sources */,
 				18BF6ED81DC09E7E003BF410 /* WTCAddCarTableViewCell.m in Sources */,
+				18ADE8CF1DCC760B009062F6 /* WTCHotBrandTableViewCell.m in Sources */,
 				18D883751DBB49F500F19129 /* NSData+ImageContentType.m in Sources */,
 				18BF6F3B1DC1DB7C003BF410 /* SafeControl.m in Sources */,
 				0451EDF81DBE3B720026D046 /* SettingViewController.m in Sources */,
@@ -2232,6 +2270,7 @@
 				18D8838E1DBB674900F19129 /* WTCCarManageTableViewCell.m in Sources */,
 				185EAF5C1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.m in Sources */,
 				042142211DC4F14D00F1A619 /* ForgetCodeFirstViewController.m in Sources */,
+				18E82D361DCC28A900D91501 /* WTCVerifyCode.m in Sources */,
 				0488DBB31DC5C5FB0018155D /* ShopSettingView.m in Sources */,
 				18BF6F341DC1DB7C003BF410 /* KKMultiStringPicker.m in Sources */,
 				18D8839B1DBB74A400F19129 /* pinyin.m in Sources */,
@@ -2245,6 +2284,7 @@
 				18F80E851DB5F30400FF1830 /* AppDelegate.mm in Sources */,
 				18D8834E1DBB49B200F19129 /* README.md in Sources */,
 				185EB00A1DC64195008C1471 /* WTCPOSViewController.m in Sources */,
+				18E82D3C1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m in Sources */,
 				185EB0231DC790E9008C1471 /* POSImageTableViewCell.m in Sources */,
 				18F80EC71DB60CE700FF1830 /* AFNetworkReachabilityManager.m in Sources */,
 				0488DBBE1DC619CA0018155D /* WTCMyDetailViewController.m in Sources */,
@@ -2295,12 +2335,14 @@
 				18D883471DBB49B200F19129 /* MJRefreshGifHeader.m in Sources */,
 				047442521DC80A040067AE82 /* WTCPOSChangePasswordViewController.m in Sources */,
 				042141F31DC4CE5B00F1A619 /* AccountSafetyViewController.m in Sources */,
+				18E82D401DCC30A500D91501 /* WTCCarDescribetionViewController.m in Sources */,
 				041D97D81DCB52EA0028B4EE /* LoanDetailTableViewCell.m in Sources */,
 				18D8834B1DBB49B200F19129 /* UIScrollView+MJExtension.m in Sources */,
 				18BF6F161DC1D3A3003BF410 /* DNAssetsViewCell.m in Sources */,
 				043564ED1DC72BDF008B1B5F /* WTCCarShopNameViewController.m in Sources */,
 				18D883551DBB49B200F19129 /* NSObject+MJProperty.m in Sources */,
 				0488DBC81DC64DA40018155D /* WTCBusinessVerityViewController.m in Sources */,
+				18ADE8C11DCC63F4009062F6 /* HomeNavigationBarView.m in Sources */,
 				18D882D61DBB153800F19129 /* RDVTabBarController.m in Sources */,
 				18D882D71DBB153800F19129 /* RDVTabBarItem.m in Sources */,
 				185EB0051DC635FA008C1471 /* HeadPhotoTableViewCell.m in Sources */,
