@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "WTCarBaseRequest.h"
 @interface WTCVerfiyCodeRequest : WTCarBaseRequest
-
+-(id)initWithLoginName:(NSString *)loginName password:(NSString *)password successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end

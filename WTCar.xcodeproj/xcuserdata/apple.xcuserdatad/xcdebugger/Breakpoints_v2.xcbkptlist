@@ -26,7 +26,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarBrandViewController.m"
-                  timestampString = "499853885.474666"
+                  timestampString = "500029814.012115"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "168"
@@ -41,7 +41,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarBrandViewController.m"
-                  timestampString = "499853885.476405"
+                  timestampString = "500029814.013923"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "168"
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/Tabbar/WTCTabBarViewController.m"
-            timestampString = "499494757.655087"
+            timestampString = "500004146.672406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-setTabBarHidden:"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCAddCarViewController.m"
-            timestampString = "499786714.994761"
+            timestampString = "499938495.915999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "@implementation WTCAddCarViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -241,38 +241,6 @@
             endingLineNumber = "53"
             landmarkName = "-LoginButtonClick:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LoginViewController LoginButtonClick:]"
-                  moduleName = "WTCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/WTCar/WTCar/controller/Login/LoginViewController.m"
-                  timestampString = "499853885.51069"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "496">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__40-[LoginViewController LoginButtonClick:]_block_invoke"
-                  moduleName = "WTCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/WTCar/WTCar/controller/Login/LoginViewController.m"
-                  timestampString = "499853885.512089"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -289,6 +257,83 @@
             endingLineNumber = "72"
             landmarkName = "-LoginButtonClick:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LoginViewController LoginButtonClick:]"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/WTCar/WTCar/controller/Login/LoginViewController.m"
+                  timestampString = "500029814.048766"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[LoginViewController LoginButtonClick:]_block_invoke"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/WTCar/WTCar/controller/Login/LoginViewController.m"
+                  timestampString = "500029814.050163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/WTCar/WTCar/controller/Login/LoginViewController.m"
+                  timestampString = "500029814.051528"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/WTCar/WTCar/controller/Login/LoginViewController.m"
+                  timestampString = "500029814.052883"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[LoginViewController LoginButtonClick:]_block_invoke.44"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/WTCar/WTCar/controller/Login/LoginViewController.m"
+                  timestampString = "500029814.054311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
