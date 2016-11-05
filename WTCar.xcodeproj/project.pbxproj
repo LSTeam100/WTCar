@@ -209,6 +209,17 @@
 		186B746C1DCB09D800248894 /* WTCLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B746B1DCB09D800248894 /* WTCLoginRequest.m */; };
 		186B746F1DCB0E7300248894 /* WTCLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B746E1DCB0E7300248894 /* WTCLoginResult.m */; };
 		186BABDF1DC1FED900F877DA /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BABDD1DC1FED900F877DA /* SZTextView.m */; };
+		18850B561DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B541DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.m */; };
+		18850B571DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18850B551DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.xib */; };
+		18850B5B1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B591DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.m */; };
+		18850B5C1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18850B5A1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.xib */; };
+		18850B6C1DCE29D900DA8F47 /* CGGeometry+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B5F1DCE29D900DA8F47 /* CGGeometry+RSKImageCropper.m */; };
+		18850B6D1DCE29D900DA8F47 /* RSKImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B631DCE29D900DA8F47 /* RSKImageCropViewController.m */; };
+		18850B6E1DCE29D900DA8F47 /* RSKImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B651DCE29D900DA8F47 /* RSKImageScrollView.m */; };
+		18850B6F1DCE29D900DA8F47 /* RSKTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B671DCE29D900DA8F47 /* RSKTouchView.m */; };
+		18850B701DCE29D900DA8F47 /* UIApplication+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B691DCE29D900DA8F47 /* UIApplication+RSKImageCropper.m */; };
+		18850B711DCE29D900DA8F47 /* UIImage+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B6B1DCE29D900DA8F47 /* UIImage+RSKImageCropper.m */; };
+		18850B751DCE2C3A00DA8F47 /* UPMImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B741DCE2C3A00DA8F47 /* UPMImageHelper.m */; };
 		18ADE8C11DCC63F4009062F6 /* HomeNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */; };
 		18ADE8C31DCC641F009062F6 /* HomeNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */; };
 		18ADE8CF1DCC760B009062F6 /* WTCHotBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE8CD1DCC760B009062F6 /* WTCHotBrandTableViewCell.m */; };
@@ -670,6 +681,28 @@
 		186B746E1DCB0E7300248894 /* WTCLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCLoginResult.m; sourceTree = "<group>"; };
 		186BABDD1DC1FED900F877DA /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
 		186BABDE1DC1FED900F877DA /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
+		18850B531DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCMineDetailInfoTableViewCell.h; sourceTree = "<group>"; };
+		18850B541DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCMineDetailInfoTableViewCell.m; sourceTree = "<group>"; };
+		18850B551DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMineDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
+		18850B581DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCMineDetailHeadTableViewCell.h; sourceTree = "<group>"; };
+		18850B591DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCMineDetailHeadTableViewCell.m; sourceTree = "<group>"; };
+		18850B5A1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMineDetailHeadTableViewCell.xib; sourceTree = "<group>"; };
+		18850B5E1DCE29D900DA8F47 /* CGGeometry+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+RSKImageCropper.h"; sourceTree = "<group>"; };
+		18850B5F1DCE29D900DA8F47 /* CGGeometry+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+RSKImageCropper.m"; sourceTree = "<group>"; };
+		18850B601DCE29D900DA8F47 /* RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageCropper.h; sourceTree = "<group>"; };
+		18850B611DCE29D900DA8F47 /* RSKImageCropViewController+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSKImageCropViewController+Protected.h"; sourceTree = "<group>"; };
+		18850B621DCE29D900DA8F47 /* RSKImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageCropViewController.h; sourceTree = "<group>"; };
+		18850B631DCE29D900DA8F47 /* RSKImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImageCropViewController.m; sourceTree = "<group>"; };
+		18850B641DCE29D900DA8F47 /* RSKImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageScrollView.h; sourceTree = "<group>"; };
+		18850B651DCE29D900DA8F47 /* RSKImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImageScrollView.m; sourceTree = "<group>"; };
+		18850B661DCE29D900DA8F47 /* RSKTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKTouchView.h; sourceTree = "<group>"; };
+		18850B671DCE29D900DA8F47 /* RSKTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKTouchView.m; sourceTree = "<group>"; };
+		18850B681DCE29D900DA8F47 /* UIApplication+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+RSKImageCropper.h"; sourceTree = "<group>"; };
+		18850B691DCE29D900DA8F47 /* UIApplication+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+RSKImageCropper.m"; sourceTree = "<group>"; };
+		18850B6A1DCE29D900DA8F47 /* UIImage+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RSKImageCropper.h"; sourceTree = "<group>"; };
+		18850B6B1DCE29D900DA8F47 /* UIImage+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RSKImageCropper.m"; sourceTree = "<group>"; };
+		18850B731DCE2C3A00DA8F47 /* UPMImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPMImageHelper.h; sourceTree = "<group>"; };
+		18850B741DCE2C3A00DA8F47 /* UPMImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPMImageHelper.m; sourceTree = "<group>"; };
 		18ADE8BF1DCC63F4009062F6 /* HomeNavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationBarView.h; sourceTree = "<group>"; };
 		18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationBarView.m; sourceTree = "<group>"; };
 		18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavigationBarView.xib; sourceTree = "<group>"; };
@@ -1348,6 +1381,36 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		18850B5D1DCE29D900DA8F47 /* RSKImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				18850B5E1DCE29D900DA8F47 /* CGGeometry+RSKImageCropper.h */,
+				18850B5F1DCE29D900DA8F47 /* CGGeometry+RSKImageCropper.m */,
+				18850B601DCE29D900DA8F47 /* RSKImageCropper.h */,
+				18850B611DCE29D900DA8F47 /* RSKImageCropViewController+Protected.h */,
+				18850B621DCE29D900DA8F47 /* RSKImageCropViewController.h */,
+				18850B631DCE29D900DA8F47 /* RSKImageCropViewController.m */,
+				18850B641DCE29D900DA8F47 /* RSKImageScrollView.h */,
+				18850B651DCE29D900DA8F47 /* RSKImageScrollView.m */,
+				18850B661DCE29D900DA8F47 /* RSKTouchView.h */,
+				18850B671DCE29D900DA8F47 /* RSKTouchView.m */,
+				18850B681DCE29D900DA8F47 /* UIApplication+RSKImageCropper.h */,
+				18850B691DCE29D900DA8F47 /* UIApplication+RSKImageCropper.m */,
+				18850B6A1DCE29D900DA8F47 /* UIImage+RSKImageCropper.h */,
+				18850B6B1DCE29D900DA8F47 /* UIImage+RSKImageCropper.m */,
+			);
+			path = RSKImageCropper;
+			sourceTree = "<group>";
+		};
+		18850B721DCE2C3A00DA8F47 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				18850B731DCE2C3A00DA8F47 /* UPMImageHelper.h */,
+				18850B741DCE2C3A00DA8F47 /* UPMImageHelper.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		18BF6ED91DC1D3A3003BF410 /* KKImageUpload */ = {
 			isa = PBXGroup;
 			children = (
@@ -1587,6 +1650,12 @@
 				043564F41DC72C54008B1B5F /* WTCCarShopIntroductionViewController.h */,
 				043564F51DC72C54008B1B5F /* WTCCarShopIntroductionViewController.m */,
 				043564F61DC72C54008B1B5F /* WTCCarShopIntroductionViewController.xib */,
+				18850B531DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.h */,
+				18850B541DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.m */,
+				18850B551DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.xib */,
+				18850B581DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.h */,
+				18850B591DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.m */,
+				18850B5A1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.xib */,
 			);
 			path = mine;
 			sourceTree = "<group>";
@@ -1889,9 +1958,9 @@
 		18F80EB31DB5F5C400FF1830 /* DateLayer */ = {
 			isa = PBXGroup;
 			children = (
+				18850B721DCE2C3A00DA8F47 /* Utils */,
 				18F80EB41DB5F5C400FF1830 /* Model */,
 				18F80EB51DB5F5C400FF1830 /* Networking */,
-				18F80EB61DB5F5C400FF1830 /* Utils */,
 			);
 			path = DateLayer;
 			sourceTree = "<group>";
@@ -1954,16 +2023,10 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		18F80EB61DB5F5C400FF1830 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		18F80EB71DB5F5C400FF1830 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				18850B5D1DCE29D900DA8F47 /* RSKImageCropper */,
 				185EAFA51DC5EDFB008C1471 /* UMSocial */,
 				185EAF5E1DC5E881008C1471 /* SharedItem */,
 				185EAF501DC5D448008C1471 /* PlaceholderTextView */,
@@ -2137,6 +2200,7 @@
 				0451EDB91DBC89BA0026D046 /* Back-icon@2x.png in Resources */,
 				185EAF441DC49105008C1471 /* img_shop_default@3x.png in Resources */,
 				185EAF4F1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.xib in Resources */,
+				18850B5C1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.xib in Resources */,
 				047442591DC80DE90067AE82 /* LoanServiceViewController.xib in Resources */,
 				185EAFE81DC5FC1C008C1471 /* WTCShareTableViewCell.xib in Resources */,
 				18EF7BC91DC8EEF8005D2DFB /* WTCMineViewController.xib in Resources */,
@@ -2194,6 +2258,7 @@
 				0451EDE71DBCB0270026D046 /* 1_banner_ch.png in Resources */,
 				0451EDC91DBC89BA0026D046 /* 更多@2x.png in Resources */,
 				185EAFD81DC5EDFB008C1471 /* WeiboSDK.bundle in Resources */,
+				18850B571DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.xib in Resources */,
 				0451EDB41DBC89BA0026D046 /* 6_lit@3x.png in Resources */,
 				0451EDBC1DBC89BA0026D046 /* 交通示意图.png in Resources */,
 				0488DBB51DC5C7FC0018155D /* ShopSettingView.xib in Resources */,
@@ -2282,6 +2347,7 @@
 				18D883101DBB484400F19129 /* MBProgressHUD.m in Sources */,
 				18D883541DBB49B200F19129 /* NSObject+MJKeyValue.m in Sources */,
 				18D883531DBB49B200F19129 /* NSObject+MJCoding.m in Sources */,
+				18850B6F1DCE29D900DA8F47 /* RSKTouchView.m in Sources */,
 				0451EDFC1DBE43210026D046 /* SettingTableViewCell.m in Sources */,
 				043564E81DC727C2008B1B5F /* WTCUserTeleNumViewController.m in Sources */,
 				18BF6F191DC1D3A3003BF410 /* DNFullImageButton.m in Sources */,
@@ -2290,6 +2356,7 @@
 				181A74E51DCDDCDA006F96E7 /* WTCReqCarInfoRequest.m in Sources */,
 				18D882FB1DBB202700F19129 /* WTCShareViewController.m in Sources */,
 				185EB0281DC7918F008C1471 /* POSHistoryTableViewCell.m in Sources */,
+				18850B6D1DCE29D900DA8F47 /* RSKImageCropViewController.m in Sources */,
 				185EAFE11DC5EDFC008C1471 /* UMShareMenuSelectionView.m in Sources */,
 				185EAFE71DC5FC1C008C1471 /* WTCShareTableViewCell.m in Sources */,
 				185EAFF61DC6265F008C1471 /* WTCProfileInfoTableViewCell.m in Sources */,
@@ -2306,7 +2373,9 @@
 				18D883931DBB6F9500F19129 /* WTCPublishCarViewController.m in Sources */,
 				0488DBC31DC64D0B0018155D /* WTCPeoNameVerityViewController.m in Sources */,
 				18D883481DBB49B200F19129 /* MJRefreshHeader.m in Sources */,
+				18850B6C1DCE29D900DA8F47 /* CGGeometry+RSKImageCropper.m in Sources */,
 				181A74EB1DCDE198006F96E7 /* WTCarStoreInfoRequest.m in Sources */,
+				18850B561DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.m in Sources */,
 				18BF6F0C1DC1D3A3003BF410 /* DNImagePickerController.m in Sources */,
 				185EB0191DC78A25008C1471 /* WTCCashierDeskViewController.m in Sources */,
 				18D8839A1DBB74A400F19129 /* ChineseString.m in Sources */,
@@ -2339,6 +2408,7 @@
 				18D8837B1DBB49F500F19129 /* SDWebImageManager.m in Sources */,
 				18BF6F391DC1DB7C003BF410 /* KKRangePicker.m in Sources */,
 				043564F21DC72C08008B1B5F /* WTCDetialAddressViewController.m in Sources */,
+				18850B751DCE2C3A00DA8F47 /* UPMImageHelper.m in Sources */,
 				181A74C11DCDC0D4006F96E7 /* WTCPublishCarRequest.m in Sources */,
 				18D8834A1DBB49B200F19129 /* MJRefreshLegendHeader.m in Sources */,
 				18F80E881DB5F30400FF1830 /* ViewController.m in Sources */,
@@ -2357,6 +2427,7 @@
 				185EAF491DC597DE008C1471 /* WTCCollectMoneyViewController.m in Sources */,
 				18D883521DBB49B200F19129 /* MJType.m in Sources */,
 				181A74DF1DCDDA3C006F96E7 /* WTCOffShelfList.m in Sources */,
+				18850B6E1DCE29D900DA8F47 /* RSKImageScrollView.m in Sources */,
 				0451EDF31DBCC1A20026D046 /* MainButtonView.m in Sources */,
 				18D8838E1DBB674900F19129 /* WTCCarManageTableViewCell.m in Sources */,
 				181A74EE1DCDE242006F96E7 /* WTCarGetStoreInfo.m in Sources */,
@@ -2388,6 +2459,8 @@
 				18BF6F101DC1D3A3003BF410 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
 				18F80EC81DB60CE700FF1830 /* AFSecurityPolicy.m in Sources */,
 				18D883861DBB638000F19129 /* WTCCarManageController.m in Sources */,
+				18850B5B1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.m in Sources */,
+				18850B701DCE29D900DA8F47 /* UIApplication+RSKImageCropper.m in Sources */,
 				042142111DC4E99D00F1A619 /* ResgisterSecondViewController.m in Sources */,
 				047442581DC80DE90067AE82 /* LoanServiceViewController.m in Sources */,
 				18D8837F1DBB49F500F19129 /* UIImage+MultiFormat.m in Sources */,
@@ -2396,6 +2469,7 @@
 				185EB0141DC767FB008C1471 /* WTCPOSCarInfoTableViewCell.m in Sources */,
 				18F80EC91DB60CE700FF1830 /* AFURLRequestSerialization.m in Sources */,
 				185EAFE31DC5EDFC008C1471 /* UMSocialUIManager.m in Sources */,
+				18850B711DCE29D900DA8F47 /* UIImage+RSKImageCropper.m in Sources */,
 				185EAF401DC4576D008C1471 /* WTCCarCategoryViewController.m in Sources */,
 				185EB0001DC62FFB008C1471 /* AuthenticationTableViewCell.m in Sources */,
 				185EAF381DC34142008C1471 /* WTCMapViewController.m in Sources */,

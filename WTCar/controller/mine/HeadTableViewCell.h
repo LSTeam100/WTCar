@@ -12,4 +12,6 @@
 @property(nonatomic,weak)IBOutlet UIImageView *profileImageView;
 @property(nonatomic,weak)IBOutlet UILabel *shopNameLabel;
 @property(nonatomic,weak)IBOutlet UILabel *shopOwnerLabel;
+@property(nonatomic,weak)IBOutlet UIImageView *vIdtiferImageview;
+@property(nonatomic,weak)IBOutlet UIImageView *bodyIndeiferImageView;
 @end

@@ -64,7 +64,6 @@
                                                         [tabBarItemImages objectAtIndex:index]]];
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         [item setTitle:[tabBarTitle objectAtIndex:index]];
-        
         index++;
     }
     self.navigationController.navigationBar.hidden=YES;

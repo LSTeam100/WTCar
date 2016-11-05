@@ -27,12 +27,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ws0-bC-6VP">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="20" id="QBM-rE-dEb"/>
-                            <constraint firstAttribute="height" constant="20" id="UQW-q9-0A2"/>
-                        </constraints>
-                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_next" translatesAutoresizingMaskIntoConstraints="NO" id="Ws0-bC-6VP"/>
                 </subviews>
                 <constraints>
                     <constraint firstItem="8Sv-60-wfd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FLj-bl-IXy"/>
@@ -47,6 +42,10 @@
                 <outlet property="headIcon" destination="8Sv-60-wfd" id="VZa-u0-Ipb"/>
                 <outlet property="headTitle" destination="xrc-Hi-9HY" id="8y0-AA-FMF"/>
             </connections>
+            <point key="canvasLocation" x="35" y="76"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="mine_next" width="6" height="10"/>
+    </resources>
 </document>

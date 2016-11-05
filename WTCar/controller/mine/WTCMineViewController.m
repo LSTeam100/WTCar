@@ -14,10 +14,10 @@
 #import "MoneyInfoTableViewCell.h"
 #import "WTCMineDetailViewController.h"
 #import "WTCNotGetPOSViewController.h"
-
 @interface WTCMineViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *posInfoArr;
+    NSArray *headIconArr;
 }
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 @end
@@ -32,6 +32,8 @@
 //    [testButton addTarget:self action:@selector(clickTestButton) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:testButton];
     posInfoArr = @[@"pos收款",@"提现",@"账单",@"我的银行卡",@"子账户",@"推荐好友",@"设置"];
+    headIconArr = @[@"mine_collectmoney",@"mine_wtihdrawCash",@"mine_bill",@"mine_bannkcard",@"mine_sub_account",@"mine_recommend",@"mine_seting"];
+    
     self.title = @"我的";
     // Do any additional setup after loading the view from its nib.
 }
@@ -81,7 +83,11 @@
         NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"WTCProfileInfoTableViewCell" owner:self options:nil];
         cell = [cellArr objectAtIndex:0];
     }
-//    cell.headTitle.text = [posInfoArr objectAtIndex:indexPath.row];
+    NSInteger index = indexPath.row - 2;
+    cell.headTitle.text = [posInfoArr objectAtIndex:index];
+    NSString *imageName = [headIconArr objectAtIndex:index];
+    cell.headIcon.image = [UIImage imageNamed:imageName];
+    //    cell.headTitle.text = [posInfoArr objectAtIndex:indexPath.row];
     return cell;
 }
 

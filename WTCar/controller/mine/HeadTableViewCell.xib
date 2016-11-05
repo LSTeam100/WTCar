@@ -16,7 +16,7 @@
                 <frame key="frameInset" width="320" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJU-Gl-d6f">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_user" translatesAutoresizingMaskIntoConstraints="NO" id="DJU-Gl-d6f">
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="6f9-i3-a6K"/>
                             <constraint firstAttribute="width" constant="60" id="okg-FD-KgN"/>
@@ -32,24 +32,19 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHk-GF-q0C">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_v_notIdtifer" translatesAutoresizingMaskIntoConstraints="NO" id="MHk-GF-q0C">
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="lwx-KT-whu"/>
                             <constraint firstAttribute="width" constant="20" id="vS1-Gs-9vU"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-C8-d8h">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_id_notidtifer" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-C8-d8h">
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="GS4-FU-Txz"/>
                             <constraint firstAttribute="width" constant="20" id="HHA-eL-KTx"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-oA-YOe">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="41" id="Gqm-7i-8a6"/>
-                            <constraint firstAttribute="height" constant="32" id="Mfb-XK-Wmk"/>
-                        </constraints>
-                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_next" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-oA-YOe"/>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="xqJ-1f-7DV" secondAttribute="bottom" constant="10" id="A1b-f1-Tqb"/>
@@ -67,11 +62,19 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bodyIndeiferImageView" destination="OTh-C8-d8h" id="zPT-Ma-VrM"/>
                 <outlet property="profileImageView" destination="DJU-Gl-d6f" id="47G-Jg-ir0"/>
                 <outlet property="shopNameLabel" destination="Rsp-lf-Z7e" id="wez-ji-cpZ"/>
                 <outlet property="shopOwnerLabel" destination="xqJ-1f-7DV" id="tf6-H2-inw"/>
+                <outlet property="vIdtiferImageview" destination="MHk-GF-q0C" id="p7s-f8-Y84"/>
             </connections>
             <point key="canvasLocation" x="107" y="6"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="mine_id_notidtifer" width="15" height="10"/>
+        <image name="mine_next" width="6" height="10"/>
+        <image name="mine_user" width="56" height="56"/>
+        <image name="mine_v_notIdtifer" width="13" height="15"/>
+    </resources>
 </document>

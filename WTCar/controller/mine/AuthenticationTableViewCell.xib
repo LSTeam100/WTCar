@@ -18,12 +18,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKH-Hm-xO0">
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZDa-dT-6UZ">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="DR2-3y-lc4"/>
-                                    <constraint firstAttribute="height" constant="30" id="oXD-E2-9BB"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mineDetail_body" translatesAutoresizingMaskIntoConstraints="NO" id="ZDa-dT-6UZ"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="实名认证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khN-dq-11D">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -47,12 +42,7 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omY-rA-8n5">
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fH7-bW-KC0">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="ZAr-Yk-CY7"/>
-                                    <constraint firstAttribute="height" constant="30" id="m75-gS-Q0p"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mineDetail_vIdtier" translatesAutoresizingMaskIntoConstraints="NO" id="fH7-bW-KC0"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商家认证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr4-VW-ZZj">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -89,4 +79,8 @@
             <point key="canvasLocation" x="195" y="84"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="mineDetail_body" width="26" height="30"/>
+        <image name="mineDetail_vIdtier" width="27" height="30"/>
+    </resources>
 </document>
