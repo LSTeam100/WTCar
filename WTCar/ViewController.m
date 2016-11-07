@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testInterface];
+    
     UIView *myView = [[UIView alloc]init];
     myView.backgroundColor =[UIColor blackColor];
     NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
@@ -50,7 +52,12 @@
     
     // Do any additional setup after loading the view, typically from a nib.
 }
+//这个方法测试接口
 
+-(void)testInterface
+{
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

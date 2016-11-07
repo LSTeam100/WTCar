@@ -122,6 +122,7 @@
 		0488DBC41DC64D0B0018155D /* WTCPeoNameVerityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBC21DC64D0B0018155D /* WTCPeoNameVerityViewController.xib */; };
 		0488DBC81DC64DA40018155D /* WTCBusinessVerityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488DBC61DC64DA40018155D /* WTCBusinessVerityViewController.m */; };
 		0488DBC91DC64DA40018155D /* WTCBusinessVerityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBC71DC64DA40018155D /* WTCBusinessVerityViewController.xib */; };
+		181738671DD07CBA00D3939B /* WTCCarType.m in Sources */ = {isa = PBXBuildFile; fileRef = 181738661DD07CBA00D3939B /* WTCCarType.m */; };
 		181A74C11DCDC0D4006F96E7 /* WTCPublishCarRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74C01DCDC0D4006F96E7 /* WTCPublishCarRequest.m */; };
 		181A74C41DCDC6AA006F96E7 /* WTCOnSaleListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74C31DCDC6AA006F96E7 /* WTCOnSaleListRequest.m */; };
 		181A74C71DCDC83A006F96E7 /* WTCOnSaleList.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74C61DCDC83A006F96E7 /* WTCOnSaleList.m */; };
@@ -536,6 +537,8 @@
 		0488DBC51DC64DA40018155D /* WTCBusinessVerityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCBusinessVerityViewController.h; sourceTree = "<group>"; };
 		0488DBC61DC64DA40018155D /* WTCBusinessVerityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCBusinessVerityViewController.m; sourceTree = "<group>"; };
 		0488DBC71DC64DA40018155D /* WTCBusinessVerityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCBusinessVerityViewController.xib; sourceTree = "<group>"; };
+		181738651DD07CBA00D3939B /* WTCCarType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarType.h; sourceTree = "<group>"; };
+		181738661DD07CBA00D3939B /* WTCCarType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarType.m; sourceTree = "<group>"; };
 		181A74BF1DCDC0D4006F96E7 /* WTCPublishCarRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCPublishCarRequest.h; sourceTree = "<group>"; };
 		181A74C01DCDC0D4006F96E7 /* WTCPublishCarRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCPublishCarRequest.m; sourceTree = "<group>"; };
 		181A74C21DCDC6AA006F96E7 /* WTCOnSaleListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCOnSaleListRequest.h; sourceTree = "<group>"; };
@@ -2003,6 +2006,8 @@
 				181A74ED1DCDE242006F96E7 /* WTCarGetStoreInfo.m */,
 				18850B791DCECC4C00DA8F47 /* WTCCarBrand.h */,
 				18850B7A1DCECC4C00DA8F47 /* WTCCarBrand.m */,
+				181738651DD07CBA00D3939B /* WTCCarType.h */,
+				181738661DD07CBA00D3939B /* WTCCarType.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2353,6 +2358,7 @@
 				18BF6F0B1DC1D3A3003BF410 /* DNImageFlowViewController.m in Sources */,
 				0421422B1DC4F18D00F1A619 /* ForgetCodeThreeViewController.m in Sources */,
 				181A74CD1DCDD159006F96E7 /* WTCarSaledRequest.m in Sources */,
+				181738671DD07CBA00D3939B /* WTCCarType.m in Sources */,
 				18BF6F111DC1D3A3003BF410 /* UIColor+Hex.m in Sources */,
 				18D882EB1DBB1B8300F19129 /* WTCTabBar.m in Sources */,
 				0474425D1DC80E190067AE82 /* AddLoanViewController.m in Sources */,

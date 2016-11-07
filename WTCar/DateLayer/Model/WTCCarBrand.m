@@ -18,7 +18,7 @@
         }
         else
         {
-            self.brandId = @"";
+            self.brandId = [NSNumber numberWithLong:0];
         }
         if ([dataDic objectForKey:@"initial"]) {
             self.initial = [dataDic objectForKey:@"initial"];
