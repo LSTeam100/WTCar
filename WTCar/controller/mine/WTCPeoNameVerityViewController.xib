@@ -147,7 +147,11 @@
                 <constraint firstItem="P07-fD-hNo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="CNo-z8-uhs"/>
                 <constraint firstItem="nkg-GV-m6h" firstAttribute="top" secondItem="xsH-x1-0oT" secondAttribute="bottom" constant="2" id="Cd7-ni-dcS"/>
                 <constraint firstAttribute="trailing" secondItem="52x-i4-0AK" secondAttribute="trailing" constant="16" id="Ci2-rX-HQm"/>
+<<<<<<< HEAD
                 <constraint firstItem="xsH-x1-0oT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="DjQ-hT-ibS"/>
+=======
+                <constraint firstItem="xsH-x1-0oT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="DjQ-hT-ibS"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstItem="kh4-mP-1yM" firstAttribute="centerY" secondItem="MZ2-vm-liG" secondAttribute="centerY" id="FUi-FK-4bG"/>
                 <constraint firstItem="3NL-fb-UTN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I7G-Xl-fgU"/>
                 <constraint firstItem="xsH-x1-0oT" firstAttribute="leading" secondItem="0TS-Zi-48e" secondAttribute="trailing" constant="8" id="MHp-Cd-12R"/>
@@ -163,7 +167,11 @@
                 <constraint firstItem="El1-tK-Brh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="eSo-n2-gby"/>
                 <constraint firstAttribute="trailing" secondItem="kh4-mP-1yM" secondAttribute="trailing" constant="16" id="fRp-g9-YJC"/>
                 <constraint firstItem="aMg-tc-fTu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="i4Z-hO-WoL"/>
+<<<<<<< HEAD
                 <constraint firstItem="O58-JW-rko" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="irV-5g-vqD"/>
+=======
+                <constraint firstItem="O58-JW-rko" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="irV-5g-vqD"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstItem="MZ2-vm-liG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="jrq-o8-yuc"/>
                 <constraint firstItem="O58-JW-rko" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lpP-Xd-VBu"/>
                 <constraint firstItem="kh4-mP-1yM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="nq7-pS-LSe"/>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -59,6 +63,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="K0l-yS-fCU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7r4-8e-FKl"/>
+<<<<<<< HEAD
                 <constraint firstItem="h1N-Ab-SJe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="FBx-aY-EJj"/>
                 <constraint firstItem="K0l-yS-fCU" firstAttribute="leading" secondItem="h1N-Ab-SJe" secondAttribute="trailing" constant="8" id="JsL-RG-ex6"/>
                 <constraint firstItem="ASx-Tn-9hj" firstAttribute="leading" secondItem="K0l-yS-fCU" secondAttribute="trailing" constant="8" id="M1v-Nt-idM"/>
@@ -66,6 +71,15 @@
                 <constraint firstItem="h1N-Ab-SJe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="dNc-Wp-apR"/>
                 <constraint firstAttribute="trailing" secondItem="ASx-Tn-9hj" secondAttribute="trailing" constant="16" id="gq4-an-6IO"/>
                 <constraint firstItem="ASx-Tn-9hj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="lKm-UH-xmF"/>
+=======
+                <constraint firstItem="h1N-Ab-SJe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="FBx-aY-EJj"/>
+                <constraint firstItem="K0l-yS-fCU" firstAttribute="leading" secondItem="h1N-Ab-SJe" secondAttribute="trailing" constant="8" id="JsL-RG-ex6"/>
+                <constraint firstItem="ASx-Tn-9hj" firstAttribute="leading" secondItem="K0l-yS-fCU" secondAttribute="trailing" constant="8" id="M1v-Nt-idM"/>
+                <constraint firstItem="K0l-yS-fCU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="Veo-wm-RpS"/>
+                <constraint firstItem="h1N-Ab-SJe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="dNc-Wp-apR"/>
+                <constraint firstAttribute="trailing" secondItem="ASx-Tn-9hj" secondAttribute="trailing" constant="16" id="gq4-an-6IO"/>
+                <constraint firstItem="ASx-Tn-9hj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="lKm-UH-xmF"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
             </constraints>
             <point key="canvasLocation" x="107" y="-3"/>
         </view>

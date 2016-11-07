@@ -77,7 +77,11 @@
                 <constraint firstItem="kHM-cZ-9gh" firstAttribute="centerY" secondItem="dZD-Kl-x15" secondAttribute="centerY" id="jiG-j9-f5E"/>
                 <constraint firstItem="i9J-3v-DVd" firstAttribute="top" secondItem="dZD-Kl-x15" secondAttribute="bottom" constant="52" id="qs5-Yd-Rgp"/>
                 <constraint firstItem="dZD-Kl-x15" firstAttribute="top" secondItem="dUo-6N-o2F" secondAttribute="bottom" constant="42" id="rcV-43-b1J"/>
+<<<<<<< HEAD
                 <constraint firstItem="dUo-6N-o2F" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="zr3-2t-jHx"/>
+=======
+                <constraint firstItem="dUo-6N-o2F" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="zr3-2t-jHx"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
             </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>

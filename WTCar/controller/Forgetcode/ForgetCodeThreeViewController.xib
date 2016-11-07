@@ -54,7 +54,11 @@
                 <constraint firstItem="beo-w8-wS2" firstAttribute="centerX" secondItem="LjW-cz-Pjd" secondAttribute="centerX" id="Tkc-uV-Tts"/>
                 <constraint firstItem="TSy-3a-62E" firstAttribute="centerX" secondItem="beo-w8-wS2" secondAttribute="centerX" id="Z33-wv-TMY"/>
                 <constraint firstItem="TSy-3a-62E" firstAttribute="top" secondItem="beo-w8-wS2" secondAttribute="bottom" constant="58" id="d44-bT-v9F"/>
+<<<<<<< HEAD
                 <constraint firstItem="LjW-cz-Pjd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="fJf-BV-Rel"/>
+=======
+                <constraint firstItem="LjW-cz-Pjd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="fJf-BV-Rel"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstItem="LjW-cz-Pjd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="pci-l5-lLv"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>

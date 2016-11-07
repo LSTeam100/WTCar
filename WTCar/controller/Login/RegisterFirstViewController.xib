@@ -44,7 +44,11 @@
                 <constraint firstItem="zAf-aQ-vww" firstAttribute="top" secondItem="IMC-Pe-9St" secondAttribute="bottom" constant="65" id="GAB-BG-KkR"/>
                 <constraint firstItem="zAf-aQ-vww" firstAttribute="centerX" secondItem="IMC-Pe-9St" secondAttribute="centerX" id="WH0-1e-T6g"/>
                 <constraint firstItem="IMC-Pe-9St" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Zx5-JL-fyq"/>
+<<<<<<< HEAD
                 <constraint firstItem="IMC-Pe-9St" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="115" id="d6c-Ef-TUV"/>
+=======
+                <constraint firstItem="IMC-Pe-9St" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="d6c-Ef-TUV"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstAttribute="trailing" secondItem="IMC-Pe-9St" secondAttribute="trailing" constant="16" id="xut-Ju-FQR"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>
