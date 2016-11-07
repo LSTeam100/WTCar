@@ -137,11 +137,9 @@
                 <constraint firstItem="5oN-fg-CWL" firstAttribute="centerY" secondItem="sh3-Ov-Lu6" secondAttribute="centerY" id="kyq-xd-A20"/>
                 <constraint firstItem="aU1-vK-q23" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="mp2-kx-ZlW"/>
                 <constraint firstItem="nxc-Ct-fKu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="179" id="rdV-I9-P4G"/>
-<<<<<<< HEAD
+
                 <constraint firstItem="HTS-cm-gll" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="vDh-sn-sie"/>
-=======
-                <constraint firstItem="HTS-cm-gll" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="vDh-sn-sie"/>
->>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
+
                 <constraint firstItem="aU1-vK-q23" firstAttribute="top" secondItem="I7X-70-Jsc" secondAttribute="bottom" constant="8" id="vZJ-gS-TBD"/>
                 <constraint firstAttribute="bottom" secondItem="LhF-GR-pgc" secondAttribute="bottom" id="yb2-4Y-ZJp"/>
             </constraints>

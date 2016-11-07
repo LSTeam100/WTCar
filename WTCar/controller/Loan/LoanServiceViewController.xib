@@ -30,11 +30,9 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="X3e-4e-Rg2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1BC-Jz-5Yf"/>
-<<<<<<< HEAD
+
                 <constraint firstItem="X3e-4e-Rg2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="RvI-xx-dWH"/>
-=======
-                <constraint firstItem="X3e-4e-Rg2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="RvI-xx-dWH"/>
->>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
+
                 <constraint firstAttribute="trailing" secondItem="X3e-4e-Rg2" secondAttribute="trailing" id="wFC-E2-eA1"/>
             </constraints>
             <point key="canvasLocation" x="74.5" y="71.5"/>

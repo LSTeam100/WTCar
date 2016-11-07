@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ChildLoginViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface ChildLoginViewController : WTCBaseViewController
 //输入主账号手机号
 @property (weak, nonatomic) IBOutlet UITextField *MainTeleNumTextField;
 //输入密匙

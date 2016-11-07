@@ -97,11 +97,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-<<<<<<< HEAD
+
                 <constraint firstItem="RW0-Yv-vtQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="7S0-1p-hsw"/>
-=======
-                <constraint firstItem="RW0-Yv-vtQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="7S0-1p-hsw"/>
->>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
+
                 <constraint firstItem="beY-rS-ICh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="93v-7T-a0b"/>
                 <constraint firstItem="fKQ-rG-ZBI" firstAttribute="leading" secondItem="7kR-d6-ywV" secondAttribute="trailing" constant="40" id="94Y-9Y-aEB"/>
                 <constraint firstAttribute="trailing" secondItem="RW0-Yv-vtQ" secondAttribute="trailing" id="G9z-8g-K4v"/>

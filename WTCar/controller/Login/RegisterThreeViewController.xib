@@ -59,11 +59,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-<<<<<<< HEAD
+
                 <constraint firstItem="cIy-6B-11M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="44z-ft-GKw"/>
-=======
-                <constraint firstItem="cIy-6B-11M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="44z-ft-GKw"/>
->>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
+
                 <constraint firstItem="gHm-Y4-bTO" firstAttribute="centerX" secondItem="Jgt-dT-NF3" secondAttribute="centerX" id="AIa-Ym-tdC"/>
                 <constraint firstItem="gHm-Y4-bTO" firstAttribute="width" secondItem="Jgt-dT-NF3" secondAttribute="width" id="HwQ-2F-hEz"/>
                 <constraint firstItem="cIy-6B-11M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="XGY-xs-DVr"/>

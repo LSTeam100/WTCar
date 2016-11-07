@@ -44,11 +44,9 @@
             <constraints>
                 <constraint firstItem="DLV-hA-Q6L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8su-Lc-1JZ"/>
                 <constraint firstItem="oNZ-Fc-muo" firstAttribute="top" secondItem="DLV-hA-Q6L" secondAttribute="bottom" constant="8" id="Job-wa-aJk"/>
-<<<<<<< HEAD
+
                 <constraint firstItem="bUg-zu-TBV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="O1H-Mu-Cel"/>
-=======
-                <constraint firstItem="bUg-zu-TBV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="O1H-Mu-Cel"/>
->>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
+
                 <constraint firstItem="bUg-zu-TBV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yg0-cG-fbf"/>
                 <constraint firstAttribute="trailing" secondItem="oNZ-Fc-muo" secondAttribute="trailing" constant="16" id="m0R-Gm-61X"/>
                 <constraint firstItem="oNZ-Fc-muo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="nN5-bU-Gyt"/>

@@ -94,11 +94,9 @@
                 <constraint firstAttribute="trailing" secondItem="CJ8-rZ-VM2" secondAttribute="trailing" constant="16" id="fbK-zK-0pm"/>
                 <constraint firstAttribute="trailing" secondItem="Px8-Rq-OPe" secondAttribute="trailing" constant="16" id="iMp-7C-TcC"/>
                 <constraint firstItem="W8R-90-GAv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="kPf-F6-Zw3"/>
-<<<<<<< HEAD
+
                 <constraint firstItem="sdy-UG-Nbs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="122" id="svt-dK-gEk"/>
-=======
-                <constraint firstItem="sdy-UG-Nbs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="svt-dK-gEk"/>
->>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
+
                 <constraint firstItem="W8R-90-GAv" firstAttribute="top" secondItem="9CN-44-Gid" secondAttribute="bottom" constant="37" id="xyf-El-gvS"/>
                 <constraint firstItem="sdy-UG-Nbs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="zSg-Ho-TxA"/>
             </constraints>

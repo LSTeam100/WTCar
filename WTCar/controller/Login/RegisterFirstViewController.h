@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RegisterFirstViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface RegisterFirstViewController : WTCBaseViewController
 //输入注册手机号
 @property (weak, nonatomic) IBOutlet UITextField *TeleNumTextField;
 //下一步

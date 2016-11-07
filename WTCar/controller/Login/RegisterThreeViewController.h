@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RegisterThreeViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface RegisterThreeViewController : WTCBaseViewController
 //注册的手机号
 @property (weak, nonatomic) IBOutlet UITextField *TeleNumTextField;
 //设置注册密码

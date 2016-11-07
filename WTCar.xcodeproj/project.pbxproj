@@ -94,6 +94,10 @@
 		0451EDFD1DBE43210026D046 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0451EDFB1DBE43210026D046 /* SettingTableViewCell.xib */; };
 		0451EDFF1DBE448D0026D046 /* Back-icon-拷贝-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0451EDFE1DBE448D0026D046 /* Back-icon-拷贝-5.png */; };
 		0451EE011DBE69890026D046 /* u718.png in Resources */ = {isa = PBXBuildFile; fileRef = 0451EE001DBE69890026D046 /* u718.png */; };
+		046767421DD0335200F59934 /* WTCMyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046767401DD0335200F59934 /* WTCMyDetailViewController.m */; };
+		046767431DD0335200F59934 /* WTCMyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046767411DD0335200F59934 /* WTCMyDetailViewController.xib */; };
+		046767471DD034F400F59934 /* WTCCarDescribetionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046767451DD034F400F59934 /* WTCCarDescribetionViewController.m */; };
+		046767481DD034F400F59934 /* WTCCarDescribetionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046767461DD034F400F59934 /* WTCCarDescribetionViewController.xib */; };
 		0474423E1DC808A50067AE82 /* WTCNotGetPOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474423C1DC808A50067AE82 /* WTCNotGetPOSViewController.m */; };
 		0474423F1DC808A50067AE82 /* WTCNotGetPOSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474423D1DC808A50067AE82 /* WTCNotGetPOSViewController.xib */; };
 		047442431DC809280067AE82 /* WTCGetPOSNotOpenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047442411DC809280067AE82 /* WTCGetPOSNotOpenViewController.m */; };
@@ -114,8 +118,6 @@
 		0488DBB51DC5C7FC0018155D /* ShopSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBB41DC5C7FC0018155D /* ShopSettingView.xib */; };
 		0488DBB91DC5DA9E0018155D /* WTCMineViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488DBB71DC5DA9E0018155D /* WTCMineViewTableViewCell.m */; };
 		0488DBBA1DC5DA9E0018155D /* WTCMineViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBB81DC5DA9E0018155D /* WTCMineViewTableViewCell.xib */; };
-		0488DBBE1DC619CA0018155D /* WTCMyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488DBBC1DC619CA0018155D /* WTCMyDetailViewController.m */; };
-		0488DBBF1DC619CA0018155D /* WTCMyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBBD1DC619CA0018155D /* WTCMyDetailViewController.xib */; };
 		0488DBC31DC64D0B0018155D /* WTCPeoNameVerityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488DBC11DC64D0B0018155D /* WTCPeoNameVerityViewController.m */; };
 		0488DBC41DC64D0B0018155D /* WTCPeoNameVerityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBC21DC64D0B0018155D /* WTCPeoNameVerityViewController.xib */; };
 		0488DBC81DC64DA40018155D /* WTCBusinessVerityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488DBC61DC64DA40018155D /* WTCBusinessVerityViewController.m */; };
@@ -339,8 +341,6 @@
 		18E648701DB6276800B11D8F /* WTCarResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6486F1DB6276800B11D8F /* WTCarResponse.m */; };
 		18E82D361DCC28A900D91501 /* WTCVerifyCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E82D351DCC28A900D91501 /* WTCVerifyCode.m */; };
 		18E82D3C1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E82D3B1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m */; };
-		18E82D401DCC30A500D91501 /* WTCCarDescribetionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E82D3E1DCC30A500D91501 /* WTCCarDescribetionViewController.m */; };
-		18E82D411DCC30A500D91501 /* WTCCarDescribetionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E82D3F1DCC30A500D91501 /* WTCCarDescribetionViewController.xib */; };
 		18EF7BC91DC8EEF8005D2DFB /* WTCMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */; };
 		18F80E821DB5F30400FF1830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E811DB5F30400FF1830 /* main.m */; };
 		18F80E851DB5F30400FF1830 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18F80E841DB5F30400FF1830 /* AppDelegate.mm */; };
@@ -489,6 +489,12 @@
 		0451EDFB1DBE43210026D046 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		0451EDFE1DBE448D0026D046 /* Back-icon-拷贝-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-icon-拷贝-5.png"; sourceTree = "<group>"; };
 		0451EE001DBE69890026D046 /* u718.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u718.png; sourceTree = "<group>"; };
+		0467673F1DD0335200F59934 /* WTCMyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCMyDetailViewController.h; sourceTree = "<group>"; };
+		046767401DD0335200F59934 /* WTCMyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCMyDetailViewController.m; sourceTree = "<group>"; };
+		046767411DD0335200F59934 /* WTCMyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMyDetailViewController.xib; sourceTree = "<group>"; };
+		046767441DD034F400F59934 /* WTCCarDescribetionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarDescribetionViewController.h; sourceTree = "<group>"; };
+		046767451DD034F400F59934 /* WTCCarDescribetionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarDescribetionViewController.m; sourceTree = "<group>"; };
+		046767461DD034F400F59934 /* WTCCarDescribetionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCarDescribetionViewController.xib; sourceTree = "<group>"; };
 		0474423B1DC808A50067AE82 /* WTCNotGetPOSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCNotGetPOSViewController.h; sourceTree = "<group>"; };
 		0474423C1DC808A50067AE82 /* WTCNotGetPOSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCNotGetPOSViewController.m; sourceTree = "<group>"; };
 		0474423D1DC808A50067AE82 /* WTCNotGetPOSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCNotGetPOSViewController.xib; sourceTree = "<group>"; };
@@ -519,9 +525,6 @@
 		0488DBB61DC5DA9E0018155D /* WTCMineViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCMineViewTableViewCell.h; sourceTree = "<group>"; };
 		0488DBB71DC5DA9E0018155D /* WTCMineViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCMineViewTableViewCell.m; sourceTree = "<group>"; };
 		0488DBB81DC5DA9E0018155D /* WTCMineViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMineViewTableViewCell.xib; sourceTree = "<group>"; };
-		0488DBBB1DC619CA0018155D /* WTCMyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCMyDetailViewController.h; sourceTree = "<group>"; };
-		0488DBBC1DC619CA0018155D /* WTCMyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCMyDetailViewController.m; sourceTree = "<group>"; };
-		0488DBBD1DC619CA0018155D /* WTCMyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMyDetailViewController.xib; sourceTree = "<group>"; };
 		0488DBC01DC64D0B0018155D /* WTCPeoNameVerityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCPeoNameVerityViewController.h; sourceTree = "<group>"; };
 		0488DBC11DC64D0B0018155D /* WTCPeoNameVerityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCPeoNameVerityViewController.m; sourceTree = "<group>"; };
 		0488DBC21DC64D0B0018155D /* WTCPeoNameVerityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCPeoNameVerityViewController.xib; sourceTree = "<group>"; };
@@ -915,9 +918,6 @@
 		18E82D351DCC28A900D91501 /* WTCVerifyCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCVerifyCode.m; sourceTree = "<group>"; };
 		18E82D3A1DCC2E5900D91501 /* WTCVerfiyCodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCVerfiyCodeRequest.h; sourceTree = "<group>"; };
 		18E82D3B1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCVerfiyCodeRequest.m; sourceTree = "<group>"; };
-		18E82D3D1DCC30A500D91501 /* WTCCarDescribetionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarDescribetionViewController.h; sourceTree = "<group>"; };
-		18E82D3E1DCC30A500D91501 /* WTCCarDescribetionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarDescribetionViewController.m; sourceTree = "<group>"; };
-		18E82D3F1DCC30A500D91501 /* WTCCarDescribetionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCCarDescribetionViewController.xib; sourceTree = "<group>"; };
 		18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMineViewController.xib; sourceTree = "<group>"; };
 		18F80E7D1DB5F30400FF1830 /* WTCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F80E811DB5F30400FF1830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1602,15 +1602,15 @@
 		18D882F61DBB1FDE00F19129 /* mine */ = {
 			isa = PBXGroup;
 			children = (
+				0467673F1DD0335200F59934 /* WTCMyDetailViewController.h */,
+				046767401DD0335200F59934 /* WTCMyDetailViewController.m */,
+				046767411DD0335200F59934 /* WTCMyDetailViewController.xib */,
 				18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */,
 				18D883021DBB207D00F19129 /* WTCMineViewController.h */,
 				18D883031DBB207D00F19129 /* WTCMineViewController.m */,
 				0488DBB61DC5DA9E0018155D /* WTCMineViewTableViewCell.h */,
 				0488DBB71DC5DA9E0018155D /* WTCMineViewTableViewCell.m */,
 				0488DBB81DC5DA9E0018155D /* WTCMineViewTableViewCell.xib */,
-				0488DBBB1DC619CA0018155D /* WTCMyDetailViewController.h */,
-				0488DBBC1DC619CA0018155D /* WTCMyDetailViewController.m */,
-				0488DBBD1DC619CA0018155D /* WTCMyDetailViewController.xib */,
 				0488DBC01DC64D0B0018155D /* WTCPeoNameVerityViewController.h */,
 				0488DBC11DC64D0B0018155D /* WTCPeoNameVerityViewController.m */,
 				0488DBC21DC64D0B0018155D /* WTCPeoNameVerityViewController.xib */,
@@ -1663,6 +1663,9 @@
 		18D882F71DBB1FDE00F19129 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				046767441DD034F400F59934 /* WTCCarDescribetionViewController.h */,
+				046767451DD034F400F59934 /* WTCCarDescribetionViewController.m */,
+				046767461DD034F400F59934 /* WTCCarDescribetionViewController.xib */,
 				18BF6ED11DC09E7E003BF410 /* WTCAddCarViewController.h */,
 				18BF6ED01DC09E7E003BF410 /* WTCAddCarViewController.m */,
 				18BF6ECF1DC09E7E003BF410 /* WTCAddCarViewController.xib */,
@@ -1729,9 +1732,6 @@
 				185EB0251DC7918F008C1471 /* POSHistoryTableViewCell.h */,
 				185EB0261DC7918F008C1471 /* POSHistoryTableViewCell.m */,
 				185EB0271DC7918F008C1471 /* POSHistoryTableViewCell.xib */,
-				18E82D3D1DCC30A500D91501 /* WTCCarDescribetionViewController.h */,
-				18E82D3E1DCC30A500D91501 /* WTCCarDescribetionViewController.m */,
-				18E82D3F1DCC30A500D91501 /* WTCCarDescribetionViewController.xib */,
 				18ADE8CC1DCC760B009062F6 /* WTCHotBrandTableViewCell.h */,
 				18ADE8CD1DCC760B009062F6 /* WTCHotBrandTableViewCell.m */,
 				18ADE8CE1DCC760B009062F6 /* WTCHotBrandTableViewCell.xib */,
@@ -2189,7 +2189,6 @@
 				185EAF581DC5D852008C1471 /* WTCCarShareViewController.xib in Resources */,
 				0451EDCD1DBC89BA0026D046 /* 联系我们@3x.png in Resources */,
 				18D883941DBB6F9500F19129 /* WTCPublishCarViewController.xib in Resources */,
-				18E82D411DCC30A500D91501 /* WTCCarDescribetionViewController.xib in Resources */,
 				185EB00B1DC64195008C1471 /* WTCPOSViewController.xib in Resources */,
 				185EAFFC1DC62EAB008C1471 /* WTCMineDetailViewController.xib in Resources */,
 				0474423F1DC808A50067AE82 /* WTCNotGetPOSViewController.xib in Resources */,
@@ -2207,7 +2206,6 @@
 				0451EDE91DBCB0270026D046 /* 2_banner_ch.png in Resources */,
 				042142121DC4E99D00F1A619 /* ResgisterSecondViewController.xib in Resources */,
 				042792831DCB936200216A60 /* GuideViewController.xib in Resources */,
-				0488DBBF1DC619CA0018155D /* WTCMyDetailViewController.xib in Resources */,
 				18BF6F381DC1DB7C003BF410 /* KKPickerProvice.plist in Resources */,
 				042142021DC4D86300F1A619 /* SettingPayCodeViewController.xib in Resources */,
 				042141F81DC4D0AE00F1A619 /* AccountSafetyTableViewCell.xib in Resources */,
@@ -2259,6 +2257,7 @@
 				0451EDC91DBC89BA0026D046 /* 更多@2x.png in Resources */,
 				185EAFD81DC5EDFB008C1471 /* WeiboSDK.bundle in Resources */,
 				18850B571DCE228700DA8F47 /* WTCMineDetailInfoTableViewCell.xib in Resources */,
+				046767431DD0335200F59934 /* WTCMyDetailViewController.xib in Resources */,
 				0451EDB41DBC89BA0026D046 /* 6_lit@3x.png in Resources */,
 				0451EDBC1DBC89BA0026D046 /* 交通示意图.png in Resources */,
 				0488DBB51DC5C7FC0018155D /* ShopSettingView.xib in Resources */,
@@ -2274,6 +2273,7 @@
 				0451EDBF1DBC89BA0026D046 /* 同期活动.png in Resources */,
 				185EAFF71DC6265F008C1471 /* WTCProfileInfoTableViewCell.xib in Resources */,
 				0451EDC51DBC89BA0026D046 /* 搜索.png in Resources */,
+				046767481DD034F400F59934 /* WTCCarDescribetionViewController.xib in Resources */,
 				0451EDC71DBC89BA0026D046 /* 搜索@3x.png in Resources */,
 				18BF6F0D1DC1D3A3003BF410 /* DNImagePickerController.strings in Resources */,
 				0488DBC41DC64D0B0018155D /* WTCPeoNameVerityViewController.xib in Resources */,
@@ -2422,6 +2422,8 @@
 				181A74D31DCDD5BC006F96E7 /* WTCSaledListRequest.m in Sources */,
 				181A74C71DCDC83A006F96E7 /* WTCOnSaleList.m in Sources */,
 				0474424D1DC809B00067AE82 /* WTCPOSHasOpenedViewController.m in Sources */,
+				046767421DD0335200F59934 /* WTCMyDetailViewController.m in Sources */,
+				046767471DD034F400F59934 /* WTCCarDescribetionViewController.m in Sources */,
 				181A74E21DCDDB5A006F96E7 /* WTCOnShelfRequest.m in Sources */,
 				185EAFF11DC62308008C1471 /* MoneyInfoTableViewCell.m in Sources */,
 				185EAF491DC597DE008C1471 /* WTCCollectMoneyViewController.m in Sources */,
@@ -2450,7 +2452,6 @@
 				18E82D3C1DCC2E5900D91501 /* WTCVerfiyCodeRequest.m in Sources */,
 				185EB0231DC790E9008C1471 /* POSImageTableViewCell.m in Sources */,
 				18F80EC71DB60CE700FF1830 /* AFNetworkReachabilityManager.m in Sources */,
-				0488DBBE1DC619CA0018155D /* WTCMyDetailViewController.m in Sources */,
 				18D883491DBB49B200F19129 /* MJRefreshLegendFooter.m in Sources */,
 				18F80E821DB5F30400FF1830 /* main.m in Sources */,
 				186B746C1DCB09D800248894 /* WTCLoginRequest.m in Sources */,
@@ -2504,7 +2505,6 @@
 				18D883471DBB49B200F19129 /* MJRefreshGifHeader.m in Sources */,
 				047442521DC80A040067AE82 /* WTCPOSChangePasswordViewController.m in Sources */,
 				042141F31DC4CE5B00F1A619 /* AccountSafetyViewController.m in Sources */,
-				18E82D401DCC30A500D91501 /* WTCCarDescribetionViewController.m in Sources */,
 				041D97D81DCB52EA0028B4EE /* LoanDetailTableViewCell.m in Sources */,
 				18D8834B1DBB49B200F19129 /* UIScrollView+MJExtension.m in Sources */,
 				18BF6F161DC1D3A3003BF410 /* DNAssetsViewCell.m in Sources */,

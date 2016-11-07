@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ResgisterSecondViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface ResgisterSecondViewController : WTCBaseViewController
 //输入验证码
 @property (weak, nonatomic) IBOutlet UITextField *verityCodeTextField;
 //获取验证码

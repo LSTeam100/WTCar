@@ -52,11 +52,10 @@
                 <constraint firstItem="zwp-nb-jlt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="o5Y-m8-E1l"/>
                 <constraint firstItem="mrc-4m-7bn" firstAttribute="top" secondItem="uN4-iu-1Mf" secondAttribute="bottom" constant="81" id="wj5-XG-hWY"/>
                 <constraint firstItem="mrc-4m-7bn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="wji-or-REr"/>
-<<<<<<< HEAD
+
                 <constraint firstItem="zwp-nb-jlt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="yjf-2A-9xD"/>
-=======
-                <constraint firstItem="zwp-nb-jlt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="yjf-2A-9xD"/>
->>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
+
+
             </constraints>
             <point key="canvasLocation" x="32.5" y="59.5"/>
         </view>
