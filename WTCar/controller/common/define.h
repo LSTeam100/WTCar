@@ -27,6 +27,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 \
 alpha:1.0]
 #pragma mark -获取颜色
 
+#define DEFAULTTOKEN @"123"
 
 #define WXPayNotification     @"WXPayNotification"
 //static NSString * const UPMShopOrderNotification=@"com.upmeilin.hohoda.upmshopordernotification";

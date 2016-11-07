@@ -8,7 +8,11 @@
 
 #import "WTCCarCategoryViewController.h"
 #import "ChineseString.h"
-
+#import "WTCCarBrandRequest.h"
+#import "WTCCarBrand.h"
+#import "CategoryTableViewCell.h"
+#import "UIImageView+WebCache.h"
+#import "WTCCarTypeRequest.h"
 
 typedef enum
 {
@@ -20,6 +24,8 @@ typedef enum
 @interface WTCCarCategoryViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSInteger spaceDistance;
+    NSArray *allBrandsArr;
+    NSMutableArray *brandsIndexArr;
 }
 @property(nonatomic,strong)NSMutableArray *indexArray;
 @property(nonatomic,strong)NSMutableArray *letterResultArr;
@@ -60,14 +66,56 @@ typedef enum
                               @"2014",@"a1",@"100",@"中国",@"暑假作业",
                               @"键盘", @"鼠标",@"hello",@"world",@"b1",
                               nil];
-    self.indexArray = [ChineseString IndexArray:stringsToSort];
-    self.letterResultArr = [ChineseString LetterSortArray:stringsToSort];
     
+    allBrandsArr = [[NSArray alloc]init];
+//    self.indexArray = [ChineseString IndexArray:stringsToSort];
+//    self.letterResultArr = [ChineseString LetterSortArray:stringsToSort];
     
     
     [self createTableview];
-    
+    [self loadCarBrand];
 
+}
+-(void)loadCarBrand
+{
+    [self setBusyIndicatorVisible:YES];
+    WTCCarBrandRequest *request = [[WTCCarBrandRequest alloc]initWithToken:@"124" successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCAllCarBrands *brands = [request getResponse].data;
+        allBrandsArr = [NSArray arrayWithArray: brands.brandsArr];
+        brandsIndexArr = [[NSMutableArray alloc]init];
+        
+        for (int i = 0; i < brands.brandsArr.count; i++) {
+            WTCCarBrand *abrand = [brands.brandsArr objectAtIndex:i];
+            [brandsIndexArr addObject:abrand.name];
+        }
+        self.indexArray = [ChineseString IndexArray:brandsIndexArr];
+        self.letterResultArr = [ChineseString LetterSortArray:brandsIndexArr];
+        
+        [self.tableView reloadData];
+        
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+
+    }];
+    [request start];
+    
+}
+-(void)loadCarType
+{
+    [self setBusyIndicatorVisible:YES];
+    WTCCarTypeRequest *request = [[WTCCarTypeRequest alloc]initWithToken:DEFAULTTOKEN successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        NSArray *arr = [request getResponse].data;
+        [self.secondTableView reloadData];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+    }];
+    [request start];
+    
 }
 -(void)createTableview
 {
@@ -121,12 +169,26 @@ typedef enum
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"carCategoryCell";
-    UITableViewCell *cell = nil;
+    
+    CategoryTableViewCell *cell = nil;
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"CategoryTableViewCell" owner:self options:nil]objectAtIndex:0];
     }
-    cell.textLabel.text = [[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+    NSString *name = [[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+    cell.nameLabel.text = name;
+    
+    for (int i = 0; i < allBrandsArr.count; i ++) {
+        WTCCarBrand *abrand = [allBrandsArr objectAtIndex:i];
+        if ([name isEqualToString:abrand.name]) {
+
+            [cell.logoImageView sd_setImageWithURL:[NSURL URLWithString:abrand.logo] placeholderImage:[UIImage imageNamed:@"1234"]];
+            break;
+        }
+    }
+    //    cell.logoImageView sd_setImageWithURL:<#(NSURL *)#> completed:<#^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)completedBlock#>
+    
     return cell;
 }
 
@@ -208,6 +270,7 @@ typedef enum
         [UIView setAnimationDuration:0.3];
         [self.secondTableView setFrame:moveRect];
         [UIView commitAnimations];
+            [self loadCarType];
         }
     }
     else if (tableview.tag == tableviewTypeSecond)
