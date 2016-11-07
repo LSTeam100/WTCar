@@ -12,6 +12,9 @@
 @interface ChineseString : NSObject
 @property(strong,nonatomic)NSString *string;
 @property(strong,nonatomic)NSString *pinYin;
+@property(strong,nonatomic)NSString *logoUrl;
+@property(strong,nonatomic)NSString *brandId;
+@property(strong,nonatomic)NSString *initial;
 
 //-----  返回tableview右方indexArray
 +(NSMutableArray*)IndexArray:(NSArray*)stringArr;
@@ -23,5 +26,9 @@
 ///----------------------
 //返回一组字母排序数组(中英混排)
 +(NSMutableArray*)SortArray:(NSArray*)stringArr;
+
+
++(NSMutableArray*)IndexArrayWithDic:(NSArray*)stringArr;
+
 
 @end
