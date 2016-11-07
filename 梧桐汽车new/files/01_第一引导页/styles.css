@@ -1,0 +1,146 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:570px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u53_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:130px;
+  height:220px;
+}
+#u53 {
+  position:absolute;
+  left:50px;
+  top:50px;
+  width:130px;
+  height:220px;
+}
+#u54 {
+  position:absolute;
+  left:2px;
+  top:102px;
+  width:126px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u55 {
+  position:absolute;
+  left:180px;
+  top:20px;
+  width:50px;
+  height:25px;
+}
+#u55_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:25px;
+  background-color:transparent;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:center;
+}
+#u55_input {
+  font-family:'应用字体';
+}
+#u56 {
+  position:absolute;
+  left:210px;
+  top:135px;
+  width:360px;
+  height:85px;
+}
+#u56_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:360px;
+  height:85px;
+  background-color:transparent;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:center;
+}
+#u56_input {
+  font-family:'应用字体';
+}
+#u57 {
+  position:absolute;
+  left:70px;
+  top:25px;
+  width:20px;
+  height:16px;
+}
+#u58 {
+  position:absolute;
+  left:16px;
+  top:0px;
+  width:2px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u57_input {
+  position:absolute;
+  left:-3px;
+  top:-2px;
+}
+#u59 {
+  position:absolute;
+  left:90px;
+  top:25px;
+  width:20px;
+  height:16px;
+}
+#u60 {
+  position:absolute;
+  left:16px;
+  top:0px;
+  width:2px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u59_input {
+  position:absolute;
+  left:-3px;
+  top:-2px;
+}
+#u61 {
+  position:absolute;
+  left:110px;
+  top:25px;
+  width:20px;
+  height:16px;
+}
+#u62 {
+  position:absolute;
+  left:16px;
+  top:0px;
+  width:2px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u61_input {
+  position:absolute;
+  left:-3px;
+  top:-2px;
+}

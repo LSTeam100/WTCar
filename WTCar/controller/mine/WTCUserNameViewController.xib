@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCUserNameViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="苗刚" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-B9-rri">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="BJL-sq-xp4"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87x-Eb-Oxa">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="IHC-RV-Ev8"/>
+                        <constraint firstAttribute="width" constant="30" id="ntK-gX-IAQ"/>
+                    </constraints>
+                    <state key="normal" image="6_lit.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-Jn-Lqq">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="TuJ-aj-7Vi"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="SaveUserNameButtonClick:" destination="-1" eventType="touchUpInside" id="PZv-ha-XtG"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jV-Qj-oxC">
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="kMu-US-Ht7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ax2-Jn-Lqq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="0Uh-Ei-YJE"/>
+                <constraint firstItem="8jV-Qj-oxC" firstAttribute="top" secondItem="87x-Eb-Oxa" secondAttribute="bottom" constant="1" id="7El-Ag-97Q"/>
+                <constraint firstItem="IVS-B9-rri" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="SdN-qe-Ysi"/>
+                <constraint firstItem="8jV-Qj-oxC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="WDl-C1-0ts"/>
+                <constraint firstAttribute="trailing" secondItem="Ax2-Jn-Lqq" secondAttribute="trailing" constant="16" id="YAu-uM-tup"/>
+                <constraint firstAttribute="trailing" secondItem="8jV-Qj-oxC" secondAttribute="trailing" constant="16" id="gvh-Sg-56f"/>
+                <constraint firstItem="87x-Eb-Oxa" firstAttribute="leading" secondItem="IVS-B9-rri" secondAttribute="trailing" constant="16" id="h1P-Tv-Zuz"/>
+                <constraint firstItem="IVS-B9-rri" firstAttribute="centerY" secondItem="87x-Eb-Oxa" secondAttribute="centerY" id="ih5-jg-JLZ"/>
+                <constraint firstItem="Ax2-Jn-Lqq" firstAttribute="top" secondItem="8jV-Qj-oxC" secondAttribute="bottom" constant="49" id="obd-ih-ati"/>
+                <constraint firstAttribute="trailing" secondItem="87x-Eb-Oxa" secondAttribute="trailing" constant="41" id="uJz-Yj-x9S"/>
+                <constraint firstItem="87x-Eb-Oxa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="up9-gV-Mod"/>
+            </constraints>
+            <point key="canvasLocation" x="59.5" y="71.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="6_lit.png" width="30" height="25"/>
+    </resources>
+</document>

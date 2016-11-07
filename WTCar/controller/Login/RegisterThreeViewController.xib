@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterThreeViewController">
+            <connections>
+                <outlet property="TeleNumTextField" destination="cIy-6B-11M" id="eYp-3t-3Ai"/>
+                <outlet property="carTypeTextField" destination="gHm-Y4-bTO" id="IYY-d1-2oJ"/>
+                <outlet property="passWordTextField" destination="Jgt-dT-NF3" id="71k-aa-8lo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIy-6B-11M">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ale-ZY-ex4"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgt-dT-NF3">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MDs-xE-rtb"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHm-Y4-bTO">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="dcb-pu-EHW"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spy-zH-wAZ">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="cpE-M5-bj1"/>
+                        <constraint firstAttribute="width" constant="343" id="oBd-4e-YnQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="完成">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="confirmButtonClick:" destination="-1" eventType="touchUpInside" id="hP5-38-TNh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cIy-6B-11M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="44z-ft-GKw"/>
+                <constraint firstItem="gHm-Y4-bTO" firstAttribute="centerX" secondItem="Jgt-dT-NF3" secondAttribute="centerX" id="AIa-Ym-tdC"/>
+                <constraint firstItem="gHm-Y4-bTO" firstAttribute="width" secondItem="Jgt-dT-NF3" secondAttribute="width" id="HwQ-2F-hEz"/>
+                <constraint firstItem="cIy-6B-11M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="XGY-xs-DVr"/>
+                <constraint firstItem="Spy-zH-wAZ" firstAttribute="centerX" secondItem="gHm-Y4-bTO" secondAttribute="centerX" id="bhd-4A-yX6"/>
+                <constraint firstItem="Jgt-dT-NF3" firstAttribute="centerX" secondItem="cIy-6B-11M" secondAttribute="centerX" id="bwx-Tn-yLE"/>
+                <constraint firstItem="Jgt-dT-NF3" firstAttribute="width" secondItem="cIy-6B-11M" secondAttribute="width" id="epR-nh-M4t"/>
+                <constraint firstItem="Spy-zH-wAZ" firstAttribute="top" secondItem="gHm-Y4-bTO" secondAttribute="bottom" constant="60" id="jaA-hA-CKK"/>
+                <constraint firstAttribute="trailing" secondItem="cIy-6B-11M" secondAttribute="trailing" constant="16" id="reM-pZ-UCm"/>
+                <constraint firstItem="Jgt-dT-NF3" firstAttribute="top" secondItem="cIy-6B-11M" secondAttribute="bottom" constant="40" id="upz-bc-vL0"/>
+                <constraint firstItem="gHm-Y4-bTO" firstAttribute="top" secondItem="Jgt-dT-NF3" secondAttribute="bottom" constant="40" id="wLX-OX-Ueo"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

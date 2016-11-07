@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCPOSViewController">
+            <connections>
+                <outlet property="alreadyPayBtn" destination="hEj-QK-m7v" id="EuH-Ho-0z4"/>
+                <outlet property="collectMoneyBtn" destination="79a-gk-qwi" id="FIj-Fb-lBz"/>
+                <outlet property="tableView" destination="30S-VH-QNk" id="t9I-Wi-wKP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="waitPayBtn" destination="HYH-dp-Cto" id="YrB-K1-qHJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYH-dp-Cto">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="iXy-5c-ouV"/>
+                    </constraints>
+                    <state key="normal" title="待支付"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEj-QK-m7v">
+                    <state key="normal" title="已支付"/>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="30S-VH-QNk">
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1In-CB-1gg"/>
+                        <outlet property="delegate" destination="-1" id="w3k-Gc-aWf"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-LH-uXM">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79a-gk-qwi">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="H2u-Sc-BA2"/>
+                                <constraint firstAttribute="height" constant="30" id="Z8A-me-vYq"/>
+                            </constraints>
+                            <state key="normal" title="去收款"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="79a-gk-qwi" firstAttribute="centerY" secondItem="A9J-LH-uXM" secondAttribute="centerY" id="1gD-r7-r2y"/>
+                        <constraint firstAttribute="trailing" secondItem="79a-gk-qwi" secondAttribute="trailing" constant="10" id="AyY-By-2JU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hEj-QK-m7v" firstAttribute="width" secondItem="HYH-dp-Cto" secondAttribute="width" id="0QA-YQ-2mw"/>
+                <constraint firstItem="hEj-QK-m7v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2yb-PN-sld"/>
+                <constraint firstItem="30S-VH-QNk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2zD-Lc-dnc"/>
+                <constraint firstItem="30S-VH-QNk" firstAttribute="top" secondItem="hEj-QK-m7v" secondAttribute="bottom" id="BDP-iC-bWC"/>
+                <constraint firstItem="A9J-LH-uXM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E1K-g0-OSJ"/>
+                <constraint firstItem="HYH-dp-Cto" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MNq-Lg-Lvw"/>
+                <constraint firstAttribute="trailing" secondItem="30S-VH-QNk" secondAttribute="trailing" id="OQv-x4-3zO"/>
+                <constraint firstAttribute="trailing" secondItem="A9J-LH-uXM" secondAttribute="trailing" id="PAl-WW-fhK"/>
+                <constraint firstItem="A9J-LH-uXM" firstAttribute="top" secondItem="30S-VH-QNk" secondAttribute="bottom" id="T4U-Ys-J7n"/>
+                <constraint firstAttribute="trailing" secondItem="hEj-QK-m7v" secondAttribute="trailing" id="Y1P-aY-4J4"/>
+                <constraint firstAttribute="bottom" secondItem="30S-VH-QNk" secondAttribute="bottom" constant="50" id="gXC-1o-NgS"/>
+                <constraint firstAttribute="bottom" secondItem="A9J-LH-uXM" secondAttribute="bottom" id="nqD-Qv-ccT"/>
+                <constraint firstItem="hEj-QK-m7v" firstAttribute="height" secondItem="HYH-dp-Cto" secondAttribute="height" id="vyG-ap-dD1"/>
+                <constraint firstItem="hEj-QK-m7v" firstAttribute="leading" secondItem="HYH-dp-Cto" secondAttribute="trailing" id="wq6-nG-eRN"/>
+                <constraint firstItem="HYH-dp-Cto" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xod-ff-Xoe"/>
+            </constraints>
+            <point key="canvasLocation" x="56.5" y="5.5"/>
+        </view>
+    </objects>
+</document>

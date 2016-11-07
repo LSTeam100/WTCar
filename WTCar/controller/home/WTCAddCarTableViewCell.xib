@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="WTCAddCarTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="326" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzY-PV-mAB">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必填" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75q-20-D4y">
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="75q-20-D4y" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5LE-Bp-nCI"/>
+                    <constraint firstItem="75q-20-D4y" firstAttribute="leading" secondItem="mzY-PV-mAB" secondAttribute="trailing" constant="20" id="WHs-nO-hUT"/>
+                    <constraint firstItem="mzY-PV-mAB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="tC9-Z5-JNo"/>
+                    <constraint firstItem="mzY-PV-mAB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tdk-cP-tt2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="75q-20-D4y" secondAttribute="trailing" constant="10" id="ycD-sc-plG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoField" destination="75q-20-D4y" id="cJB-wP-Jx9"/>
+                <outlet property="nameLabel" destination="mzY-PV-mAB" id="b9m-w1-L5O"/>
+            </connections>
+            <point key="canvasLocation" x="-15" y="-272"/>
+        </tableViewCell>
+    </objects>
+</document>

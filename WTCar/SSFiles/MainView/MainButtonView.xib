@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainButtonView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WG-4W-PLV">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTF-YW-PZa">
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQf-pF-ZKk">
+                                    <state key="normal" title="Button" image="home_addCar"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obg-pz-er2">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="9Ed-aL-S6Q"/>
+                                        <constraint firstAttribute="height" constant="70" id="9Yr-LM-RxV"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="home_CarManage"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布车辆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogo-mV-Vv3">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="9mG-Xv-A35"/>
+                                        <constraint firstAttribute="width" constant="80" id="MgI-Gp-6or"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺设置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLQ-Y2-7qN">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Iif-rG-Hcm"/>
+                                        <constraint firstAttribute="width" constant="80" id="O5k-OP-FEE"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-xo-NOW">
+                                    <state key="normal" title="Button" image="home_shopSeting"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆管理" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-JE-p8n">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="dC6-jl-uAi"/>
+                                        <constraint firstAttribute="width" constant="80" id="qZs-9t-Aaw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbR-ER-HQu">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="TlR-Yw-oGt"/>
+                                        <constraint firstAttribute="width" constant="70" id="xr5-m9-ABJ"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="home_shoperPost"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa8-bV-JXT">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="0aV-aj-Q64"/>
+                                        <constraint firstAttribute="width" constant="70" id="hRF-Yt-EFl"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="home_loan"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商家POS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-0l-NAp">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="StD-ux-g8i"/>
+                                        <constraint firstAttribute="width" constant="80" id="XDE-6L-fYp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车险质保" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-Sp-g7M">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="L0K-d6-Gsx"/>
+                                        <constraint firstAttribute="width" constant="80" id="sDh-zF-byX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-if-rcI">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="I1L-YI-Ce4"/>
+                                        <constraint firstAttribute="width" constant="70" id="qw2-xX-tqg"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="home_carInstruance"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配资服务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0t-S8-FC9">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="FXz-h1-ECy"/>
+                                        <constraint firstAttribute="height" constant="20" id="uEP-xf-4qo"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiN-NP-kKV">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="Ffx-58-4OM"/>
+                                        <constraint firstAttribute="height" constant="70" id="dyy-WY-jhw"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="home_serviceTool"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NF-Ck-p21">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="Njs-ml-vtK"/>
+                                        <constraint firstAttribute="width" constant="70" id="uXg-BW-2a5"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="home_carKnow"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务工具" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d82-dM-PG3">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="FH6-L2-aAh"/>
+                                        <constraint firstAttribute="height" constant="20" id="R0R-Dw-dqA"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汽车小常识" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbR-NK-ICF">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="FPZ-la-EgU"/>
+                                        <constraint firstAttribute="width" constant="83" id="VKe-Xy-9Eb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sef-e5-fSO">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="68" id="1fx-Od-YyK"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTD-Gr-Z3I">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-1o-pPP">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGV-QF-Ata">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="68" id="a2L-i0-5wL"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="a2L-i0-5wL"/>
+                                        </mask>
+                                    </variation>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="6ZE-0l-NAp" firstAttribute="top" secondItem="YbR-ER-HQu" secondAttribute="bottom" constant="25" id="0cK-uI-Pzy"/>
+                                <constraint firstItem="KTD-Gr-Z3I" firstAttribute="width" secondItem="sef-e5-fSO" secondAttribute="width" constant="1" id="3zM-ok-Fho"/>
+                                <constraint firstItem="NQf-pF-ZKk" firstAttribute="height" secondItem="Obg-pz-er2" secondAttribute="height" id="43N-q8-SeO"/>
+                                <constraint firstItem="1NF-Ck-p21" firstAttribute="top" secondItem="pa8-bV-JXT" secondAttribute="bottom" constant="73" id="52A-5O-KWP"/>
+                                <constraint firstItem="sef-e5-fSO" firstAttribute="top" secondItem="MTF-YW-PZa" secondAttribute="top" constant="13" id="59t-0D-PfZ"/>
+                                <constraint firstItem="UbR-NK-ICF" firstAttribute="centerX" secondItem="1NF-Ck-p21" secondAttribute="centerX" id="6nc-Ca-7nm"/>
+                                <constraint firstItem="iGV-QF-Ata" firstAttribute="top" secondItem="Cxg-1o-pPP" secondAttribute="top" id="7Mw-WS-Pdn"/>
+                                <constraint firstItem="yCG-Sp-g7M" firstAttribute="centerX" secondItem="aCv-if-rcI" secondAttribute="centerX" id="80g-HW-aGY"/>
+                                <constraint firstItem="d82-dM-PG3" firstAttribute="centerX" secondItem="UiN-NP-kKV" secondAttribute="centerX" id="81O-XU-cDd"/>
+                                <constraint firstItem="eLQ-Y2-7qN" firstAttribute="top" secondItem="kpm-xo-NOW" secondAttribute="bottom" constant="25" id="8yt-Nc-b9X"/>
+                                <constraint firstItem="NQf-pF-ZKk" firstAttribute="width" secondItem="Obg-pz-er2" secondAttribute="width" id="ATc-yF-RoK"/>
+                                <constraint firstItem="Cxg-1o-pPP" firstAttribute="leading" secondItem="Obg-pz-er2" secondAttribute="trailing" id="FQf-CB-cnq"/>
+                                <constraint firstItem="Ogo-mV-Vv3" firstAttribute="top" secondItem="NQf-pF-ZKk" secondAttribute="bottom" constant="25" id="IMQ-3v-2cV"/>
+                                <constraint firstItem="Cxg-1o-pPP" firstAttribute="width" secondItem="sef-e5-fSO" secondAttribute="width" id="K1S-W6-OfK"/>
+                                <constraint firstItem="iGV-QF-Ata" firstAttribute="width" secondItem="sef-e5-fSO" secondAttribute="width" id="LU3-kK-FqJ"/>
+                                <constraint firstItem="Ogo-mV-Vv3" firstAttribute="centerX" secondItem="NQf-pF-ZKk" secondAttribute="centerX" id="MqY-bK-Sns"/>
+                                <constraint firstItem="yCG-Sp-g7M" firstAttribute="top" secondItem="aCv-if-rcI" secondAttribute="bottom" constant="25" id="NJQ-1C-0a5"/>
+                                <constraint firstItem="kpm-xo-NOW" firstAttribute="leading" secondItem="Cxg-1o-pPP" secondAttribute="trailing" id="OKk-MP-h8A"/>
+                                <constraint firstItem="KTD-Gr-Z3I" firstAttribute="leading" secondItem="NQf-pF-ZKk" secondAttribute="trailing" id="PO9-NA-uwp"/>
+                                <constraint firstItem="Cxg-1o-pPP" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="QYT-Ug-tQh"/>
+                                <constraint firstItem="i0t-S8-FC9" firstAttribute="top" secondItem="pa8-bV-JXT" secondAttribute="bottom" constant="25" id="Qxu-HT-j06"/>
+                                <constraint firstAttribute="height" constant="750" id="REy-jl-2UW"/>
+                                <constraint firstItem="aCv-if-rcI" firstAttribute="top" secondItem="kpm-xo-NOW" secondAttribute="bottom" constant="73" id="RYY-ZL-Sd9"/>
+                                <constraint firstItem="YbR-ER-HQu" firstAttribute="top" secondItem="NQf-pF-ZKk" secondAttribute="bottom" constant="73" id="SY2-eQ-xy4"/>
+                                <constraint firstItem="iGV-QF-Ata" firstAttribute="top" secondItem="sef-e5-fSO" secondAttribute="top" id="UzR-Rv-yWd"/>
+                                <constraint firstItem="kpm-xo-NOW" firstAttribute="width" secondItem="Obg-pz-er2" secondAttribute="width" id="VDS-YD-Udv"/>
+                                <constraint firstItem="6ZE-0l-NAp" firstAttribute="centerX" secondItem="YbR-ER-HQu" secondAttribute="centerX" id="Wuh-dv-OS6"/>
+                                <constraint firstItem="iGV-QF-Ata" firstAttribute="leading" secondItem="kpm-xo-NOW" secondAttribute="trailing" id="XSf-1q-NQH"/>
+                                <constraint firstItem="UiN-NP-kKV" firstAttribute="top" secondItem="YbR-ER-HQu" secondAttribute="bottom" constant="73" id="awg-uL-IoM"/>
+                                <constraint firstItem="iGV-QF-Ata" firstAttribute="top" secondItem="KTD-Gr-Z3I" secondAttribute="top" id="clJ-y2-Uk3"/>
+                                <constraint firstItem="Obg-pz-er2" firstAttribute="top" secondItem="MTF-YW-PZa" secondAttribute="top" constant="12" id="d8T-B2-PKT"/>
+                                <constraint firstItem="N6d-JE-p8n" firstAttribute="centerX" secondItem="Obg-pz-er2" secondAttribute="centerX" constant="-1" id="dQb-8b-amo"/>
+                                <constraint firstItem="NQf-pF-ZKk" firstAttribute="leading" secondItem="sef-e5-fSO" secondAttribute="trailing" id="eZD-FC-hMZ"/>
+                                <constraint firstItem="UbR-NK-ICF" firstAttribute="top" secondItem="1NF-Ck-p21" secondAttribute="bottom" constant="25" id="fD6-1y-duG"/>
+                                <constraint firstItem="d82-dM-PG3" firstAttribute="top" secondItem="UiN-NP-kKV" secondAttribute="bottom" constant="25" id="gVL-Ry-2zw"/>
+                                <constraint firstItem="Obg-pz-er2" firstAttribute="centerX" secondItem="MTF-YW-PZa" secondAttribute="centerX" id="guq-Hf-9jD"/>
+                                <constraint firstItem="Obg-pz-er2" firstAttribute="leading" secondItem="KTD-Gr-Z3I" secondAttribute="trailing" id="gvb-Io-IPt"/>
+                                <constraint firstItem="YbR-ER-HQu" firstAttribute="centerX" secondItem="NQf-pF-ZKk" secondAttribute="centerX" constant="-4" id="hl0-pF-fKe"/>
+                                <constraint firstItem="1NF-Ck-p21" firstAttribute="centerX" secondItem="pa8-bV-JXT" secondAttribute="centerX" id="hxK-aa-IOT"/>
+                                <constraint firstItem="iGV-QF-Ata" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="kYn-Kj-ZEf"/>
+                                <constraint firstItem="pa8-bV-JXT" firstAttribute="top" secondItem="Obg-pz-er2" secondAttribute="bottom" constant="73" id="kht-d1-Ha5"/>
+                                <constraint firstItem="NQf-pF-ZKk" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="kpF-ER-u1v"/>
+                                <constraint firstItem="UiN-NP-kKV" firstAttribute="centerX" secondItem="YbR-ER-HQu" secondAttribute="centerX" id="mDs-MX-CMH"/>
+                                <constraint firstItem="pa8-bV-JXT" firstAttribute="centerX" secondItem="Obg-pz-er2" secondAttribute="centerX" constant="-1" id="mdr-XJ-5bY"/>
+                                <constraint firstItem="aCv-if-rcI" firstAttribute="centerX" secondItem="kpm-xo-NOW" secondAttribute="centerX" constant="3" id="mqX-0R-PPI"/>
+                                <constraint firstItem="eLQ-Y2-7qN" firstAttribute="centerX" secondItem="kpm-xo-NOW" secondAttribute="centerX" id="o03-C2-GAx"/>
+                                <constraint firstItem="sef-e5-fSO" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="prC-NZ-h1R"/>
+                                <constraint firstItem="kpm-xo-NOW" firstAttribute="height" secondItem="Obg-pz-er2" secondAttribute="height" id="rPa-0n-6F0"/>
+                                <constraint firstItem="sef-e5-fSO" firstAttribute="leading" secondItem="MTF-YW-PZa" secondAttribute="leading" id="sbE-JD-af2"/>
+                                <constraint firstItem="N6d-JE-p8n" firstAttribute="top" secondItem="Obg-pz-er2" secondAttribute="bottom" constant="25" id="uW6-O3-LhU"/>
+                                <constraint firstItem="kpm-xo-NOW" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="w6D-Cy-Tsb"/>
+                                <constraint firstItem="KTD-Gr-Z3I" firstAttribute="centerY" secondItem="Obg-pz-er2" secondAttribute="centerY" id="w9Q-Tw-hji"/>
+                                <constraint firstItem="iGV-QF-Ata" firstAttribute="leading" secondItem="MTF-YW-PZa" secondAttribute="leading" constant="334" id="wRQ-cn-5zh"/>
+                                <constraint firstItem="i0t-S8-FC9" firstAttribute="centerX" secondItem="pa8-bV-JXT" secondAttribute="centerX" id="ynl-jq-I8p"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="wRQ-cn-5zh"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="MTF-YW-PZa" firstAttribute="top" secondItem="1WG-4W-PLV" secondAttribute="top" id="GyG-rh-VBT"/>
+                        <constraint firstItem="MTF-YW-PZa" firstAttribute="leading" secondItem="1WG-4W-PLV" secondAttribute="leading" id="Ivv-0k-4oN"/>
+                        <constraint firstAttribute="trailing" secondItem="MTF-YW-PZa" secondAttribute="trailing" id="Y7F-tM-lNX"/>
+                        <constraint firstItem="MTF-YW-PZa" firstAttribute="centerX" secondItem="1WG-4W-PLV" secondAttribute="centerX" id="eWW-Ok-jeV"/>
+                        <constraint firstAttribute="bottom" secondItem="MTF-YW-PZa" secondAttribute="bottom" constant="-83" id="hnl-JU-I7b"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1WG-4W-PLV" secondAttribute="bottom" id="PsU-uC-GBW"/>
+                <constraint firstItem="1WG-4W-PLV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RRp-pw-0zH"/>
+                <constraint firstAttribute="trailing" secondItem="1WG-4W-PLV" secondAttribute="trailing" id="lgf-ZR-RUz"/>
+                <constraint firstItem="1WG-4W-PLV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pBm-EB-9Tm"/>
+            </constraints>
+            <connections>
+                <outlet property="CheGuanLiButton" destination="Obg-pz-er2" id="Xau-Pb-ilf"/>
+                <outlet property="DianPuSZButton" destination="kpm-xo-NOW" id="oaj-lL-y1Q"/>
+                <outlet property="FaBuCheButton" destination="NQf-pF-ZKk" id="XSc-r4-U4k"/>
+                <outlet property="MainContentView" destination="MTF-YW-PZa" id="HL2-AU-7ar"/>
+                <outlet property="MainContentViewHight" destination="hnl-JU-I7b" id="RW1-hP-a3f"/>
+                <outlet property="MainScrollView" destination="1WG-4W-PLV" id="Dc4-9S-bNp"/>
+                <outlet property="ShangJiaPosButton" destination="YbR-ER-HQu" id="0pr-wI-Jmb"/>
+                <outlet property="loanButton" destination="pa8-bV-JXT" id="RB0-20-7O8"/>
+            </connections>
+            <point key="canvasLocation" x="35.5" y="80.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_CarManage" width="62" height="57"/>
+        <image name="home_addCar" width="52" height="57"/>
+        <image name="home_carInstruance" width="50" height="59"/>
+        <image name="home_carKnow" width="62" height="59"/>
+        <image name="home_loan" width="62" height="59"/>
+        <image name="home_serviceTool" width="52" height="59"/>
+        <image name="home_shopSeting" width="49" height="57"/>
+        <image name="home_shoperPost" width="52" height="59"/>
+    </resources>
+</document>

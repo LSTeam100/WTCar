@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCUserTeleNumViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1873165821" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBi-kS-WA3">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="oK9-Cx-DSO"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vk5-8n-68g">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="59w-BW-ceR"/>
+                        <constraint firstAttribute="width" constant="30" id="HU5-x1-X2E"/>
+                    </constraints>
+                    <state key="normal" image="6_lit.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-bu-FjY">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="IRl-75-eTw"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="SaveUserTeleNumButtonClick:" destination="-1" eventType="touchUpInside" id="HEd-J7-Wto"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwZ-2w-lkQ">
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="LWe-GX-Kie"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fwZ-2w-lkQ" secondAttribute="trailing" constant="16" id="05m-Ls-y45"/>
+                <constraint firstItem="eX3-bu-FjY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="97O-VF-UhI"/>
+                <constraint firstItem="Vk5-8n-68g" firstAttribute="leading" secondItem="QBi-kS-WA3" secondAttribute="trailing" constant="16" id="9hR-97-N4n"/>
+                <constraint firstItem="QBi-kS-WA3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="OId-Pj-z0C"/>
+                <constraint firstItem="fwZ-2w-lkQ" firstAttribute="top" secondItem="Vk5-8n-68g" secondAttribute="bottom" constant="1" id="R7i-vB-oFu"/>
+                <constraint firstAttribute="trailing" secondItem="eX3-bu-FjY" secondAttribute="trailing" constant="16" id="Zhm-wL-xfw"/>
+                <constraint firstItem="fwZ-2w-lkQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Zpb-Jj-8lw"/>
+                <constraint firstItem="QBi-kS-WA3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="aML-5l-cxw"/>
+                <constraint firstItem="eX3-bu-FjY" firstAttribute="top" secondItem="fwZ-2w-lkQ" secondAttribute="bottom" constant="49" id="b7J-f3-1hb"/>
+                <constraint firstAttribute="trailing" secondItem="Vk5-8n-68g" secondAttribute="trailing" constant="41" id="fXc-Da-oSr"/>
+                <constraint firstItem="Vk5-8n-68g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="vVk-cI-ilC"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="6_lit.png" width="30" height="25"/>
+    </resources>
+</document>
