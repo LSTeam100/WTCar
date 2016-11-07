@@ -192,7 +192,11 @@
                 <constraint firstAttribute="trailing" secondItem="McE-Bj-SWD" secondAttribute="trailing" constant="48" id="dn0-rp-cRj"/>
                 <constraint firstAttribute="trailing" secondItem="SKw-km-blK" secondAttribute="trailing" id="f8K-mk-BLm"/>
                 <constraint firstItem="SKw-km-blK" firstAttribute="top" secondItem="Uu2-QC-ens" secondAttribute="bottom" constant="52" id="goW-KJ-Mwb"/>
+<<<<<<< HEAD
+                <constraint firstItem="McE-Bj-SWD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="122" id="plt-Bi-ZGc"/>
+=======
                 <constraint firstItem="McE-Bj-SWD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="plt-Bi-ZGc"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstItem="Uu2-QC-ens" firstAttribute="centerX" secondItem="McE-Bj-SWD" secondAttribute="centerX" constant="-8" id="stH-Vp-nHa"/>
                 <constraint firstItem="Uu2-QC-ens" firstAttribute="top" secondItem="McE-Bj-SWD" secondAttribute="bottom" constant="8" id="vkm-hK-jLd"/>
                 <constraint firstItem="McE-Bj-SWD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="48" id="wsM-WX-ovm"/>

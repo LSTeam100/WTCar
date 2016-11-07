@@ -66,7 +66,11 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="woT-Rk-Wci" secondAttribute="trailing" constant="16" id="5Sk-w4-ljn"/>
+<<<<<<< HEAD
+                <constraint firstItem="yAX-ST-FHp" firstAttribute="top" secondItem="Do2-DM-izg" secondAttribute="top" constant="70" id="BYw-g2-BA5"/>
+=======
                 <constraint firstItem="yAX-ST-FHp" firstAttribute="top" secondItem="Do2-DM-izg" secondAttribute="top" constant="20" id="BYw-g2-BA5"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstAttribute="trailing" secondItem="DhC-X2-Kj3" secondAttribute="trailing" constant="16" id="BtP-RR-eN5"/>
                 <constraint firstItem="ec9-ZJ-5jP" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="CgC-4C-cfD"/>
                 <constraint firstItem="DhC-X2-Kj3" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="DSh-XN-Dy8"/>

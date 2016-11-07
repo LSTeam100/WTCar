@@ -196,9 +196,15 @@
             <constraints>
                 <constraint firstItem="2Ff-NI-mLg" firstAttribute="top" secondItem="Qbt-WU-GH5" secondAttribute="bottom" constant="8" id="BGQ-Q1-U9m"/>
                 <constraint firstItem="2Ff-NI-mLg" firstAttribute="centerX" secondItem="Qbt-WU-GH5" secondAttribute="centerX" constant="-8" id="Ee9-K6-H8Q"/>
+<<<<<<< HEAD
+                <constraint firstItem="WAh-1t-ajF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Fjg-5k-1rX"/>
+                <constraint firstAttribute="trailing" secondItem="WAh-1t-ajF" secondAttribute="trailing" id="Iks-k3-wfW"/>
+                <constraint firstItem="Xhu-vD-3Ip" firstAttribute="top" secondItem="mfI-vY-J4E" secondAttribute="bottom" constant="15" id="Mtz-Om-DKm"/>
+=======
                 <constraint firstItem="WAh-1t-ajF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Fjg-5k-1rX"/>
                 <constraint firstAttribute="trailing" secondItem="WAh-1t-ajF" secondAttribute="trailing" id="Iks-k3-wfW"/>
                 <constraint firstItem="Xhu-vD-3Ip" firstAttribute="top" secondItem="mfI-vY-J4E" secondAttribute="bottom" constant="39" id="Mtz-Om-DKm"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstItem="Xhu-vD-3Ip" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="T9x-An-kNE"/>
                 <constraint firstItem="Qbt-WU-GH5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="48" id="bxl-Ms-PcF"/>
                 <constraint firstAttribute="trailing" secondItem="Xhu-vD-3Ip" secondAttribute="trailing" constant="16" id="eGZ-PJ-eGg"/>

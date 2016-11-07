@@ -71,12 +71,20 @@
                 <constraint firstItem="wVg-oP-gLH" firstAttribute="top" secondItem="UdC-lU-fHs" secondAttribute="bottom" constant="43" id="6IJ-ED-VyI"/>
                 <constraint firstItem="wVg-oP-gLH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="E9t-EU-hrd"/>
                 <constraint firstItem="zJ2-K6-IYr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="EEz-S1-k6k"/>
+<<<<<<< HEAD
+                <constraint firstItem="UdC-lU-fHs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="R65-xs-Z18"/>
+=======
                 <constraint firstItem="UdC-lU-fHs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="R65-xs-Z18"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstItem="UdC-lU-fHs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iQK-At-qA5"/>
                 <constraint firstAttribute="trailing" secondItem="wVg-oP-gLH" secondAttribute="trailing" constant="16" id="jqm-dd-sNf"/>
                 <constraint firstAttribute="trailing" secondItem="UdC-lU-fHs" secondAttribute="trailing" id="lxr-RX-QGD"/>
                 <constraint firstAttribute="trailing" secondItem="zJ2-K6-IYr" secondAttribute="trailing" constant="16" id="orZ-KL-J97"/>
+<<<<<<< HEAD
+                <constraint firstItem="zJ2-K6-IYr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="132" id="zq4-CM-8XU"/>
+=======
                 <constraint firstItem="zJ2-K6-IYr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="88" id="zq4-CM-8XU"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
             </constraints>
             <point key="canvasLocation" x="32.5" y="56.5"/>
         </view>

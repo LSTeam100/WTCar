@@ -43,7 +43,11 @@
                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PoG-Nr-7ME">
+<<<<<<< HEAD
+                    <frame key="frameInset" minX="16" minY="294" width="308" height="39"/>
+=======
                     <frame key="frameInset" minX="16" minY="230" width="308" height="39"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -64,7 +68,11 @@
                 <constraint firstItem="1X8-UP-Hi6" firstAttribute="top" secondItem="OYz-aE-eSM" secondAttribute="bottom" constant="8" id="BIz-1e-bTT"/>
                 <constraint firstItem="Isg-16-1jH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Def-TY-qMm"/>
                 <constraint firstItem="1X8-UP-Hi6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="DoT-FA-u0K"/>
+<<<<<<< HEAD
+                <constraint firstItem="OYz-aE-eSM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="c4h-RL-XT3"/>
+=======
                 <constraint firstItem="OYz-aE-eSM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c4h-RL-XT3"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstAttribute="trailing" secondItem="OYz-aE-eSM" secondAttribute="trailing" id="edO-Eb-gaN"/>
                 <constraint firstAttribute="trailing" secondItem="1X8-UP-Hi6" secondAttribute="trailing" constant="16" id="lxM-fK-wL2"/>
                 <constraint firstItem="OYz-aE-eSM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r3Q-Os-rgQ"/>

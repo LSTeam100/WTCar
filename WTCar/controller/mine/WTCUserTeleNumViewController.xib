@@ -58,10 +58,17 @@
                 <constraint firstItem="fwZ-2w-lkQ" firstAttribute="top" secondItem="Vk5-8n-68g" secondAttribute="bottom" constant="1" id="R7i-vB-oFu"/>
                 <constraint firstAttribute="trailing" secondItem="eX3-bu-FjY" secondAttribute="trailing" constant="16" id="Zhm-wL-xfw"/>
                 <constraint firstItem="fwZ-2w-lkQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Zpb-Jj-8lw"/>
+<<<<<<< HEAD
+                <constraint firstItem="QBi-kS-WA3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="aML-5l-cxw"/>
+                <constraint firstItem="eX3-bu-FjY" firstAttribute="top" secondItem="fwZ-2w-lkQ" secondAttribute="bottom" constant="49" id="b7J-f3-1hb"/>
+                <constraint firstAttribute="trailing" secondItem="Vk5-8n-68g" secondAttribute="trailing" constant="41" id="fXc-Da-oSr"/>
+                <constraint firstItem="Vk5-8n-68g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="vVk-cI-ilC"/>
+=======
                 <constraint firstItem="QBi-kS-WA3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="aML-5l-cxw"/>
                 <constraint firstItem="eX3-bu-FjY" firstAttribute="top" secondItem="fwZ-2w-lkQ" secondAttribute="bottom" constant="49" id="b7J-f3-1hb"/>
                 <constraint firstAttribute="trailing" secondItem="Vk5-8n-68g" secondAttribute="trailing" constant="41" id="fXc-Da-oSr"/>
                 <constraint firstItem="Vk5-8n-68g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="vVk-cI-ilC"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
             </constraints>
         </view>
     </objects>

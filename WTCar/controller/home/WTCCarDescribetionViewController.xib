@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -40,7 +44,11 @@
             <constraints>
                 <constraint firstItem="KGX-RA-Agw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="1YD-Yc-nNU"/>
                 <constraint firstItem="2em-Dy-CmA" firstAttribute="top" secondItem="KGX-RA-Agw" secondAttribute="bottom" constant="10" id="2Sr-d2-U2h"/>
+<<<<<<< HEAD
+                <constraint firstItem="KGX-RA-Agw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="3m8-J0-ng2"/>
+=======
                 <constraint firstItem="KGX-RA-Agw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3m8-J0-ng2"/>
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
                 <constraint firstItem="2em-Dy-CmA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7Ss-Oq-ADZ"/>
                 <constraint firstAttribute="trailing" secondItem="2em-Dy-CmA" secondAttribute="trailing" constant="60" id="H64-iX-ktr"/>
                 <constraint firstAttribute="trailing" secondItem="KGX-RA-Agw" secondAttribute="trailing" constant="10" id="ZBH-P1-MWy"/>

@@ -273,7 +273,11 @@
 
 -(void)ShangJPosButtonClick
 {
+<<<<<<< HEAD
+     *BusinessPosViewController = [WTCBusinessPosViewController new];
+=======
     WTCBusinessPosViewController *BusinessPosViewController = [WTCBusinessPosViewController new];
+>>>>>>> 34b22c5bc38fdd6c40b62763e2ade9b8f3b010f4
     [self.navigationController pushViewController:BusinessPosViewController animated:YES];
 }
 -(void)navitoLoanConTroller:(id)sender
