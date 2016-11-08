@@ -9,6 +9,12 @@
 #import "WTCCarManageController.h"
 #import "WTCCarManageTableViewCell.h"
 #import "WTCCarShareViewController.h"
+#import "WTCOnSaleListRequest.h"
+#import "WTCSaledListRequest.h"
+#import "WTCOffShelfList.h"
+#import "CommonVar.h"
+#import "WTCOnSaleList.h"
+#import "WTCarOffShelfListRequest.h"
 typedef enum
 {
     CarMangeTypeOffline               = 0,
@@ -21,6 +27,9 @@ CarMangeType;
 {
     NSArray *carInfoArr;
     CarMangeType carMangeType;
+    NSMutableArray *onsaleArr;
+    NSMutableArray *saledArr;
+    NSMutableArray *offShelfArr;
     
     
 }
@@ -33,7 +42,12 @@ CarMangeType;
     [super viewDidLoad];
     self.title = @"车辆管理";
     carInfoArr = [[NSArray alloc]init];
+    onsaleArr = [[NSMutableArray alloc]init];
+    saledArr = [[NSMutableArray alloc]init];
+    offShelfArr = [[NSMutableArray alloc]init];
     [self configureUI];
+    
+    [self requestSteup];
     
 
 }
@@ -50,18 +64,32 @@ CarMangeType;
     [self.view addSubview:_segmentedControl];
     
     self.constraint.constant = -100;
-   
-
+//    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
 }
+-(void)headerRereshing
+{
+    [self requestSteup];
+}
+
+-(void)requestSteup
+{
+    [self getOnSaleList];
+}
+
+
 -(void)onSegmentSelectedChanged:(UISegmentedControl *)Seg{
     NSInteger index = Seg.selectedSegmentIndex;
     
     if (index == CarMangeTypeOffline) {
         carMangeType = CarMangeTypeOffline;
+        [self getOnSaleList];
+    
+        
     }
     else if (index == CarMangeTypeSale)
     {
         carMangeType = CarMangeTypeSale;
+        [self getSaledList];
     }
     else
     {
@@ -69,10 +97,56 @@ CarMangeType;
     }
     
     
-    [self.tableview reloadData];
+//    [self.tableview reloadData];
+    
     
     NSLog(@"index=%ld",(long)index);
+}
+-(void)getOnSaleList
+{
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCOnSaleListRequest *request = [[WTCOnSaleListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:1] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCOnSaleList *saleList = [request getResponse].data;
+        onsaleArr = [[NSMutableArray alloc]initWithArray:saleList.rows];
+        [self.tableView reloadData];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+    }];
+    [request start];
+    
+}
+-(void)getSaledList
+{
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    
+    WTCSaledListRequest *request = [[WTCSaledListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:1] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
 
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+
+    }];
+    [request start];
+
+}
+
+-(void)getOffShelf
+{
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCarOffShelfListRequest *request = [[WTCarOffShelfListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithLong:1] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:YES];
+
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:YES];
+
+    }];
+    [request start];
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,7 +155,18 @@ CarMangeType;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (carMangeType == CarMangeTypeOffline) {
+        return onsaleArr.count;
+        
+    }
+    else if (carMangeType == CarMangeTypeSale)
+    {
+        return 1;
+    }
+    else
+    {
+        return 1;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,6 +184,10 @@ CarMangeType;
         cell.collectPayBtn.hidden = NO;
         cell.shareBtn.hidden = NO;
         cell.manageBtn.hidden = NO;
+        WTCASale *asale = [onsaleArr objectAtIndex:indexPath.row];
+        NSString *imageUrl = [asale.primaryPicUrl objectAtIndex:0];
+        [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] completed:nil];
+        
     }
     else if (carMangeType == CarMangeTypeSale){
         cell.collectPayBtn.hidden = YES;

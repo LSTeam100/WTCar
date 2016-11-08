@@ -1,25 +1,21 @@
 //
-//  WTCCarDescribetionViewController.m
+//  WTCAddCarSuccessViewController.m
 //  WTCar
 //
-//  Created by apple on 2016/11/4.
+//  Created by apple on 2016/11/8.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCCarDescribetionViewController.h"
-#import "BRPlaceholderTextView.h"
-@interface WTCCarDescribetionViewController ()
+#import "WTCAddCarSuccessViewController.h"
+
+@interface WTCAddCarSuccessViewController ()
 
 @end
 
-@implementation WTCCarDescribetionViewController
+@implementation WTCAddCarSuccessViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"车辆信息描述";
-    self.textView.placeholder = @"可填写车辆状况，交易公式，转让原因等";
-    
-    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -27,13 +23,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
--(IBAction)save:(id)sender
+-(IBAction)goOnAddCar:(id)sender
 {
-    if (self.desDelegate && [self.desDelegate respondsToSelector:@selector(saveCarDescribtion:)] ) {
-        [self.desDelegate saveCarDescribtion:self.textView.text];
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

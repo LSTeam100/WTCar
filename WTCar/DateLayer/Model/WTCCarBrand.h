@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface WTCCarBrand : NSObject
-@property(nonatomic,strong)NSString *brandId;
+@property(nonatomic,strong)NSNumber *brandId;
 @property(nonatomic,strong)NSString *initial;
 @property(nonatomic,strong)NSString *logo;
 @property(nonatomic,strong)NSString *name;

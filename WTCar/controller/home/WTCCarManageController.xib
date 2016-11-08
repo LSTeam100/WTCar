@@ -12,7 +12,7 @@
                 <outlet property="constraint" destination="Kpp-1q-745" id="pun-gJ-ewf"/>
                 <outlet property="mangeView" destination="mFB-1t-irh" id="RPY-T0-CPb"/>
                 <outlet property="modifyView" destination="qfY-SN-iBI" id="9Vv-Dp-DXb"/>
-                <outlet property="tableview" destination="FeX-Jv-GHH" id="ZPb-nh-5kn"/>
+                <outlet property="tableView" destination="FeX-Jv-GHH" id="32M-QX-Euz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

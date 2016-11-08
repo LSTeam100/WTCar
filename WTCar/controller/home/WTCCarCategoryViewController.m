@@ -9,10 +9,10 @@
 #import "WTCCarCategoryViewController.h"
 #import "ChineseString.h"
 #import "WTCCarBrandRequest.h"
-#import "WTCCarBrand.h"
 #import "CategoryTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "WTCCarTypeRequest.h"
+#import "WTCCarModelRequest.h"
 
 typedef enum
 {
@@ -26,6 +26,8 @@ typedef enum
     NSInteger spaceDistance;
     NSArray *allBrandsArr;
     NSMutableArray *brandsIndexArr;
+    NSMutableArray *carTypesSecionsArr;
+    NSMutableArray *carModelSecitonsArr;
 }
 @property(nonatomic,strong)NSMutableArray *indexArray;
 @property(nonatomic,strong)NSMutableArray *letterResultArr;
@@ -35,6 +37,9 @@ typedef enum
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 @property(nonatomic,strong)UITableView *secondTableView;
 @property(nonatomic,strong)UITableView *thirdTableView;
+@property(nonatomic,strong)WTCCarBrand *selectBrand;
+@property(nonatomic,strong)WTCCarType *selectType;
+@property(nonatomic,strong)WTCCarModel *selectModel;
 
 
 
@@ -60,16 +65,11 @@ typedef enum
     
     spaceDistance = 100;
     
-    NSArray *stringsToSort = [NSArray arrayWithObjects:
-                              @"￥hhh, .$",@" ￥Chin ese ",@"开源中国 ",@"www.oschina.net",
-                              @"开源技术",@"社区",@"开发者",@"传播",
-                              @"2014",@"a1",@"100",@"中国",@"暑假作业",
-                              @"键盘", @"鼠标",@"hello",@"world",@"b1",
-                              nil];
+
     
     allBrandsArr = [[NSArray alloc]init];
-//    self.indexArray = [ChineseString IndexArray:stringsToSort];
-//    self.letterResultArr = [ChineseString LetterSortArray:stringsToSort];
+    carTypesSecionsArr = [[NSMutableArray alloc]init];
+    carModelSecitonsArr = [[NSMutableArray alloc]init];
     
     
     [self createTableview];
@@ -103,29 +103,48 @@ typedef enum
     [request start];
     
 }
--(void)loadCarType
+-(void)loadCarType:(NSNumber *)typeId
 {
     [self setBusyIndicatorVisible:YES];
-    WTCCarTypeRequest *request = [[WTCCarTypeRequest alloc]initWithToken:DEFAULTTOKEN successCallback:^(WTCarBaseRequest *request) {
+    WTCCarTypeRequest *request = [[WTCCarTypeRequest alloc]initWithToken:DEFAULTTOKEN TypeId:typeId successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
-        NSArray *arr = [request getResponse].data;
-        [self.secondTableView reloadData];
+        WTCAllCarsType *typeModel = [request getResponse].data;
+        carTypesSecionsArr = [NSMutableArray arrayWithArray:typeModel.carsTypeArr];
         
+        [self.secondTableView reloadData];
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+
     }];
     [request start];
     
 }
+-(void)loadCarModel:(NSNumber *)modelId
+{
+    [self setBusyIndicatorVisible:YES];
+    WTCCarModelRequest *request = [[WTCCarModelRequest alloc]initWithToken:DEFAULTTOKEN ModelId:modelId successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCAllCarsModel *carsModel = [request getResponse].data;
+        carModelSecitonsArr = [NSMutableArray arrayWithArray:carsModel.carsModelArr];
+        [self.thirdTableView reloadData];
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+
+    }];
+  
+    [request start];
+    
+}
+
 -(void)createTableview
 {
-    self.secondTableView = [[UITableView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH,0,SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.secondTableView = [[UITableView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH,64,SCREEN_WIDTH, SCREEN_HEIGHT-64)];
     self.secondTableView.tag = tableviewTypeSecond;
     self.secondTableView.delegate = self;
     self.secondTableView.dataSource = self;
     [self.view addSubview:self.secondTableView];
     
-    self.thirdTableView = [[UITableView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH,0,SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.thirdTableView = [[UITableView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH,64,SCREEN_WIDTH, SCREEN_HEIGHT-64)];
     self.thirdTableView.tag = tableviewTypeThird;
     self.thirdTableView.delegate = self;
     self.thirdTableView.dataSource = self;
@@ -139,7 +158,8 @@ typedef enum
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     if (tableView.tag == tableviewTypeSecond) {
-        return self.indexArray;
+//        return self.indexArray;
+        return 0;
     }
     else if (tableView.tag == tableviewTypeThird)
     {
@@ -147,49 +167,137 @@ typedef enum
     }
     else
     {
-        return self.indexArray;
+        return 0;
     }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSString *key = [self.indexArray objectAtIndex:section];
-    return key;
+    if (tableView.tag == tableviewTypeFirst) {
+        NSString *key = [self.indexArray objectAtIndex:section];
+        return key;
+    }
+    else if (tableView.tag == tableviewTypeSecond)
+    {
+        NSDictionary *oneDic = [carTypesSecionsArr objectAtIndex:section];
+        NSString *key = @"梧桐汽车";
+        for (NSString *titleKey in oneDic) {
+            key = titleKey;
+        }
+        return key;
+
+    }
+    else
+    {
+        NSDictionary *oneDic = [carModelSecitonsArr objectAtIndex:section];
+        NSString *key = @"梧桐汽车";
+        for (NSString *titleKey in oneDic) {
+            key = titleKey;
+        }
+        return key;
+
+    }
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [self.indexArray count];
+    if (tableView.tag == tableviewTypeFirst) {
+        return [self.indexArray count];
+    }
+    else if(tableView.tag == tableviewTypeSecond)
+    {
+        return carTypesSecionsArr.count;
+    }
+    else
+    {
+        return  carModelSecitonsArr.count;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self.letterResultArr objectAtIndex:section] count];
+    if (tableView.tag == tableviewTypeFirst) {
+        return [[self.letterResultArr objectAtIndex:section] count];
+    }
+    else if (tableView.tag == tableviewTypeSecond){
+        NSDictionary *rowsDic = [carTypesSecionsArr objectAtIndex:section];
+        NSArray *rowArr = [[NSArray alloc]init];
+            for (NSString *key in rowsDic) {
+                rowArr = [rowsDic objectForKey:key];
+            }
+        return rowArr.count;
+
+    }
+    else
+    {
+        NSDictionary *rowsDic = [carModelSecitonsArr objectAtIndex:section];
+        NSArray *rowArr = [[NSArray alloc]init];
+        for (NSString *key in rowsDic) {
+            rowArr = [rowsDic objectForKey:key];
+        }
+        return rowArr.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"carCategoryCell";
-    
-    CategoryTableViewCell *cell = nil;
-    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (!cell) {
-        cell = [[[NSBundle mainBundle]loadNibNamed:@"CategoryTableViewCell" owner:self options:nil]objectAtIndex:0];
-    }
-    NSString *name = [[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
-    cell.nameLabel.text = name;
-    
-    for (int i = 0; i < allBrandsArr.count; i ++) {
-        WTCCarBrand *abrand = [allBrandsArr objectAtIndex:i];
-        if ([name isEqualToString:abrand.name]) {
-
-            [cell.logoImageView sd_setImageWithURL:[NSURL URLWithString:abrand.logo] placeholderImage:[UIImage imageNamed:@"1234"]];
-            break;
+    if (tableView.tag == tableviewTypeFirst) {
+        static NSString *CellIdentifier = @"carCategoryCell";
+        CategoryTableViewCell *cell = nil;
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        if (!cell) {
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"CategoryTableViewCell" owner:self options:nil]objectAtIndex:0];
         }
+        NSString *name = [[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+        cell.nameLabel.text = name;
+        
+        for (int i = 0; i < allBrandsArr.count; i ++) {
+            WTCCarBrand *abrand = [allBrandsArr objectAtIndex:i];
+            if ([name isEqualToString:abrand.name]) {
+                
+                [cell.logoImageView sd_setImageWithURL:[NSURL URLWithString:abrand.logo] placeholderImage:[UIImage imageNamed:@"1234"]];
+                break;
+            }
+        }
+        return cell;
     }
-    //    cell.logoImageView sd_setImageWithURL:<#(NSURL *)#> completed:<#^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)completedBlock#>
-    
-    return cell;
+    else if (tableView.tag == tableviewTypeSecond)
+    {
+        static NSString *typeIdentifer = @"typeCell";
+        UITableViewCell *cell = nil;
+        cell = [tableView dequeueReusableCellWithIdentifier:typeIdentifer];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:typeIdentifer];
+        }
+        
+            NSDictionary *oneDic = [carTypesSecionsArr objectAtIndex:indexPath.section];
+            
+            for (NSString *key in oneDic) {
+                NSArray *arr = [oneDic objectForKey:key];
+                WTCCarType *atype = [arr objectAtIndex:indexPath.row];
+                cell.textLabel.text = atype.fullname;
+            }
+        return cell;
+
+    }
+    else
+    {
+        static NSString *typeIdentifer = @"thirdtypeCell";
+        UITableViewCell *cell = nil;
+        cell = [tableView dequeueReusableCellWithIdentifier:typeIdentifer];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:typeIdentifer];
+        }
+            NSDictionary *oneDic = [carModelSecitonsArr objectAtIndex:indexPath.section];
+            
+            for (NSString *key in oneDic) {
+                NSArray *arr = [oneDic objectForKey:key];
+                WTCCarModel *aModel = [arr objectAtIndex:indexPath.row];
+                cell.textLabel.text = aModel.name;
+        }
+        return cell;
+    }
+   
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
@@ -227,11 +335,38 @@ typedef enum
 #pragma mark - UITableViewDelegate
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel *lab = [UILabel new];
-    lab.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    lab.text = [self.indexArray objectAtIndex:section];
-    lab.textColor = [UIColor whiteColor];
-    return lab;
+    if (tableView.tag == tableviewTypeFirst) {
+        UILabel *lab = [UILabel new];
+        lab.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        lab.text = [self.indexArray objectAtIndex:section];
+        lab.textColor = [UIColor blackColor];
+        return lab;
+        
+    }
+    else if (tableView.tag == tableviewTypeSecond){
+        NSDictionary *oneDic = [carTypesSecionsArr objectAtIndex:section];
+        NSString *key = @"梧桐汽车";
+        for (NSString *titleKey in oneDic) {
+            key = titleKey;
+        }
+        UILabel *lab = [UILabel new];
+        lab.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        lab.text = key;
+        lab.textColor = [UIColor blackColor];
+        return lab;
+    }
+    else
+    {
+        NSDictionary *oneDic = [carModelSecitonsArr objectAtIndex:section];
+        NSString *key = @"梧桐汽车";
+        for (NSString *titleKey in oneDic) {
+            key = titleKey;
+        }
+        UILabel *lab = [UILabel new];
+        lab.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        lab.text = key;
+        lab.textColor = [UIColor blackColor];
+        return lab;    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -243,50 +378,74 @@ typedef enum
 {
     [self searchCategory:tableView atIndex:indexPath];
     
-    NSLog(@"---->%@",[[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
     
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-//                                                    message:[[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row]
-//                                                   delegate:nil
-//                                          cancelButtonTitle:@"YES" otherButtonTitles:nil];
-//    [alert show];
     
 }
 -(void)searchCategory:(UITableView *)tableview atIndex:(NSIndexPath *)indexPath
 {
     if (tableview.tag == tableviewTypeFirst) {
         if (self.thirdTableView.frame.origin.x == spaceDistance * 2) {
-            CGRect moveRect = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+            CGRect moveRect = CGRectMake(SCREEN_WIDTH, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64);
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:0.3];
             [self.thirdTableView setFrame:moveRect];
             [UIView commitAnimations];
         }
         else{
-        CGRect moveRect = CGRectMake(spaceDistance, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        CGRect moveRect = CGRectMake(spaceDistance, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64);
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.3];
         [self.secondTableView setFrame:moveRect];
         [UIView commitAnimations];
-            [self loadCarType];
+            
+            NSString *selectName = [[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+
+            for (int i = 0; i < allBrandsArr.count; i ++) {
+                WTCCarBrand *abrand = [allBrandsArr objectAtIndex:i];
+                if ([selectName isEqualToString:abrand.name]) {
+                    self.selectBrand  = abrand;
+                    [self loadCarType:abrand.brandId];
+                    break;
+                }
+            }
         }
     }
     else if (tableview.tag == tableviewTypeSecond)
     {
-        CGRect moveRect = CGRectMake(spaceDistance*2, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        CGRect moveRect = CGRectMake(spaceDistance*2, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64);
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.3];
         [self.thirdTableView setFrame:moveRect];
         [UIView commitAnimations];
+        
+        NSDictionary *oneDic = [carTypesSecionsArr objectAtIndex:indexPath.section];
+        
+        for (NSString *key in oneDic) {
+            
+            NSArray *selecArr = [oneDic objectForKey:key];
+            if (selecArr.count > 0) {
+                WTCCarType *atype = [selecArr objectAtIndex:indexPath.row];
+                self.selectType = atype;
+                [self loadCarModel:atype.typeId];
+                
+            }
+        }
     }
     else if (tableview.tag == tableviewTypeThird)
     {
-        NSLog(@"section=%ld",(long)indexPath.section);
-        NSLog(@"选中的%ld个",(long)indexPath.row);
+        NSDictionary *oneDic = [carModelSecitonsArr objectAtIndex:indexPath.section];
+        
+        for (NSString *key in oneDic) {
+            NSArray *arr = [oneDic objectForKey:key];
+            WTCCarModel *aModel = [arr objectAtIndex:indexPath.row];
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(selectBrand:type:Model:)]) {
+                [self.delegate selectBrand:self.selectBrand type:self.selectType Model:aModel];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {

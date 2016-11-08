@@ -7,17 +7,16 @@
 //
 
 #import "WTCCarTypeRequest.h"
-
+#import "WTCCarType.h"
 @implementation WTCCarTypeRequest
 
--(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
+-(id)initWithToken:(NSString *)token TypeId:(NSNumber *)typeId successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
 {
     self = [super initWithToken:token successCallback:success failureCallback:failed];
     if (self) {
-        //        NSDictionary *parameters=@{@"id":onShelfId,
-        //                                   };
-        
-        //        [self setParameters:parameters];
+                NSDictionary *parameters=@{@"id":typeId,
+                                           };
+                [self setParameters:parameters];
     }
     return self;
 }
@@ -27,16 +26,16 @@
 }
 
 -(NSString *)getMethod{
-    return @"post";
+    return @"POST";
 }
 
 -(void)processResponse:(NSDictionary *)responseDictionary{
     [super processResponse:responseDictionary];
-    
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil){
-            [self getResponse].data=data;
+            WTCAllCarsType *carsType = [[WTCAllCarsType alloc]initWithDictionary:data];
+            [self getResponse].data=carsType;
         }
     }
 }

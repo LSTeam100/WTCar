@@ -10,7 +10,7 @@
 #import "WTCBaseViewController.h"
 @interface WTCCarManageController : WTCBaseViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UISegmentedControl *segmentedControl;
-@property(nonatomic,strong)IBOutlet UITableView *tableview;
+@property(nonatomic,strong)IBOutlet UITableView *tableView;
 @property(nonatomic,weak)IBOutlet UIView *mangeView;
 @property(nonatomic,weak)IBOutlet UIView *modifyView;
 @property(nonatomic,weak)IBOutlet UIButton *cancelBtn;

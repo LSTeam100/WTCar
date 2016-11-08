@@ -28,6 +28,7 @@ alpha:1.0]
 #pragma mark -获取颜色
 
 #define DEFAULTTOKEN @"123"
+#define DEFAULTPAGESIZE 10
 
 #define WXPayNotification     @"WXPayNotification"
 //static NSString * const UPMShopOrderNotification=@"com.upmeilin.hohoda.upmshopordernotification";
