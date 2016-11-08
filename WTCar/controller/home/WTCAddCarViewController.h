@@ -7,8 +7,9 @@
 //
 
 #import "WTCBaseViewController.h"
-
-@interface WTCAddCarViewController : WTCBaseViewController
+#import "WTCCarDescribetionViewController.h"
+#import "WTCCarCategoryViewController.h"
+@interface WTCAddCarViewController : WTCBaseViewController<DescribetionControllerDelegate,carCategoryDelegate>
 
 
 @end

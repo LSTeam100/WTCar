@@ -1,14 +1,14 @@
 //
-//  WTCCarType.m
+//  WTCCarModel.m
 //  WTCar
 //
-//  Created by apple on 2016/11/7.
+//  Created by apple on 2016/11/8.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCCarType.h"
+#import "WTCCarModel.h"
 
-@implementation WTCCarType
+@implementation WTCCarModel
 -(instancetype)initWithDictionary:(NSDictionary *)dataDic
 {
     self = [super init];
@@ -115,23 +115,25 @@
     return self;
 }
 @end
-@implementation WTCAllCarsType
+
+@implementation WTCAllCarsModel
+
 -(instancetype)initWithDictionary:(NSDictionary *)dataDic
 {
     self = [super init];
     if (self) {
-        self.carsTypeArr = [[NSMutableArray alloc]init];
+        self.carsModelArr = [[NSMutableArray alloc]init];
         
         for (NSString *key in dataDic) {
-            NSArray *carTypeArr = [dataDic objectForKey:key];
-            NSMutableArray *aTypeArr = [[NSMutableArray alloc]init];
+            NSArray *carModelArr = [dataDic objectForKey:key];
+            NSMutableArray *aModelArr = [[NSMutableArray alloc]init];
             NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
-            for (int i = 0; i < carTypeArr.count; i++) {
-                WTCCarType *atype = [[WTCCarType alloc]initWithDictionary:[carTypeArr objectAtIndex:i]];
-                [aTypeArr addObject:atype];
+            for (int i = 0; i < carModelArr.count; i++) {
+                WTCCarModel *amodel = [[WTCCarModel alloc]initWithDictionary:[carModelArr objectAtIndex:i]];
+                [aModelArr addObject:amodel];
             }
-            [dic setValue:aTypeArr forKey:key];
-            [self.carsTypeArr addObject:dic];
+            [dic setValue:aModelArr forKey:key];
+            [self.carsModelArr addObject:dic];
         }
     }
     return self;

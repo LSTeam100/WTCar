@@ -27,10 +27,12 @@
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-Ld-6Nk">
                     <constraints>
-                        <constraint firstAttribute="width" constant="200" id="CqU-uE-iX7"/>
                         <constraint firstAttribute="height" constant="40" id="xRj-Oz-h4U"/>
                     </constraints>
-                    <state key="normal" title="提交"/>
+                    <state key="normal" title="提交" backgroundImage="btn_background_gray"/>
+                    <connections>
+                        <action selector="commit:" destination="-1" eventType="touchUpInside" id="9Tm-Dl-zKi"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,4 +46,7 @@
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="btn_background_gray" width="340" height="40"/>
+    </resources>
 </document>

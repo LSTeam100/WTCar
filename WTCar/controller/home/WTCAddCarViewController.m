@@ -16,9 +16,12 @@
 #import "KKRangePicker.h"
 #import "ACEExpandableTextCell.h"
 #import "WTCCarBrandViewController.h"
-#import "WTCCarCategoryViewController.h"
 #import "WTCTabBarViewController.h"
-#import "WTCCarDescribetionViewController.h"
+#import "WTCAddCarSuccessViewController.h"
+#import "WTCCarModel.h"
+#import "WTCCarType.h"
+#import "WTCCarBrand.h"
+
 static NSString *collectionViewCellId = @"collectionViewCellId";
 static CGFloat imageSize = 80;
 
@@ -42,7 +45,10 @@ typedef enum
 @property(nonatomic, strong) NSMutableArray *imageArray;
 @property(nonatomic,weak)IBOutlet UIButton *commitBtn;
 @property (nonatomic, strong) NSMutableArray *cellData;
-
+@property(nonatomic,strong)NSString *carDescibetion;
+@property(nonatomic,strong)WTCCarBrand *selectBrand;
+@property(nonatomic,strong)WTCCarType *selectType;
+@property(nonatomic,strong)WTCCarModel *selectModel;
 @end
 
 @implementation WTCAddCarViewController
@@ -220,7 +226,13 @@ typedef enum
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
     }
-    cell.textLabel.text = @"车辆描述";
+    if (self.carDescibetion) {
+        cell.textLabel.text = self.carDescibetion;
+    }
+    else
+    {
+        cell.textLabel.text = @"车辆描述";
+    }
     return cell;
 }
 
@@ -242,7 +254,15 @@ typedef enum
     }
     
     cell.infoField.tag = indexPath.row;
+    
+    
     cell.nameLabel.text = [infoArr objectAtIndex:indexPath.row];
+    
+    if (indexPath.row == 0) {
+        if (self.selectBrand != nil && self.selectType != nil && self.selectModel != nil) {
+            cell.infoField.text = [NSString stringWithFormat:@"%@ %@ %@",self.selectModel.fullname,self.selectType.fullname,self.selectModel.name];
+        }
+    }
 
     return cell;
 }
@@ -251,16 +271,24 @@ typedef enum
     
     if (indexPath.row == 4) {
         WTCCarDescribetionViewController *desController = [[WTCCarDescribetionViewController alloc]init];
+        desController.desDelegate = self;
         [self.navigationController pushViewController:desController animated:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+}
+-(void)saveCarDescribtion:(NSString *)des
+{
+    self.carDescibetion = des;
+    NSIndexSet *indexSet=[[NSIndexSet alloc]initWithIndex:4];
+    [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
 }
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     textField.returnKeyType = UIReturnKeyDone;
     if (textField.tag == 0) {
         WTCCarCategoryViewController *category = [[WTCCarCategoryViewController alloc]init];
+        category.delegate = self;
         [self.navigationController pushViewController:category animated:YES];
         
         return NO;
@@ -344,6 +372,11 @@ typedef enum
     [_cellData replaceObjectAtIndex:indexPath.section withObject:text];
 }
 
+-(IBAction)commit:(id)sender{
+    WTCAddCarSuccessViewController *success = [[WTCAddCarSuccessViewController alloc]init];
+    [self presentViewController:success animated:YES completion:nil];
+    
+}
 //- (void)setToolBarForTextField:(id)aTextInput doneActionTarget:(id)aTarget actionSelector:(SEL)aDoneSEL
 //
 //{
@@ -378,5 +411,13 @@ typedef enum
 //    
 //    
 //}
+#pragma mark-选择车系回调方法
+-(void)selectBrand:(WTCCarBrand *)brand type:(WTCCarType *)type Model:(WTCCarModel *)model
+{
+    self.selectModel = model;
+    self.selectType = type;
+    self.selectBrand = brand;
+    [self.tableView reloadData];
+}
 
 @end

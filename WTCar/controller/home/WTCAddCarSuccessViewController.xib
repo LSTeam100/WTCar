@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCAddCarSuccessViewController">
+            <connections>
+                <outlet property="goOnAdCarBtn" destination="riS-t9-L4A" id="Vvx-tD-TDH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_addcarsuccess" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-6V-GUh"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜您发布车辆成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgW-xc-WV9">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riS-t9-L4A">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Adb-Pt-LVx"/>
+                    </constraints>
+                    <state key="normal" title="继续发布车辆" backgroundImage="btn_background_green">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goOnAddCar:" destination="-1" eventType="touchUpInside" id="7p1-cH-kHu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8ac-6V-GUh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BOs-oJ-7it"/>
+                <constraint firstItem="fgW-xc-WV9" firstAttribute="top" secondItem="8ac-6V-GUh" secondAttribute="bottom" constant="15" id="Tza-da-IxX"/>
+                <constraint firstItem="riS-t9-L4A" firstAttribute="top" secondItem="fgW-xc-WV9" secondAttribute="bottom" constant="60" id="cOD-Zh-p6t"/>
+                <constraint firstItem="riS-t9-L4A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="j6I-qO-0QB"/>
+                <constraint firstItem="8ac-6V-GUh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="mOa-dH-Ihh"/>
+                <constraint firstItem="fgW-xc-WV9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tW5-fM-EYt"/>
+            </constraints>
+            <point key="canvasLocation" x="171.5" y="4.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_background_green" width="340" height="40"/>
+        <image name="home_addcarsuccess" width="140" height="140"/>
+    </resources>
+</document>
