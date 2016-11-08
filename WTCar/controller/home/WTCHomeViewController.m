@@ -16,6 +16,7 @@
 #import "LoanServiceViewController.h"
 #import "HomeNavigationBarView.h"
 #import "WTCNotGetPOSViewController.h"
+#import "LoginViewController.h"
 @interface WTCHomeViewController ()
 {
     CGFloat carouselHeight;
@@ -281,6 +282,8 @@
 {
     LoanServiceViewController *loan = [[LoanServiceViewController alloc]init];
     [self.navigationController pushViewController:loan animated:YES];
+    //LoginViewController *logCon = [[LoginViewController alloc]init];
+    //[self.navigationController pushViewController:logCon animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

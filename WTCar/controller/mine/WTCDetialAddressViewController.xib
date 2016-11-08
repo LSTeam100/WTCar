@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIM-YP-hh2">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIM-YP-hh2">
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="dcn-Lk-PaU"/>
                     </constraints>
@@ -25,7 +25,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTB-OH-atS">
-                    <color key="backgroundColor" red="0.59687670920000002" green="0.95686274770000002" blue="0.50270967389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.45627807409999999" green="0.85286132000000003" blue="0.1038663066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="42v-WB-nem"/>
                     </constraints>
@@ -42,7 +42,7 @@
                         <constraint firstAttribute="height" constant="1" id="MUt-fA-7ZF"/>
                     </constraints>
                 </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOF-xm-pH8">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOF-xm-pH8">
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="CyP-rO-4jX"/>
                     </constraints>
@@ -81,9 +81,7 @@
                 <constraint firstItem="7dR-5W-Tvp" firstAttribute="top" secondItem="2QF-3k-jev" secondAttribute="bottom" constant="4" id="ddI-gy-SCQ"/>
                 <constraint firstAttribute="trailing" secondItem="FOF-xm-pH8" secondAttribute="trailing" constant="16" id="e6T-GN-Azh"/>
                 <constraint firstItem="2QF-3k-jev" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ev4-1F-h2K"/>
-
                 <constraint firstItem="LIM-YP-hh2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="hwo-nX-tw9"/>
-
                 <constraint firstItem="2QF-3k-jev" firstAttribute="top" secondItem="LIM-YP-hh2" secondAttribute="bottom" id="lZg-9Q-NCY"/>
                 <constraint firstAttribute="trailing" secondItem="LIM-YP-hh2" secondAttribute="trailing" constant="16" id="vEU-1f-7tw"/>
                 <constraint firstAttribute="trailing" secondItem="J55-eo-JFV" secondAttribute="trailing" constant="16" id="vI0-9B-FhY"/>

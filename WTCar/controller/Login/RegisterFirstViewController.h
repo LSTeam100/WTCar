@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *TeleNumTextField;
 //下一步
 - (IBAction)NextStepButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *ReTeleImageView;
 
 @end

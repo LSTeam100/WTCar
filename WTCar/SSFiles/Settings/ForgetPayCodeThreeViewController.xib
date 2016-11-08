@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgetPayCodeThreeViewController">
+            <connections>
+                <outlet property="confirmNewCodeButton" destination="Z36-8Y-IVc" id="CZV-7u-znF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入您新的支付密码并确认" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-H3-16C">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Y4I-m9-jEl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请再次输入并确认" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPv-qY-hsL">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="1jL-XS-Xrw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z36-8Y-IVc">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="kwC-VH-LIC"/>
+                    </constraints>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RPv-qY-hsL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="7pf-l1-8Mk"/>
+                <constraint firstItem="Z36-8Y-IVc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="De3-mE-OIk"/>
+                <constraint firstAttribute="trailing" secondItem="Z36-8Y-IVc" secondAttribute="trailing" constant="61" id="GeO-OA-rKG"/>
+                <constraint firstItem="RPv-qY-hsL" firstAttribute="top" secondItem="6E1-H3-16C" secondAttribute="bottom" constant="85" id="NQv-bb-Fda"/>
+                <constraint firstItem="Z36-8Y-IVc" firstAttribute="top" secondItem="RPv-qY-hsL" secondAttribute="bottom" constant="105" id="PR1-0f-0L0"/>
+                <constraint firstAttribute="trailing" secondItem="6E1-H3-16C" secondAttribute="trailing" constant="62" id="SeE-3t-4L3"/>
+                <constraint firstItem="6E1-H3-16C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="eR4-vC-KMy"/>
+                <constraint firstItem="6E1-H3-16C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="epA-wD-fbd"/>
+                <constraint firstAttribute="trailing" secondItem="RPv-qY-hsL" secondAttribute="trailing" constant="62" id="pEL-Bt-xF4"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T32-cK-zVb">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T32-cK-zVb">
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Sxe-Bk-wfX"/>
                     </constraints>
@@ -27,8 +27,7 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-Cn-rzt">
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="mWF-Xn-cPl"/>
-                        <constraint firstAttribute="width" constant="343" id="wny-rp-BVE"/>
+                        <constraint firstAttribute="height" constant="30" id="xY9-sa-2Z3"/>
                     </constraints>
                     <state key="normal" title="下一步">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,18 +36,46 @@
                         <action selector="NextStepButtonClick:" destination="-1" eventType="touchUpInside" id="5Rg-63-QCc"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDp-6z-aca">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="qpH-AC-s9W"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tele_title" translatesAutoresizingMaskIntoConstraints="NO" id="ZEm-R7-M0K">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="OyR-MP-HOk"/>
+                        <constraint firstAttribute="width" constant="30" id="WfX-Mg-zc0"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77g-Ys-TF5">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="X2R-zs-Lce"/>
+                        <constraint firstAttribute="width" constant="1" id="oUc-sv-eFO"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="JDp-6z-aca" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="3it-ff-Clq"/>
+                <constraint firstAttribute="trailing" secondItem="JDp-6z-aca" secondAttribute="trailing" constant="16" id="9fM-ZC-wyf"/>
+                <constraint firstItem="77g-Ys-TF5" firstAttribute="centerY" secondItem="T32-cK-zVb" secondAttribute="centerY" constant="-1" id="AvD-X8-CO9"/>
+                <constraint firstItem="T32-cK-zVb" firstAttribute="leading" secondItem="77g-Ys-TF5" secondAttribute="trailing" constant="16" id="DdT-vu-5mk"/>
+                <constraint firstItem="ZEm-R7-M0K" firstAttribute="centerY" secondItem="T32-cK-zVb" secondAttribute="centerY" constant="-1" id="Iiz-KT-hTG"/>
+                <constraint firstItem="oSR-Cn-rzt" firstAttribute="top" secondItem="T32-cK-zVb" secondAttribute="bottom" constant="41" id="Jyu-cO-Fg8"/>
                 <constraint firstAttribute="trailing" secondItem="T32-cK-zVb" secondAttribute="trailing" constant="16" id="Mbf-Vi-fT6"/>
-
+                <constraint firstItem="JDp-6z-aca" firstAttribute="top" secondItem="T32-cK-zVb" secondAttribute="bottom" id="Nj5-p1-DNA"/>
                 <constraint firstItem="T32-cK-zVb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="116" id="Pb8-7k-76W"/>
-
-                <constraint firstItem="T32-cK-zVb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="QNr-mC-1Vw"/>
-                <constraint firstItem="oSR-Cn-rzt" firstAttribute="top" secondItem="T32-cK-zVb" secondAttribute="bottom" constant="41" id="ZUD-gv-UOf"/>
-                <constraint firstItem="oSR-Cn-rzt" firstAttribute="centerX" secondItem="T32-cK-zVb" secondAttribute="centerX" id="ywm-rh-BOv"/>
+                <constraint firstItem="T32-cK-zVb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="QNr-mC-1Vw"/>
+                <constraint firstAttribute="trailing" secondItem="oSR-Cn-rzt" secondAttribute="trailing" constant="16" id="cAj-RH-F67"/>
+                <constraint firstItem="77g-Ys-TF5" firstAttribute="leading" secondItem="ZEm-R7-M0K" secondAttribute="trailing" constant="14" id="wec-4t-ILx"/>
+                <constraint firstItem="oSR-Cn-rzt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="xEM-rr-2Lv"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="tele_title" width="13" height="20"/>
+    </resources>
 </document>

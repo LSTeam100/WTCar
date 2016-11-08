@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgetPayCodeViewController">
+            <connections>
+                <outlet property="NextStepButton" destination="cxN-kt-um9" id="eHt-22-b9I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qFg-Ua-QDX">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="enN-qv-afV"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxN-kt-um9">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="u48-s3-s42"/>
+                    </constraints>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e85-l7-B1O">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="fUf-t3-r6x"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tele_title" translatesAutoresizingMaskIntoConstraints="NO" id="q5v-re-cTJ">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1dW-ma-LAz"/>
+                        <constraint firstAttribute="width" constant="30" id="H19-PA-zwN"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEi-5Q-xao">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="GJR-jw-8JZ"/>
+                        <constraint firstAttribute="height" constant="20" id="Ih7-MN-xzJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qFg-Ua-QDX" firstAttribute="leading" secondItem="yEi-5Q-xao" secondAttribute="trailing" constant="16" id="2Fz-CM-366"/>
+                <constraint firstItem="qFg-Ua-QDX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="60C-wL-i61"/>
+                <constraint firstAttribute="trailing" secondItem="cxN-kt-um9" secondAttribute="trailing" constant="16" id="Dtb-hQ-wws"/>
+                <constraint firstAttribute="trailing" secondItem="e85-l7-B1O" secondAttribute="trailing" constant="16" id="FIw-of-20a"/>
+                <constraint firstItem="e85-l7-B1O" firstAttribute="top" secondItem="qFg-Ua-QDX" secondAttribute="bottom" id="FJJ-1u-noG"/>
+                <constraint firstItem="q5v-re-cTJ" firstAttribute="centerY" secondItem="qFg-Ua-QDX" secondAttribute="centerY" constant="-1" id="MRn-Wq-sJb"/>
+                <constraint firstItem="cxN-kt-um9" firstAttribute="top" secondItem="e85-l7-B1O" secondAttribute="bottom" constant="40" id="Qzf-qz-Smt"/>
+                <constraint firstItem="yEi-5Q-xao" firstAttribute="leading" secondItem="q5v-re-cTJ" secondAttribute="trailing" constant="14" id="T7a-EP-jkS"/>
+                <constraint firstItem="qFg-Ua-QDX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="115" id="Yo4-mX-H4g"/>
+                <constraint firstItem="cxN-kt-um9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Za7-SY-fuF"/>
+                <constraint firstAttribute="trailing" secondItem="qFg-Ua-QDX" secondAttribute="trailing" constant="16" id="fhF-UO-JGE"/>
+                <constraint firstItem="e85-l7-B1O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="sNC-WS-dQw"/>
+                <constraint firstItem="yEi-5Q-xao" firstAttribute="centerY" secondItem="qFg-Ua-QDX" secondAttribute="centerY" constant="-1" id="sv2-Zm-oSx"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="tele_title" width="13" height="20"/>
+    </resources>
+</document>

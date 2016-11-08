@@ -8,6 +8,7 @@
 #import "SettingViewController.h"
 #import "SettingTableViewCell.h"
 #import "AccountSafetyViewController.h"
+#import "LoginViewController.h"
 @interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat cellHeight;
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];
     [self dataInit];
     [self makeDeckView];
     [self makeTableView];
@@ -29,7 +31,7 @@
     // Do any additional setup after loading the view.
 }
 -(void)dataInit{
-    _cellTextArray = @[@"启动引导页",@"修改个人资料",@"账号安全",@"客服电话",@"检查更新",@"当前版本"];
+    _cellTextArray = @[@"账号安全",@"客服电话",@"检查更新",@"当前版本"];
     _TeleNumlabel = [[UILabel alloc]init];
     _TeleNumlabel.text = @"4008-010-010";
     _TeleNumlabel.font = [UIFont boldSystemFontOfSize:14];
@@ -45,6 +47,7 @@
 }
 -(void)makeTableView{
     _SettingTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_deckView.frame),SCREEN_WIDTH, cellHeight*6) style:UITableViewStylePlain];
+
     [self.view addSubview:_SettingTableView];
     _SettingTableView.delegate = self;
     _SettingTableView.dataSource =self;
@@ -61,7 +64,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    return 4;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return cellHeight;
@@ -71,7 +74,7 @@
     [_SettingTableView dequeueReusableCellWithIdentifier:@"cellIdentifier"];
 
      _SettingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [cell.contentView setBackgroundColor:[UIColor lightGrayColor]];
+    [cell.contentView setBackgroundColor:[UIColor whiteColor]];
     cell.SettingLabel.text = _cellTextArray[indexPath.row];
     
     if (!IOS9_OR_LATER) {
@@ -80,10 +83,6 @@
     if (indexPath.row == 0) {
         
     }else if (indexPath.row == 1){
-        
-    }else if (indexPath.row == 2){
-        
-    }else if (indexPath.row == 3){
         cell.BackIconImageView.hidden = YES;
         if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
             _TeleNumlabel.frame =CGRectMake(SCREEN_WIDTH - _TeleNumlabel.frame.size.width - 10,\
@@ -95,9 +94,9 @@
         [cell.contentView addSubview:_TeleNumlabel];
         _TeleNumlabel.backgroundColor = [UIColor clearColor];
         _TeleNumlabel.textColor = [UIColor blueColor];
-    }else if (indexPath.row == 4){
+    }else if (indexPath.row == 2){
         
-    }else if (indexPath.row == 5){
+    }else if (indexPath.row == 3){
         cell.BackIconImageView.hidden = YES;
         
     }
@@ -106,18 +105,14 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
-
-    }else if (indexPath.row == 1){
-
-    }else if (indexPath.row == 2){
+    if (indexPath.row == 0){
         AccountSafetyViewController *accountSafetyViewController = [AccountSafetyViewController new];
         [self.navigationController pushViewController:accountSafetyViewController animated:YES];
-    }else if (indexPath.row == 3){
+    }else if (indexPath.row == 1){
         [self callPhone:@"01083065377"];
-    }else if (indexPath.row == 4){
+    }else if (indexPath.row == 2){
  
-    }else if (indexPath.row == 5){
+    }else if (indexPath.row == 3){
  
     }
     
@@ -132,6 +127,7 @@
     
     [logOutButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [logOutButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [logOutButton addTarget:self action:@selector(logoutClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:logOutButton];
 }
 - (void)callPhone:(NSString *)phoneNumber
@@ -145,6 +141,11 @@
     [self.view addSubview:callWebview];
     
     
+}
+-(void)logoutClick
+{
+    LoginViewController *loginViewCon = [LoginViewController new];
+    [self.navigationController pushViewController:loginViewCon animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

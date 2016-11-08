@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="苗刚" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-B9-rri">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="苗刚" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-B9-rri">
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="BJL-sq-xp4"/>
                     </constraints>
@@ -29,7 +29,7 @@
                         <constraint firstAttribute="height" constant="25" id="IHC-RV-Ev8"/>
                         <constraint firstAttribute="width" constant="30" id="ntK-gX-IAQ"/>
                     </constraints>
-                    <state key="normal" image="6_lit.png"/>
+                    <state key="normal" image="WTCAddRemove"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-Jn-Lqq">
                     <constraints>
@@ -61,14 +61,12 @@
                 <constraint firstItem="IVS-B9-rri" firstAttribute="centerY" secondItem="87x-Eb-Oxa" secondAttribute="centerY" id="ih5-jg-JLZ"/>
                 <constraint firstItem="Ax2-Jn-Lqq" firstAttribute="top" secondItem="8jV-Qj-oxC" secondAttribute="bottom" constant="49" id="obd-ih-ati"/>
                 <constraint firstAttribute="trailing" secondItem="87x-Eb-Oxa" secondAttribute="trailing" constant="41" id="uJz-Yj-x9S"/>
-
                 <constraint firstItem="87x-Eb-Oxa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="up9-gV-Mod"/>
-
             </constraints>
             <point key="canvasLocation" x="59.5" y="71.5"/>
         </view>
     </objects>
     <resources>
-        <image name="6_lit.png" width="30" height="25"/>
+        <image name="WTCAddRemove" width="16" height="16"/>
     </resources>
 </document>

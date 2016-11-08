@@ -152,7 +152,8 @@
     }
     else if (indexPath.row == 8)
     {
-        
+        SettingViewController *settingViewCon = [SettingViewController new];
+        [self.navigationController pushViewController:settingViewCon animated:YES];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -18,23 +18,23 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
     self.navigationItem.title =@"设置支付密码";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"back" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
     [self addsubview];
     // Do any additional setup after loading the view from its nib.
 }
 //加载密码输入框
 -(void)addsubview
 {
-    self.password = [[TTPasswordView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-256.5)/2,193.5, 256.5, 39)];
+    self.password = [[TTPasswordView alloc] initWithFrame:CGRectMake(60, 90+30, SCREEN_WIDTH-120, (SCREEN_WIDTH-120)/6)];
     self.password.elementCount = 6;
     self.password.elementColor=UIColorFromRGB(0xd5d5d5);
     [self.view addSubview:self.password];
+    self.password2 = [[TTPasswordView alloc] initWithFrame:CGRectMake(60, 195+30, SCREEN_WIDTH-120,(SCREEN_WIDTH-120)/6)];
+    self.password2.elementCount = 6;
+    self.password2.elementColor=UIColorFromRGB(0xd5d5d5);
+    [self.view addSubview:self.password2];
 }
 
--(void)back
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

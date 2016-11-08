@@ -9,6 +9,8 @@
 #import "AccountSafetyViewController.h"
 #import "AccountSafetyTableViewCell.h"
 #import "SettingPayCodeViewController.h"
+#import "ChangePayCodeViewController.h"
+#import "ForgetPayCodeViewController.h"
 @interface AccountSafetyViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat cellHeight;//cell高度
@@ -24,18 +26,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];
     [self dataInit];
     [self makeTableView];
     // Do any additional setup after loading the view.
 }
 -(void)dataInit{
-    _cellTextArray = @[@"设置支付密码",@"修改支付密码",@"忘记支付密码",@"设置POS机登录密码",@"修改POS机登陆密码"];
+    _cellTextArray = @[@"设置支付密码",@"修改支付密码",@"忘记支付密码"];
     cellHeight = 42;
     
 }
 //设置tableView
 -(void)makeTableView{
-    _AccountSafetyTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 60,SCREEN_WIDTH, cellHeight*5) style:UITableViewStylePlain];
+    _AccountSafetyTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20,SCREEN_WIDTH, 300) style:UITableViewStylePlain];
+
     [self.view addSubview:_AccountSafetyTableView];
     _AccountSafetyTableView.delegate = self;
     _AccountSafetyTableView.dataSource =self;
@@ -52,7 +56,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 3;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return cellHeight;
@@ -62,7 +66,7 @@
     [_AccountSafetyTableView dequeueReusableCellWithIdentifier:@"cellIdentifier"];
     
     _AccountSafetyTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [cell.contentView setBackgroundColor:[UIColor lightGrayColor]];
+    [cell.contentView setBackgroundColor:[UIColor whiteColor]];
     cell.AccountSafetyLabel.text = _cellTextArray[indexPath.row];
     
     if (!IOS9_OR_LATER) {
@@ -74,10 +78,6 @@
         
     }else if (indexPath.row == 2){
         
-    }else if (indexPath.row == 3){
-        
-    }else if (indexPath.row == 4){
-        
     }
     
     return cell;
@@ -88,13 +88,11 @@
         SettingPayCodeViewController *settingpaycodeViewCon = [SettingPayCodeViewController new];
         [self.navigationController pushViewController:settingpaycodeViewCon animated:YES];
     }else if (indexPath.row == 1){
-        
+        ChangePayCodeViewController *changePaycodeViewCon = [ChangePayCodeViewController new];
+        [self.navigationController pushViewController:changePaycodeViewCon animated:YES];
     }else if (indexPath.row == 2){
-        
-    }else if (indexPath.row == 3){
-    
-    }else if (indexPath.row == 4){
-        
+        ForgetPayCodeViewController *forgetPaycodeViewCon = [ForgetPayCodeViewController new];
+        [self.navigationController pushViewController:forgetPaycodeViewCon animated:YES];
     }
     
 }

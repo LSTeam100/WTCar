@@ -122,6 +122,16 @@
 		0488DBC41DC64D0B0018155D /* WTCPeoNameVerityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBC21DC64D0B0018155D /* WTCPeoNameVerityViewController.xib */; };
 		0488DBC81DC64DA40018155D /* WTCBusinessVerityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0488DBC61DC64DA40018155D /* WTCBusinessVerityViewController.m */; };
 		0488DBC91DC64DA40018155D /* WTCBusinessVerityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DBC71DC64DA40018155D /* WTCBusinessVerityViewController.xib */; };
+		04FAB32B1DD2297000E3D969 /* ChangePayCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAB3291DD2297000E3D969 /* ChangePayCodeViewController.m */; };
+		04FAB32C1DD2297000E3D969 /* ChangePayCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FAB32A1DD2297000E3D969 /* ChangePayCodeViewController.xib */; };
+		04FAB3301DD2298E00E3D969 /* ForgetPayCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAB32E1DD2298E00E3D969 /* ForgetPayCodeViewController.m */; };
+		04FAB3311DD2298E00E3D969 /* ForgetPayCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FAB32F1DD2298E00E3D969 /* ForgetPayCodeViewController.xib */; };
+		04FAB3351DD2321800E3D969 /* ForgetPayCodeSecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAB3331DD2321800E3D969 /* ForgetPayCodeSecViewController.m */; };
+		04FAB3361DD2321800E3D969 /* ForgetPayCodeSecViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FAB3341DD2321800E3D969 /* ForgetPayCodeSecViewController.xib */; };
+		04FAB33A1DD2323F00E3D969 /* ForgetPayCodeThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAB3381DD2323F00E3D969 /* ForgetPayCodeThreeViewController.m */; };
+		04FAB33B1DD2323F00E3D969 /* ForgetPayCodeThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FAB3391DD2323F00E3D969 /* ForgetPayCodeThreeViewController.xib */; };
+		04FAB33F1DD23AFD00E3D969 /* ShopSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAB33D1DD23AFD00E3D969 /* ShopSettingTableViewCell.m */; };
+		04FAB3401DD23AFD00E3D969 /* ShopSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FAB33E1DD23AFD00E3D969 /* ShopSettingTableViewCell.xib */; };
 		181A74C11DCDC0D4006F96E7 /* WTCPublishCarRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74C01DCDC0D4006F96E7 /* WTCPublishCarRequest.m */; };
 		181A74C41DCDC6AA006F96E7 /* WTCOnSaleListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74C31DCDC6AA006F96E7 /* WTCOnSaleListRequest.m */; };
 		181A74C71DCDC83A006F96E7 /* WTCOnSaleList.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74C61DCDC83A006F96E7 /* WTCOnSaleList.m */; };
@@ -536,6 +546,21 @@
 		0488DBC51DC64DA40018155D /* WTCBusinessVerityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCBusinessVerityViewController.h; sourceTree = "<group>"; };
 		0488DBC61DC64DA40018155D /* WTCBusinessVerityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCBusinessVerityViewController.m; sourceTree = "<group>"; };
 		0488DBC71DC64DA40018155D /* WTCBusinessVerityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCBusinessVerityViewController.xib; sourceTree = "<group>"; };
+		04FAB3281DD2297000E3D969 /* ChangePayCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePayCodeViewController.h; sourceTree = "<group>"; };
+		04FAB3291DD2297000E3D969 /* ChangePayCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePayCodeViewController.m; sourceTree = "<group>"; };
+		04FAB32A1DD2297000E3D969 /* ChangePayCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePayCodeViewController.xib; sourceTree = "<group>"; };
+		04FAB32D1DD2298E00E3D969 /* ForgetPayCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPayCodeViewController.h; sourceTree = "<group>"; };
+		04FAB32E1DD2298E00E3D969 /* ForgetPayCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPayCodeViewController.m; sourceTree = "<group>"; };
+		04FAB32F1DD2298E00E3D969 /* ForgetPayCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPayCodeViewController.xib; sourceTree = "<group>"; };
+		04FAB3321DD2321800E3D969 /* ForgetPayCodeSecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPayCodeSecViewController.h; sourceTree = "<group>"; };
+		04FAB3331DD2321800E3D969 /* ForgetPayCodeSecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPayCodeSecViewController.m; sourceTree = "<group>"; };
+		04FAB3341DD2321800E3D969 /* ForgetPayCodeSecViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPayCodeSecViewController.xib; sourceTree = "<group>"; };
+		04FAB3371DD2323F00E3D969 /* ForgetPayCodeThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPayCodeThreeViewController.h; sourceTree = "<group>"; };
+		04FAB3381DD2323F00E3D969 /* ForgetPayCodeThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPayCodeThreeViewController.m; sourceTree = "<group>"; };
+		04FAB3391DD2323F00E3D969 /* ForgetPayCodeThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPayCodeThreeViewController.xib; sourceTree = "<group>"; };
+		04FAB33C1DD23AFD00E3D969 /* ShopSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSettingTableViewCell.h; sourceTree = "<group>"; };
+		04FAB33D1DD23AFD00E3D969 /* ShopSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopSettingTableViewCell.m; sourceTree = "<group>"; };
+		04FAB33E1DD23AFD00E3D969 /* ShopSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopSettingTableViewCell.xib; sourceTree = "<group>"; };
 		181A74BF1DCDC0D4006F96E7 /* WTCPublishCarRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCPublishCarRequest.h; sourceTree = "<group>"; };
 		181A74C01DCDC0D4006F96E7 /* WTCPublishCarRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCPublishCarRequest.m; sourceTree = "<group>"; };
 		181A74C21DCDC6AA006F96E7 /* WTCOnSaleListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCOnSaleListRequest.h; sourceTree = "<group>"; };
@@ -1196,6 +1221,18 @@
 				042141FE1DC4D86300F1A619 /* SettingPayCodeViewController.h */,
 				042141FF1DC4D86300F1A619 /* SettingPayCodeViewController.m */,
 				042142001DC4D86300F1A619 /* SettingPayCodeViewController.xib */,
+				04FAB3281DD2297000E3D969 /* ChangePayCodeViewController.h */,
+				04FAB3291DD2297000E3D969 /* ChangePayCodeViewController.m */,
+				04FAB32A1DD2297000E3D969 /* ChangePayCodeViewController.xib */,
+				04FAB32D1DD2298E00E3D969 /* ForgetPayCodeViewController.h */,
+				04FAB32E1DD2298E00E3D969 /* ForgetPayCodeViewController.m */,
+				04FAB32F1DD2298E00E3D969 /* ForgetPayCodeViewController.xib */,
+				04FAB3321DD2321800E3D969 /* ForgetPayCodeSecViewController.h */,
+				04FAB3331DD2321800E3D969 /* ForgetPayCodeSecViewController.m */,
+				04FAB3341DD2321800E3D969 /* ForgetPayCodeSecViewController.xib */,
+				04FAB3371DD2323F00E3D969 /* ForgetPayCodeThreeViewController.h */,
+				04FAB3381DD2323F00E3D969 /* ForgetPayCodeThreeViewController.m */,
+				04FAB3391DD2323F00E3D969 /* ForgetPayCodeThreeViewController.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1247,6 +1284,9 @@
 				0488DBB11DC5C5FB0018155D /* ShopSettingView.h */,
 				0488DBB21DC5C5FB0018155D /* ShopSettingView.m */,
 				0488DBB41DC5C7FC0018155D /* ShopSettingView.xib */,
+				04FAB33C1DD23AFD00E3D969 /* ShopSettingTableViewCell.h */,
+				04FAB33D1DD23AFD00E3D969 /* ShopSettingTableViewCell.m */,
+				04FAB33E1DD23AFD00E3D969 /* ShopSettingTableViewCell.xib */,
 			);
 			path = ShopSettingView;
 			sourceTree = "<group>";
@@ -2205,6 +2245,7 @@
 				0451EDB21DBC89BA0026D046 /* 6_lit.png in Resources */,
 				0451EDD21DBC89BA0026D046 /* 餐饮服务@2x.png in Resources */,
 				185EAFDB1DC5EDFB008C1471 /* read_me.txt in Resources */,
+				04FAB3311DD2298E00E3D969 /* ForgetPayCodeViewController.xib in Resources */,
 				047442441DC809280067AE82 /* WTCGetPOSNotOpenViewController.xib in Resources */,
 				047442491DC8096F0067AE82 /* WTCPOSToOpenViewController.xib in Resources */,
 				185EB0011DC62FFB008C1471 /* AuthenticationTableViewCell.xib in Resources */,
@@ -2225,12 +2266,14 @@
 				18850B5C1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.xib in Resources */,
 				047442591DC80DE90067AE82 /* LoanServiceViewController.xib in Resources */,
 				185EAFE81DC5FC1C008C1471 /* WTCShareTableViewCell.xib in Resources */,
+				04FAB3361DD2321800E3D969 /* ForgetPayCodeSecViewController.xib in Resources */,
 				18EF7BC91DC8EEF8005D2DFB /* WTCMineViewController.xib in Resources */,
 				0451EDE91DBCB0270026D046 /* 2_banner_ch.png in Resources */,
 				042142121DC4E99D00F1A619 /* ResgisterSecondViewController.xib in Resources */,
 				042792831DCB936200216A60 /* GuideViewController.xib in Resources */,
 				18BF6F381DC1DB7C003BF410 /* KKPickerProvice.plist in Resources */,
 				042142021DC4D86300F1A619 /* SettingPayCodeViewController.xib in Resources */,
+				04FAB32C1DD2297000E3D969 /* ChangePayCodeViewController.xib in Resources */,
 				042141F81DC4D0AE00F1A619 /* AccountSafetyTableViewCell.xib in Resources */,
 				0451EDEA1DBCB0270026D046 /* 2_banner_en.png in Resources */,
 				0451EDE81DBCB0270026D046 /* 1_banner_en.png in Resources */,
@@ -2272,6 +2315,7 @@
 				0451EDBD1DBC89BA0026D046 /* 交通示意图@2x.png in Resources */,
 				0451EDD31DBC89BA0026D046 /* 餐饮服务@3x.png in Resources */,
 				0451EDC41DBC89BA0026D046 /* 客户邀请@3x.png in Resources */,
+				04FAB33B1DD2323F00E3D969 /* ForgetPayCodeThreeViewController.xib in Resources */,
 				0451EDB71DBC89BA0026D046 /* b9.png in Resources */,
 				042142171DC4EC4100F1A619 /* RegisterThreeViewController.xib in Resources */,
 				043564E91DC727C2008B1B5F /* WTCUserTeleNumViewController.xib in Resources */,
@@ -2325,6 +2369,7 @@
 				0451EDBA1DBC89BA0026D046 /* Back-icon@3x.png in Resources */,
 				18D882FC1DBB202700F19129 /* WTCShareViewController.xib in Resources */,
 				0451EDCB1DBC89BA0026D046 /* 联系我们.png in Resources */,
+				04FAB3401DD23AFD00E3D969 /* ShopSettingTableViewCell.xib in Resources */,
 				0451EDD01DBC89BA0026D046 /* 酒店信息@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2408,6 +2453,7 @@
 				0451ED8C1DBC6FA80026D046 /* iCarousel.m in Sources */,
 				181A74DC1DCDD9E7006F96E7 /* WTCarOffShelfListRequest.m in Sources */,
 				185EB00F1DC647E8008C1471 /* WTCOrderTableViewCell.m in Sources */,
+				04FAB3351DD2321800E3D969 /* ForgetPayCodeSecViewController.m in Sources */,
 				0451ED8D1DBC6FA80026D046 /* ScrollImageItem.m in Sources */,
 				18850B7F1DCED65B00DA8F47 /* CategoryTableViewCell.m in Sources */,
 				042141F01DC4CCBC00F1A619 /* TTPasswordView.m in Sources */,
@@ -2420,6 +2466,7 @@
 				18D883751DBB49F500F19129 /* NSData+ImageContentType.m in Sources */,
 				18BF6F3B1DC1DB7C003BF410 /* SafeControl.m in Sources */,
 				0451EDF81DBE3B720026D046 /* SettingViewController.m in Sources */,
+				04FAB32B1DD2297000E3D969 /* ChangePayCodeViewController.m in Sources */,
 				043564E31DC72799008B1B5F /* WTCUserNameViewController.m in Sources */,
 				18BF6F091DC1D3A3003BF410 /* DNAlbumTableViewController.m in Sources */,
 				18D883781DBB49F500F19129 /* SDWebImageDecoder.m in Sources */,
@@ -2484,6 +2531,7 @@
 				185EAF571DC5D852008C1471 /* WTCCarShareViewController.m in Sources */,
 				18BF6F101DC1D3A3003BF410 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
 				18F80EC81DB60CE700FF1830 /* AFSecurityPolicy.m in Sources */,
+				04FAB3301DD2298E00E3D969 /* ForgetPayCodeViewController.m in Sources */,
 				18D883861DBB638000F19129 /* WTCCarManageController.m in Sources */,
 				18850B5B1DCE26DB00DA8F47 /* WTCMineDetailHeadTableViewCell.m in Sources */,
 				18850B701DCE29D900DA8F47 /* UIApplication+RSKImageCropper.m in Sources */,
@@ -2507,6 +2555,7 @@
 				0488DBB91DC5DA9E0018155D /* WTCMineViewTableViewCell.m in Sources */,
 				181A74CA1DCDD02C006F96E7 /* WTCOffShelfRequest.m in Sources */,
 				18BF6F0A1DC1D3A3003BF410 /* DNAsset.m in Sources */,
+				04FAB33F1DD23AFD00E3D969 /* ShopSettingTableViewCell.m in Sources */,
 				18F80EC61DB60CE700FF1830 /* AFHTTPSessionManager.m in Sources */,
 				0451EDE11DBCA0850026D046 /* WTCBusinessPosViewController.m in Sources */,
 				18D8834C1DBB49B200F19129 /* UIScrollView+MJRefresh.m in Sources */,
@@ -2525,6 +2574,7 @@
 				047442481DC8096F0067AE82 /* WTCPOSToOpenViewController.m in Sources */,
 				18D8838A1DBB63E100F19129 /* WTCBaseViewController.m in Sources */,
 				18D883451DBB49B200F19129 /* MJRefreshFooter.m in Sources */,
+				04FAB33A1DD2323F00E3D969 /* ForgetPayCodeThreeViewController.m in Sources */,
 				18D8837A1DBB49F500F19129 /* SDWebImageDownloaderOperation.m in Sources */,
 				18E648701DB6276800B11D8F /* WTCarResponse.m in Sources */,
 				18D883791DBB49F500F19129 /* SDWebImageDownloader.m in Sources */,

@@ -85,7 +85,7 @@
                         <constraint firstAttribute="height" constant="70" id="2k4-Jk-0T7"/>
                         <constraint firstAttribute="width" constant="70" id="ZVm-ib-Zw0"/>
                     </constraints>
-                    <state key="normal" image="餐饮服务.png"/>
+                    <state key="normal" image="WTCAddCar_add"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="营业执照照片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-Ov-Lu6">
                     <constraints>
@@ -137,9 +137,7 @@
                 <constraint firstItem="5oN-fg-CWL" firstAttribute="centerY" secondItem="sh3-Ov-Lu6" secondAttribute="centerY" id="kyq-xd-A20"/>
                 <constraint firstItem="aU1-vK-q23" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="mp2-kx-ZlW"/>
                 <constraint firstItem="nxc-Ct-fKu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="179" id="rdV-I9-P4G"/>
-
                 <constraint firstItem="HTS-cm-gll" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="vDh-sn-sie"/>
-
                 <constraint firstItem="aU1-vK-q23" firstAttribute="top" secondItem="I7X-70-Jsc" secondAttribute="bottom" constant="8" id="vZJ-gS-TBD"/>
                 <constraint firstAttribute="bottom" secondItem="LhF-GR-pgc" secondAttribute="bottom" id="yb2-4Y-ZJp"/>
             </constraints>
@@ -147,6 +145,6 @@
         </view>
     </objects>
     <resources>
-        <image name="餐饮服务.png" width="74" height="74"/>
+        <image name="WTCAddCar_add" width="70" height="70"/>
     </resources>
 </document>

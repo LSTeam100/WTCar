@@ -6,8 +6,8 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WTCBaseViewController.h"
 
-@interface AddLoanSuccessViewController : UIViewController
+@interface AddLoanSuccessViewController : WTCBaseViewController
 
 @end

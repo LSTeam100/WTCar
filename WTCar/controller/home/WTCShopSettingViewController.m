@@ -8,17 +8,30 @@
 
 #import "WTCShopSettingViewController.h"
 #import "WTCMyDetailViewController.h"
+#import "ShopSettingTableViewCell.h"
+#import "ShopSettingView.h"
 @interface WTCShopSettingViewController ()
-
+@property(strong,nonatomic)ShopSettingView *shopsettingView;
 @end
 
 @implementation WTCShopSettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];
+    [self makeShopSettingView];
     // Do any additional setup after loading the view from its nib.
 }
+-(void)dataInit{
+   
+}
 
+-(void)makeShopSettingView
+{
+    _shopsettingView = [[NSBundle mainBundle]loadNibNamed:@"ShopSettingView" owner:nil options:nil][0];
+    _shopsettingView.frame = CGRectMake(0,251, SCREEN_WIDTH, 200);
+    [_shopSettingContentView addSubview:_shopsettingView];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

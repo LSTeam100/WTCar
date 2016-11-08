@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterFirstViewController">
             <connections>
+                <outlet property="ReTeleImageView" destination="BH0-4k-s02" id="K1O-KS-eNG"/>
                 <outlet property="TeleNumTextField" destination="IMC-Pe-9St" id="6X8-53-mzS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMC-Pe-9St">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMC-Pe-9St">
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="LN4-Ss-nPe"/>
                     </constraints>
@@ -25,11 +26,23 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-aQ-vww">
-                    <color key="backgroundColor" red="0.45467015529999999" green="0.95686274770000002" blue="0.67793823389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tele_title" translatesAutoresizingMaskIntoConstraints="NO" id="BH0-4k-s02">
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="Cwy-nL-qDt"/>
-                        <constraint firstAttribute="width" constant="343" id="pmZ-hZ-4uU"/>
+                        <constraint firstAttribute="width" constant="30" id="YdU-yF-Q6d"/>
+                        <constraint firstAttribute="height" constant="30" id="xht-oP-fJj"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-4h-EUc">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="GqW-8b-pH3"/>
+                        <constraint firstAttribute="width" constant="1" id="fqH-Qo-arS"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-aQ-vww">
+                    <color key="backgroundColor" red="0.45627807409999999" green="0.85286132000000003" blue="0.1038663066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="vbF-pw-NHP"/>
                     </constraints>
                     <state key="normal" title="下一步">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,18 +51,33 @@
                         <action selector="NextStepButtonClick:" destination="-1" eventType="touchUpInside" id="lnJ-Xx-eGs"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDV-0T-6G0">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="06S-OH-PQc"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="zAf-aQ-vww" firstAttribute="top" secondItem="IMC-Pe-9St" secondAttribute="bottom" constant="65" id="GAB-BG-KkR"/>
-                <constraint firstItem="zAf-aQ-vww" firstAttribute="centerX" secondItem="IMC-Pe-9St" secondAttribute="centerX" id="WH0-1e-T6g"/>
-                <constraint firstItem="IMC-Pe-9St" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Zx5-JL-fyq"/>
-
+                <constraint firstAttribute="trailing" secondItem="zAf-aQ-vww" secondAttribute="trailing" constant="16" id="AP4-ec-pEt"/>
+                <constraint firstItem="zAf-aQ-vww" firstAttribute="top" secondItem="IMC-Pe-9St" secondAttribute="bottom" constant="65" id="Sgt-XI-fv3"/>
+                <constraint firstItem="xBq-4h-EUc" firstAttribute="leading" secondItem="BH0-4k-s02" secondAttribute="trailing" constant="14" id="UU3-wc-tTn"/>
+                <constraint firstItem="IMC-Pe-9St" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="Zx5-JL-fyq"/>
+                <constraint firstItem="bDV-0T-6G0" firstAttribute="top" secondItem="IMC-Pe-9St" secondAttribute="bottom" id="bgm-tb-qDR"/>
                 <constraint firstItem="IMC-Pe-9St" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="115" id="d6c-Ef-TUV"/>
-
+                <constraint firstItem="bDV-0T-6G0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="hGy-GB-5Go"/>
+                <constraint firstAttribute="trailing" secondItem="bDV-0T-6G0" secondAttribute="trailing" constant="16" id="jOM-r6-cE6"/>
+                <constraint firstItem="BH0-4k-s02" firstAttribute="centerY" secondItem="IMC-Pe-9St" secondAttribute="centerY" id="saF-Ht-F8Z"/>
+                <constraint firstItem="IMC-Pe-9St" firstAttribute="leading" secondItem="xBq-4h-EUc" secondAttribute="trailing" constant="16" id="tdZ-Yz-LJB"/>
+                <constraint firstItem="xBq-4h-EUc" firstAttribute="centerY" secondItem="IMC-Pe-9St" secondAttribute="centerY" constant="-2" id="teX-Py-bsP"/>
+                <constraint firstItem="zAf-aQ-vww" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="uxK-aF-kbY"/>
                 <constraint firstAttribute="trailing" secondItem="IMC-Pe-9St" secondAttribute="trailing" constant="16" id="xut-Ju-FQR"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="tele_title" width="13" height="20"/>
+    </resources>
 </document>

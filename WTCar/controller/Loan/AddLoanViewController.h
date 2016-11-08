@@ -6,9 +6,9 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WTCBaseViewController.h"
 
-@interface AddLoanViewController : UIViewController
+@interface AddLoanViewController : WTCBaseViewController
 //提交配资申请
 - (IBAction)confirmLoanButtonClick:(id)sender;
 //输入配资金额文本框

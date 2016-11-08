@@ -15,5 +15,7 @@
 - (IBAction)childAccountLoginButtonClick:(id)sender;
 - (IBAction)RegisterButtonClick:(id)sender;
 - (IBAction)ForgetCodeButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *TeleImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *PasswordImageView;
 
 @end

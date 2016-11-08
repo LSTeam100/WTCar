@@ -6,8 +6,8 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-@interface WTCNotGetPOSViewController : UIViewController
+#import"WTCBaseViewController.h"
+@interface WTCNotGetPOSViewController : WTCBaseViewController
 //获取店铺POS
 - (IBAction)ToGetPOSButtonClick:(id)sender;
 

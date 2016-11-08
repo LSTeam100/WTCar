@@ -6,14 +6,15 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WTCBaseViewController.h"
 #import "define.h"
 #import "TTPasswordView.h"
-@interface SettingPayCodeViewController : UIViewController
+@interface SettingPayCodeViewController : WTCBaseViewController
 /**
  *   密码框
  */
 @property(nonatomic,retain)TTPasswordView *password;
+@property(nonatomic,retain)TTPasswordView *password2;
 /**
  *  第一次输入的密码
  */

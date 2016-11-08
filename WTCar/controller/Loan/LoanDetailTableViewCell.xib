@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LoanDetailTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="407" height="95"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="LoanDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="62"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="407" height="94"/>
+                <frame key="frameInset" width="407" height="62"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配资中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gh-wt-k2z">
@@ -45,12 +45,12 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="BUn-Ed-ZIC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="16R-UU-jgv"/>
+                    <constraint firstItem="BUn-Ed-ZIC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-0.25" id="16R-UU-jgv"/>
                     <constraint firstItem="BUn-Ed-ZIC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="31" id="OgZ-X6-2e1"/>
                     <constraint firstItem="NE5-fC-GLt" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cRX-9R-qTj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="9Gh-wt-k2z" secondAttribute="trailing" constant="40" id="dnE-RN-eyz"/>
-                    <constraint firstItem="9Gh-wt-k2z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="eIJ-4m-Osr"/>
-                    <constraint firstItem="NE5-fC-GLt" firstAttribute="top" secondItem="9Gh-wt-k2z" secondAttribute="bottom" constant="24" id="x5s-T6-ynC"/>
+                    <constraint firstItem="9Gh-wt-k2z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="eIJ-4m-Osr"/>
+                    <constraint firstItem="NE5-fC-GLt" firstAttribute="top" secondItem="9Gh-wt-k2z" secondAttribute="bottom" constant="4" id="x5s-T6-ynC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -58,7 +58,7 @@
                 <outlet property="LoanStateLabel" destination="9Gh-wt-k2z" id="xrP-pX-akc"/>
                 <outlet property="LoanTimeLabel" destination="NE5-fC-GLt" id="vsT-W7-7iN"/>
             </connections>
-            <point key="canvasLocation" x="59.5" y="79.5"/>
+            <point key="canvasLocation" x="59.5" y="63"/>
         </tableViewCell>
     </objects>
 </document>

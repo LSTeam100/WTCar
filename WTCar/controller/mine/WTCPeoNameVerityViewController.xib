@@ -34,7 +34,7 @@
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0TS-Zi-48e">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mineDetail_body" translatesAutoresizingMaskIntoConstraints="NO" id="0TS-Zi-48e">
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="bAJ-7K-amx"/>
                         <constraint firstAttribute="height" constant="40" id="hL7-fx-WQJ"/>
@@ -73,7 +73,7 @@
                         <constraint firstAttribute="height" constant="1" id="LX3-vi-DE9"/>
                     </constraints>
                 </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请填写本人真实姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kh4-mP-1yM">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写本人真实姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kh4-mP-1yM">
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Enm-wn-cWB"/>
                     </constraints>
@@ -96,7 +96,7 @@
                         <constraint firstAttribute="height" constant="1" id="paC-xB-HaN"/>
                     </constraints>
                 </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请填写身份证号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wG7-13-fYb">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写身份证号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wG7-13-fYb">
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Wmz-3G-Ggk"/>
                     </constraints>
@@ -105,7 +105,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-tc-fTu">
-                    <color key="backgroundColor" red="0.45467015529999999" green="0.95686274770000002" blue="0.67793823389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.45627807409999999" green="0.85286132000000003" blue="0.1038663066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="prR-kq-x5p"/>
                     </constraints>
@@ -147,9 +147,7 @@
                 <constraint firstItem="P07-fD-hNo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="CNo-z8-uhs"/>
                 <constraint firstItem="nkg-GV-m6h" firstAttribute="top" secondItem="xsH-x1-0oT" secondAttribute="bottom" constant="2" id="Cd7-ni-dcS"/>
                 <constraint firstAttribute="trailing" secondItem="52x-i4-0AK" secondAttribute="trailing" constant="16" id="Ci2-rX-HQm"/>
-
-                <constraint firstItem="xsH-x1-0oT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="DjQ-hT-ibS"/>
-
+                <constraint firstItem="xsH-x1-0oT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="DjQ-hT-ibS"/>
                 <constraint firstItem="kh4-mP-1yM" firstAttribute="centerY" secondItem="MZ2-vm-liG" secondAttribute="centerY" id="FUi-FK-4bG"/>
                 <constraint firstItem="3NL-fb-UTN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I7G-Xl-fgU"/>
                 <constraint firstItem="xsH-x1-0oT" firstAttribute="leading" secondItem="0TS-Zi-48e" secondAttribute="trailing" constant="8" id="MHp-Cd-12R"/>
@@ -165,9 +163,7 @@
                 <constraint firstItem="El1-tK-Brh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="eSo-n2-gby"/>
                 <constraint firstAttribute="trailing" secondItem="kh4-mP-1yM" secondAttribute="trailing" constant="16" id="fRp-g9-YJC"/>
                 <constraint firstItem="aMg-tc-fTu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="i4Z-hO-WoL"/>
-
-                <constraint firstItem="O58-JW-rko" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="irV-5g-vqD"/>
-
+                <constraint firstItem="O58-JW-rko" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="irV-5g-vqD"/>
                 <constraint firstItem="MZ2-vm-liG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="jrq-o8-yuc"/>
                 <constraint firstItem="O58-JW-rko" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lpP-Xd-VBu"/>
                 <constraint firstItem="kh4-mP-1yM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="nq7-pS-LSe"/>
@@ -180,7 +176,10 @@
                 <constraint firstAttribute="trailing" secondItem="3NL-fb-UTN" secondAttribute="trailing" id="uaI-Y5-d1V"/>
                 <constraint firstItem="MZ2-vm-liG" firstAttribute="top" secondItem="3NL-fb-UTN" secondAttribute="bottom" constant="32" id="wY9-bG-G0U"/>
             </constraints>
-            <point key="canvasLocation" x="52.5" y="59.5"/>
+            <point key="canvasLocation" x="66" y="41"/>
         </view>
     </objects>
+    <resources>
+        <image name="mineDetail_body" width="26" height="30"/>
+    </resources>
 </document>

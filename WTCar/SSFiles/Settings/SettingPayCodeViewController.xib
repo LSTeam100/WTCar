@@ -18,44 +18,45 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为了您的资金安全请输入6位密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-nb-jlt">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为了您的资金安全请输入6位密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-nb-jlt">
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="zXV-OG-eif"/>
+                        <constraint firstAttribute="height" constant="20" id="WO8-iK-WfT"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请再次输入并确认" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-iu-1Mf">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="zQz-Iz-Nmu"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrc-4m-7bn">
-                    <state key="normal" title="确认"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="bQ7-ar-Pxv"/>
+                    </constraints>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="ConfirmButtonClick:" destination="-1" eventType="touchUpInside" id="g5c-0U-pnO"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请再次输入并确认" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-iu-1Mf">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Ok3-wG-aNv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="zwp-nb-jlt" secondAttribute="trailing" constant="61" id="80X-PR-Jdq"/>
-                <constraint firstItem="uN4-iu-1Mf" firstAttribute="top" secondItem="zwp-nb-jlt" secondAttribute="bottom" constant="105" id="CgZ-aB-vCr"/>
-                <constraint firstAttribute="trailing" secondItem="mrc-4m-7bn" secondAttribute="trailing" constant="61" id="Ec6-90-y1m"/>
-                <constraint firstItem="uN4-iu-1Mf" firstAttribute="centerX" secondItem="zwp-nb-jlt" secondAttribute="centerX" id="Km2-CT-ycP"/>
-                <constraint firstItem="mrc-4m-7bn" firstAttribute="centerX" secondItem="uN4-iu-1Mf" secondAttribute="centerX" id="SYI-fq-5X0"/>
-                <constraint firstItem="uN4-iu-1Mf" firstAttribute="width" secondItem="zwp-nb-jlt" secondAttribute="width" id="gi7-oP-d6V"/>
-                <constraint firstItem="zwp-nb-jlt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="o5Y-m8-E1l"/>
-                <constraint firstItem="mrc-4m-7bn" firstAttribute="top" secondItem="uN4-iu-1Mf" secondAttribute="bottom" constant="81" id="wj5-XG-hWY"/>
-                <constraint firstItem="mrc-4m-7bn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="wji-or-REr"/>
-
-                <constraint firstItem="zwp-nb-jlt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="yjf-2A-9xD"/>
-
-
+                <constraint firstAttribute="trailing" secondItem="mrc-4m-7bn" secondAttribute="trailing" constant="61" id="2nl-Fn-DAv"/>
+                <constraint firstItem="zwp-nb-jlt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="852-eW-s5L"/>
+                <constraint firstItem="mrc-4m-7bn" firstAttribute="top" secondItem="uN4-iu-1Mf" secondAttribute="bottom" constant="105" id="93R-UD-nS0"/>
+                <constraint firstItem="zwp-nb-jlt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="DDv-kl-FHz"/>
+                <constraint firstItem="uN4-iu-1Mf" firstAttribute="top" secondItem="zwp-nb-jlt" secondAttribute="bottom" constant="85" id="Nm9-Ud-cln"/>
+                <constraint firstAttribute="trailing" secondItem="zwp-nb-jlt" secondAttribute="trailing" constant="62" id="Qq9-un-1jS"/>
+                <constraint firstAttribute="trailing" secondItem="uN4-iu-1Mf" secondAttribute="trailing" constant="62" id="UVP-ny-5KM"/>
+                <constraint firstItem="uN4-iu-1Mf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="WXq-xW-eGQ"/>
+                <constraint firstItem="mrc-4m-7bn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="cLh-tW-B7J"/>
             </constraints>
             <point key="canvasLocation" x="32.5" y="59.5"/>
         </view>

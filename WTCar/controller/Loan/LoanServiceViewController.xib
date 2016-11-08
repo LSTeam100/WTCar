@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoanServiceViewController">
             <connections>
-                <outlet property="LoanTitleLabel" destination="X3e-4e-Rg2" id="rE9-aD-AaU"/>
+                <outlet property="LoanTitleLabel" destination="X3e-4e-Rg2" id="uXQ-G2-0Fr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,9 +30,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="X3e-4e-Rg2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1BC-Jz-5Yf"/>
-
-                <constraint firstItem="X3e-4e-Rg2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="RvI-xx-dWH"/>
-
+                <constraint firstItem="X3e-4e-Rg2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="RvI-xx-dWH"/>
                 <constraint firstAttribute="trailing" secondItem="X3e-4e-Rg2" secondAttribute="trailing" id="wFC-E2-eA1"/>
             </constraints>
             <point key="canvasLocation" x="74.5" y="71.5"/>

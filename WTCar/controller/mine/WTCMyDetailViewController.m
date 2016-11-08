@@ -8,7 +8,13 @@
 
 #import "WTCMyDetailViewController.h"
 #import "WTCMineViewTableViewCell.h"
-
+#import "WTCPeoNameVerityViewController.h"
+#import "WTCBusinessVerityViewController.h"
+#import "WTCUserNameViewController.h"
+#import "WTCUserTeleNumViewController.h"
+#import "WTCCarShopNameViewController.h"
+#import "WTCDetialAddressViewController.h"
+#import "WTCCarShopIntroductionViewController.h"
 @interface WTCMyDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat cellHeight;
@@ -22,6 +28,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];
+    [_NameVerityButton addTarget:self action:@selector(NameVerityClick) forControlEvents:UIControlEventTouchUpInside];
+    [_BusinessVerityButton addTarget:self action:@selector(businessVerityClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self dataInit];
+    [self makeTableView];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)dataInit{
@@ -30,7 +42,7 @@
     cellHeight = 42;
 }
 -(void)makeTableView{
-    _myDetialTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_NameVerityButton.frame)+50,SCREEN_WIDTH, cellHeight*6) style:UITableViewStylePlain];
+    _myDetialTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 154+15,SCREEN_WIDTH, cellHeight*7) style:UITableViewStylePlain];
     [self.view addSubview:_myDetialTableView];
     _myDetialTableView.delegate = self;
     _myDetialTableView.dataSource =self;
@@ -70,7 +82,7 @@
     [_myDetialTableView dequeueReusableCellWithIdentifier:@"cellIdentifier"];
     
     _myDetialTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [cell.contentView setBackgroundColor:[UIColor lightGrayColor]];
+    [cell.contentView setBackgroundColor:[UIColor whiteColor]];
     if (indexPath.section==0) {
         cell.mineDataLabel.text = _cellFirTextArray[indexPath.row];
         cell.detailLabel.text = _cellSecTextArray[indexPath.row];
@@ -114,19 +126,36 @@
     if (indexPath.row == 0) {
         
     }else if (indexPath.row == 1){
-        
+        WTCUserNameViewController*usernameViewCon = [WTCUserNameViewController new];
+        [self.navigationController pushViewController:usernameViewCon animated:YES];
     }else if (indexPath.row == 2){
+        WTCUserTeleNumViewController*userTeleViewCon = [WTCUserTeleNumViewController new];
+        [self.navigationController pushViewController:userTeleViewCon animated:YES];
 
     }else if (indexPath.row == 3){
+        WTCCarShopNameViewController*carshopNameViewCon = [WTCCarShopNameViewController new];
+        [self.navigationController pushViewController:carshopNameViewCon animated:YES];
         
     }else if (indexPath.row == 4){
+        WTCDetialAddressViewController*detailAddressViewCon = [WTCDetialAddressViewController new];
+        [self.navigationController pushViewController:detailAddressViewCon animated:YES];
         
     }else if (indexPath.row == 5){
+        WTCCarShopIntroductionViewController*carIntroViewCon = [WTCCarShopIntroductionViewController new];
+        [self.navigationController pushViewController:carIntroViewCon animated:YES];
         
     }
     
 }
-
+-(void)NameVerityClick{
+    WTCPeoNameVerityViewController *nameVerityViewCon = [WTCPeoNameVerityViewController new];
+    [self.navigationController pushViewController:nameVerityViewCon animated:YES];
+}
+-(void)businessVerityClick{
+    WTCBusinessVerityViewController *businessVerityViewCon = [WTCBusinessVerityViewController new];
+    [self.navigationController pushViewController:businessVerityViewCon animated:YES];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
