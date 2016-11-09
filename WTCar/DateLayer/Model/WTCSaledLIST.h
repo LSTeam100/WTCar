@@ -10,7 +10,8 @@
 
 @interface WTCSaledLIST : NSObject
 @property(nonatomic,strong)NSMutableArray *rows;
--(instancetype)initWithDictionary:(NSDictionary *)dataDic;
+-(instancetype)initWithDictionary:(NSArray *)dataArr;
+;
 
 @end
 

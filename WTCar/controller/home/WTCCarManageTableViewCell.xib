@@ -16,7 +16,7 @@
                 <frame key="frameInset" width="320" height="119"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_shop_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="SXk-wi-0Qu">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="SXk-wi-0Qu">
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="vaN-0x-5Eq"/>
                             <constraint firstAttribute="height" constant="60" id="wMD-LY-zOl"/>
@@ -48,13 +48,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJm-XS-lcS">
-                        <state key="normal" title="收款"/>
+                        <state key="normal" title="收款" backgroundImage="mange_btn"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-mK-jVK">
-                        <state key="normal" title="分享"/>
+                        <state key="normal" title="分享" backgroundImage="mange_btn"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73L-0i-aOt">
-                        <state key="normal" title="管理"/>
+                        <state key="normal" title="管理" backgroundImage="mange_btn"/>
                     </button>
                 </subviews>
                 <constraints>
@@ -93,6 +93,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="img_shop_default.png" width="320" height="180"/>
+        <image name="defaultImage" width="75" height="56"/>
+        <image name="mange_btn" width="45" height="20"/>
     </resources>
 </document>

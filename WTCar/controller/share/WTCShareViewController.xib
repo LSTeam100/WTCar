@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="allCarNum" destination="0Pj-ww-93w" id="SPe-rM-7jp"/>
                 <outlet property="allSelectBtn" destination="YPR-By-Ot4" id="3hF-kH-maz"/>
+                <outlet property="selectAllBtn" destination="YPR-By-Ot4" id="De0-hz-9RV"/>
                 <outlet property="shareBtn" destination="NHu-fy-VRY" id="Uc8-rc-2dT"/>
                 <outlet property="tableView" destination="RwF-u4-pdX" id="UpN-CD-BF2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,21 +30,27 @@
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkF-Sd-H4W">
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPR-By-Ot4">
-                            <state key="normal" title="Button"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPR-By-Ot4">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="gwf-C9-Fzg"/>
+                                <constraint firstAttribute="width" constant="30" id="mUK-Pc-22W"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="share_unselect"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全选" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIC-ot-zMc">
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计车辆2台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pj-ww-93w">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计车辆  台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pj-ww-93w">
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHu-fy-VRY">
-                            <state key="normal" title="分享"/>
+                            <state key="normal" title="分享" backgroundImage="manage_btnclick">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
                             <connections>
                                 <action selector="share:" destination="-1" eventType="touchUpInside" id="qfB-Fj-rr4"/>
                             </connections>
@@ -76,4 +83,8 @@
             <point key="canvasLocation" x="161.5" y="-116.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="manage_btnclick" width="45" height="20"/>
+        <image name="share_unselect" width="14" height="14"/>
+    </resources>
 </document>

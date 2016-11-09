@@ -7,7 +7,7 @@
 //
 
 #import "WTCOffShelfRequest.h"
-
+#import "WTCOffShelfList.h"
 @implementation WTCOffShelfRequest
 -(id)initWithToken:(NSString *)token OffShelfId:(NSNumber *)offShelfId successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
 {
@@ -34,9 +34,9 @@
     
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil){
-//            WTCOnSaleList *saleList = [[WTCOnSaleList alloc]initWithDictionary:data];
-            [self getResponse].data=data;
+        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
+            WTCOffShelfList *offShelfList = [[WTCOffShelfList alloc]initWithDictionary:data];
+            [self getResponse].data=offShelfList;
         }
     }
 }

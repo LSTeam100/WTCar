@@ -32,7 +32,7 @@
     
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil){
+        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
             WTCarGetStoreInfo *storeInfo = [[WTCarGetStoreInfo alloc]init];
             storeInfo.merchantAddress = data[@"merchantAddress"];
             storeInfo.merchantDescr = data[@"merchantDescr"];

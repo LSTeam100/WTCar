@@ -24,11 +24,11 @@
 }
 
 -(NSString *)getURL{
-    return @"saledList.do";
+    return @"/offShelfList.do";
 }
 
 -(NSString *)getMethod{
-    return @"GET";
+    return @"POST";
 }
 
 -(void)processResponse:(NSDictionary *)responseDictionary{
@@ -36,7 +36,7 @@
     
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil){
+        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
             WTCAOffShelf *saleList = [[WTCAOffShelf alloc]initWithDictionary:data];
             [self getResponse].data=saleList;
         }

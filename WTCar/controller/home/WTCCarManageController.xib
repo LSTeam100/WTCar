@@ -8,10 +8,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCCarManageController">
             <connections>
+                <outlet property="bottomViewConstraint" destination="Kpp-1q-745" id="5oM-FG-PHU"/>
                 <outlet property="cancelBtn" destination="vux-dn-amg" id="UrB-Fd-Lbv"/>
-                <outlet property="constraint" destination="Kpp-1q-745" id="pun-gJ-ewf"/>
                 <outlet property="mangeView" destination="mFB-1t-irh" id="RPY-T0-CPb"/>
                 <outlet property="modifyView" destination="qfY-SN-iBI" id="9Vv-Dp-DXb"/>
+                <outlet property="offShelfBtn" destination="kdt-CW-MKl" id="GYt-pR-PvA"/>
+                <outlet property="onSaleBtn" destination="qs3-VP-oSU" id="lrA-7T-G30"/>
+                <outlet property="saledBtn" destination="gjz-kY-0AU" id="xtJ-MB-a67"/>
                 <outlet property="tableView" destination="FeX-Jv-GHH" id="32M-QX-Euz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,6 +24,49 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUo-Hk-ld1">
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-kY-0AU">
+                            <state key="normal" title="已售">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="selectChanged:" destination="-1" eventType="touchUpInside" id="mKr-U7-JxL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdt-CW-MKl">
+                            <state key="normal" title="未上架">
+                                <color key="titleColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="selectChanged:" destination="-1" eventType="touchUpInside" id="eEc-kq-aLv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs3-VP-oSU">
+                            <state key="normal" title="在售">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="selectChanged:" destination="-1" eventType="touchUpInside" id="OuH-Zo-itv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="kdt-CW-MKl" firstAttribute="width" secondItem="qs3-VP-oSU" secondAttribute="width" id="2UO-ru-gjM"/>
+                        <constraint firstAttribute="height" constant="40" id="GPm-a0-p6A"/>
+                        <constraint firstAttribute="trailing" secondItem="kdt-CW-MKl" secondAttribute="trailing" id="GaQ-ox-Epf"/>
+                        <constraint firstAttribute="bottom" secondItem="kdt-CW-MKl" secondAttribute="bottom" id="LV8-ap-JBr"/>
+                        <constraint firstItem="gjz-kY-0AU" firstAttribute="top" secondItem="PUo-Hk-ld1" secondAttribute="top" id="MKB-xf-18l"/>
+                        <constraint firstAttribute="bottom" secondItem="gjz-kY-0AU" secondAttribute="bottom" id="b1P-0s-FeL"/>
+                        <constraint firstItem="gjz-kY-0AU" firstAttribute="leading" secondItem="qs3-VP-oSU" secondAttribute="trailing" id="bAS-Kf-omP"/>
+                        <constraint firstItem="kdt-CW-MKl" firstAttribute="leading" secondItem="gjz-kY-0AU" secondAttribute="trailing" id="c47-JC-IDX"/>
+                        <constraint firstItem="qs3-VP-oSU" firstAttribute="top" secondItem="PUo-Hk-ld1" secondAttribute="top" id="f8x-BC-cPp"/>
+                        <constraint firstItem="gjz-kY-0AU" firstAttribute="width" secondItem="qs3-VP-oSU" secondAttribute="width" id="jVQ-MY-cpB"/>
+                        <constraint firstAttribute="bottom" secondItem="qs3-VP-oSU" secondAttribute="bottom" id="qf0-I4-Q2Y"/>
+                        <constraint firstItem="qs3-VP-oSU" firstAttribute="leading" secondItem="PUo-Hk-ld1" secondAttribute="leading" id="vyd-ZW-VSF"/>
+                        <constraint firstItem="kdt-CW-MKl" firstAttribute="top" secondItem="PUo-Hk-ld1" secondAttribute="top" id="ztj-66-OQw"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FeX-Jv-GHH">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -171,13 +217,16 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="FeX-Jv-GHH" secondAttribute="trailing" id="0Dw-rS-KQG"/>
                 <constraint firstItem="mFB-1t-irh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Zq-L9-8TG"/>
+                <constraint firstAttribute="trailing" secondItem="PUo-Hk-ld1" secondAttribute="trailing" id="Atc-cg-cex"/>
+                <constraint firstItem="FeX-Jv-GHH" firstAttribute="top" secondItem="PUo-Hk-ld1" secondAttribute="bottom" id="Hhr-BH-Uus"/>
                 <constraint firstAttribute="bottom" secondItem="mFB-1t-irh" secondAttribute="bottom" id="Kpp-1q-745"/>
-                <constraint firstItem="FeX-Jv-GHH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="ghx-yw-q87"/>
+                <constraint firstItem="PUo-Hk-ld1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vl4-pD-diZ"/>
+                <constraint firstItem="PUo-Hk-ld1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="VvM-ZI-wnU"/>
                 <constraint firstItem="FeX-Jv-GHH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mTW-dm-VZQ"/>
                 <constraint firstAttribute="trailing" secondItem="mFB-1t-irh" secondAttribute="trailing" id="xgK-c4-vFQ"/>
                 <constraint firstAttribute="bottom" secondItem="FeX-Jv-GHH" secondAttribute="bottom" id="ySz-7u-vlB"/>
             </constraints>
-            <point key="canvasLocation" x="-123.5" y="29.5"/>
+            <point key="canvasLocation" x="-11.5" y="37.5"/>
         </view>
     </objects>
     <resources>

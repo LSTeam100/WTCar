@@ -15,6 +15,7 @@
     BOOL actionFlag;
     int cycleCount;
     BOOL isShowing;
+    NSArray *tempArr;
 }
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 @property(nonatomic,weak)IBOutlet UIButton *allSelectBtn;
@@ -34,9 +35,22 @@
     cycleCount = 0;
     timer =  [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(isHaveActivity) userInfo:nil repeats:YES];
     isShowing = false;
-
+    
+    NSDictionary *dic1= @{@"name":@"法拉利",
+                          @"date":@"2015年10月|120万公里",
+                          @"price":@"120万"};
+    tempArr =@[dic1,dic1,dic1];
+    [self.selectAllBtn setBackgroundImage:[UIImage imageNamed:@"share_unselect"] forState:UIControlStateNormal];
+    [self.selectAllBtn setBackgroundImage:[UIImage imageNamed:@"share_select"] forState:UIControlStateSelected];
     // Do any additional setup after loading the view from its nib.
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+//    [super viewWillAppear:animated];
+    [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
+    
+}
+
 -(void)dealloc
 {
     [timer invalidate];
@@ -50,24 +64,38 @@
         NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"WTCShareTableViewCell" owner:self options:nil];
         cell = [cellArr objectAtIndex:0];
     }
+    NSDictionary *oneDic = [tempArr objectAtIndex:indexPath.row];
+    cell.titleLabel.text = [oneDic objectForKey:@"name"];
+    cell.dateLabel.text = [oneDic objectForKey:@"date"];
+    cell.priceLabel.text = [oneDic objectForKey:@"price"];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    WTCShareTableViewCell *cell = (WTCShareTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+    if (cell.m_checked == YES) {
+        [cell setChecked:NO];
+    }
+    else
+    {
+        [cell setChecked:YES];
+
+    }
+
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return tempArr.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 60;
 }
 -(IBAction)share:(id)sender
 {
     actionFlag = true;
-    cycleCount = 6;
+    cycleCount = 1;
     for (int i = 0; i < cycleCount; i++) {
         [self loadImage:[NSNumber numberWithInt:i]];
     }
@@ -81,7 +109,7 @@
     
     
     //    NSLog(@"wechatArr=%@",wechatArr);
-    
+    [self setBusyIndicatorVisible:YES];
     NSArray *array_photo = @[@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt2fbZm38Zct4DH92p-ez7-fXt.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocd24Y6jK8uQA8-8y-47H6vRe7.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocdd94h6ld4kQJh8PcpjGSkORS.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocdd94h6ld4kQJh8PcpjGSkORS.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneioccpacV1LVg2AfG9fbYl8zN1So.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt0haf1zwepSkxx9okI0W34t05.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85"];
     
     
@@ -122,6 +150,7 @@
             [self presentViewController:activityViewController animated:TRUE completion:^
             {
                 isShowing = false;
+                [self setBusyIndicatorVisible:NO];
                 NSLog(@"展示分享页面");
             }];
             
@@ -138,11 +167,6 @@
     //    [self presentViewController:activityView animated:YES completion:nil];
     
    
-}
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
 }
 -(BOOL)isHaveActivity
 {
