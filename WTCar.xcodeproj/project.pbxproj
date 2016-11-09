@@ -149,6 +149,15 @@
 		181A74EE1DCDE242006F96E7 /* WTCarGetStoreInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74ED1DCDE242006F96E7 /* WTCarGetStoreInfo.m */; };
 		181A74F11DCDE46D006F96E7 /* WTCUpStoreInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74F01DCDE46D006F96E7 /* WTCUpStoreInfoRequest.m */; };
 		1836DEED1DC1FA81005C5A9E /* ACEExpandableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */; };
+		1858A38A1DD2CEEA00F0FBAE /* WTCCarType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3861DD2CEEA00F0FBAE /* WTCCarType.m */; };
+		1858A38B1DD2CEEA00F0FBAE /* WTCCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3881DD2CEEA00F0FBAE /* WTCCarModel.m */; };
+		1858A38E1DD2CF1900F0FBAE /* CommonVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A38C1DD2CF1900F0FBAE /* CommonVar.m */; };
+		1858A3991DD2CFE300F0FBAE /* WTCSetPayPasswdRequest .m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A38F1DD2CFE300F0FBAE /* WTCSetPayPasswdRequest .m */; };
+		1858A39A1DD2CFE300F0FBAE /* WTCResetPayPasswdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3911DD2CFE300F0FBAE /* WTCResetPayPasswdRequest.m */; };
+		1858A39C1DD2CFE300F0FBAE /* WTCChangeAccountKeyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3951DD2CFE300F0FBAE /* WTCChangeAccountKeyRequest.m */; };
+		1858A39D1DD2CFE300F0FBAE /* WTCCarModelRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3971DD2CFE300F0FBAE /* WTCCarModelRequest.m */; };
+		1858A3A11DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1858A39E1DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.xib */; };
+		1858A3A21DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A39F1DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.m */; };
 		185EAF2B1DC33EEA008C1471 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF241DC33EEA008C1471 /* BaiduMapAPI_Base.framework */; };
 		185EAF2C1DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF251DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework */; };
 		185EAF2D1DC33EEA008C1471 /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF261DC33EEA008C1471 /* BaiduMapAPI_Location.framework */; };
@@ -595,6 +604,23 @@
 		181A74F01DCDE46D006F96E7 /* WTCUpStoreInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCUpStoreInfoRequest.m; sourceTree = "<group>"; };
 		1836DEEB1DC1FA81005C5A9E /* ACEExpandableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEExpandableTextCell.h; sourceTree = "<group>"; };
 		1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEExpandableTextCell.m; sourceTree = "<group>"; };
+		1858A3861DD2CEEA00F0FBAE /* WTCCarType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarType.m; sourceTree = "<group>"; };
+		1858A3871DD2CEEA00F0FBAE /* WTCCarType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarType.h; sourceTree = "<group>"; };
+		1858A3881DD2CEEA00F0FBAE /* WTCCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarModel.m; sourceTree = "<group>"; };
+		1858A3891DD2CEEA00F0FBAE /* WTCCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarModel.h; sourceTree = "<group>"; };
+		1858A38C1DD2CF1900F0FBAE /* CommonVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonVar.m; sourceTree = "<group>"; };
+		1858A38D1DD2CF1900F0FBAE /* CommonVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonVar.h; sourceTree = "<group>"; };
+		1858A38F1DD2CFE300F0FBAE /* WTCSetPayPasswdRequest .m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WTCSetPayPasswdRequest .m"; sourceTree = "<group>"; };
+		1858A3901DD2CFE300F0FBAE /* WTCSetPayPasswdRequest .h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WTCSetPayPasswdRequest .h"; sourceTree = "<group>"; };
+		1858A3911DD2CFE300F0FBAE /* WTCResetPayPasswdRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCResetPayPasswdRequest.m; sourceTree = "<group>"; };
+		1858A3921DD2CFE300F0FBAE /* WTCResetPayPasswdRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCResetPayPasswdRequest.h; sourceTree = "<group>"; };
+		1858A3951DD2CFE300F0FBAE /* WTCChangeAccountKeyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCChangeAccountKeyRequest.m; sourceTree = "<group>"; };
+		1858A3961DD2CFE300F0FBAE /* WTCChangeAccountKeyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCChangeAccountKeyRequest.h; sourceTree = "<group>"; };
+		1858A3971DD2CFE300F0FBAE /* WTCCarModelRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarModelRequest.m; sourceTree = "<group>"; };
+		1858A3981DD2CFE300F0FBAE /* WTCCarModelRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarModelRequest.h; sourceTree = "<group>"; };
+		1858A39E1DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCAddCarSuccessViewController.xib; sourceTree = "<group>"; };
+		1858A39F1DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCAddCarSuccessViewController.m; sourceTree = "<group>"; };
+		1858A3A01DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCAddCarSuccessViewController.h; sourceTree = "<group>"; };
 		185EAF241DC33EEA008C1471 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		185EAF251DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
 		185EAF261DC33EEA008C1471 /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
@@ -1628,6 +1654,8 @@
 		18D882EE1DBB1D8D00F19129 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				1858A38C1DD2CF1900F0FBAE /* CommonVar.m */,
+				1858A38D1DD2CF1900F0FBAE /* CommonVar.h */,
 				18D8830C1DBB436500F19129 /* define.h */,
 				18D882F21DBB1E0200F19129 /* WTCNavigationBar.h */,
 				18D882F31DBB1E0200F19129 /* WTCNavigationBar.m */,
@@ -1717,6 +1745,9 @@
 		18D882F71DBB1FDE00F19129 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				1858A39E1DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.xib */,
+				1858A39F1DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.m */,
+				1858A3A01DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.h */,
 				046767441DD034F400F59934 /* WTCCarDescribetionViewController.h */,
 				046767451DD034F400F59934 /* WTCCarDescribetionViewController.m */,
 				046767461DD034F400F59934 /* WTCCarDescribetionViewController.xib */,
@@ -2025,6 +2056,10 @@
 		18F80EB41DB5F5C400FF1830 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1858A3861DD2CEEA00F0FBAE /* WTCCarType.m */,
+				1858A3871DD2CEEA00F0FBAE /* WTCCarType.h */,
+				1858A3881DD2CEEA00F0FBAE /* WTCCarModel.m */,
+				1858A3891DD2CEEA00F0FBAE /* WTCCarModel.h */,
 				18E6486E1DB6276800B11D8F /* WTCarResponse.h */,
 				18E6486F1DB6276800B11D8F /* WTCarResponse.m */,
 				186B746D1DCB0E7300248894 /* WTCLoginResult.h */,
@@ -2050,6 +2085,14 @@
 		18F80EB51DB5F5C400FF1830 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1858A38F1DD2CFE300F0FBAE /* WTCSetPayPasswdRequest .m */,
+				1858A3901DD2CFE300F0FBAE /* WTCSetPayPasswdRequest .h */,
+				1858A3911DD2CFE300F0FBAE /* WTCResetPayPasswdRequest.m */,
+				1858A3921DD2CFE300F0FBAE /* WTCResetPayPasswdRequest.h */,
+				1858A3951DD2CFE300F0FBAE /* WTCChangeAccountKeyRequest.m */,
+				1858A3961DD2CFE300F0FBAE /* WTCChangeAccountKeyRequest.h */,
+				1858A3971DD2CFE300F0FBAE /* WTCCarModelRequest.m */,
+				1858A3981DD2CFE300F0FBAE /* WTCCarModelRequest.h */,
 				18E6486B1DB6103900B11D8F /* WTCarBaseRequest.h */,
 				18E6486C1DB6103900B11D8F /* WTCarBaseRequest.m */,
 				186B746A1DCB09D800248894 /* WTCLoginRequest.h */,
@@ -2304,6 +2347,7 @@
 				0451EDFD1DBE43210026D046 /* SettingTableViewCell.xib in Resources */,
 				18D883411DBB49B200F19129 /* LICENSE in Resources */,
 				18F80E8B1DB5F30400FF1830 /* Main.storyboard in Resources */,
+				1858A3A11DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.xib in Resources */,
 				047442631DC80E340067AE82 /* AddLoanSuccessViewController.xib in Resources */,
 				185EAF4A1DC597DE008C1471 /* WTCCollectMoneyViewController.xib in Resources */,
 				0451EDB31DBC89BA0026D046 /* 6_lit@2x.png in Resources */,
@@ -2406,6 +2450,7 @@
 				18BF6F1A1DC1D3A3003BF410 /* DNSendButton.m in Sources */,
 				18D883511DBB49B200F19129 /* MJProperty.m in Sources */,
 				18BF6F351DC1DB7C003BF410 /* KKPickerAbstract.m in Sources */,
+				1858A39D1DD2CFE300F0FBAE /* WTCCarModelRequest.m in Sources */,
 				18E6486D1DB6103900B11D8F /* WTCarBaseRequest.m in Sources */,
 				181A74D91DCDD86B006F96E7 /* WTCSaledLIST.m in Sources */,
 				186B746F1DCB0E7300248894 /* WTCLoginResult.m in Sources */,
@@ -2478,6 +2523,7 @@
 				18D883501DBB49B200F19129 /* MJFoundation.m in Sources */,
 				18D883811DBB49F500F19129 /* UIImageView+WebCache.m in Sources */,
 				18D8837B1DBB49F500F19129 /* SDWebImageManager.m in Sources */,
+				1858A38E1DD2CF1900F0FBAE /* CommonVar.m in Sources */,
 				18BF6F391DC1DB7C003BF410 /* KKRangePicker.m in Sources */,
 				043564F21DC72C08008B1B5F /* WTCDetialAddressViewController.m in Sources */,
 				18850B751DCE2C3A00DA8F47 /* UPMImageHelper.m in Sources */,
@@ -2492,6 +2538,7 @@
 				18BF6F331DC1DB7C003BF410 /* KKDateTimePicker.m in Sources */,
 				18BF6F181DC1D3A3003BF410 /* DNBrowserCell.m in Sources */,
 				181A74D31DCDD5BC006F96E7 /* WTCSaledListRequest.m in Sources */,
+				1858A39A1DD2CFE300F0FBAE /* WTCResetPayPasswdRequest.m in Sources */,
 				181A74C71DCDC83A006F96E7 /* WTCOnSaleList.m in Sources */,
 				0474424D1DC809B00067AE82 /* WTCPOSHasOpenedViewController.m in Sources */,
 				046767421DD0335200F59934 /* WTCMyDetailViewController.m in Sources */,
@@ -2499,6 +2546,7 @@
 				181A74E21DCDDB5A006F96E7 /* WTCOnShelfRequest.m in Sources */,
 				185EAFF11DC62308008C1471 /* MoneyInfoTableViewCell.m in Sources */,
 				185EAF491DC597DE008C1471 /* WTCCollectMoneyViewController.m in Sources */,
+				1858A3991DD2CFE300F0FBAE /* WTCSetPayPasswdRequest .m in Sources */,
 				18D883521DBB49B200F19129 /* MJType.m in Sources */,
 				181A74DF1DCDDA3C006F96E7 /* WTCOffShelfList.m in Sources */,
 				18850B6E1DCE29D900DA8F47 /* RSKImageScrollView.m in Sources */,
@@ -2517,6 +2565,7 @@
 				042142071DC4E53D00F1A619 /* LoginViewController.m in Sources */,
 				18D883A71DBB854500F19129 /* WTCCarBrandViewController.m in Sources */,
 				18D882EC1DBB1B8300F19129 /* WTCTabBarItem.m in Sources */,
+				1858A38A1DD2CEEA00F0FBAE /* WTCCarType.m in Sources */,
 				18D883801DBB49F500F19129 /* UIImageView+HighlightedWebCache.m in Sources */,
 				18F80E851DB5F30400FF1830 /* AppDelegate.mm in Sources */,
 				18D8834E1DBB49B200F19129 /* README.md in Sources */,
@@ -2567,10 +2616,12 @@
 				047442621DC80E340067AE82 /* AddLoanSuccessViewController.m in Sources */,
 				0451EDD71DBCA0200026D046 /* WTCShopSettingViewController.m in Sources */,
 				18D883051DBB207D00F19129 /* WTCMineViewController.m in Sources */,
+				1858A39C1DD2CFE300F0FBAE /* WTCChangeAccountKeyRequest.m in Sources */,
 				18850B7B1DCECC4C00DA8F47 /* WTCCarBrand.m in Sources */,
 				0421421B1DC4EF3200F1A619 /* ChildLoginViewController.m in Sources */,
 				18BF6F1E1DC1D3A3003BF410 /* KKPhotoPickerManager.m in Sources */,
 				18D8830A1DBB20A600F19129 /* WTCHomeViewController.m in Sources */,
+				1858A38B1DD2CEEA00F0FBAE /* WTCCarModel.m in Sources */,
 				047442481DC8096F0067AE82 /* WTCPOSToOpenViewController.m in Sources */,
 				18D8838A1DBB63E100F19129 /* WTCBaseViewController.m in Sources */,
 				18D883451DBB49B200F19129 /* MJRefreshFooter.m in Sources */,
@@ -2579,6 +2630,7 @@
 				18E648701DB6276800B11D8F /* WTCarResponse.m in Sources */,
 				18D883791DBB49F500F19129 /* SDWebImageDownloader.m in Sources */,
 				18BF6F131DC1D3A3003BF410 /* UIViewController+DNImagePicker.m in Sources */,
+				1858A3A21DD2D07B00F0FBAE /* WTCAddCarSuccessViewController.m in Sources */,
 				047442431DC809280067AE82 /* WTCGetPOSNotOpenViewController.m in Sources */,
 				18D883471DBB49B200F19129 /* MJRefreshGifHeader.m in Sources */,
 				047442521DC80A040067AE82 /* WTCPOSChangePasswordViewController.m in Sources */,
