@@ -35,7 +35,7 @@
     
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil){
+        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
             WTCLoginResult *result=[[WTCLoginResult alloc]init];
             result.token=data[@"token"];
             [self getResponse].data=result;

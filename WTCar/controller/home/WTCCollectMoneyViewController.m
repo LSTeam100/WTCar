@@ -35,7 +35,7 @@
     }
     else
     {
-        return 120;
+        return 60;
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,6 +57,7 @@
         NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"WTCCommitBuyCarMoneyTableViewCell" owner:self options:nil];
         cell = [cellArr objectAtIndex:0];
     }
+
     return cell;
 }
 -(UITableViewCell *)getCarMangeCell:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
@@ -67,10 +68,29 @@
     if (cell == nil) {
         NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"WTCCarManageTableViewCell" owner:self options:nil];
         cell = [cellArr objectAtIndex:0];
+        cell.shareBtn.hidden = YES;
+        cell.collectPayBtn.hidden = YES;
+        cell.manageBtn.hidden = YES;
     }
+    
+    
+    WTCASale *asale = self.aSale;
+    NSString *imageUrl = [asale.primaryPicUrl objectAtIndex:0];
+    [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+    cell.nameLabel.text = asale.productName;
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@",asale.firstUpTime];
+    cell.priceLabel.text = asale.price;
+    cell.callNumLabel.text = [NSString stringWithFormat:@"%@",asale.telNumTimes];
+    cell.browserNumLabel.text = [NSString stringWithFormat:@"%@",asale.browseNumTimes];
+    cell.sellLabel.text = [NSString stringWithFormat:@"%@",asale.saledDays];
+
     return cell;
 }
-
+-(IBAction)navitCaisher:(id)sender
+{
+    WTCCashierDeskViewController *cashier = [[WTCCashierDeskViewController alloc]init];
+    [self.navigationController pushViewController:cashier animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

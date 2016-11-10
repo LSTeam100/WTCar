@@ -10,7 +10,7 @@
 
 @interface WTCOnSaleList : NSObject
 @property(nonatomic,strong)NSMutableArray *rows;
--(instancetype)initWithDictionary:(NSDictionary *)dataDic;
+-(instancetype)initWithDictionary:(NSArray *)dataArr;
 
 @end
 
@@ -22,6 +22,7 @@
 @property(nonatomic,strong)NSArray *primaryPicUrl;
 @property(nonatomic,strong)NSString *productName;
 @property(nonatomic,strong)NSNumber *telNumTimes;
+@property(nonatomic,strong)NSNumber *saledDays;
 -(instancetype)initWithDictionary:(NSDictionary *)dataDic;
 
 @end

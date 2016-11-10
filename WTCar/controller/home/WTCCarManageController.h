@@ -14,5 +14,13 @@
 @property(nonatomic,weak)IBOutlet UIView *mangeView;
 @property(nonatomic,weak)IBOutlet UIView *modifyView;
 @property(nonatomic,weak)IBOutlet UIButton *cancelBtn;
-@property(nonatomic,weak)IBOutlet NSLayoutConstraint *constraint;
+@property(nonatomic,weak)IBOutlet NSLayoutConstraint *bottomViewConstraint;
+@property(nonatomic,weak)IBOutlet UIButton *onSaleBtn;
+@property(nonatomic,weak)IBOutlet UIButton *saledBtn;
+@property(nonatomic,weak)IBOutlet UIButton *offShelfBtn;
+@property(nonatomic,weak)IBOutlet UIView *saledView;
+@property(nonatomic,weak)IBOutlet UIView *offShelfView_edite;
+@property(nonatomic,weak)IBOutlet UIView *offShelfView_upView;
+
+
 @end

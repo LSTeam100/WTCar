@@ -9,11 +9,11 @@
 #import "WTCSaledLIST.h"
 
 @implementation WTCSaledLIST
--(instancetype)initWithDictionary:(NSDictionary *)dataDic
+-(instancetype)initWithDictionary:(NSArray *)dataArr
 {
     self = [super init];
     if (self) {
-        NSArray *dataArr = [dataDic objectForKey:@"rows"];
+//        NSArray *dataArr = [dataDic objectForKey:@"rows"];
         self.rows = [[NSMutableArray alloc]init];
         for (int i = 0; i < dataArr.count; i++) {
             NSDictionary *oneDic = [dataArr objectAtIndex:i];

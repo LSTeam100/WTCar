@@ -15,7 +15,7 @@
                 <frame key="frameInset" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PoK-JF-ry3"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="PoK-JF-ry3"/>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="PoK-JF-ry3" secondAttribute="trailing" id="bfL-NF-VmM"/>
@@ -29,4 +29,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="defaultImage" width="75" height="56"/>
+    </resources>
 </document>

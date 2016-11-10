@@ -34,7 +34,7 @@
     
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil){
+        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
             WTCAllCarBrands *allBrands = [[WTCAllCarBrands alloc]initWithDictionary:data];
             [self getResponse].data=allBrands;
         }

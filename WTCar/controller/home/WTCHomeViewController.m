@@ -39,24 +39,23 @@
     viewX = CGRectGetWidth(self.view.frame);//屏幕宽
     viewY = CGRectGetHeight(self.view.frame);//屏幕高
     
+    
     CGFloat offset = 44;
     _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, viewX, viewY-44-offset)];
     _mainScrollView.backgroundColor = [UIColor blackColor];
     _mainScrollView.showsVerticalScrollIndicator = false;//禁止垂直滚动条显示
-    
     [self.view addSubview:_mainScrollView];
     [self dataInit];
     [self bannerPicInit];
     [self buttonViewInit];
-//    HomeNavigationBarView *barview = [[HomeNavigationBarView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 66)];
-//    [self.navigationController.view addSubview:barview];
     
-    self.navigationController.view.backgroundColor= [UIColor redColor];
+//    self.navigationController.view.backgroundColor= [UIColor redColor];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.naviView.hidden = NO;
     [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
 
 }

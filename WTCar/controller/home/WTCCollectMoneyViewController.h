@@ -7,7 +7,8 @@
 //
 
 #import "WTCBaseViewController.h"
-
+#import "WTCOnSaleList.h"
+#import "WTCCashierDeskViewController.h"
 @interface WTCCollectMoneyViewController : WTCBaseViewController
-
+@property(nonatomic,strong)WTCASale *aSale;
 @end

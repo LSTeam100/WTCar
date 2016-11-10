@@ -34,7 +34,7 @@
     
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil){
+        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
             WTCarReqCarInfo *reqInfo = [[WTCarReqCarInfo alloc]init];
             reqInfo.firstUpTime = data[@"firstUpTime"];
             reqInfo.carReqId = data[@"carReqId"];

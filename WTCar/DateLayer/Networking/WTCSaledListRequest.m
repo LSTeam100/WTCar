@@ -29,15 +29,15 @@
 }
 
 -(NSString *)getMethod{
-    return @"GET";
+    return @"POST";
 }
 
 -(void)processResponse:(NSDictionary *)responseDictionary{
     [super processResponse:responseDictionary];
     
     if([[self getResponse] isSucceed]){
-        NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil){
+        NSArray* data=responseDictionary[@"data"];
+        if(data!=nil && data != NULL && data != (NSArray *)[NSNull null]){
             WTCSaledLIST *saleList = [[WTCSaledLIST alloc]initWithDictionary:data];
             [self getResponse].data=saleList;
         }

@@ -10,7 +10,7 @@
 
 @interface WTCOffShelfList : NSObject
 @property(nonatomic,strong)NSMutableArray *rows;
--(instancetype)initWithDictionary:(NSDictionary *)dataDic;
+-(instancetype)initWithDictionary:(NSArray *)dataArr;
 @end
 
 @interface WTCAOffShelf : NSObject

@@ -49,6 +49,7 @@ typedef enum
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"车类品牌";
     self.sectionTitleView = ({
         UILabel *sectionTitleView = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-100)/2, (SCREEN_HEIGHT-100)/2,100,100)];
         sectionTitleView.textAlignment = NSTextAlignmentCenter;

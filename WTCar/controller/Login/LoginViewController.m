@@ -87,7 +87,10 @@
     }
     else
     {
+        [self setBusyIndicatorVisible:YES];
         WTCLoginRequest *request = [[WTCLoginRequest alloc]initWithLoginName:mobilePhone password:password successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+
             WTCLoginResult *loginResult = [request getResponse].data;
             NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
             [userDefault setValue:mobilePhone forKey:@"loginName"];
@@ -106,6 +109,7 @@
             
             
         } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
             [self handleResponseError:self request:request treatErrorAsUnknown:YES];
         }];
         [request start];

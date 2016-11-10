@@ -17,13 +17,13 @@
 - (void)setChecked:(BOOL)checked{
     if (checked)
     {
-        self.selectImageView.image = [UIImage imageNamed:@"success"];
+        self.selectImageView.image = [UIImage imageNamed:@"share_select"];
     }
     else
     {
-        self.selectImageView.image = [UIImage imageNamed:@"success"];
+        self.selectImageView.image = [UIImage imageNamed:@"share_unselect"];
     }
-    m_checked = checked;
+   self.m_checked = checked;
     
     
 }

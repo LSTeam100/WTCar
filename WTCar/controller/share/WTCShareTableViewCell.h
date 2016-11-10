@@ -10,13 +10,14 @@
 
 @interface WTCShareTableViewCell : UITableViewCell
 {
-    BOOL			m_checked;
 }
 @property(nonatomic,weak)IBOutlet UIImageView *selectImageView;
 @property(nonatomic,weak)IBOutlet UIImageView *titleImageView;
 @property(nonatomic,weak)IBOutlet UILabel *titleLabel;
 @property(nonatomic,weak)IBOutlet UILabel *dateLabel;
 @property(nonatomic,weak)IBOutlet UILabel *priceLabel;
+@property(nonatomic,assign)BOOL m_checked;
+
 - (void)setChecked:(BOOL)checked;
 
 
