@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeAccountCodeViewController">
+            <connections>
+                <outlet property="AccountCodeTextField" destination="781-D9-clI" id="gRM-3T-mOY"/>
+                <outlet property="ChangeAccountCodeButton" destination="tU1-Km-0cL" id="BS7-K4-n9e"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6in-JB-Zqg">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8BE-fs-qrq">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="YOb-gi-lbz"/>
+                                <constraint firstAttribute="height" constant="35" id="aJ2-jM-heM"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入新的秘钥" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="781-D9-clI">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="83w-fK-z4i"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yy5-6b-dwD">
+                            <frame key="frameInset" minX="16" minY="59" width="343" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU1-Km-0cL">
+                            <frame key="frameInset" minX="17" minY="96" width="341" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="保存">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8BE-fs-qrq" secondAttribute="trailing" constant="18" id="84v-sW-S0x"/>
+                        <constraint firstItem="8BE-fs-qrq" firstAttribute="leading" secondItem="781-D9-clI" secondAttribute="trailing" constant="8" id="HFg-Om-xZZ"/>
+                        <constraint firstItem="8BE-fs-qrq" firstAttribute="centerY" secondItem="781-D9-clI" secondAttribute="centerY" id="K6t-8D-4ao"/>
+                        <constraint firstItem="781-D9-clI" firstAttribute="top" secondItem="6in-JB-Zqg" secondAttribute="top" constant="25" id="Ty6-tb-LUH"/>
+                        <constraint firstAttribute="height" constant="283" id="lV8-2p-Bh0"/>
+                        <constraint firstItem="781-D9-clI" firstAttribute="leading" secondItem="6in-JB-Zqg" secondAttribute="leading" constant="16" id="mdN-fe-Uj0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.95913110339999996" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6in-JB-Zqg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="6WH-Em-kuo"/>
+                <constraint firstItem="6in-JB-Zqg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZWp-bl-wr8"/>
+                <constraint firstAttribute="trailing" secondItem="6in-JB-Zqg" secondAttribute="trailing" id="rY7-b3-PB3"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

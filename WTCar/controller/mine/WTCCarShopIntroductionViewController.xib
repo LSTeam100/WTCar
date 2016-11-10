@@ -65,9 +65,7 @@
                 <constraint firstAttribute="trailing" secondItem="PEs-7F-Fjn" secondAttribute="trailing" constant="37" id="k36-DB-Y0k"/>
                 <constraint firstItem="kbX-dk-t6G" firstAttribute="top" secondItem="PEs-7F-Fjn" secondAttribute="bottom" constant="58" id="pB9-HV-KqN"/>
                 <constraint firstItem="PEs-7F-Fjn" firstAttribute="leading" secondItem="HaJ-Bu-QME" secondAttribute="trailing" constant="8" id="vbb-BN-MEP"/>
-
-                <constraint firstItem="exJ-Rs-YqU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="vk9-EJ-tLn"/>
-
+                <constraint firstItem="exJ-Rs-YqU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="112" id="vk9-EJ-tLn"/>
                 <constraint firstAttribute="trailing" secondItem="exJ-Rs-YqU" secondAttribute="trailing" constant="16" id="yuX-1v-gao"/>
             </constraints>
             <point key="canvasLocation" x="59.5" y="71.5"/>

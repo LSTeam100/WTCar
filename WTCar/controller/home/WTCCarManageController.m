@@ -186,7 +186,7 @@ CarMangeType;
         cell.manageBtn.hidden = NO;
         WTCASale *asale = [onsaleArr objectAtIndex:indexPath.row];
         NSString *imageUrl = [asale.primaryPicUrl objectAtIndex:0];
-        [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] completed:nil];
+//        [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] completed:nil];
         
     }
     else if (carMangeType == CarMangeTypeSale){

@@ -7,8 +7,11 @@
 //
 
 #import "SettingPayCodeViewController.h"
-
+#import "WTCAddBankCardViewController.h"
 @interface SettingPayCodeViewController ()
+{
+    
+}
 
 @end
 
@@ -18,8 +21,17 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
     self.navigationItem.title =@"设置支付密码";
+    [self dataInit];
     [self addsubview];
     // Do any additional setup after loading the view from its nib.
+}
+-(void)dataInit
+{
+    _CashNoNameSetpassword = NO;
+    _CashHasNameSetpassword = NO;
+    
+    _AddBankCardNoNameSetpassword = NO;
+    _AddBankCardHasNameSetpassword = NO;
 }
 //加载密码输入框
 -(void)addsubview
@@ -51,7 +63,13 @@
 */
 
 - (IBAction)ConfirmButtonClick:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (_CashHasNameSetpassword == YES) {
+        WTCAddBankCardViewController *addCardViewCon = [WTCAddBankCardViewController new];
+        [self.navigationController pushViewController:addCardViewCon animated:YES];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
 //    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

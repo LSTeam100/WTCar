@@ -10,6 +10,11 @@
 #import "define.h"
 #import "TTPasswordView.h"
 @interface SettingPayCodeViewController : WTCBaseViewController
+@property(nonatomic) BOOL OnlySetpassword;
+@property(nonatomic) BOOL CashHasNameSetpassword;
+@property(nonatomic) BOOL CashNoNameSetpassword;
+@property(nonatomic) BOOL AddBankCardHasNameSetpassword;
+@property(nonatomic) BOOL AddBankCardNoNameSetpassword;
 /**
  *   密码框
  */

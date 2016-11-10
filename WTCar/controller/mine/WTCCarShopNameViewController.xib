@@ -59,9 +59,9 @@
                 <constraint firstItem="nc1-R0-Xae" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="U9T-h7-5EI"/>
                 <constraint firstItem="auO-Cm-hvO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="f6V-9S-gCJ"/>
                 <constraint firstAttribute="trailing" secondItem="nc1-R0-Xae" secondAttribute="trailing" constant="16" id="gCI-DC-KC3"/>
-                <constraint firstItem="FrM-O2-ywL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="uDj-Sb-uyC"/>
+                <constraint firstItem="FrM-O2-ywL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="94" id="uDj-Sb-uyC"/>
                 <constraint firstAttribute="trailing" secondItem="auO-Cm-hvO" secondAttribute="trailing" constant="16" id="uGS-xl-X3y"/>
-                <constraint firstItem="yDa-Yj-q28" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="zaa-wc-uuF"/>
+                <constraint firstItem="yDa-Yj-q28" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="97" id="zaa-wc-uuF"/>
             </constraints>
         </view>
     </objects>

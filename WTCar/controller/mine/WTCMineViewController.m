@@ -14,6 +14,10 @@
 #import "MoneyInfoTableViewCell.h"
 #import "WTCMineDetailViewController.h"
 #import "WTCNotGetPOSViewController.h"
+#import "WTCCashToPasswordViewController.h"
+#import "SettingPayCodeViewController.h"
+#import "WTCChildAccountViewController.h"
+#import "WTCCashRecordViewController.h"
 @interface WTCMineViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *posInfoArr;
@@ -132,19 +136,25 @@
     }
     else if (indexPath.row == 3)
     {
-        
+        SettingPayCodeViewController *setPayCodeViewcon = [SettingPayCodeViewController new];
+        setPayCodeViewcon.AddBankCardHasNameSetpassword = YES;
+         [self.navigationController pushViewController:setPayCodeViewcon animated:YES];
     }
     else if (indexPath.row == 4)
     {
-        
+        WTCCashRecordViewController *CashRecordViewCon = [WTCCashRecordViewController new];
+        [self.navigationController pushViewController:CashRecordViewCon animated:YES];
     }
     else if (indexPath.row == 5)
     {
-        
+        WTCCashToPasswordViewController *cashToPasswordViewCon = [WTCCashToPasswordViewController new];
+        cashToPasswordViewCon.AddBankCardHasCardLogpassword = YES;
+        [self.navigationController pushViewController:cashToPasswordViewCon animated:YES];
     }
     else if (indexPath.row == 6)
     {
-        
+        WTCChildAccountViewController *childAccountViewCon = [WTCChildAccountViewController new];
+        [self.navigationController pushViewController:childAccountViewCon animated:YES];
     }
     else if (indexPath.row == 7)
     {

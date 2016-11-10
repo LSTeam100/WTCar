@@ -42,7 +42,7 @@
     cellHeight = 42;
 }
 -(void)makeTableView{
-    _myDetialTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 154+15,SCREEN_WIDTH, cellHeight*7) style:UITableViewStylePlain];
+    _myDetialTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 215+20,SCREEN_WIDTH, cellHeight*9) style:UITableViewStylePlain];
     [self.view addSubview:_myDetialTableView];
     _myDetialTableView.delegate = self;
     _myDetialTableView.dataSource =self;
@@ -121,30 +121,53 @@
     }
     return cell;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return 0.1;
+    }
+    return 20;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.1;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView* myView = [[UIView alloc] init];
+    myView.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];
+    return myView;
+}
+
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
-        
-    }else if (indexPath.row == 1){
-        WTCUserNameViewController*usernameViewCon = [WTCUserNameViewController new];
-        [self.navigationController pushViewController:usernameViewCon animated:YES];
-    }else if (indexPath.row == 2){
-        WTCUserTeleNumViewController*userTeleViewCon = [WTCUserTeleNumViewController new];
-        [self.navigationController pushViewController:userTeleViewCon animated:YES];
-
-    }else if (indexPath.row == 3){
-        WTCCarShopNameViewController*carshopNameViewCon = [WTCCarShopNameViewController new];
-        [self.navigationController pushViewController:carshopNameViewCon animated:YES];
-        
-    }else if (indexPath.row == 4){
-        WTCDetialAddressViewController*detailAddressViewCon = [WTCDetialAddressViewController new];
-        [self.navigationController pushViewController:detailAddressViewCon animated:YES];
-        
-    }else if (indexPath.row == 5){
-        WTCCarShopIntroductionViewController*carIntroViewCon = [WTCCarShopIntroductionViewController new];
-        [self.navigationController pushViewController:carIntroViewCon animated:YES];
-        
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            
+        }else if (indexPath.row == 1){
+            WTCUserNameViewController*usernameViewCon = [WTCUserNameViewController new];
+            [self.navigationController pushViewController:usernameViewCon animated:YES];
+        }else if (indexPath.row == 2){
+            WTCUserTeleNumViewController*userTeleViewCon = [WTCUserTeleNumViewController new];
+            [self.navigationController pushViewController:userTeleViewCon animated:YES];
+            
+        }
+    } else if (indexPath.section == 1){
+         if (indexPath.row == 0){
+            WTCCarShopNameViewController*carshopNameViewCon = [WTCCarShopNameViewController new];
+            [self.navigationController pushViewController:carshopNameViewCon animated:YES];
+            
+        }else if (indexPath.row == 1){
+            WTCDetialAddressViewController*detailAddressViewCon = [WTCDetialAddressViewController new];
+            [self.navigationController pushViewController:detailAddressViewCon animated:YES];
+            
+        }else if (indexPath.row == 2){
+            WTCCarShopIntroductionViewController*carIntroViewCon = [WTCCarShopIntroductionViewController new];
+            [self.navigationController pushViewController:carIntroViewCon animated:YES];
+            
+        }
     }
+    
     
 }
 -(void)NameVerityClick{

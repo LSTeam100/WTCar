@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="KGk-i7-Jjw" customClass="ChildAccountTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="407" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苗刚" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddj-Fp-oL3">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="9bd-o8-E1p"/>
+                            <constraint firstAttribute="width" constant="123" id="oVq-4F-eEp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18801166689" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUs-Hz-7w4">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="cdx-MR-nf4"/>
+                            <constraint firstAttribute="width" constant="123" id="yfm-PB-RIE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBU-Eg-3DL">
+                        <color key="backgroundColor" red="0.56644931730000003" green="0.80053343290000001" blue="0.1312894725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="8H3-q1-pmf"/>
+                            <constraint firstAttribute="width" constant="50" id="u6N-uh-y5b"/>
+                        </constraints>
+                        <state key="normal" title="删除">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwK-un-ivq">
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="cwg-3k-v2I"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14V-G1-p9T">
+                        <color key="backgroundColor" red="0.56644931730000003" green="0.80053343290000001" blue="0.1312894725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="NUK-bJ-wJF"/>
+                            <constraint firstAttribute="height" constant="30" id="avb-pM-Qg1"/>
+                        </constraints>
+                        <state key="normal" title="修改">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sBU-Eg-3DL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1zg-aI-BUM"/>
+                    <constraint firstItem="14V-G1-p9T" firstAttribute="centerY" secondItem="sBU-Eg-3DL" secondAttribute="centerY" id="9jw-NC-tIy"/>
+                    <constraint firstItem="DUs-Hz-7w4" firstAttribute="top" secondItem="Ddj-Fp-oL3" secondAttribute="bottom" constant="3" id="CV0-Is-DBb"/>
+                    <constraint firstItem="rwK-un-ivq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="F6P-e0-9zf"/>
+                    <constraint firstItem="rwK-un-ivq" firstAttribute="top" secondItem="DUs-Hz-7w4" secondAttribute="bottom" constant="8" id="IF3-Th-ljf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sBU-Eg-3DL" secondAttribute="trailing" constant="25" id="IQd-CL-zwo"/>
+                    <constraint firstItem="sBU-Eg-3DL" firstAttribute="leading" secondItem="14V-G1-p9T" secondAttribute="trailing" constant="26" id="MV9-Pc-fqA"/>
+                    <constraint firstItem="Ddj-Fp-oL3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="Mnn-l2-VnU"/>
+                    <constraint firstItem="Ddj-Fp-oL3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="eZ5-By-hVW"/>
+                    <constraint firstItem="DUs-Hz-7w4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="ylC-Pc-FZY"/>
+                    <constraint firstAttribute="trailing" secondItem="rwK-un-ivq" secondAttribute="trailing" constant="8" id="yoa-Ig-lUs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ChangeChildAccountButton" destination="14V-G1-p9T" id="OeV-87-dgl"/>
+                <outlet property="ChildAccountNameLabel" destination="Ddj-Fp-oL3" id="D1e-vd-1MC"/>
+                <outlet property="ChildAccountTeleLabel" destination="DUs-Hz-7w4" id="9eY-hm-Qu6"/>
+                <outlet property="DeleChildAccountButton" destination="sBU-Eg-3DL" id="2dx-Z1-9dy"/>
+            </connections>
+            <point key="canvasLocation" x="40.5" y="85"/>
+        </tableViewCell>
+    </objects>
+</document>
