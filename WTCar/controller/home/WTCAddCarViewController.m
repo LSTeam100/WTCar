@@ -49,6 +49,9 @@ typedef enum
 @property(nonatomic,strong)WTCCarBrand *selectBrand;
 @property(nonatomic,strong)WTCCarType *selectType;
 @property(nonatomic,strong)WTCCarModel *selectModel;
+@property(nonatomic,strong)NSString *location;
+@property(nonatomic,strong)NSString *distance;
+@property(nonatomic,strong)NSString *plateDate;
 @end
 
 @implementation WTCAddCarViewController
@@ -188,10 +191,7 @@ typedef enum
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
@@ -280,8 +280,8 @@ typedef enum
 -(void)saveCarDescribtion:(NSString *)des
 {
     self.carDescibetion = des;
-    NSIndexSet *indexSet=[[NSIndexSet alloc]initWithIndex:4];
-    [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:4 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
 }
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
@@ -298,6 +298,7 @@ typedef enum
             textField.inputView=picker;
         } onCommit:^(KKAreaPicker *picker, KKAdrress *address) {
             textField.text = [NSString stringWithFormat:@"%@%@",address.provice,address.city];
+            self.location = textField.text;
         }];
         return NO;
     }
@@ -308,6 +309,7 @@ typedef enum
         } onCommit:^(KKDateTimePicker *picker, NSDate *selectedDate) {
         
             textField.text = [self dateToString:selectedDate];
+            self.plateDate = textField.text;
         }];
         return NO;
     }
@@ -417,7 +419,11 @@ typedef enum
     self.selectModel = model;
     self.selectType = type;
     self.selectBrand = brand;
-    [self.tableView reloadData];
+    
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+    
+    
 }
 
 @end

@@ -35,8 +35,8 @@
     [super processResponse:responseDictionary];
     
     if([[self getResponse] isSucceed]){
-        NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
+        NSArray* data=responseDictionary[@"data"];
+        if(data!=nil && data != NULL && data != (NSArray *)[NSNull null]){
             WTCOnSaleList *saleList = [[WTCOnSaleList alloc]initWithDictionary:data];
             [self getResponse].data=saleList;
         }

@@ -17,6 +17,7 @@
 #import "WTCarOffShelfListRequest.h"
 #import "WTCSaledLIST.h"
 #import "WTCOffShelfList.h"
+#import "WTCCollectMoneyViewController.h"
 typedef enum
 {
     CarMangeTypeOnSale               = 0,
@@ -90,6 +91,8 @@ CarMangeType;
     UIButton *selectdBtn = (UIButton *)sender;
     
     if (selectdBtn.tag == CarMangeTypeOnSale) {
+        carMangeType = CarMangeTypeOnSale;
+
         self.onSaleBtn.selected = YES;
         self.saledBtn.selected = NO;
         self.offShelfBtn.selected = NO;
@@ -97,6 +100,7 @@ CarMangeType;
     }
     else if(selectdBtn.tag == CarMangeTypeSaled)
     {
+        carMangeType = CarMangeTypeSaled;
         self.onSaleBtn.selected = NO;
         self.saledBtn.selected = YES;
         self.offShelfBtn.selected = NO;
@@ -104,6 +108,8 @@ CarMangeType;
     }
     else
     {
+        carMangeType = CarMangeTypeOffShelf;
+
         self.onSaleBtn.selected = NO;
         self.saledBtn.selected = NO;
         self.offShelfBtn.selected = YES;
@@ -220,15 +226,23 @@ CarMangeType;
         
         [cell.shareBtn addTarget:self action:@selector(navitoShareController) forControlEvents:UIControlEventTouchUpInside];
         [cell.manageBtn addTarget:self action:@selector(showBottomeView) forControlEvents:UIControlEventTouchUpInside];
+        [cell.collectPayBtn addTarget:self action:@selector(naviToCollectMoneyController:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (carMangeType == CarMangeTypeOnSale) {
         cell.collectPayBtn.hidden = NO;
         cell.shareBtn.hidden = NO;
         cell.manageBtn.hidden = NO;
+        cell.collectPayBtn.tag = indexPath.row;
         WTCASale *asale = [onsaleArr objectAtIndex:indexPath.row];
         NSString *imageUrl = [asale.primaryPicUrl objectAtIndex:0];
         [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+        cell.nameLabel.text = asale.productName;
+        cell.dateLabel.text = [NSString stringWithFormat:@"%@",asale.firstUpTime];
+        cell.priceLabel.text = asale.price;
+        cell.callNumLabel.text = [NSString stringWithFormat:@"%@",asale.telNumTimes];
+        cell.browserNumLabel.text = [NSString stringWithFormat:@"%@",asale.browseNumTimes];
+        cell.sellLabel.text = [NSString stringWithFormat:@"%@",asale.saledDays];
         
         
     }
@@ -239,11 +253,25 @@ CarMangeType;
         WTCASaled *saled = [saledArr objectAtIndex:indexPath.row];
         NSString *imageUrl = [saled.primaryPicUrl objectAtIndex:0];
         [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+        cell.nameLabel.text = saled.productName;
+        cell.dateLabel.text = [NSString stringWithFormat:@"%@",saled.firstUpTime];
+        cell.priceLabel.text = saled.price;
+//        cell.callNumLabel.text = [NSString stringWithFormat:@"%@",saled.telNumTimes];
+//        cell.browserNumLabel.text = [NSString stringWithFormat:@"%@",saled.browseNumTimes];
+//        cell.sellLabel.text = [NSString stringWithFormat:@"%@",saled.saledDays];
     }
     else{
         cell.collectPayBtn.hidden = YES;
         cell.shareBtn.hidden = YES;
         cell.manageBtn.hidden = NO;
+        
+        WTCAOffShelf *aoffShelf = [offShelfArr objectAtIndex:indexPath.row];
+        NSString *imageUrl = [aoffShelf.primaryPicUrl objectAtIndex:0];
+        [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+        cell.nameLabel.text = aoffShelf.productName;
+        cell.dateLabel.text = [NSString stringWithFormat:@"%@",aoffShelf.firstUpTime];
+        cell.priceLabel.text = aoffShelf.price;
+
     }
     
     return cell;
@@ -259,6 +287,14 @@ CarMangeType;
 -(IBAction)hidenBottomView:(id)sender
 {
     [self hidenBottomView];
+}
+-(void)naviToCollectMoneyController:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    WTCASale *aSale = [onsaleArr objectAtIndex:btn.tag];
+    WTCCollectMoneyViewController *collect = [[WTCCollectMoneyViewController alloc]init];
+    collect.aSale = aSale;
+    [self.navigationController pushViewController:collect animated:YES];
 }
 -(void)navitoShareController
 {

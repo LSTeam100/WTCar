@@ -12,6 +12,9 @@
 #import "POSHistoryTableViewCell.h"
 
 @interface WTCCashierDeskViewController ()<UITableViewDelegate,UITableViewDataSource>
+{
+    NSArray *titleArr;
+}
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 @end
 
@@ -20,12 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"收银台";
+    titleArr = @[@"待收款",@"已收款",@"收款总额"];
     // Do any additional setup after loading the view from its nib.
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 3;
+        return titleArr.count;
     }
     else if (section ==1)
     {
@@ -69,6 +73,8 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"CaiserTableViewCell" owner:self options:nil]objectAtIndex:0];
     }
+    cell.titleLabel.text = [titleArr objectAtIndex:atIndex.row];
+//    cell.describetionLabel.text = 
     return cell;
     
 }

@@ -18,4 +18,5 @@
 @property(nonatomic,weak)IBOutlet UIButton *onSaleBtn;
 @property(nonatomic,weak)IBOutlet UIButton *saledBtn;
 @property(nonatomic,weak)IBOutlet UIButton *offShelfBtn;
+
 @end

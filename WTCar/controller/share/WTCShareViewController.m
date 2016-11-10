@@ -15,10 +15,12 @@
     BOOL actionFlag;
     int cycleCount;
     BOOL isShowing;
-    NSArray *tempArr;
+    NSMutableArray *tempArr;
+    NSMutableArray *selectArr;
+    NSInteger shareNum;
 }
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
-@property(nonatomic,weak)IBOutlet UIButton *allSelectBtn;
+//@property(nonatomic,weak)IBOutlet UIButton *allSelectBtn;
 @property(nonatomic,weak)IBOutlet UILabel *allCarNum;
 @property(nonatomic,weak)IBOutlet UIButton *shareBtn;
 @end
@@ -38,10 +40,24 @@
     
     NSDictionary *dic1= @{@"name":@"法拉利",
                           @"date":@"2015年10月|120万公里",
-                          @"price":@"120万"};
-    tempArr =@[dic1,dic1,dic1];
+                          @"price":@"120万",
+                          @"check":@"NO"};
+    
+    tempArr = [[NSMutableArray alloc]initWithArray:@[dic1,dic1,dic1]];
+    
+    shareNum = [self getShareNum:tempArr];
+    
+    self.allCarNum = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
+    selectArr = [[NSMutableArray alloc]init];
+    
     [self.selectAllBtn setBackgroundImage:[UIImage imageNamed:@"share_unselect"] forState:UIControlStateNormal];
     [self.selectAllBtn setBackgroundImage:[UIImage imageNamed:@"share_select"] forState:UIControlStateSelected];
+
+    
+//    [self.selectAllBtn setImage:[UIImage imageNamed:@"share_unselect"] forState:UIControlStateNormal];
+//    [self.selectAllBtn setImage:[UIImage imageNamed:@"share_select"] forState:UIControlStateHighlighted];
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewWillAppear:(BOOL)animated
@@ -49,6 +65,18 @@
 //    [super viewWillAppear:animated];
     [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
     
+}
+-(IBAction)selectALLItem:(id)sender
+{
+    for (int i = 0; i < tempArr.count; i++) {
+        NSMutableDictionary *oneDic = [[NSMutableDictionary alloc]initWithDictionary:[tempArr objectAtIndex:i]];
+        [oneDic setValue:@"YES" forKey:@"check"];
+        [tempArr replaceObjectAtIndex:i withObject:oneDic];
+    }
+    [self.tableView reloadData];
+    shareNum = [self getShareNum:tempArr];
+    self.allCarNum = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
+    NSLog(@"allCarNum=%@",self.allCarNum);
 }
 
 -(void)dealloc
@@ -68,20 +96,40 @@
     cell.titleLabel.text = [oneDic objectForKey:@"name"];
     cell.dateLabel.text = [oneDic objectForKey:@"date"];
     cell.priceLabel.text = [oneDic objectForKey:@"price"];
+    
+    NSString *check = [oneDic objectForKey:@"check"];
+    if ([check isEqualToString:@"YES"]) {
+        cell.selectImageView.image = [UIImage imageNamed:@"share_select"];
+    }
+    else
+    {
+        cell.selectImageView.image = [UIImage imageNamed:@"share_unselect"];
+    }
+    
+    
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     WTCShareTableViewCell *cell = (WTCShareTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
-    if (cell.m_checked == YES) {
+    NSMutableDictionary *oneDic = [[NSMutableDictionary alloc]initWithDictionary: [tempArr objectAtIndex:indexPath.row]];
+    
+    NSString *check = [oneDic objectForKey:@"check"];
+    if ([check isEqualToString:@"YES"]) {
+        [oneDic setValue:@"NO" forKey:@"check"];
         [cell setChecked:NO];
     }
     else
     {
+        [oneDic setValue:@"YES" forKey:@"check"];
         [cell setChecked:YES];
-
     }
+    [tempArr replaceObjectAtIndex:indexPath.row withObject:oneDic];
+    
+    shareNum = [self getShareNum:tempArr];
+    self.allCarNum = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
+
 
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -99,6 +147,19 @@
     for (int i = 0; i < cycleCount; i++) {
         [self loadImage:[NSNumber numberWithInt:i]];
     }
+}
+
+-(NSInteger)getShareNum:(NSArray *)arr
+{
+    NSInteger num = 0;
+    for (int i = 0; i < arr.count; i++) {
+        NSDictionary *oneDic = [arr objectAtIndex:i];
+        NSString *checkStatus = [oneDic objectForKey:@"check"];
+        if ([checkStatus isEqualToString:@"YES"]) {
+            num ++;
+        }
+    }
+    return num;
 }
 -(void)shareWX{
     cycleCount--;

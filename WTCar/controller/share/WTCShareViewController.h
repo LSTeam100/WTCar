@@ -10,5 +10,4 @@
 #import "WTCBaseViewController.h"
 @interface WTCShareViewController : WTCBaseViewController
 @property(nonatomic,weak)IBOutlet UIButton *selectAllBtn;
-
 @end
