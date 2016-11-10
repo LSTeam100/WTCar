@@ -18,6 +18,8 @@
 #import "WTCSaledLIST.h"
 #import "WTCOffShelfList.h"
 #import "WTCCollectMoneyViewController.h"
+#import "WTCAddCarViewController.h"
+#import "WTCOffShelfRequest.h"
 typedef enum
 {
     CarMangeTypeOnSale               = 0,
@@ -104,6 +106,8 @@ CarMangeType;
         self.onSaleBtn.selected = NO;
         self.saledBtn.selected = YES;
         self.offShelfBtn.selected = NO;
+
+        [self hidenBottomView];
         [self getSaledList];
     }
     else
@@ -113,6 +117,7 @@ CarMangeType;
         self.onSaleBtn.selected = NO;
         self.saledBtn.selected = NO;
         self.offShelfBtn.selected = YES;
+        [self hidenBottomView];
         [self getOffShelfList];
     }
     
@@ -224,7 +229,7 @@ CarMangeType;
     if (cell==nil) {
         cell=[[[NSBundle mainBundle]loadNibNamed:@"WTCCarManageTableViewCell" owner:self options:nil] objectAtIndex:0];
         
-        [cell.shareBtn addTarget:self action:@selector(navitoShareController) forControlEvents:UIControlEventTouchUpInside];
+        [cell.shareBtn addTarget:self action:@selector(navitoShareController:) forControlEvents:UIControlEventTouchUpInside];
         [cell.manageBtn addTarget:self action:@selector(showBottomeView) forControlEvents:UIControlEventTouchUpInside];
         [cell.collectPayBtn addTarget:self action:@selector(naviToCollectMoneyController:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -279,6 +284,25 @@ CarMangeType;
 -(void)showBottomeView
 {
     self.bottomViewConstraint.constant = 0;
+    if (carMangeType == 0) {
+        self.modifyView.hidden = NO;
+        self.saledView.hidden = YES;
+    }
+    else if(carMangeType == 1)
+    {
+        self.modifyView.hidden = YES;
+        self.saledView.hidden = NO;
+        self.offShelfView_edite.hidden = YES;
+        self.offShelfView_upView.hidden = YES;
+    }
+    else
+    {
+        self.modifyView.hidden = YES;
+        self.saledView.hidden = NO;
+        self.offShelfView_edite.hidden = NO;
+        self.offShelfView_upView.hidden = NO;
+
+    }
 }
 -(void)hidenBottomView
 {
@@ -296,11 +320,36 @@ CarMangeType;
     collect.aSale = aSale;
     [self.navigationController pushViewController:collect animated:YES];
 }
--(void)navitoShareController
+-(void)navitoShareController:(id)sender
 {
+    UIButton *btn = (UIButton *)sender;
     WTCCarShareViewController *shareController = [WTCCarShareViewController new];
+    shareController.ascale = [onsaleArr objectAtIndex:btn.tag];
     [self.navigationController pushViewController:shareController animated:YES];
 }
+-(IBAction)naviToAddCar:(id)sender
+{
+    WTCAddCarViewController *addCar = [[WTCAddCarViewController alloc]init];
+    [self.navigationController pushViewController:addCar animated:YES];
+}
+-(IBAction)offShelfCar:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    if (carMangeType == 0) {
+        WTCASale *aSale = [onsaleArr objectAtIndex:btn.tag];
+        [self setBusyIndicatorVisible:YES];
+        WTCOffShelfRequest *request = [[WTCOffShelfRequest alloc]initWithToken:DEFAULTTOKEN OffShelfId:aSale.saleId successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [self hidenBottomView];
+            [self.tableView reloadData];
+            
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+        }];
+        [request start];
+    }
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

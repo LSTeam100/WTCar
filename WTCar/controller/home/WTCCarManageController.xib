@@ -13,8 +13,11 @@
                 <outlet property="mangeView" destination="mFB-1t-irh" id="RPY-T0-CPb"/>
                 <outlet property="modifyView" destination="qfY-SN-iBI" id="9Vv-Dp-DXb"/>
                 <outlet property="offShelfBtn" destination="kdt-CW-MKl" id="GYt-pR-PvA"/>
+                <outlet property="offShelfView_edite" destination="nsJ-11-bhH" id="GM3-5k-ZSQ"/>
+                <outlet property="offShelfView_upView" destination="ELP-Or-b7Y" id="wCh-Nf-6du"/>
                 <outlet property="onSaleBtn" destination="qs3-VP-oSU" id="lrA-7T-G30"/>
                 <outlet property="saledBtn" destination="gjz-kY-0AU" id="xtJ-MB-a67"/>
+                <outlet property="saledView" destination="MBv-5m-hJi" id="IZR-tU-Ixj"/>
                 <outlet property="tableView" destination="FeX-Jv-GHH" id="32M-QX-Euz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -80,7 +83,11 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpc-1j-VIa">
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bR-2i-qXl"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bR-2i-qXl">
+                                            <connections>
+                                                <action selector="offShelfCar:" destination="-1" eventType="touchUpInside" id="Lhx-cf-iIs"/>
+                                            </connections>
+                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fromsale" translatesAutoresizingMaskIntoConstraints="NO" id="Rov-rm-RYt"/>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下架" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fg-NO-4mu">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -104,7 +111,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZv-2b-JOJ"/>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sellout" translatesAutoresizingMaskIntoConstraints="NO" id="268-KM-NMT"/>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="售罄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAq-Wf-je9">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已售" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAq-Wf-je9">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -146,7 +153,11 @@
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-01-Sg8">
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIX-wp-mKE"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIX-wp-mKE">
+                                            <connections>
+                                                <action selector="naviToAddCar:" destination="-1" eventType="touchUpInside" id="aFi-42-BOG"/>
+                                            </connections>
+                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edite" translatesAutoresizingMaskIntoConstraints="NO" id="YsI-pi-49h"/>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jll-Ui-fZw">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -190,11 +201,89 @@
                                 <constraint firstAttribute="bottom" secondItem="QC2-dc-Gge" secondAttribute="bottom" id="vft-mf-Fol"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBv-5m-hJi">
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsJ-11-bhH">
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y08-lE-XlZ">
+                                            <state key="normal" image="edite"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1j-vr-u7N">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="V1j-vr-u7N" firstAttribute="centerX" secondItem="nsJ-11-bhH" secondAttribute="centerX" id="Jij-Ie-wk5"/>
+                                        <constraint firstAttribute="bottom" secondItem="V1j-vr-u7N" secondAttribute="bottom" id="Lqu-dK-lo1"/>
+                                        <constraint firstItem="y08-lE-XlZ" firstAttribute="centerX" secondItem="nsJ-11-bhH" secondAttribute="centerX" id="Oaq-FF-3Fh"/>
+                                        <constraint firstItem="y08-lE-XlZ" firstAttribute="top" secondItem="nsJ-11-bhH" secondAttribute="top" id="X8r-MM-YdN"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-Or-b7Y">
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYk-Xb-CgE">
+                                            <state key="normal" backgroundImage="upshelf"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上架" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p0-d2-zDl">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="fYk-Xb-CgE" firstAttribute="top" secondItem="ELP-Or-b7Y" secondAttribute="top" id="24t-54-diX"/>
+                                        <constraint firstItem="fYk-Xb-CgE" firstAttribute="centerX" secondItem="ELP-Or-b7Y" secondAttribute="centerX" id="POR-du-SaM"/>
+                                        <constraint firstAttribute="bottom" secondItem="7p0-d2-zDl" secondAttribute="bottom" id="gzu-PF-zBC"/>
+                                        <constraint firstItem="7p0-d2-zDl" firstAttribute="centerX" secondItem="ELP-Or-b7Y" secondAttribute="centerX" id="pqr-mr-fBw"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVw-Pe-kRo">
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SC-Uk-nyD">
+                                            <state key="normal" backgroundImage="delete"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="删除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pad-vb-PwP">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Pad-vb-PwP" secondAttribute="bottom" id="4VO-sU-VuJ"/>
+                                        <constraint firstItem="7SC-Uk-nyD" firstAttribute="top" secondItem="uVw-Pe-kRo" secondAttribute="top" id="OZE-sP-H8c"/>
+                                        <constraint firstItem="Pad-vb-PwP" firstAttribute="centerX" secondItem="uVw-Pe-kRo" secondAttribute="centerX" id="XY1-VF-9Uz"/>
+                                        <constraint firstItem="7SC-Uk-nyD" firstAttribute="centerX" secondItem="uVw-Pe-kRo" secondAttribute="centerX" id="nT2-we-CMz"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="uVw-Pe-kRo" secondAttribute="bottom" id="09i-W9-Hff"/>
+                                <constraint firstItem="nsJ-11-bhH" firstAttribute="top" secondItem="MBv-5m-hJi" secondAttribute="top" id="34A-X1-DfS"/>
+                                <constraint firstItem="ELP-Or-b7Y" firstAttribute="width" secondItem="nsJ-11-bhH" secondAttribute="width" id="APe-gw-ZzV"/>
+                                <constraint firstAttribute="trailing" secondItem="ELP-Or-b7Y" secondAttribute="trailing" id="TdG-Fg-Mei"/>
+                                <constraint firstItem="nsJ-11-bhH" firstAttribute="leading" secondItem="MBv-5m-hJi" secondAttribute="leading" id="UxK-Af-bQu"/>
+                                <constraint firstItem="ELP-Or-b7Y" firstAttribute="top" secondItem="MBv-5m-hJi" secondAttribute="top" id="a9I-cu-JB9"/>
+                                <constraint firstItem="uVw-Pe-kRo" firstAttribute="top" secondItem="MBv-5m-hJi" secondAttribute="top" id="euj-bc-Jig"/>
+                                <constraint firstAttribute="bottom" secondItem="nsJ-11-bhH" secondAttribute="bottom" id="iI9-hA-frf"/>
+                                <constraint firstAttribute="bottom" secondItem="ELP-Or-b7Y" secondAttribute="bottom" id="lKv-4x-iUJ"/>
+                                <constraint firstItem="ELP-Or-b7Y" firstAttribute="leading" secondItem="uVw-Pe-kRo" secondAttribute="trailing" id="mfy-kq-65H"/>
+                                <constraint firstItem="uVw-Pe-kRo" firstAttribute="leading" secondItem="nsJ-11-bhH" secondAttribute="trailing" id="pVH-48-gtB"/>
+                                <constraint firstItem="uVw-Pe-kRo" firstAttribute="width" secondItem="nsJ-11-bhH" secondAttribute="width" id="y1S-uk-Utf"/>
+                            </constraints>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vux-dn-amg">
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="KtU-ll-oHq"/>
                             </constraints>
-                            <state key="normal" title="取消"/>
+                            <state key="normal" title="取消" backgroundImage="btn_background_green">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
                             <connections>
                                 <action selector="hidenBottomView:" destination="-1" eventType="touchUpInside" id="ove-dW-D5h"/>
                             </connections>
@@ -206,9 +295,13 @@
                         <constraint firstAttribute="trailing" secondItem="qfY-SN-iBI" secondAttribute="trailing" id="2tj-4E-i5U"/>
                         <constraint firstItem="qfY-SN-iBI" firstAttribute="top" secondItem="mFB-1t-irh" secondAttribute="top" id="5eH-b2-FHA"/>
                         <constraint firstAttribute="height" constant="100" id="OHp-1q-TMF"/>
+                        <constraint firstAttribute="trailing" secondItem="MBv-5m-hJi" secondAttribute="trailing" id="Qch-Dw-psU"/>
                         <constraint firstItem="qfY-SN-iBI" firstAttribute="leading" secondItem="mFB-1t-irh" secondAttribute="leading" id="Z27-3s-hyg"/>
+                        <constraint firstItem="MBv-5m-hJi" firstAttribute="leading" secondItem="mFB-1t-irh" secondAttribute="leading" id="fNs-7A-z1X"/>
                         <constraint firstAttribute="trailing" secondItem="vux-dn-amg" secondAttribute="trailing" id="hcP-53-bod"/>
+                        <constraint firstItem="MBv-5m-hJi" firstAttribute="top" secondItem="mFB-1t-irh" secondAttribute="top" id="jea-ro-p7H"/>
                         <constraint firstItem="vux-dn-amg" firstAttribute="top" secondItem="qfY-SN-iBI" secondAttribute="bottom" id="vhs-z9-ews"/>
+                        <constraint firstItem="vux-dn-amg" firstAttribute="top" secondItem="MBv-5m-hJi" secondAttribute="bottom" id="vnz-5j-TbX"/>
                         <constraint firstAttribute="bottom" secondItem="vux-dn-amg" secondAttribute="bottom" id="w5Z-3r-k29"/>
                     </constraints>
                 </view>
@@ -226,13 +319,15 @@
                 <constraint firstAttribute="trailing" secondItem="mFB-1t-irh" secondAttribute="trailing" id="xgK-c4-vFQ"/>
                 <constraint firstAttribute="bottom" secondItem="FeX-Jv-GHH" secondAttribute="bottom" id="ySz-7u-vlB"/>
             </constraints>
-            <point key="canvasLocation" x="-11.5" y="37.5"/>
+            <point key="canvasLocation" x="-10.5" y="21.5"/>
         </view>
     </objects>
     <resources>
+        <image name="btn_background_green" width="340" height="40"/>
         <image name="delete" width="30" height="35"/>
         <image name="edite" width="35" height="34"/>
         <image name="fromsale" width="35" height="35"/>
         <image name="sellout" width="35" height="35"/>
+        <image name="upshelf" width="35" height="35"/>
     </resources>
 </document>

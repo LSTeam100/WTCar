@@ -25,6 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self setupNavBar];
+    self.naviView = [[UIImageView alloc]initWithFrame:CGRectMake(0,0, [UIScreen mainScreen].bounds.size.width, 64)];
+    self.naviView.image = [UIImage imageNamed:@"home_title"];
+    [self.navigationController.view addSubview:self.naviView];
     [self setupTabar];
     
     // Do any additional setup after loading the view.
@@ -32,6 +35,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.naviView.hidden = YES;
+
     [[self WTCTabBarController] setTabBarHidden:YES animated:YES];
 
 

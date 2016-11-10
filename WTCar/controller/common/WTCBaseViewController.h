@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WTCarBaseRequest.h"
+
 @interface WTCBaseViewController : UIViewController
 -(void)setBusyIndicatorVisible:(BOOL)visible;
 
@@ -20,6 +21,7 @@
 -(void)showDefaultFailureMessage;
 
 -(void)showMessage:(NSString *)message;
+@property(strong,nonatomic)UIImageView *naviView;
 
 
 @end
