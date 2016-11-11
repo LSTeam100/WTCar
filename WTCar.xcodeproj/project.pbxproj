@@ -141,6 +141,16 @@
 		045F35391DD4D46400CDD473 /* ChangeChildAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045F35371DD4D46400CDD473 /* ChangeChildAccountViewController.xib */; };
 		045F353D1DD4D48200CDD473 /* ChangeAccountCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F353B1DD4D48200CDD473 /* ChangeAccountCodeViewController.m */; };
 		045F353E1DD4D48200CDD473 /* ChangeAccountCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045F353C1DD4D48200CDD473 /* ChangeAccountCodeViewController.xib */; };
+		045F35411DD5598A00CDD473 /* WTCSubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F35401DD5598A00CDD473 /* WTCSubUser.m */; };
+		045F35541DD559A100CDD473 /* WTCAddSubUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F35431DD559A100CDD473 /* WTCAddSubUserRequest.m */; };
+		045F35551DD559A100CDD473 /* WTCApplyCashRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F35451DD559A100CDD473 /* WTCApplyCashRequest.m */; };
+		045F35561DD559A100CDD473 /* WTCBindBankCardRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F35471DD559A100CDD473 /* WTCBindBankCardRequest.m */; };
+		045F35581DD559A100CDD473 /* WTCDelBankCardRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F354B1DD559A100CDD473 /* WTCDelBankCardRequest.m */; };
+		045F35591DD559A100CDD473 /* WTCDelSubUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F354D1DD559A100CDD473 /* WTCDelSubUserRequest.m */; };
+		045F355A1DD559A100CDD473 /* WTCIdcardverifyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F354F1DD559A100CDD473 /* WTCIdcardverifyRequest.m */; };
+		045F355B1DD559A100CDD473 /* WTCSubUserListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F35511DD559A100CDD473 /* WTCSubUserListRequest.m */; };
+		045F355C1DD559A100CDD473 /* WTCUpSubUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F35531DD559A100CDD473 /* WTCUpSubUserRequest.m */; };
+		045F355E1DD560AB00CDD473 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045F355D1DD560AB00CDD473 /* CoreData.framework */; };
 		046767421DD0335200F59934 /* WTCMyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046767401DD0335200F59934 /* WTCMyDetailViewController.m */; };
 		046767431DD0335200F59934 /* WTCMyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046767411DD0335200F59934 /* WTCMyDetailViewController.xib */; };
 		046767471DD034F400F59934 /* WTCCarDescribetionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046767451DD034F400F59934 /* WTCCarDescribetionViewController.m */; };
@@ -617,6 +627,25 @@
 		045F353A1DD4D48200CDD473 /* ChangeAccountCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeAccountCodeViewController.h; sourceTree = "<group>"; };
 		045F353B1DD4D48200CDD473 /* ChangeAccountCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeAccountCodeViewController.m; sourceTree = "<group>"; };
 		045F353C1DD4D48200CDD473 /* ChangeAccountCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeAccountCodeViewController.xib; sourceTree = "<group>"; };
+		045F353F1DD5598A00CDD473 /* WTCSubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCSubUser.h; sourceTree = "<group>"; };
+		045F35401DD5598A00CDD473 /* WTCSubUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCSubUser.m; sourceTree = "<group>"; };
+		045F35421DD559A100CDD473 /* WTCAddSubUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCAddSubUserRequest.h; sourceTree = "<group>"; };
+		045F35431DD559A100CDD473 /* WTCAddSubUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCAddSubUserRequest.m; sourceTree = "<group>"; };
+		045F35441DD559A100CDD473 /* WTCApplyCashRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCApplyCashRequest.h; sourceTree = "<group>"; };
+		045F35451DD559A100CDD473 /* WTCApplyCashRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCApplyCashRequest.m; sourceTree = "<group>"; };
+		045F35461DD559A100CDD473 /* WTCBindBankCardRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCBindBankCardRequest.h; sourceTree = "<group>"; };
+		045F35471DD559A100CDD473 /* WTCBindBankCardRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCBindBankCardRequest.m; sourceTree = "<group>"; };
+		045F354A1DD559A100CDD473 /* WTCDelBankCardRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCDelBankCardRequest.h; sourceTree = "<group>"; };
+		045F354B1DD559A100CDD473 /* WTCDelBankCardRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCDelBankCardRequest.m; sourceTree = "<group>"; };
+		045F354C1DD559A100CDD473 /* WTCDelSubUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCDelSubUserRequest.h; sourceTree = "<group>"; };
+		045F354D1DD559A100CDD473 /* WTCDelSubUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCDelSubUserRequest.m; sourceTree = "<group>"; };
+		045F354E1DD559A100CDD473 /* WTCIdcardverifyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCIdcardverifyRequest.h; sourceTree = "<group>"; };
+		045F354F1DD559A100CDD473 /* WTCIdcardverifyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCIdcardverifyRequest.m; sourceTree = "<group>"; };
+		045F35501DD559A100CDD473 /* WTCSubUserListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCSubUserListRequest.h; sourceTree = "<group>"; };
+		045F35511DD559A100CDD473 /* WTCSubUserListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCSubUserListRequest.m; sourceTree = "<group>"; };
+		045F35521DD559A100CDD473 /* WTCUpSubUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCUpSubUserRequest.h; sourceTree = "<group>"; };
+		045F35531DD559A100CDD473 /* WTCUpSubUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCUpSubUserRequest.m; sourceTree = "<group>"; };
+		045F355D1DD560AB00CDD473 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0467673F1DD0335200F59934 /* WTCMyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCMyDetailViewController.h; sourceTree = "<group>"; };
 		046767401DD0335200F59934 /* WTCMyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCMyDetailViewController.m; sourceTree = "<group>"; };
 		046767411DD0335200F59934 /* WTCMyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCMyDetailViewController.xib; sourceTree = "<group>"; };
@@ -1075,6 +1104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045F355E1DD560AB00CDD473 /* CoreData.framework in Frameworks */,
 				18BF08891DC3382900FD679D /* libstdc++.6.0.9.tbd in Frameworks */,
 				185EAFD71DC5EDFB008C1471 /* libWeiboSDK.a in Frameworks */,
 				185EAFDA1DC5EDFB008C1471 /* libWeChatSDK.a in Frameworks */,
@@ -1703,6 +1733,7 @@
 		18BF6F3C1DC1DF51003BF410 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				045F355D1DD560AB00CDD473 /* CoreData.framework */,
 				18BF08881DC3382900FD679D /* libstdc++.6.0.9.tbd */,
 				18BF08861DC3381A00FD679D /* CoreTelephony.framework */,
 				18BF08841DC3380500FD679D /* libsqlite3.0.tbd */,
@@ -2168,6 +2199,8 @@
 		18F80EB41DB5F5C400FF1830 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				045F353F1DD5598A00CDD473 /* WTCSubUser.h */,
+				045F35401DD5598A00CDD473 /* WTCSubUser.m */,
 				045F34951DD3409400CDD473 /* WTCCarModel.h */,
 				045F34961DD3409400CDD473 /* WTCCarModel.m */,
 				045F34971DD3409400CDD473 /* WTCCarType.h */,
@@ -2197,6 +2230,22 @@
 		18F80EB51DB5F5C400FF1830 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				045F35421DD559A100CDD473 /* WTCAddSubUserRequest.h */,
+				045F35431DD559A100CDD473 /* WTCAddSubUserRequest.m */,
+				045F35441DD559A100CDD473 /* WTCApplyCashRequest.h */,
+				045F35451DD559A100CDD473 /* WTCApplyCashRequest.m */,
+				045F35461DD559A100CDD473 /* WTCBindBankCardRequest.h */,
+				045F35471DD559A100CDD473 /* WTCBindBankCardRequest.m */,
+				045F354A1DD559A100CDD473 /* WTCDelBankCardRequest.h */,
+				045F354B1DD559A100CDD473 /* WTCDelBankCardRequest.m */,
+				045F354C1DD559A100CDD473 /* WTCDelSubUserRequest.h */,
+				045F354D1DD559A100CDD473 /* WTCDelSubUserRequest.m */,
+				045F354E1DD559A100CDD473 /* WTCIdcardverifyRequest.h */,
+				045F354F1DD559A100CDD473 /* WTCIdcardverifyRequest.m */,
+				045F35501DD559A100CDD473 /* WTCSubUserListRequest.h */,
+				045F35511DD559A100CDD473 /* WTCSubUserListRequest.m */,
+				045F35521DD559A100CDD473 /* WTCUpSubUserRequest.h */,
+				045F35531DD559A100CDD473 /* WTCUpSubUserRequest.m */,
 				045F34C11DD348F200CDD473 /* WTCarBaseRequest.h */,
 				045F34C21DD348F200CDD473 /* WTCarBaseRequest.m */,
 				045F34C31DD348F200CDD473 /* WTCarOffShelfListRequest.h */,
@@ -2606,6 +2655,8 @@
 				0421420C1DC4E8FB00F1A619 /* RegisterFirstViewController.m in Sources */,
 				185EAFE21DC5EDFC008C1471 /* UMSocialShareScrollView.m in Sources */,
 				045F35381DD4D46400CDD473 /* ChangeChildAccountViewController.m in Sources */,
+				045F355A1DD559A100CDD473 /* WTCIdcardverifyRequest.m in Sources */,
+				045F35551DD559A100CDD473 /* WTCApplyCashRequest.m in Sources */,
 				185EAFEC1DC61EF5008C1471 /* HeadTableViewCell.m in Sources */,
 				18BF6F0E1DC1D3A3003BF410 /* DNPhotoBrowser.m in Sources */,
 				18D882ED1DBB1B8300F19129 /* WTCTabBarViewController.m in Sources */,
@@ -2648,6 +2699,7 @@
 				18BF6F091DC1D3A3003BF410 /* DNAlbumTableViewController.m in Sources */,
 				18D883781DBB49F500F19129 /* SDWebImageDecoder.m in Sources */,
 				18D882F41DBB1E0200F19129 /* WTCNavigationBar.m in Sources */,
+				045F35541DD559A100CDD473 /* WTCAddSubUserRequest.m in Sources */,
 				18F80ECB1DB60CE700FF1830 /* AFURLSessionManager.m in Sources */,
 				18D883431DBB49B200F19129 /* MJRefreshComponent.m in Sources */,
 				18D882D51DBB153800F19129 /* RDVTabBar.m in Sources */,
@@ -2662,6 +2714,7 @@
 				18D8834A1DBB49B200F19129 /* MJRefreshLegendHeader.m in Sources */,
 				045F34F01DD348F200CDD473 /* WTCCarBrandRequest.m in Sources */,
 				18F80E881DB5F30400FF1830 /* ViewController.m in Sources */,
+				045F35591DD559A100CDD473 /* WTCDelSubUserRequest.m in Sources */,
 				18D8834D1DBB49B200F19129 /* UIView+MJExtension.m in Sources */,
 				18BF6F171DC1D3A3003BF410 /* DNBadgeLabel.m in Sources */,
 				18D883771DBB49F500F19129 /* SDWebImageCompat.m in Sources */,
@@ -2684,9 +2737,11 @@
 				045F350E1DD35DCF00CDD473 /* WTCCashRecordViewController.m in Sources */,
 				0451EDF31DBCC1A20026D046 /* MainButtonView.m in Sources */,
 				18D8838E1DBB674900F19129 /* WTCCarManageTableViewCell.m in Sources */,
+				045F35581DD559A100CDD473 /* WTCDelBankCardRequest.m in Sources */,
 				181A74EE1DCDE242006F96E7 /* WTCarGetStoreInfo.m in Sources */,
 				185EAF5C1DC5DAE9008C1471 /* WTCCarShanreTableViewCell.m in Sources */,
 				042142211DC4F14D00F1A619 /* ForgetCodeFirstViewController.m in Sources */,
+				045F35561DD559A100CDD473 /* WTCBindBankCardRequest.m in Sources */,
 				18E82D361DCC28A900D91501 /* WTCVerifyCode.m in Sources */,
 				0488DBB31DC5C5FB0018155D /* ShopSettingView.m in Sources */,
 				18BF6F341DC1DB7C003BF410 /* KKMultiStringPicker.m in Sources */,
@@ -2745,11 +2800,13 @@
 				18F80EC61DB60CE700FF1830 /* AFHTTPSessionManager.m in Sources */,
 				0451EDE11DBCA0850026D046 /* WTCBusinessPosViewController.m in Sources */,
 				18D8834C1DBB49B200F19129 /* UIScrollView+MJRefresh.m in Sources */,
+				045F355B1DD559A100CDD473 /* WTCSubUserListRequest.m in Sources */,
 				045F35041DD35B6500CDD473 /* WTCCashWithCardNameViewController.m in Sources */,
 				1836DEED1DC1FA81005C5A9E /* ACEExpandableTextCell.m in Sources */,
 				18D883821DBB49F500F19129 /* UIView+WebCacheOperation.m in Sources */,
 				18D883AE1DBC738E00F19129 /* MultiTablesView.m in Sources */,
 				185EAF4E1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.m in Sources */,
+				045F355C1DD559A100CDD473 /* WTCUpSubUserRequest.m in Sources */,
 				047442621DC80E340067AE82 /* AddLoanSuccessViewController.m in Sources */,
 				0451EDD71DBCA0200026D046 /* WTCShopSettingViewController.m in Sources */,
 				18D883051DBB207D00F19129 /* WTCMineViewController.m in Sources */,
@@ -2778,6 +2835,7 @@
 				0488DBC81DC64DA40018155D /* WTCBusinessVerityViewController.m in Sources */,
 				18ADE8C11DCC63F4009062F6 /* HomeNavigationBarView.m in Sources */,
 				18D882D61DBB153800F19129 /* RDVTabBarController.m in Sources */,
+				045F35411DD5598A00CDD473 /* WTCSubUser.m in Sources */,
 				18D882D71DBB153800F19129 /* RDVTabBarItem.m in Sources */,
 				185EB0051DC635FA008C1471 /* HeadPhotoTableViewCell.m in Sources */,
 				18D8834F1DBB49B200F19129 /* MJConst.m in Sources */,

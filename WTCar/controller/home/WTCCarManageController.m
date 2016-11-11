@@ -15,6 +15,9 @@
 #import "CommonVar.h"
 #import "WTCOnSaleList.h"
 #import "WTCarOffShelfListRequest.h"
+//#import <CoreData/CoreData.h>
+//#import <CoreData/NSMergePolicy.h>
+
 typedef enum
 {
     CarMangeTypeOffline               = 0,
@@ -62,8 +65,8 @@ CarMangeType;
     _segmentedControl.tintColor=[UIColor redColor];
     [_segmentedControl addTarget:self action:@selector(onSegmentSelectedChanged:)forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_segmentedControl];
-    
-    self.constraint.constant = -100;
+        
+//    self.constraint.constant = -100;
 //    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
 }
 -(void)headerRereshing
@@ -204,11 +207,11 @@ CarMangeType;
 }
 -(void)showBottomeView
 {
-    self.constraint.constant = 0;
+//    self.constraint.constant = 0;
 }
 -(void)hidenBottomView
 {
-    self.constraint.constant = -100;
+//    self.constraint.constant = -100;
 }
 -(IBAction)hidenBottomView:(id)sender
 {
