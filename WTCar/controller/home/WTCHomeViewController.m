@@ -54,8 +54,8 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    self.naviView.hidden = NO;
+//    [super viewWillAppear:animated];
+//    self.naviView.hidden = NO;
     [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
 
 }

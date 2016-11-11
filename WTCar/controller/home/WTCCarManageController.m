@@ -15,11 +15,16 @@
 #import "CommonVar.h"
 #import "WTCOnSaleList.h"
 #import "WTCarOffShelfListRequest.h"
+#import "WTCSaledLIST.h"
+#import "WTCOffShelfList.h"
+#import "WTCCollectMoneyViewController.h"
+#import "WTCAddCarViewController.h"
+#import "WTCOffShelfRequest.h"
 typedef enum
 {
-    CarMangeTypeOffline               = 0,
-    CarMangeTypeSale                  = 1,
-    CarMangeTypeSaleOut               = 2
+    CarMangeTypeOnSale               = 0,
+    CarMangeTypeSaled                = 1,
+    CarMangeTypeOffShelf             = 2
 }
 CarMangeType;
 
@@ -30,6 +35,7 @@ CarMangeType;
     NSMutableArray *onsaleArr;
     NSMutableArray *saledArr;
     NSMutableArray *offShelfArr;
+    NSArray *tempArr;
     
     
 }
@@ -49,22 +55,28 @@ CarMangeType;
     
     [self requestSteup];
     
-
+    
 }
 #pragma mark-UI 相关
 -(void)configureUI
 {
-    NSArray *segmentedArray=[[NSArray alloc]initWithObjects:@"在售",@"已售",@"未上架",nil];
-    _segmentedControl=[[UISegmentedControl alloc]initWithItems:segmentedArray];
-    _segmentedControl.backgroundColor=[UIColor clearColor];
-    _segmentedControl.frame=CGRectMake(30, 80,[UIScreen mainScreen].bounds.size.width-60, 30);
-    _segmentedControl.selectedSegmentIndex=0;
-    _segmentedControl.tintColor=[UIColor redColor];
-    [_segmentedControl addTarget:self action:@selector(onSegmentSelectedChanged:)forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:_segmentedControl];
+    self.onSaleBtn.selected = YES;
+    [self.onSaleBtn setBackgroundImage:[UIImage imageNamed:@"btn_unselectsate"] forState:UIControlStateNormal];
+    [self.onSaleBtn setBackgroundImage:[UIImage imageNamed:@"btn_selectstate"] forState:UIControlStateSelected];
     
-    self.constraint.constant = -100;
-//    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
+    
+    
+    [self.saledBtn setBackgroundImage:[UIImage imageNamed:@"btn_unselectsate"] forState:UIControlStateNormal];
+    [self.saledBtn setBackgroundImage:[UIImage imageNamed:@"btn_selectstate"] forState:UIControlStateSelected];
+    
+    
+    [self.offShelfBtn setBackgroundImage:[UIImage imageNamed:@"btn_unselectsate"] forState:UIControlStateNormal];
+    [self.offShelfBtn setBackgroundImage:[UIImage imageNamed:@"btn_selectstate"] forState:UIControlStateSelected];
+    
+    
+    self.bottomViewConstraint.constant = -100;
+    
+    //    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
 }
 -(void)headerRereshing
 {
@@ -76,28 +88,63 @@ CarMangeType;
     [self getOnSaleList];
 }
 
-
--(void)onSegmentSelectedChanged:(UISegmentedControl *)Seg{
-    NSInteger index = Seg.selectedSegmentIndex;
+-(IBAction)selectChanged:(id)sender
+{
+    UIButton *selectdBtn = (UIButton *)sender;
     
-    if (index == CarMangeTypeOffline) {
-        carMangeType = CarMangeTypeOffline;
-        [self getOnSaleList];
-    
+    if (selectdBtn.tag == CarMangeTypeOnSale) {
+        carMangeType = CarMangeTypeOnSale;
         
+        self.onSaleBtn.selected = YES;
+        self.saledBtn.selected = NO;
+        self.offShelfBtn.selected = NO;
+        [self getOnSaleList];
     }
-    else if (index == CarMangeTypeSale)
+    else if(selectdBtn.tag == CarMangeTypeSaled)
     {
-        carMangeType = CarMangeTypeSale;
+        carMangeType = CarMangeTypeSaled;
+        self.onSaleBtn.selected = NO;
+        self.saledBtn.selected = YES;
+        self.offShelfBtn.selected = NO;
+        
+        [self hidenBottomView];
         [self getSaledList];
     }
     else
     {
-        carMangeType = CarMangeTypeSaleOut;
+        carMangeType = CarMangeTypeOffShelf;
+        
+        self.onSaleBtn.selected = NO;
+        self.saledBtn.selected = NO;
+        self.offShelfBtn.selected = YES;
+        [self hidenBottomView];
+        [self getOffShelfList];
     }
     
+}
+
+
+-(void)onSegmentSelectedChanged:(UISegmentedControl *)Seg{
+    NSInteger index = Seg.selectedSegmentIndex;
     
-//    [self.tableview reloadData];
+    //    if (index == CarMangeTypeOffline) {
+    //        carMangeType = CarMangeTypeOffline;
+    //        [self getOnSaleList];
+    //
+    //
+    //    }
+    //    else if (index == CarMangeTypeSale)
+    //    {
+    //        carMangeType = CarMangeTypeSale;
+    //        [self getSaledList];
+    //    }
+    //    else
+    //    {
+    //        carMangeType = CarMangeTypeSaleOut;
+    //    }
+    
+    
+    //    [self.tableview reloadData];
     
     
     NSLog(@"index=%ld",(long)index);
@@ -106,7 +153,7 @@ CarMangeType;
 {
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
-    WTCOnSaleListRequest *request = [[WTCOnSaleListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:1] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+    WTCOnSaleListRequest *request = [[WTCOnSaleListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:0] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         WTCOnSaleList *saleList = [request getResponse].data;
         onsaleArr = [[NSMutableArray alloc]initWithArray:saleList.rows];
@@ -123,27 +170,33 @@ CarMangeType;
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
     
-    WTCSaledListRequest *request = [[WTCSaledListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:1] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+    WTCSaledListRequest *request = [[WTCSaledListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:0] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+        WTCSaledLIST *saledList = [request getResponse].data;
+        saledArr = [[NSMutableArray alloc]initWithArray:saledList.rows];
+        [self.tableView reloadData];
+        
         [self setBusyIndicatorVisible:NO];
-
+        
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
-
+        
     }];
     [request start];
-
 }
 
--(void)getOffShelf
+-(void)getOffShelfList
 {
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
-    WTCarOffShelfListRequest *request = [[WTCarOffShelfListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithLong:1] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:YES];
-
+    WTCarOffShelfListRequest *request = [[WTCarOffShelfListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithLong:0] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCOffShelfList *offList = [request getResponse].data;
+        offShelfArr = [[NSMutableArray alloc]initWithArray:offList.rows];
+        [self.tableView reloadData];
+        
     } failureCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:YES];
-
+        [self setBusyIndicatorVisible:NO];
+        
     }];
     [request start];
     
@@ -155,17 +208,17 @@ CarMangeType;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (carMangeType == CarMangeTypeOffline) {
+    if (carMangeType == CarMangeTypeOnSale) {
         return onsaleArr.count;
         
     }
-    else if (carMangeType == CarMangeTypeSale)
+    else if (carMangeType == CarMangeTypeSaled)
     {
-        return 1;
+        return saledArr.count;
     }
     else
     {
-        return 1;
+        return offShelfArr.count;
     }
 }
 
@@ -176,49 +229,127 @@ CarMangeType;
     if (cell==nil) {
         cell=[[[NSBundle mainBundle]loadNibNamed:@"WTCCarManageTableViewCell" owner:self options:nil] objectAtIndex:0];
         
-        [cell.shareBtn addTarget:self action:@selector(navitoShareController) forControlEvents:UIControlEventTouchUpInside];
+        [cell.shareBtn addTarget:self action:@selector(navitoShareController:) forControlEvents:UIControlEventTouchUpInside];
         [cell.manageBtn addTarget:self action:@selector(showBottomeView) forControlEvents:UIControlEventTouchUpInside];
+        [cell.collectPayBtn addTarget:self action:@selector(naviToCollectMoneyController:) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    if (carMangeType == CarMangeTypeOffline) {
+    if (carMangeType == CarMangeTypeOnSale) {
         cell.collectPayBtn.hidden = NO;
         cell.shareBtn.hidden = NO;
         cell.manageBtn.hidden = NO;
+        cell.collectPayBtn.tag = indexPath.row;
         WTCASale *asale = [onsaleArr objectAtIndex:indexPath.row];
         NSString *imageUrl = [asale.primaryPicUrl objectAtIndex:0];
-//        [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] completed:nil];
+        [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+        cell.nameLabel.text = asale.productName;
+        cell.dateLabel.text = [NSString stringWithFormat:@"%@",asale.firstUpTime];
+        cell.priceLabel.text = asale.price;
+        cell.callNumLabel.text = [NSString stringWithFormat:@"%@",asale.telNumTimes];
+        cell.browserNumLabel.text = [NSString stringWithFormat:@"%@",asale.browseNumTimes];
+        cell.sellLabel.text = [NSString stringWithFormat:@"%@",asale.saledDays];
+        
         
     }
-    else if (carMangeType == CarMangeTypeSale){
+    else if (carMangeType == CarMangeTypeSaled){
         cell.collectPayBtn.hidden = YES;
         cell.shareBtn.hidden = YES;
         cell.manageBtn.hidden = NO;
+        WTCASaled *saled = [saledArr objectAtIndex:indexPath.row];
+        NSString *imageUrl = [saled.primaryPicUrl objectAtIndex:0];
+        [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+        cell.nameLabel.text = saled.productName;
+        cell.dateLabel.text = [NSString stringWithFormat:@"%@",saled.firstUpTime];
+        cell.priceLabel.text = saled.price;
+        //        cell.callNumLabel.text = [NSString stringWithFormat:@"%@",saled.telNumTimes];
+        //        cell.browserNumLabel.text = [NSString stringWithFormat:@"%@",saled.browseNumTimes];
+        //        cell.sellLabel.text = [NSString stringWithFormat:@"%@",saled.saledDays];
     }
     else{
         cell.collectPayBtn.hidden = YES;
         cell.shareBtn.hidden = YES;
         cell.manageBtn.hidden = NO;
+        
+        WTCAOffShelf *aoffShelf = [offShelfArr objectAtIndex:indexPath.row];
+        NSString *imageUrl = [aoffShelf.primaryPicUrl objectAtIndex:0];
+        [cell.carImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+        cell.nameLabel.text = aoffShelf.productName;
+        cell.dateLabel.text = [NSString stringWithFormat:@"%@",aoffShelf.firstUpTime];
+        cell.priceLabel.text = aoffShelf.price;
+        
     }
     
     return cell;
 }
 -(void)showBottomeView
 {
-    self.constraint.constant = 0;
+    self.bottomViewConstraint.constant = 0;
+    if (carMangeType == 0) {
+        self.modifyView.hidden = NO;
+        self.saledView.hidden = YES;
+    }
+    else if(carMangeType == 1)
+    {
+        self.modifyView.hidden = YES;
+        self.saledView.hidden = NO;
+        self.offShelfView_edite.hidden = YES;
+        self.offShelfView_upView.hidden = YES;
+    }
+    else
+    {
+        self.modifyView.hidden = YES;
+        self.saledView.hidden = NO;
+        self.offShelfView_edite.hidden = NO;
+        self.offShelfView_upView.hidden = NO;
+        
+    }
 }
 -(void)hidenBottomView
 {
-    self.constraint.constant = -100;
+    self.bottomViewConstraint.constant = -100;
 }
 -(IBAction)hidenBottomView:(id)sender
 {
     [self hidenBottomView];
 }
--(void)navitoShareController
+-(void)naviToCollectMoneyController:(id)sender
 {
+    UIButton *btn = (UIButton *)sender;
+    WTCASale *aSale = [onsaleArr objectAtIndex:btn.tag];
+    WTCCollectMoneyViewController *collect = [[WTCCollectMoneyViewController alloc]init];
+    collect.aSale = aSale;
+    [self.navigationController pushViewController:collect animated:YES];
+}
+-(void)navitoShareController:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
     WTCCarShareViewController *shareController = [WTCCarShareViewController new];
+    shareController.ascale = [onsaleArr objectAtIndex:btn.tag];
     [self.navigationController pushViewController:shareController animated:YES];
 }
+-(IBAction)naviToAddCar:(id)sender
+{
+    WTCAddCarViewController *addCar = [[WTCAddCarViewController alloc]init];
+    [self.navigationController pushViewController:addCar animated:YES];
+}
+-(IBAction)offShelfCar:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    if (carMangeType == 0) {
+        WTCASale *aSale = [onsaleArr objectAtIndex:btn.tag];
+        [self setBusyIndicatorVisible:YES];
+        WTCOffShelfRequest *request = [[WTCOffShelfRequest alloc]initWithToken:DEFAULTTOKEN OffShelfId:aSale.saleId successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [self hidenBottomView];
+            [self.tableView reloadData];
+            
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+        }];
+        [request start];
+    }
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -230,13 +361,13 @@ CarMangeType;
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
