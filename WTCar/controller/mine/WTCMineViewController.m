@@ -137,7 +137,7 @@
     else if (indexPath.row == 3)
     {
         SettingPayCodeViewController *setPayCodeViewcon = [SettingPayCodeViewController new];
-        setPayCodeViewcon.AddBankCardHasNameSetpassword = YES;
+        setPayCodeViewcon.CashHasNameSetpassword = YES;
          [self.navigationController pushViewController:setPayCodeViewcon animated:YES];
     }
     else if (indexPath.row == 4)

@@ -69,16 +69,14 @@
     
     _cashRecordTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [cell.contentView setBackgroundColor:[UIColor whiteColor]];
+
     cell.cashNumLabel.text = _cellNumTextArray[indexPath.row];
     cell.cashMoneyLabel.text = _cellMoneyTextArray[indexPath.row];
     cell.cashStateLabel.text = _cellStateTextArray[indexPath.row];
     cell.cashTimeLabel.text = _cellTimeTextArray[indexPath.row];
     
     if (!IOS9_OR_LATER) {
-        cell.cashNumLabel.font = [UIFont boldSystemFontOfSize:15];
-        cell.cashTimeLabel.font = [UIFont boldSystemFontOfSize:15];
-        cell.cashStateLabel.font = [UIFont boldSystemFontOfSize:15];
-        cell.cashMoneyLabel.font = [UIFont boldSystemFontOfSize:15];
+
     }
     return cell;
 }

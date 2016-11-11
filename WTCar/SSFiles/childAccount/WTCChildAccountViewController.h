@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *MainAccountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *AccountCodeLabel;
 @property (weak, nonatomic) IBOutlet UIView *DeckView;
+- (IBAction)ChangeChildCodeButtonClick:(id)sender;
 
 @end

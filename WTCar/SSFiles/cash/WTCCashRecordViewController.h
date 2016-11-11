@@ -9,5 +9,9 @@
 #import "WTCBaseViewController.h"
 
 @interface WTCCashRecordViewController : WTCBaseViewController
+@property (weak, nonatomic) IBOutlet UILabel *CashDanHaoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *CashMoneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *CashStateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *CashTimeLabel;
 
 @end

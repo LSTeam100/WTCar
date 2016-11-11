@@ -27,12 +27,12 @@
 
 -(void)dataInit
 {
-    _CashNoCardLogpassword = NO;
-    _CashHasCardLogpassword = NO;
-    _CashNoNameNoCardLogpassword = NO;
-    _AddBankCardNoCardLogpassword = NO;
-    _AddBankCardHasCardLogpassword = NO;
-    _AddBankCardNoCardNoNameLogpassword = NO;
+//    _CashNoCardLogpassword = NO;
+//    _CashHasCardLogpassword = NO;
+//    _CashNoNameNoCardLogpassword = NO;
+//    _AddBankCardNoCardLogpassword = NO;
+//    _AddBankCardHasCardLogpassword = NO;
+//    _AddBankCardNoCardNoNameLogpassword = NO;
 }
 -(void)ConfirmCashClick
 {

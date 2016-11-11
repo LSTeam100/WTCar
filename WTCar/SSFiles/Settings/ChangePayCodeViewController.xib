@@ -68,7 +68,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="DSY-jY-7Hq"/>
                             </constraints>
-                            <state key="normal" title="确认">
+                            <state key="normal" title="确认" backgroundImage="ClickButton_title">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
@@ -95,4 +95,7 @@
             <point key="canvasLocation" x="51.5" y="78.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ClickButton_title" width="340" height="40"/>
+    </resources>
 </document>

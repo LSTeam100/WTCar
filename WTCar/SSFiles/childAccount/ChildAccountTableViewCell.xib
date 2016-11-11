@@ -34,13 +34,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBU-Eg-3DL">
-                        <color key="backgroundColor" red="0.56644931730000003" green="0.80053343290000001" blue="0.1312894725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBU-Eg-3DL">
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="8H3-q1-pmf"/>
                             <constraint firstAttribute="width" constant="50" id="u6N-uh-y5b"/>
                         </constraints>
-                        <state key="normal" title="删除">
+                        <state key="normal" title="删除" backgroundImage="childAccountButton-title">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
@@ -50,13 +49,12 @@
                             <constraint firstAttribute="height" constant="1" id="cwg-3k-v2I"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14V-G1-p9T">
-                        <color key="backgroundColor" red="0.56644931730000003" green="0.80053343290000001" blue="0.1312894725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14V-G1-p9T">
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="NUK-bJ-wJF"/>
                             <constraint firstAttribute="height" constant="30" id="avb-pM-Qg1"/>
                         </constraints>
-                        <state key="normal" title="修改">
+                        <state key="normal" title="修改" backgroundImage="childAccountButton-title">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
@@ -81,7 +79,10 @@
                 <outlet property="ChildAccountTeleLabel" destination="DUs-Hz-7w4" id="9eY-hm-Qu6"/>
                 <outlet property="DeleChildAccountButton" destination="sBU-Eg-3DL" id="2dx-Z1-9dy"/>
             </connections>
-            <point key="canvasLocation" x="40.5" y="85"/>
+            <point key="canvasLocation" x="38" y="85"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="childAccountButton-title" width="45" height="20"/>
+    </resources>
 </document>

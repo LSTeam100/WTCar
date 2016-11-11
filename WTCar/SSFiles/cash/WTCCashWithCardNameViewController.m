@@ -23,8 +23,14 @@
 
 -(void)GotoLogPasswordOrCashRecord
 {
-    WTCCashToPasswordViewController *toPasswordViewCon = [WTCCashToPasswordViewController new];
-    [self.navigationController pushViewController:toPasswordViewCon animated:YES];
+    if (_CashHasPasswordAndName==YES) {
+        WTCCashToPasswordViewController *toPasswordViewCon = [WTCCashToPasswordViewController new];
+        [self.navigationController pushViewController:toPasswordViewCon animated:YES];
+    } else {
+        WTCCashRecordViewController *cashRecordViewCon = [WTCCashRecordViewController new];
+        [self.navigationController pushViewController:cashRecordViewCon animated:YES];
+    }
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

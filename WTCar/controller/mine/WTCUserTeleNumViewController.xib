@@ -29,7 +29,7 @@
                         <constraint firstAttribute="height" constant="25" id="59w-BW-ceR"/>
                         <constraint firstAttribute="width" constant="30" id="HU5-x1-X2E"/>
                     </constraints>
-                    <state key="normal" image="WTCAddRemove"/>
+                    <state key="normal" image="textfieldDele_title2"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-bu-FjY">
                     <constraints>
@@ -66,6 +66,6 @@
         </view>
     </objects>
     <resources>
-        <image name="WTCAddRemove" width="16" height="16"/>
+        <image name="textfieldDele_title2" width="20" height="20"/>
     </resources>
 </document>

@@ -20,7 +20,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6in-JB-Zqg">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8BE-fs-qrq">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title" translatesAutoresizingMaskIntoConstraints="NO" id="8BE-fs-qrq">
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="YOb-gi-lbz"/>
                                 <constraint firstAttribute="height" constant="35" id="aJ2-jM-heM"/>
@@ -43,7 +43,7 @@
                             <frame key="frameInset" minX="17" minY="96" width="341" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                            <state key="normal" title="保存">
+                            <state key="normal" title="保存" backgroundImage="ClickButton_title">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
@@ -67,4 +67,8 @@
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="ClickButton_title" width="340" height="40"/>
+        <image name="textfieldDele_title" width="20" height="20"/>
+    </resources>
 </document>

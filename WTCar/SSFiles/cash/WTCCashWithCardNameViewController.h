@@ -14,5 +14,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *CardAddressLabel;
 @property (weak, nonatomic) IBOutlet UITextField *CashNumTextField;
 @property (weak, nonatomic) IBOutlet UIButton *NextStepButton;
-
+@property(nonatomic) BOOL CashHasPasswordAndName;
 @end

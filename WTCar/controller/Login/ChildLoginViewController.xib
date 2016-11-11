@@ -48,7 +48,7 @@
                         <constraint firstAttribute="height" constant="30" id="7kO-Zt-giD"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="登录">
+                    <state key="normal" title="登录" backgroundImage="ClickButton_title">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -153,6 +153,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ClickButton_title" width="340" height="40"/>
         <image name="childlog_title" width="20" height="20"/>
         <image name="password_title" width="17" height="20"/>
         <image name="tele_title" width="13" height="20"/>

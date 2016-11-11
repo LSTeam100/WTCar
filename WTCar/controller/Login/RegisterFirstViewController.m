@@ -24,7 +24,7 @@
     _TeleNumTextField.adjustsFontSizeToFitWidth = YES;
     _TeleNumTextField.keyboardType = UIKeyboardTypeDefault;
     _TeleNumTextField.delegate = self;
-    _TeleNumTextField.leftView = _ReTeleImageView;
+//    _TeleNumTextField.leftView = _ReTeleImageView;
     _TeleNumTextField.leftViewMode = UITextFieldViewModeAlways;
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。

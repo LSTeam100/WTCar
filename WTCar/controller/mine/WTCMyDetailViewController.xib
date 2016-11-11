@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCMyDetailViewController">
             <connections>
+                <outlet property="BusinessVerityButton" destination="uoW-vC-MZ7" id="AUc-H6-sGJ"/>
+                <outlet property="NameVerityButton" destination="xIp-UY-dfx" id="h7O-FO-rTU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,11 +20,11 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fpr-jf-de2">
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xIp-UY-dfx">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xIp-UY-dfx">
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="4dI-B8-3Ew"/>
                             </constraints>
-                            <state key="normal" image="同期活动.png">
+                            <state key="normal" image="mineDetail_body">
                                 <attributedString key="attributedTitle">
                                     <fragment content="实名认证">
                                         <attributes>
@@ -33,11 +35,11 @@
                                 </attributedString>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoW-vC-MZ7">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoW-vC-MZ7">
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="VG8-JD-gf6"/>
                             </constraints>
-                            <state key="normal" image="联系我们.png">
+                            <state key="normal" image="mineDetail_vIdtier">
                                 <attributedString key="attributedTitle">
                                     <fragment content="商家认证">
                                         <attributes>
@@ -80,7 +82,7 @@
         </view>
     </objects>
     <resources>
-        <image name="同期活动.png" width="74" height="74"/>
-        <image name="联系我们.png" width="74" height="74"/>
+        <image name="mineDetail_body" width="26" height="30"/>
+        <image name="mineDetail_vIdtier" width="27" height="30"/>
     </resources>
 </document>

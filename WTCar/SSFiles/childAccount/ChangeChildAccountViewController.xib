@@ -21,7 +21,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4e3-p0-tKx">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O4V-9Q-Qg7">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title" translatesAutoresizingMaskIntoConstraints="NO" id="O4V-9Q-Qg7">
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="FbT-DX-SOi"/>
                                 <constraint firstAttribute="width" constant="35" id="owd-gt-hq0"/>
@@ -35,7 +35,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P8h-rf-46W">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title" translatesAutoresizingMaskIntoConstraints="NO" id="P8h-rf-46W">
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="7c2-qP-PAz"/>
                                 <constraint firstAttribute="height" constant="35" id="YoE-WQ-cLI"/>
@@ -66,7 +66,7 @@
                                 <constraint firstAttribute="height" constant="45" id="USW-0J-GsF"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                            <state key="normal" title="保存">
+                            <state key="normal" title="保存" backgroundImage="ClickButton_title">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
@@ -104,4 +104,8 @@
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="ClickButton_title" width="340" height="40"/>
+        <image name="textfieldDele_title" width="20" height="20"/>
+    </resources>
 </document>

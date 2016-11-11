@@ -48,7 +48,7 @@
                         <constraint firstAttribute="height" constant="30" id="g83-N0-VTp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="完成">
+                    <state key="normal" title="完成" backgroundImage="ClickButton_title">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
@@ -150,6 +150,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ClickButton_title" width="340" height="40"/>
         <image name="password_title" width="17" height="20"/>
         <image name="tele_title" width="13" height="20"/>
     </resources>

@@ -25,13 +25,25 @@
     [self addsubview];
     // Do any additional setup after loading the view from its nib.
 }
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+        _CashNoNameSetpassword = NO;
+        _CashHasNameSetpassword = NO;
+    
+        _AddBankCardNoNameSetpassword = NO;
+        _AddBankCardHasNameSetpassword = NO;
+}
 -(void)dataInit
 {
-    _CashNoNameSetpassword = NO;
-    _CashHasNameSetpassword = NO;
-    
-    _AddBankCardNoNameSetpassword = NO;
-    _AddBankCardHasNameSetpassword = NO;
+//    _CashNoNameSetpassword = NO;
+//    _CashHasNameSetpassword = NO;
+//    
+//    _AddBankCardNoNameSetpassword = NO;
+//    _AddBankCardHasNameSetpassword = NO;
 }
 //加载密码输入框
 -(void)addsubview
@@ -65,6 +77,7 @@
 - (IBAction)ConfirmButtonClick:(id)sender {
     if (_CashHasNameSetpassword == YES) {
         WTCAddBankCardViewController *addCardViewCon = [WTCAddBankCardViewController new];
+        addCardViewCon.CashHasNameNoPassword = YES;
         [self.navigationController pushViewController:addCardViewCon animated:YES];
     } else {
         [self.navigationController popViewControllerAnimated:YES];

@@ -29,7 +29,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="xY9-sa-2Z3"/>
                     </constraints>
-                    <state key="normal" title="下一步">
+                    <state key="normal" title="下一步" backgroundImage="ClickButton_title">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -76,6 +76,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ClickButton_title" width="340" height="40"/>
         <image name="tele_title" width="13" height="20"/>
     </resources>
 </document>

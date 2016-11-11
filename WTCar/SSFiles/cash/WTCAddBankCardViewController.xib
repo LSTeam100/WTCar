@@ -111,7 +111,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jIm-JF-81I">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title2" translatesAutoresizingMaskIntoConstraints="NO" id="jIm-JF-81I">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="IjO-1a-hNg"/>
                                         <constraint firstAttribute="height" constant="35" id="enu-25-ALm"/>
@@ -147,7 +147,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLS-2I-LcI">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title2" translatesAutoresizingMaskIntoConstraints="NO" id="bLS-2I-LcI">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="rra-os-mu2"/>
                                         <constraint firstAttribute="height" constant="35" id="xjA-i0-ayo"/>
@@ -183,7 +183,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4aN-n5-SaG">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title2" translatesAutoresizingMaskIntoConstraints="NO" id="4aN-n5-SaG">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="QeE-FB-YlB"/>
                                         <constraint firstAttribute="height" constant="35" id="duk-si-TN1"/>
@@ -284,4 +284,7 @@
             <point key="canvasLocation" x="59.5" y="74.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="textfieldDele_title2" width="20" height="20"/>
+    </resources>
 </document>

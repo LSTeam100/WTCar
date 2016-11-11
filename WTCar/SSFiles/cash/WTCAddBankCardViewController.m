@@ -8,6 +8,7 @@
 
 #import "WTCAddBankCardViewController.h"
 #import "WTCCashWithCardNameViewController.h"
+#import "WTCCashToPasswordViewController.h"
 @interface WTCAddBankCardViewController ()
 
 @end
@@ -20,12 +21,8 @@
     [_ConfirmAddBankCardButton addTarget:self action:@selector(GotoCashViewCon) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
 }
--(void)GotoCashViewCon
-{
-    WTCCashWithCardNameViewController *cashViewCon = [WTCCashWithCardNameViewController new];
-    [self.navigationController pushViewController:cashViewCon animated:YES];
-}
--(void)dataInit
+
+-(void)viewDidDisappear:(BOOL)animated
 {
     _CashNoNameNoPassword = NO;
     _CashHasNameNoPassword = NO;
@@ -36,6 +33,24 @@
     _AddBankHasNameNoPassword = NO;
     _AddBankHasPasswordNoName = NO;
     _AddBankHasNameAndPassword = NO;
+}
+
+-(void)GotoCashViewCon
+{
+    if (_CashHasNameNoPassword == YES) {
+        WTCCashWithCardNameViewController *cashViewCon = [WTCCashWithCardNameViewController new];
+        cashViewCon.CashHasPasswordAndName = NO;
+        [self.navigationController pushViewController:cashViewCon animated:YES];
+    } else {
+        WTCCashToPasswordViewController *cashTopasswordViewCon = [WTCCashToPasswordViewController new];
+        cashTopasswordViewCon.CashHasCardLogpassword = YES;
+        [self.navigationController pushViewController:cashTopasswordViewCon animated:YES];
+    }
+    
+}
+-(void)dataInit
+{
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
