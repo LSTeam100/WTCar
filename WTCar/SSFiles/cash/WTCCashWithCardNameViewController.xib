@@ -27,12 +27,12 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azg-FP-hpG">
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4V-eT-Roz">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4V-eT-Roz">
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="57" id="ioO-tZ-qLG"/>
                                                 <constraint firstAttribute="height" constant="21" id="lVL-mz-4fF"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -40,37 +40,37 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="xbx-kR-5YH"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卡号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKG-KX-56a">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卡号：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKG-KX-56a">
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="57" id="Tfz-SR-Ijg"/>
                                                 <constraint firstAttribute="height" constant="21" id="riL-8k-KKV"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMS-9a-jgy">
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="w4K-oT-ZBf"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwg-O3-poQ">
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="ufF-WJ-XDX"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开户行：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEg-vd-mpG">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开户行：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEg-vd-mpG">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Nbq-Wi-sbc"/>
                                                 <constraint firstAttribute="width" constant="71" id="Xf6-MD-krC"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -78,7 +78,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="cy4-aj-PQC"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -87,20 +87,21 @@
                                                 <constraint firstAttribute="height" constant="21" id="GR5-rq-0uy"/>
                                                 <constraint firstAttribute="width" constant="91" id="igR-ia-4yD"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRV-9o-xiK">
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="PAS-rg-LpL"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8C-oS-mTf">
-                                            <frame key="frameInset" minX="8" minY="161" width="359" height="1"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8C-oS-mTf">
+                                            <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="Q7P-kV-LLv"/>
+                                            </constraints>
                                         </view>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-NX-W6i">
                                             <constraints>
@@ -114,7 +115,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Fev-AE-Hct"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -122,6 +123,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="kRx-sM-gcU" secondAttribute="trailing" constant="8" id="0Na-sG-IJm"/>
+                                        <constraint firstAttribute="trailing" secondItem="y8C-oS-mTf" secondAttribute="trailing" constant="8" id="3C1-gv-GbO"/>
                                         <constraint firstAttribute="trailing" secondItem="akW-rL-VPu" secondAttribute="trailing" constant="98" id="4d7-Uc-70w"/>
                                         <constraint firstItem="UEg-vd-mpG" firstAttribute="top" secondItem="kwg-O3-poQ" secondAttribute="bottom" constant="11" id="8rS-vL-Dcd"/>
                                         <constraint firstItem="kwg-O3-poQ" firstAttribute="top" secondItem="kRx-sM-gcU" secondAttribute="bottom" constant="8" id="BL2-oA-0GT"/>
@@ -151,6 +153,8 @@
                                         <constraint firstItem="j4V-eT-Roz" firstAttribute="leading" secondItem="azg-FP-hpG" secondAttribute="leading" constant="39" id="rvr-Sx-Ea8"/>
                                         <constraint firstItem="kwg-O3-poQ" firstAttribute="leading" secondItem="azg-FP-hpG" secondAttribute="leading" constant="8" id="uWJ-TM-n84"/>
                                         <constraint firstItem="UEg-vd-mpG" firstAttribute="leading" secondItem="azg-FP-hpG" secondAttribute="leading" constant="20" id="v7t-Rb-Dkt"/>
+                                        <constraint firstItem="y8C-oS-mTf" firstAttribute="top" secondItem="vRf-NX-W6i" secondAttribute="bottom" constant="3.5" id="wAE-Ho-svw"/>
+                                        <constraint firstItem="y8C-oS-mTf" firstAttribute="leading" secondItem="azg-FP-hpG" secondAttribute="leading" constant="8" id="ylE-oO-bOs"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWq-FO-WtB">

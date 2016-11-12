@@ -40,7 +40,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="seC-tX-ZPc"/>
                     </constraints>
-                    <state key="normal" title="提交认证">
+                    <state key="normal" title="提交认证" backgroundImage="ClickButton_title">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
@@ -145,6 +145,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ClickButton_title" width="340" height="40"/>
         <image name="WTCAddCar_add" width="70" height="70"/>
     </resources>
 </document>

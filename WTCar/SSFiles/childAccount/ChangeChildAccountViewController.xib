@@ -23,8 +23,8 @@
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title" translatesAutoresizingMaskIntoConstraints="NO" id="O4V-9Q-Qg7">
                             <constraints>
-                                <constraint firstAttribute="height" constant="35" id="FbT-DX-SOi"/>
-                                <constraint firstAttribute="width" constant="35" id="owd-gt-hq0"/>
+                                <constraint firstAttribute="height" constant="30" id="FbT-DX-SOi"/>
+                                <constraint firstAttribute="width" constant="30" id="owd-gt-hq0"/>
                             </constraints>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1668994545" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qan-4p-uLD">
@@ -37,8 +37,8 @@
                         </textField>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title" translatesAutoresizingMaskIntoConstraints="NO" id="P8h-rf-46W">
                             <constraints>
-                                <constraint firstAttribute="width" constant="35" id="7c2-qP-PAz"/>
-                                <constraint firstAttribute="height" constant="35" id="YoE-WQ-cLI"/>
+                                <constraint firstAttribute="width" constant="30" id="7c2-qP-PAz"/>
+                                <constraint firstAttribute="height" constant="30" id="YoE-WQ-cLI"/>
                             </constraints>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="苗刚" placeholder="请输入姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvD-wQ-AWT">
@@ -50,13 +50,13 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njs-zk-ArF">
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="k2l-5v-NmS"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coa-fR-9Db">
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="MKV-tv-x5v"/>
                             </constraints>
@@ -73,19 +73,19 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="P8h-rf-46W" firstAttribute="centerY" secondItem="Qan-4p-uLD" secondAttribute="centerY" id="36M-HB-DJs"/>
+                        <constraint firstItem="P8h-rf-46W" firstAttribute="centerY" secondItem="Qan-4p-uLD" secondAttribute="centerY" constant="-2.5" id="36M-HB-DJs"/>
                         <constraint firstItem="cvD-wQ-AWT" firstAttribute="top" secondItem="4e3-p0-tKx" secondAttribute="top" constant="25" id="4Gf-6r-ITR"/>
-                        <constraint firstAttribute="trailing" secondItem="P8h-rf-46W" secondAttribute="trailing" constant="18" id="8Ny-g2-AMD"/>
+                        <constraint firstAttribute="trailing" secondItem="P8h-rf-46W" secondAttribute="trailing" constant="23" id="8Ny-g2-AMD"/>
                         <constraint firstAttribute="height" constant="283" id="8hz-VO-lhm"/>
                         <constraint firstAttribute="trailing" secondItem="6Pe-ga-sbo" secondAttribute="trailing" constant="17" id="8ra-lb-DTN"/>
-                        <constraint firstItem="coa-fR-9Db" firstAttribute="top" secondItem="P8h-rf-46W" secondAttribute="bottom" constant="2" id="JQo-d9-WF9"/>
+                        <constraint firstItem="coa-fR-9Db" firstAttribute="top" secondItem="P8h-rf-46W" secondAttribute="bottom" constant="7" id="JQo-d9-WF9"/>
                         <constraint firstItem="cvD-wQ-AWT" firstAttribute="leading" secondItem="4e3-p0-tKx" secondAttribute="leading" constant="16" id="K1R-LR-9Vo"/>
                         <constraint firstItem="6Pe-ga-sbo" firstAttribute="top" secondItem="coa-fR-9Db" secondAttribute="bottom" constant="50" id="LVh-0n-kKD"/>
                         <constraint firstItem="njs-zk-ArF" firstAttribute="leading" secondItem="4e3-p0-tKx" secondAttribute="leading" constant="16" id="RJJ-i6-IEt"/>
-                        <constraint firstItem="O4V-9Q-Qg7" firstAttribute="centerY" secondItem="cvD-wQ-AWT" secondAttribute="centerY" id="Rss-Yd-0Z7"/>
-                        <constraint firstAttribute="trailing" secondItem="O4V-9Q-Qg7" secondAttribute="trailing" constant="18" id="TGJ-Bl-uyX"/>
+                        <constraint firstItem="O4V-9Q-Qg7" firstAttribute="centerY" secondItem="cvD-wQ-AWT" secondAttribute="centerY" constant="-2.5" id="Rss-Yd-0Z7"/>
+                        <constraint firstAttribute="trailing" secondItem="O4V-9Q-Qg7" secondAttribute="trailing" constant="23" id="TGJ-Bl-uyX"/>
                         <constraint firstAttribute="trailing" secondItem="coa-fR-9Db" secondAttribute="trailing" constant="16" id="YjE-iG-Gei"/>
-                        <constraint firstItem="njs-zk-ArF" firstAttribute="top" secondItem="O4V-9Q-Qg7" secondAttribute="bottom" constant="2" id="cAb-s1-VuV"/>
+                        <constraint firstItem="njs-zk-ArF" firstAttribute="top" secondItem="O4V-9Q-Qg7" secondAttribute="bottom" constant="7" id="cAb-s1-VuV"/>
                         <constraint firstAttribute="trailing" secondItem="njs-zk-ArF" secondAttribute="trailing" constant="16" id="els-h3-6q7"/>
                         <constraint firstItem="O4V-9Q-Qg7" firstAttribute="leading" secondItem="cvD-wQ-AWT" secondAttribute="trailing" constant="8" id="fhd-9v-LNa"/>
                         <constraint firstItem="Qan-4p-uLD" firstAttribute="top" secondItem="njs-zk-ArF" secondAttribute="bottom" constant="11" id="fvr-6a-vXN"/>

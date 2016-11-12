@@ -45,8 +45,8 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="RPv-qY-hsL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="7pf-l1-8Mk"/>
-                <constraint firstItem="Z36-8Y-IVc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="De3-mE-OIk"/>
-                <constraint firstAttribute="trailing" secondItem="Z36-8Y-IVc" secondAttribute="trailing" constant="61" id="GeO-OA-rKG"/>
+                <constraint firstItem="Z36-8Y-IVc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="De3-mE-OIk"/>
+                <constraint firstAttribute="trailing" secondItem="Z36-8Y-IVc" secondAttribute="trailing" constant="16" id="GeO-OA-rKG"/>
                 <constraint firstItem="RPv-qY-hsL" firstAttribute="top" secondItem="6E1-H3-16C" secondAttribute="bottom" constant="85" id="NQv-bb-Fda"/>
                 <constraint firstItem="Z36-8Y-IVc" firstAttribute="top" secondItem="RPv-qY-hsL" secondAttribute="bottom" constant="105" id="PR1-0f-0L0"/>
                 <constraint firstAttribute="trailing" secondItem="6E1-H3-16C" secondAttribute="trailing" constant="62" id="SeE-3t-4L3"/>
@@ -54,6 +54,7 @@
                 <constraint firstItem="6E1-H3-16C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="epA-wD-fbd"/>
                 <constraint firstAttribute="trailing" secondItem="RPv-qY-hsL" secondAttribute="trailing" constant="62" id="pEL-Bt-xF4"/>
             </constraints>
+            <point key="canvasLocation" x="54.5" y="78.5"/>
         </view>
     </objects>
     <resources>

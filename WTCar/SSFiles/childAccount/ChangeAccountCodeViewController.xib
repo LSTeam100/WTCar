@@ -22,8 +22,8 @@
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title" translatesAutoresizingMaskIntoConstraints="NO" id="8BE-fs-qrq">
                             <constraints>
-                                <constraint firstAttribute="width" constant="35" id="YOb-gi-lbz"/>
-                                <constraint firstAttribute="height" constant="35" id="aJ2-jM-heM"/>
+                                <constraint firstAttribute="width" constant="30" id="YOb-gi-lbz"/>
+                                <constraint firstAttribute="height" constant="30" id="aJ2-jM-heM"/>
                             </constraints>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入新的秘钥" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="781-D9-clI">
@@ -35,9 +35,9 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yy5-6b-dwD">
-                            <frame key="frameInset" minX="16" minY="59" width="343" height="1"/>
+                            <frame key="frameInset" minX="16" minY="59" width="343" height="0.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU1-Km-0cL">
                             <frame key="frameInset" minX="17" minY="96" width="341" height="45"/>
@@ -50,9 +50,9 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="8BE-fs-qrq" secondAttribute="trailing" constant="18" id="84v-sW-S0x"/>
+                        <constraint firstAttribute="trailing" secondItem="8BE-fs-qrq" secondAttribute="trailing" constant="23" id="84v-sW-S0x"/>
                         <constraint firstItem="8BE-fs-qrq" firstAttribute="leading" secondItem="781-D9-clI" secondAttribute="trailing" constant="8" id="HFg-Om-xZZ"/>
-                        <constraint firstItem="8BE-fs-qrq" firstAttribute="centerY" secondItem="781-D9-clI" secondAttribute="centerY" id="K6t-8D-4ao"/>
+                        <constraint firstItem="8BE-fs-qrq" firstAttribute="centerY" secondItem="781-D9-clI" secondAttribute="centerY" constant="-2.5" id="K6t-8D-4ao"/>
                         <constraint firstItem="781-D9-clI" firstAttribute="top" secondItem="6in-JB-Zqg" secondAttribute="top" constant="25" id="Ty6-tb-LUH"/>
                         <constraint firstAttribute="height" constant="283" id="lV8-2p-Bh0"/>
                         <constraint firstItem="781-D9-clI" firstAttribute="leading" secondItem="6in-JB-Zqg" secondAttribute="leading" constant="16" id="mdN-fe-Uj0"/>

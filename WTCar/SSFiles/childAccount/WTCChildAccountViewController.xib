@@ -47,7 +47,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqg-ye-svw">
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Vfs-69-o3R"/>
                     </constraints>
@@ -73,7 +73,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.56644931730000003" green="0.80053343290000001" blue="0.1312894725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="EUE-be-hby"/>
                         <constraint firstItem="5pL-mA-eZC" firstAttribute="centerY" secondItem="z7n-5l-AMH" secondAttribute="centerY" id="x4i-fO-evz"/>

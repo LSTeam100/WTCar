@@ -54,7 +54,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.56644931725129888" green="0.80053343294416246" blue="0.13128947252738701" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.71372549019607845" green="0.86274509803921573" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="iDw-hS-iec" firstAttribute="top" secondItem="8eQ-ZI-YUj" secondAttribute="bottom" constant="36" id="3No-t8-iJE"/>
                         <constraint firstItem="iDw-hS-iec" firstAttribute="leading" secondItem="yVa-nv-LJz" secondAttribute="leading" constant="35" id="JWs-QO-Kfu"/>
@@ -73,7 +73,7 @@
                         <constraint firstAttribute="height" constant="50" id="Od6-ij-1tT"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <state key="normal" title="删除">
+                    <state key="normal" title="删除" backgroundImage="ClickButton_title">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -90,4 +90,7 @@
             <point key="canvasLocation" x="90.5" y="78.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ClickButton_title" width="340" height="40"/>
+    </resources>
 </document>

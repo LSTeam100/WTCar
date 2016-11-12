@@ -42,16 +42,16 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KX-tD-8cZ">
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="mTU-zs-oMR"/>
                     </constraints>
-                    <state key="normal" title="下一步" backgroundImage="ClickButton_title">
-                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wW-CO-VRM">
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.58823529409999997" green="0.57647058819999997" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="ziY-QS-fSe"/>
                     </constraints>
@@ -87,7 +87,4 @@
             <point key="canvasLocation" x="42" y="25"/>
         </view>
     </objects>
-    <resources>
-        <image name="ClickButton_title" width="340" height="40"/>
-    </resources>
 </document>

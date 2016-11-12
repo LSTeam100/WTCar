@@ -31,18 +31,19 @@
                             <constraint firstAttribute="height" constant="21" id="lOq-Ck-RVG"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u718.png" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-u6-eV2">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2U-xx-ZgJ">
+                        <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="8bh-hx-0Bs"/>
+                            <constraint firstAttribute="height" constant="1" id="0LV-3C-FLw"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="x2U-xx-ZgJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5QV-T7-QXz"/>
                     <constraint firstAttribute="trailingMargin" secondItem="5RX-wf-Q7M" secondAttribute="trailing" constant="10" id="91w-Jk-acK"/>
-                    <constraint firstItem="ocb-u6-eV2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="GBI-dw-b19"/>
-                    <constraint firstAttribute="bottom" secondItem="ocb-u6-eV2" secondAttribute="bottom" constant="0.5" id="IBJ-wy-O6R"/>
                     <constraint firstItem="hvk-KY-6he" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="eAO-QB-Ncw"/>
-                    <constraint firstAttribute="trailing" secondItem="ocb-u6-eV2" secondAttribute="trailing" constant="18" id="r7N-Pc-R3M"/>
+                    <constraint firstAttribute="trailing" secondItem="x2U-xx-ZgJ" secondAttribute="trailing" constant="8" id="mTc-1Y-Etk"/>
+                    <constraint firstItem="x2U-xx-ZgJ" firstAttribute="top" secondItem="5RX-wf-Q7M" secondAttribute="bottom" constant="35" id="qnm-Pp-ys3"/>
                     <constraint firstItem="hvk-KY-6he" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wnX-B7-jhj"/>
                     <constraint firstItem="5RX-wf-Q7M" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="y49-rp-btF"/>
                 </constraints>
@@ -55,6 +56,5 @@
     </objects>
     <resources>
         <image name="Back-icon-拷贝-5.png" width="12" height="21"/>
-        <image name="u718.png" width="469" height="2"/>
     </resources>
 </document>

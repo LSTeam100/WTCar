@@ -52,35 +52,35 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46v-Ab-CRb">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="XTG-GX-036"/>
+                                    </constraints>
+                                    <state key="normal" title="确认" backgroundImage="ClickButton_title">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="B5B-yW-2uS" firstAttribute="top" secondItem="H9Q-sU-hBW" secondAttribute="top" constant="64" id="GjR-rJ-cf3"/>
                                 <constraint firstItem="B5B-yW-2uS" firstAttribute="leading" secondItem="H9Q-sU-hBW" secondAttribute="leading" constant="45" id="YwH-0q-NC6"/>
+                                <constraint firstItem="46v-Ab-CRb" firstAttribute="top" secondItem="T7p-Zu-vie" secondAttribute="bottom" constant="116" id="Zw0-9Z-6ha"/>
+                                <constraint firstAttribute="trailing" secondItem="46v-Ab-CRb" secondAttribute="trailing" constant="8" id="a2V-K7-Oi4"/>
                                 <constraint firstItem="T7p-Zu-vie" firstAttribute="top" secondItem="kPR-ez-fHm" secondAttribute="bottom" constant="8" id="ahD-am-zZB"/>
+                                <constraint firstItem="46v-Ab-CRb" firstAttribute="leading" secondItem="H9Q-sU-hBW" secondAttribute="leading" constant="8" id="et1-jU-qRI"/>
                                 <constraint firstItem="kPR-ez-fHm" firstAttribute="top" secondItem="B5B-yW-2uS" secondAttribute="bottom" constant="8" id="fVj-cl-FDs"/>
                                 <constraint firstItem="T7p-Zu-vie" firstAttribute="leading" secondItem="H9Q-sU-hBW" secondAttribute="leading" constant="20" id="ug6-vb-RxJ"/>
                                 <constraint firstItem="kPR-ez-fHm" firstAttribute="leading" secondItem="H9Q-sU-hBW" secondAttribute="leading" constant="33" id="wKb-3U-JB6"/>
                                 <constraint firstAttribute="height" constant="812" id="xuK-AB-zO5"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46v-Ab-CRb">
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="DSY-jY-7Hq"/>
-                            </constraints>
-                            <state key="normal" title="确认" backgroundImage="ClickButton_title">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="46v-Ab-CRb" firstAttribute="top" secondItem="Gy0-cc-Cyi" secondAttribute="top" constant="222" id="2xy-0b-E5d"/>
                         <constraint firstAttribute="bottom" secondItem="H9Q-sU-hBW" secondAttribute="bottom" constant="-145" id="AkI-ie-BuE"/>
-                        <constraint firstItem="46v-Ab-CRb" firstAttribute="leading" secondItem="Gy0-cc-Cyi" secondAttribute="leading" constant="38" id="K59-ly-YZK"/>
                         <constraint firstItem="H9Q-sU-hBW" firstAttribute="leading" secondItem="Gy0-cc-Cyi" secondAttribute="leading" id="KbN-nR-7xx"/>
                         <constraint firstAttribute="trailing" secondItem="H9Q-sU-hBW" secondAttribute="trailing" id="T3F-3x-7Jt"/>
                         <constraint firstItem="H9Q-sU-hBW" firstAttribute="top" secondItem="Gy0-cc-Cyi" secondAttribute="top" id="UDw-9u-6xl"/>
-                        <constraint firstAttribute="trailing" secondItem="46v-Ab-CRb" secondAttribute="trailing" constant="38" id="WuL-kO-1Vw"/>
                         <constraint firstItem="H9Q-sU-hBW" firstAttribute="centerX" secondItem="Gy0-cc-Cyi" secondAttribute="centerX" id="YnE-oc-Rjl"/>
                     </constraints>
                 </scrollView>

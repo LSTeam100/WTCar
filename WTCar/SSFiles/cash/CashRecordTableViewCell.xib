@@ -16,10 +16,6 @@
                 <frame key="frameInset" width="375" height="45"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="u718.png" translatesAutoresizingMaskIntoConstraints="NO" id="v8a-Qt-g5I">
-                        <frame key="frameInset" minX="3" minY="44.5" width="369" height="1"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未提现" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U6-rn-d2A">
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Hf8-rD-1wa"/>
@@ -48,6 +44,12 @@
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VF-as-Gvl">
+                        <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="5Rv-az-ZoT"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="qKe-9K-3fa" secondAttribute="trailing" id="CCf-97-2AU"/>
@@ -60,8 +62,11 @@
                     <constraint firstItem="qKe-9K-3fa" firstAttribute="leading" secondItem="1U6-rn-d2A" secondAttribute="trailing" constant="8" id="LH8-Qi-vdM"/>
                     <constraint firstItem="1U6-rn-d2A" firstAttribute="leading" secondItem="Ket-RZ-qzA" secondAttribute="trailing" constant="3" id="MsL-cg-UXX"/>
                     <constraint firstItem="Ket-RZ-qzA" firstAttribute="leading" secondItem="QUx-1N-PWO" secondAttribute="trailing" constant="8" id="PGz-aO-kXw"/>
+                    <constraint firstItem="4VF-as-Gvl" firstAttribute="top" secondItem="QUx-1N-PWO" secondAttribute="bottom" constant="11" id="Xdh-9f-B5m"/>
+                    <constraint firstItem="4VF-as-Gvl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="awE-1A-7fa"/>
                     <constraint firstItem="1U6-rn-d2A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="bxQ-Jx-upQ"/>
                     <constraint firstItem="qKe-9K-3fa" firstAttribute="width" secondItem="QUx-1N-PWO" secondAttribute="width" constant="20" id="fWg-iZ-7zD"/>
+                    <constraint firstAttribute="trailing" secondItem="4VF-as-Gvl" secondAttribute="trailing" constant="8" id="j6P-Ce-Dea"/>
                     <constraint firstItem="Ket-RZ-qzA" firstAttribute="leading" secondItem="QUx-1N-PWO" secondAttribute="trailing" constant="8" id="pvk-I7-7LQ"/>
                     <constraint firstItem="Ket-RZ-qzA" firstAttribute="width" secondItem="QUx-1N-PWO" secondAttribute="width" constant="7" id="s8U-3B-dtU"/>
                     <constraint firstItem="QUx-1N-PWO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="sRI-yI-vqb"/>
@@ -76,7 +81,4 @@
             <point key="canvasLocation" x="53.5" y="78"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="u718.png" width="469" height="2"/>
-    </resources>
 </document>
