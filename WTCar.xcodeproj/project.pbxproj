@@ -196,6 +196,7 @@
 		181A74EE1DCDE242006F96E7 /* WTCarGetStoreInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74ED1DCDE242006F96E7 /* WTCarGetStoreInfo.m */; };
 		1836DEED1DC1FA81005C5A9E /* ACEExpandableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */; };
 		1858A3C61DD6BC4700F0FBAE /* WTCImageUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3C51DD6BC4700F0FBAE /* WTCImageUploadRequest.m */; };
+		1858A3CC1DD8523500F0FBAE /* TFFileUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3C91DD8523500F0FBAE /* TFFileUploadManager.m */; };
 		185EAF2B1DC33EEA008C1471 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF241DC33EEA008C1471 /* BaiduMapAPI_Base.framework */; };
 		185EAF2C1DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF251DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework */; };
 		185EAF2D1DC33EEA008C1471 /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF261DC33EEA008C1471 /* BaiduMapAPI_Location.framework */; };
@@ -718,6 +719,8 @@
 		1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEExpandableTextCell.m; sourceTree = "<group>"; };
 		1858A3C41DD6BC4700F0FBAE /* WTCImageUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCImageUploadRequest.h; sourceTree = "<group>"; };
 		1858A3C51DD6BC4700F0FBAE /* WTCImageUploadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCImageUploadRequest.m; sourceTree = "<group>"; };
+		1858A3C81DD8523500F0FBAE /* TFFileUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileUploadManager.h; sourceTree = "<group>"; };
+		1858A3C91DD8523500F0FBAE /* TFFileUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFileUploadManager.m; sourceTree = "<group>"; };
 		185EAF241DC33EEA008C1471 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		185EAF251DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
 		185EAF261DC33EEA008C1471 /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
@@ -1471,6 +1474,15 @@
 				1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */,
 			);
 			path = ACEExpandableTextCell;
+			sourceTree = "<group>";
+		};
+		1858A3C71DD8523500F0FBAE /* TFFileUploadManager */ = {
+			isa = PBXGroup;
+			children = (
+				1858A3C81DD8523500F0FBAE /* TFFileUploadManager.h */,
+				1858A3C91DD8523500F0FBAE /* TFFileUploadManager.m */,
+			);
+			path = TFFileUploadManager;
 			sourceTree = "<group>";
 		};
 		185EAF231DC33EEA008C1471 /* BaiduMapAPI */ = {
@@ -2298,6 +2310,7 @@
 		18F80EB71DB5F5C400FF1830 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				1858A3C71DD8523500F0FBAE /* TFFileUploadManager */,
 				18850B5D1DCE29D900DA8F47 /* RSKImageCropper */,
 				185EAFA51DC5EDFB008C1471 /* UMSocial */,
 				185EAF5E1DC5E881008C1471 /* SharedItem */,
@@ -2770,6 +2783,7 @@
 				18F80E821DB5F30400FF1830 /* main.m in Sources */,
 				185EAF571DC5D852008C1471 /* WTCCarShareViewController.m in Sources */,
 				18BF6F101DC1D3A3003BF410 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
+				1858A3CC1DD8523500F0FBAE /* TFFileUploadManager.m in Sources */,
 				18F80EC81DB60CE700FF1830 /* AFSecurityPolicy.m in Sources */,
 				04FAB3301DD2298E00E3D969 /* ForgetPayCodeViewController.m in Sources */,
 				18D883861DBB638000F19129 /* WTCCarManageController.m in Sources */,

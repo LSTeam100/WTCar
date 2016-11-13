@@ -18,6 +18,7 @@
 #import "SettingPayCodeViewController.h"
 #import "WTCChildAccountViewController.h"
 #import "WTCCashRecordViewController.h"
+#import "WTCMyDetailViewController.h"
 @interface WTCMineViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *posInfoArr;
@@ -126,7 +127,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        WTCMineDetailViewController *detail = [[WTCMineDetailViewController alloc]init];
+        WTCMyDetailViewController *detail = [[WTCMyDetailViewController alloc]init];
+        
+//        WTCMineDetailViewController *detail = [[WTCMineDetailViewController alloc]init];
         [self.navigationController pushViewController:detail animated:YES];
     }
     else if(indexPath.row == 2)
