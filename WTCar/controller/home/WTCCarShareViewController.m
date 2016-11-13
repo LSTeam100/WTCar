@@ -42,6 +42,7 @@
     }
     WTCASale *asale = self.ascale;
     NSString *imageUrl = [asale.primaryPicUrl objectAtIndex:0];
+    NSLog(@"imageUrl=%@",imageUrl);
     [cell.shanreImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
     cell.titleLabel.text = asale.productName;
     cell.dateLabel.text = [NSString stringWithFormat:@"%@",asale.firstUpTime];
@@ -86,7 +87,6 @@
     NSArray *array_photo = [NSArray arrayWithArray:self.ascale.primaryPicUrl];
     
     
-    NSLog(@"array_photo=%@",array_photo);
     
     NSMutableArray *array = [[NSMutableArray alloc]init];
     for (int i = 0; i <array_photo.count; i++) {

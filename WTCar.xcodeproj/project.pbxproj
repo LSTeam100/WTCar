@@ -195,6 +195,7 @@
 		181A74E81DCDDE23006F96E7 /* WTCarReqCarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74E71DCDDE23006F96E7 /* WTCarReqCarInfo.m */; };
 		181A74EE1DCDE242006F96E7 /* WTCarGetStoreInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74ED1DCDE242006F96E7 /* WTCarGetStoreInfo.m */; };
 		1836DEED1DC1FA81005C5A9E /* ACEExpandableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */; };
+		1858A3C61DD6BC4700F0FBAE /* WTCImageUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3C51DD6BC4700F0FBAE /* WTCImageUploadRequest.m */; };
 		185EAF2B1DC33EEA008C1471 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF241DC33EEA008C1471 /* BaiduMapAPI_Base.framework */; };
 		185EAF2C1DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF251DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework */; };
 		185EAF2D1DC33EEA008C1471 /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF261DC33EEA008C1471 /* BaiduMapAPI_Location.framework */; };
@@ -715,6 +716,8 @@
 		181A74ED1DCDE242006F96E7 /* WTCarGetStoreInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarGetStoreInfo.m; sourceTree = "<group>"; };
 		1836DEEB1DC1FA81005C5A9E /* ACEExpandableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEExpandableTextCell.h; sourceTree = "<group>"; };
 		1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEExpandableTextCell.m; sourceTree = "<group>"; };
+		1858A3C41DD6BC4700F0FBAE /* WTCImageUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCImageUploadRequest.h; sourceTree = "<group>"; };
+		1858A3C51DD6BC4700F0FBAE /* WTCImageUploadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCImageUploadRequest.m; sourceTree = "<group>"; };
 		185EAF241DC33EEA008C1471 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		185EAF251DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
 		185EAF261DC33EEA008C1471 /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
@@ -1830,9 +1833,9 @@
 				0467673F1DD0335200F59934 /* WTCMyDetailViewController.h */,
 				046767401DD0335200F59934 /* WTCMyDetailViewController.m */,
 				046767411DD0335200F59934 /* WTCMyDetailViewController.xib */,
-				18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */,
 				18D883021DBB207D00F19129 /* WTCMineViewController.h */,
 				18D883031DBB207D00F19129 /* WTCMineViewController.m */,
+				18EF7BC81DC8EEF8005D2DFB /* WTCMineViewController.xib */,
 				0488DBB61DC5DA9E0018155D /* WTCMineViewTableViewCell.h */,
 				0488DBB71DC5DA9E0018155D /* WTCMineViewTableViewCell.m */,
 				0488DBB81DC5DA9E0018155D /* WTCMineViewTableViewCell.xib */,
@@ -2286,6 +2289,8 @@
 				045F34E81DD348F200CDD473 /* WTCUpStoreInfoRequest.m */,
 				045F34E91DD348F200CDD473 /* WTCVerfiyCodeRequest.h */,
 				045F34EA1DD348F200CDD473 /* WTCVerfiyCodeRequest.m */,
+				1858A3C41DD6BC4700F0FBAE /* WTCImageUploadRequest.h */,
+				1858A3C51DD6BC4700F0FBAE /* WTCImageUploadRequest.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -2660,6 +2665,7 @@
 				185EAFEC1DC61EF5008C1471 /* HeadTableViewCell.m in Sources */,
 				18BF6F0E1DC1D3A3003BF410 /* DNPhotoBrowser.m in Sources */,
 				18D882ED1DBB1B8300F19129 /* WTCTabBarViewController.m in Sources */,
+				1858A3C61DD6BC4700F0FBAE /* WTCImageUploadRequest.m in Sources */,
 				18D8837D1DBB49F500F19129 /* UIButton+WebCache.m in Sources */,
 				18BF6ED61DC09E7E003BF410 /* WTCAddCarViewController.m in Sources */,
 				042792821DCB936200216A60 /* GuideViewController.m in Sources */,

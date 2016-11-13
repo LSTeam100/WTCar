@@ -9,8 +9,12 @@
 #import "WTCShareViewController.h"
 #import "WTCShareTableViewCell.h"
 #import "SharedItem.h"
+#import "WTCOnSaleListRequest.h"
+#import "WTCOnSaleList.h"
+#import "CommonVar.h"
+#import "NSObject+MJKeyValue.h"
 @interface WTCShareViewController ()<UITableViewDelegate,UITableViewDataSource>{
-    NSCondition *_condition;
+//    NSCondition *_condition;
     NSTimer *timer;
     BOOL actionFlag;
     int cycleCount;
@@ -18,6 +22,8 @@
     NSMutableArray *tempArr;
     NSMutableArray *selectArr;
     NSInteger shareNum;
+    NSMutableArray *onsaleArr;
+    NSMutableArray *selectShareArr;
 }
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 //@property(nonatomic,weak)IBOutlet UIButton *allSelectBtn;
@@ -29,13 +35,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
     self.title = @"分享";
     //初始化锁对象
-    _condition=[[NSCondition alloc]init];
+//    _condition=[[NSCondition alloc]init];
     actionFlag = false;
     cycleCount = 0;
-    timer =  [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(isHaveActivity) userInfo:nil repeats:YES];
+//    timer =  [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(isHaveActivity) userInfo:nil repeats:YES];
     isShowing = false;
     
     NSDictionary *dic1= @{@"name":@"法拉利",
@@ -45,9 +50,9 @@
     
     tempArr = [[NSMutableArray alloc]initWithArray:@[dic1,dic1,dic1]];
     
-    shareNum = [self getShareNum:tempArr];
+//    shareNum = [self getShareNum:tempArr];
     
-    self.allCarNum = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
+    self.allCarNum.text = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
     selectArr = [[NSMutableArray alloc]init];
     
     [self.selectAllBtn setBackgroundImage:[UIImage imageNamed:@"share_unselect"] forState:UIControlStateNormal];
@@ -55,28 +60,55 @@
 
     
 //    [self.selectAllBtn setImage:[UIImage imageNamed:@"share_unselect"] forState:UIControlStateNormal];
-//    [self.selectAllBtn setImage:[UIImage imageNamed:@"share_select"] forState:UIControlStateHighlighted];
+//    [self.selectAllBtn setImage:[UIImage imageNamed:@"share_select"] forState:UIControlStateSelected];
     
     
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)getOnSaleList
+{
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCOnSaleListRequest *request = [[WTCOnSaleListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:0] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCOnSaleList *saleList = [request getResponse].data;
+        
+        onsaleArr = [[NSMutableArray alloc]init];
+        for (int i = 0; i < saleList.rows.count; i++) {
+//            onsaleArr = [[NSMutableArray alloc]initWithArray:saleList.rows];
+            WTCASale *asale = [saleList.rows objectAtIndex:i];
+            NSMutableDictionary *oneDic = [[NSMutableDictionary alloc]init];
+//            NSString *modelJson = asale.JSONString;
+            [oneDic setValue:asale forKey:@"class"];
+            [oneDic setValue:@"NO" forKey:@"check"];
+            [onsaleArr addObject:oneDic];
+        }
+        [self.tableView reloadData];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+    }];
+    [request start];
+    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
 //    [super viewWillAppear:animated];
     [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
-    
+    [self getOnSaleList];
+
 }
 -(IBAction)selectALLItem:(id)sender
 {
-    for (int i = 0; i < tempArr.count; i++) {
-        NSMutableDictionary *oneDic = [[NSMutableDictionary alloc]initWithDictionary:[tempArr objectAtIndex:i]];
+    for (int i = 0; i < onsaleArr.count; i++) {
+        NSMutableDictionary *oneDic = [[NSMutableDictionary alloc]initWithDictionary:[onsaleArr objectAtIndex:i]];
         [oneDic setValue:@"YES" forKey:@"check"];
-        [tempArr replaceObjectAtIndex:i withObject:oneDic];
+        [onsaleArr replaceObjectAtIndex:i withObject:oneDic];
     }
     [self.tableView reloadData];
-    shareNum = [self getShareNum:tempArr];
-    self.allCarNum = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
-    NSLog(@"allCarNum=%@",self.allCarNum);
+    shareNum = [self getShareNum:onsaleArr];
+    self.allCarNum.text = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
 }
 
 -(void)dealloc
@@ -92,10 +124,26 @@
         NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"WTCShareTableViewCell" owner:self options:nil];
         cell = [cellArr objectAtIndex:0];
     }
-    NSDictionary *oneDic = [tempArr objectAtIndex:indexPath.row];
-    cell.titleLabel.text = [oneDic objectForKey:@"name"];
-    cell.dateLabel.text = [oneDic objectForKey:@"date"];
-    cell.priceLabel.text = [oneDic objectForKey:@"price"];
+    NSDictionary *oneDic;
+    if (onsaleArr.count > 0) {
+        oneDic = [onsaleArr objectAtIndex:indexPath.row];
+
+    }
+    else
+    {
+        oneDic = [tempArr objectAtIndex:indexPath.row];
+
+    }
+//    NSDictionary *oneDic = [tempArr objectAtIndex:indexPath.row];
+//    NSString *modelJson = [oneDic objectForKey:@"class"];
+    WTCASale *ascle = [oneDic objectForKey:@"class"];
+    cell.titleLabel.text = ascle.productName;
+    cell.dateLabel.text = ascle.firstUpTime;
+    cell.priceLabel.text = ascle.price;
+    if (ascle.primaryPicUrl.count > 0) {
+        [cell.titleImageView sd_setImageWithURL:[NSURL URLWithString:[ascle.primaryPicUrl objectAtIndex:0]] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+    }
+    
     
     NSString *check = [oneDic objectForKey:@"check"];
     if ([check isEqualToString:@"YES"]) {
@@ -113,7 +161,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     WTCShareTableViewCell *cell = (WTCShareTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
-    NSMutableDictionary *oneDic = [[NSMutableDictionary alloc]initWithDictionary: [tempArr objectAtIndex:indexPath.row]];
+    NSMutableDictionary *oneDic = [[NSMutableDictionary alloc]initWithDictionary: [onsaleArr objectAtIndex:indexPath.row]];
     
     NSString *check = [oneDic objectForKey:@"check"];
     if ([check isEqualToString:@"YES"]) {
@@ -125,28 +173,75 @@
         [oneDic setValue:@"YES" forKey:@"check"];
         [cell setChecked:YES];
     }
-    [tempArr replaceObjectAtIndex:indexPath.row withObject:oneDic];
+    [onsaleArr replaceObjectAtIndex:indexPath.row withObject:oneDic];
     
-    shareNum = [self getShareNum:tempArr];
-    self.allCarNum = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
+    shareNum = [self getShareNum:onsaleArr];
+    self.allCarNum.text = [NSString stringWithFormat:@"合计车辆%ld台",(long)shareNum];
 
 
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return tempArr.count;
+    if (onsaleArr.count > 0) {
+        return onsaleArr.count;
+    }
+    else
+    {
+        return tempArr.count;
+    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 60;
 }
--(IBAction)share:(id)sender
+-(IBAction)share:(NSArray *)sender
 {
-    actionFlag = true;
-    cycleCount = 1;
-    for (int i = 0; i < cycleCount; i++) {
-        [self loadImage:[NSNumber numberWithInt:i]];
+    selectShareArr = [[NSMutableArray alloc]init];
+    NSMutableArray *selectTempArr = [[NSMutableArray alloc]init];
+    for (int i = 0; i < onsaleArr.count; i++) {
+        NSDictionary *oneDic = [onsaleArr objectAtIndex:i];
+        
+        NSString *key = [oneDic objectForKey:@"check"];
+        if ([key isEqualToString:@"YES"]) {
+            [selectTempArr addObject:oneDic];
+        }
     }
+    int cycle = floor(selectTempArr.count/8.0);
+    if (cycle == 0) {
+        cycle = 1;
+    }
+    actionFlag = true;
+    cycleCount = cycle;
+    
+    for (int j = 0; j < cycle; j++) {
+        NSMutableArray *onePartArr = [[NSMutableArray alloc]init];
+        if (selectTempArr.count > 7) {
+            for (int k = 0; k < 8; k++) {
+                NSDictionary *oneDic = [selectTempArr objectAtIndex:k];
+                [onePartArr addObject:oneDic];
+            }
+            [selectShareArr addObject:onePartArr];
+        }
+        else
+        {
+            for (int k = 0; k < selectTempArr.count; k ++) {
+                NSDictionary *oneDic = [selectTempArr objectAtIndex:k];
+                [onePartArr addObject:oneDic];
+            }
+            [selectShareArr addObject:onePartArr];
+
+        }
+    }
+    
+    
+    if (selectShareArr.count > 0) {
+        NSMutableArray *onePartArr = [selectShareArr objectAtIndex:0];
+        [self loadImage:onePartArr];
+    }
+    
+//    for (int i = 0; i < cycleCount; i++) {
+//        [self loadImage:onsaleArr];
+//    }
 }
 
 -(NSInteger)getShareNum:(NSArray *)arr
@@ -161,22 +256,28 @@
     }
     return num;
 }
--(void)shareWX{
+-(void)shareWX:(NSMutableArray *)shareArr{
     cycleCount--;
     isShowing = YES;
-    NSLog(@"cycleCount=%d",cycleCount);
+    NSMutableArray *array_photo = [[NSMutableArray alloc]init];
+    for (int i = 0; i < shareArr.count; i ++) {
+        NSDictionary *oneDic = [shareArr objectAtIndex:i];
+        WTCASale *asacle = [oneDic objectForKey:@"class"];
+        [array_photo addObject:[asacle.primaryPicUrl objectAtIndex:0]];
+    }
     /** 图片数组*/
     //    NSArray *wechatArr = @[[[WeixinSessionActivity alloc] init], [[WeixinTimelineActivity alloc] init]];
     
     
     //    NSLog(@"wechatArr=%@",wechatArr);
     [self setBusyIndicatorVisible:YES];
-    NSArray *array_photo = @[@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt2fbZm38Zct4DH92p-ez7-fXt.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocd24Y6jK8uQA8-8y-47H6vRe7.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocdd94h6ld4kQJh8PcpjGSkORS.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocdd94h6ld4kQJh8PcpjGSkORS.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneioccpacV1LVg2AfG9fbYl8zN1So.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt0haf1zwepSkxx9okI0W34t05.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85"];
-    
+//    NSArray *array_photo = [NSArray arrayWithArray:selectShareArr];
+//    NSArray *array_photo = @[@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt2fbZm38Zct4DH92p-ez7-fXt.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocd24Y6jK8uQA8-8y-47H6vRe7.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocdd94h6ld4kQJh8PcpjGSkORS.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneiocdd94h6ld4kQJh8PcpjGSkORS.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneioccpacV1LVg2AfG9fbYl8zN1So.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt0haf1zwepSkxx9okI0W34t05.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85",@"http://img.meifajia.com/o1aneipt09eCl5bqQp4ifbQdTHlKIJfq.jpg?imageView2/1/w/360/h/480/q/85"];
+    NSLog(@"array_photo=%@",array_photo);
     
     
     NSMutableArray *array = [[NSMutableArray alloc]init];
-    for (int i = 0; i <8; i++) {
+    for (int i = 0; i <array_photo.count; i++) {
         NSString *URL = array_photo[i];
         NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:URL]];
         UIImage *imagerang = [UIImage imageWithData:data];
@@ -217,24 +318,18 @@
             
         });
     }
-//    [_condition unlock];
-
     
-    
-    
-    
-    //    UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:array applicationActivities:wechatArr];
-    //    activityView.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePrint];
-    //    [self presentViewController:activityView animated:YES completion:nil];
-    
-   
 }
 -(BOOL)isHaveActivity
 {
     BOOL ret = false;
     if (self.presentedViewController == nil) {
         if (actionFlag == true && cycleCount > 0 ) {
-            [self loadImage:[NSNumber numberWithInt:1]];
+            if (cycleCount <= selectShareArr.count) {
+                NSMutableArray *onePartArr = [selectShareArr objectAtIndex:cycleCount];
+                [self loadImage:onePartArr];
+
+            }
         }
         ret = false;
     }
@@ -262,7 +357,7 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark 加载图片
--(void)loadImage:(NSNumber *)index{
+-(void)loadImage:(NSMutableArray *)shareArr{
     //加锁
 //    [_condition lock];
     //如果当前有图片资源则加载，否则等待
@@ -270,7 +365,7 @@
     if (ret == false && cycleCount > 0) {
         NSLog(@"可以分享微信");
         if (isShowing == false) {
-            [self shareWX];
+            [self shareWX:shareArr];
         }
     }
     else
