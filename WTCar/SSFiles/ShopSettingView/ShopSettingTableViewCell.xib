@@ -31,27 +31,27 @@
                             <constraint firstAttribute="height" constant="21" id="Uyi-Py-DJs"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u718.png" translatesAutoresizingMaskIntoConstraints="NO" id="qlE-kh-WFZ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGX-R6-266">
+                        <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="jhQ-op-Mhf"/>
+                            <constraint firstAttribute="height" constant="0.5" id="XwS-XF-Elq"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QVM-23-6ba" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0X7-QZ-hUL"/>
                     <constraint firstItem="86a-X7-kci" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9rX-g8-OCR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="QVM-23-6ba" secondAttribute="trailing" constant="23" id="Ecx-WH-2Z5"/>
-                    <constraint firstAttribute="bottom" secondItem="qlE-kh-WFZ" secondAttribute="bottom" id="T0u-EY-6A7"/>
-                    <constraint firstItem="qlE-kh-WFZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="YMz-NY-OJA"/>
+                    <constraint firstItem="oGX-R6-266" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Umn-9S-lkW"/>
+                    <constraint firstItem="oGX-R6-266" firstAttribute="top" secondItem="QVM-23-6ba" secondAttribute="bottom" constant="35" id="dP8-Tb-Qlc"/>
                     <constraint firstItem="86a-X7-kci" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="fNX-xT-YkT"/>
-                    <constraint firstAttribute="trailing" secondItem="qlE-kh-WFZ" secondAttribute="trailing" constant="8" id="zfZ-VG-LPk"/>
+                    <constraint firstAttribute="trailing" secondItem="oGX-R6-266" secondAttribute="trailing" constant="8" id="pi0-17-iBL"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="92.5" y="104"/>
+            <point key="canvasLocation" x="92.5" y="103.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Back-icon-拷贝-5.png" width="12" height="21"/>
-        <image name="u718.png" width="469" height="2"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -31,20 +31,21 @@
                             <constraint firstAttribute="height" constant="21" id="yfj-zE-Pvt"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u718.png" translatesAutoresizingMaskIntoConstraints="NO" id="udD-8v-ZcU">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dou-6c-gUL">
+                        <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="9d3-U9-nN7"/>
+                            <constraint firstAttribute="height" constant="1" id="ruj-bw-Fxv"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="udD-8v-ZcU" secondAttribute="bottom" constant="1" id="7ss-em-Z4Q"/>
                     <constraint firstItem="dNA-pe-GyF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8mE-Y1-3bf"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Fb4-85-W0W" secondAttribute="trailing" constant="10" id="A4J-HL-6tw"/>
+                    <constraint firstItem="dou-6c-gUL" firstAttribute="top" secondItem="Fb4-85-W0W" secondAttribute="bottom" constant="35" id="E8g-ee-Vv2"/>
+                    <constraint firstAttribute="trailing" secondItem="dou-6c-gUL" secondAttribute="trailing" constant="8" id="M20-Mf-gmS"/>
+                    <constraint firstItem="dou-6c-gUL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MCH-3B-vZ5"/>
                     <constraint firstItem="Fb4-85-W0W" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RZs-7g-KaM"/>
                     <constraint firstItem="dNA-pe-GyF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="ipM-6G-cUU"/>
-                    <constraint firstAttribute="trailing" secondItem="udD-8v-ZcU" secondAttribute="trailing" constant="18" id="jPy-3r-1Up"/>
-                    <constraint firstItem="udD-8v-ZcU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nEb-b1-XYQ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -56,6 +57,5 @@
     </objects>
     <resources>
         <image name="Back-icon-拷贝-5.png" width="12" height="21"/>
-        <image name="u718.png" width="469" height="2"/>
     </resources>
 </document>
