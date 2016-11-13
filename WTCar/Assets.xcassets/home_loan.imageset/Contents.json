@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "home-Withinformation-button.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "05-wu-tong_16.png",
+      "filename" : "home-Withinformation-button@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "home-Withinformation-button@3x.png",
       "scale" : "3x"
     }
   ],
