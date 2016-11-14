@@ -195,7 +195,6 @@
 		181A74E81DCDDE23006F96E7 /* WTCarReqCarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74E71DCDDE23006F96E7 /* WTCarReqCarInfo.m */; };
 		181A74EE1DCDE242006F96E7 /* WTCarGetStoreInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74ED1DCDE242006F96E7 /* WTCarGetStoreInfo.m */; };
 		1836DEED1DC1FA81005C5A9E /* ACEExpandableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */; };
-		1858A3C61DD6BC4700F0FBAE /* WTCImageUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3C51DD6BC4700F0FBAE /* WTCImageUploadRequest.m */; };
 		1858A3CC1DD8523500F0FBAE /* TFFileUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858A3C91DD8523500F0FBAE /* TFFileUploadManager.m */; };
 		185EAF2B1DC33EEA008C1471 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF241DC33EEA008C1471 /* BaiduMapAPI_Base.framework */; };
 		185EAF2C1DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185EAF251DC33EEA008C1471 /* BaiduMapAPI_Cloud.framework */; };
@@ -282,6 +281,7 @@
 		18850B7B1DCECC4C00DA8F47 /* WTCCarBrand.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B7A1DCECC4C00DA8F47 /* WTCCarBrand.m */; };
 		18850B7F1DCED65B00DA8F47 /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B7D1DCED65B00DA8F47 /* CategoryTableViewCell.m */; };
 		18850B801DCED65B00DA8F47 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18850B7E1DCED65B00DA8F47 /* CategoryTableViewCell.xib */; };
+		1897AA431DD992CA00A29912 /* WTCProfileImageUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897AA421DD992CA00A29912 /* WTCProfileImageUploadRequest.m */; };
 		18ADE8C11DCC63F4009062F6 /* HomeNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */; };
 		18ADE8C31DCC641F009062F6 /* HomeNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */; };
 		18ADE8CF1DCC760B009062F6 /* WTCHotBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE8CD1DCC760B009062F6 /* WTCHotBrandTableViewCell.m */; };
@@ -717,8 +717,6 @@
 		181A74ED1DCDE242006F96E7 /* WTCarGetStoreInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarGetStoreInfo.m; sourceTree = "<group>"; };
 		1836DEEB1DC1FA81005C5A9E /* ACEExpandableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEExpandableTextCell.h; sourceTree = "<group>"; };
 		1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEExpandableTextCell.m; sourceTree = "<group>"; };
-		1858A3C41DD6BC4700F0FBAE /* WTCImageUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCImageUploadRequest.h; sourceTree = "<group>"; };
-		1858A3C51DD6BC4700F0FBAE /* WTCImageUploadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCImageUploadRequest.m; sourceTree = "<group>"; };
 		1858A3C81DD8523500F0FBAE /* TFFileUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileUploadManager.h; sourceTree = "<group>"; };
 		1858A3C91DD8523500F0FBAE /* TFFileUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFileUploadManager.m; sourceTree = "<group>"; };
 		185EAF241DC33EEA008C1471 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
@@ -865,6 +863,8 @@
 		18850B7C1DCED65B00DA8F47 /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewCell.h; sourceTree = "<group>"; };
 		18850B7D1DCED65B00DA8F47 /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewCell.m; sourceTree = "<group>"; };
 		18850B7E1DCED65B00DA8F47 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		1897AA411DD992CA00A29912 /* WTCProfileImageUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCProfileImageUploadRequest.h; sourceTree = "<group>"; };
+		1897AA421DD992CA00A29912 /* WTCProfileImageUploadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCProfileImageUploadRequest.m; sourceTree = "<group>"; };
 		18ADE8BF1DCC63F4009062F6 /* HomeNavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationBarView.h; sourceTree = "<group>"; };
 		18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationBarView.m; sourceTree = "<group>"; };
 		18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavigationBarView.xib; sourceTree = "<group>"; };
@@ -2301,8 +2301,8 @@
 				045F34E81DD348F200CDD473 /* WTCUpStoreInfoRequest.m */,
 				045F34E91DD348F200CDD473 /* WTCVerfiyCodeRequest.h */,
 				045F34EA1DD348F200CDD473 /* WTCVerfiyCodeRequest.m */,
-				1858A3C41DD6BC4700F0FBAE /* WTCImageUploadRequest.h */,
-				1858A3C51DD6BC4700F0FBAE /* WTCImageUploadRequest.m */,
+				1897AA411DD992CA00A29912 /* WTCProfileImageUploadRequest.h */,
+				1897AA421DD992CA00A29912 /* WTCProfileImageUploadRequest.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -2678,7 +2678,7 @@
 				185EAFEC1DC61EF5008C1471 /* HeadTableViewCell.m in Sources */,
 				18BF6F0E1DC1D3A3003BF410 /* DNPhotoBrowser.m in Sources */,
 				18D882ED1DBB1B8300F19129 /* WTCTabBarViewController.m in Sources */,
-				1858A3C61DD6BC4700F0FBAE /* WTCImageUploadRequest.m in Sources */,
+				1897AA431DD992CA00A29912 /* WTCProfileImageUploadRequest.m in Sources */,
 				18D8837D1DBB49F500F19129 /* UIButton+WebCache.m in Sources */,
 				18BF6ED61DC09E7E003BF410 /* WTCAddCarViewController.m in Sources */,
 				042792821DCB936200216A60 /* GuideViewController.m in Sources */,

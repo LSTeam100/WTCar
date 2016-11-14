@@ -80,7 +80,7 @@ typedef enum
 -(void)loadCarBrand
 {
     [self setBusyIndicatorVisible:YES];
-    WTCCarBrandRequest *request = [[WTCCarBrandRequest alloc]initWithToken:@"124" successCallback:^(WTCarBaseRequest *request) {
+    WTCCarBrandRequest *request = [[WTCCarBrandRequest alloc]initWithToken:DEFAULTTOKEN successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         WTCAllCarBrands *brands = [request getResponse].data;
         allBrandsArr = [NSArray arrayWithArray: brands.brandsArr];

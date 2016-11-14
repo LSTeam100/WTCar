@@ -19,10 +19,9 @@
 #import "RSKImageCropViewController.h"
 #import "UPMImageHelper.h"
 #import <AVFoundation/AVFoundation.h>
-#import "WTCImageUploadRequest.h"
 #import "CommonVar.h"
 #import "TFFileUploadManager.h"
-
+#import "WTCProfileImageUploadRequest.h"
 @interface WTCMyDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,RSKImageCropViewControllerDelegate>
 {
     CGFloat cellHeight;
@@ -339,158 +338,38 @@
 }
 -(void)imageUploadRequest:(UIImage *)image
 {
-    NSString* url=[BaseAddress stringByAppendingString:@"/upload.do"];
+//    NSString* url=[BaseAddress stringByAppendingString:@"/upload.do"];
     NSData *data = UIImageJPEGRepresentation(image,1.0);
     
-//    NSString* url = @"https://upload.api.weibo.com/2/statuses/upload.json";
-//    NSString* content = _textField.text;
-    
-//    NSString* filepath = [[NSBundle mainBundle]pathForResource:@"1" ofType:@"jpg"];
-    
-//    NSDictionary* param = @{@"access_token":_access_token,@"status":content,@"source":@"2582981980"};
-    
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *plistFilePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"123.jpg"]];
-   bool ret = [data writeToFile:plistFilePath atomically:YES];
+    NSString *profilePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"profile.jpg"]];
+    bool ret = [data writeToFile:profilePath atomically:YES];
 
     if (ret) {
-        NSLog(@"plistFilePath=%@",plistFilePath);
+        NSLog(@"plistFilePath=%@",profilePath);
     }
     
     
     NSDictionary *param = @{};
     [self setBusyIndicatorVisible:YES];
-    [[TFFileUploadManager shareInstance] uploadFileWithURL:url params:param fileKey:@"file" filePath:plistFilePath completeHander:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    WTCProfileImageUploadRequest *request = [[WTCProfileImageUploadRequest alloc]init];
+    [request WTCUploadFileWith:param fileKey:@"file" filePath:profilePath SuccessCallbackBlock:^(NSData *data, NSURLResponse *response) {
         [self setBusyIndicatorVisible:NO];
-        if (connectionError) {
-            NSLog(@"请求出错 %@",connectionError);
-        }else{
-            NSLog(@"请求返回：\n%@",response);
-        }
+    } FailCallbackBlock:^(NSError *data, NSURLResponse *response) {
+        [self setBusyIndicatorVisible:NO];
     }];
-
-    
-//    NSMutableURLRequest *req=[[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20];
-//    
-//    NSMutableData *postData = [[NSMutableData alloc]init];
-    //请求体数据
     
     
     
-    
-    
-    
-    
-    //文件部分
-//    NSString *filename = [filePath lastPathComponent];
-//    NSString *contentType = AFContentTypeForPathExtension([filePath pathExtension]);
-//    
-//    NSString *filePair = [NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\"; filename=\"%@\";Content-Type=%@\r\n\r\n",boundary,fileKey,filename,contentType];
-//    [postData appendData:[filePair dataUsingEncoding:NSUTF8StringEncoding]];
-//    [postData appendData:fileData]; //加入文件的数据
-//    
-//    //设置请求体
-//    [postData appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-//    request.HTTPBody = postData;
-//    //设置请求头总数据长度
-//    [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)postData.length] forHTTPHeaderField:@"Content-Length"];
-    
-    
-    
-    
-    
-//    [req setValue:@"image/jpeg" forHTTPHeaderField:@"Content-Type"];
-//    [req setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@",data] forHTTPHeaderField:@"Content-Type"];
-
-    
-    
-    
-    
-
-//    [req setHTTPMethod:@"POST"];
-//    [req setHTTPBody:data];
-    
-    
-    //创建请求对象
-//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    //创建session对象
-//    NSURLSession * session =  [NSURLSession sharedSession];
-//    //添加任务
-//    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable connectionError) {
-//        if (connectionError) {
-//            NSLog(@"connectionError=%@",connectionError);
-//        }
-//        
-//        if(data)
-//        {
-//            NSLog(@"data=%@",data);
-//        }
-//        
-//    }];
-//    //开始任务
-//    [dataTask resume];
-//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-//    [request setURL:[NSURL URLWithString:url]];
-//    [request setHTTPMethod:@"POST"];
-//    NSMutableData *body = [NSMutableData data];
-//    
-//    //设置表单项分隔符
-//    NSString *boundary = @"---------------------------14737809831466499882746641449";
-//    
-//    //设置内容类型
-//    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
-//    [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
-//    
-//    //写入图片的内容
-//    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-//    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"PIC_DATA1.jpg\"\r\n",@"PIC_DATA1"] dataUsingEncoding:NSUTF8StringEncoding]];
-//    [body appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-//    
-////    [body appendData:[infoDic objectForKey:@"PIC_DATA1"]];
-//    [body appendData:imageData];
-//    [body appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-//    
-//    //写入INFO的内容
-//    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-//    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",@"PIC_INFO"] dataUsingEncoding:NSUTF8StringEncoding]];
-//    [body appendData:imageData];
-//    [body appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-//    
-//    //写入尾部内容
-//    [body appendData:[[NSString stringWithFormat:@"--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-//    
-//    [request setHTTPBody:body];
-//    
-//    NSHTTPURLResponse *urlResponese = nil;
-//    NSError *error = [[NSError alloc]init];
-//    
-//    
-//    NSData* resultData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponese error:&error];
-    
-    
-//    NSURLSession *session = [[NSURLSession alloc]init];
-//    [session uploadTaskWithRequest:request fromData:imageData];
-    
-//    [session uploadTaskWithRequest:request fromData:imageData completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        NSLog(@"response=%@",response);
-//    }];
-    
-//    NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:resultData options:NSJSONReadingMutableLeaves error:nil];
-//    NSLog(@"responseDic=%@",responseDic);
-//    WTCImageUploadRequest *request = [[WTCImageUploadRequest alloc]init];
-//    
-//    NSData *imageData = UIImagePNGRepresentation(image);
-//    [self setBusyIndicatorVisible:YES];
-//    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
-//
-//    [self setBusyIndicatorVisible:YES];
-//    [request imageUpload:loginToken PhotoName:@"profile" ImageUrl:url ImageData:imageData Success:^(WTCarBaseRequest *request) {
+//  TFFileUploadManager *upload = [[TFFileUploadManager alloc] init];
+//    [upload WTCUploadFileWithURL:url params:param fileKey:@"file" filePath:profilePath SuccessCallbackBlock:^(NSData *data, NSURLResponse *response) {
 //        [self setBusyIndicatorVisible:NO];
-//        NSLog(@"response = %@",request.getResponse);
-//    } failureCallback:^(WTCarBaseRequest *request) {
+//        NSLog(@"data=%@",data);
+//    } FailCallbackBlock:^(NSError *error, NSURLResponse *response) {
 //        [self setBusyIndicatorVisible:NO];
-//        NSLog(@"response = %@",request.getResponse);
+//        NSLog(@"error=%@",error);
 //    }];
+
     
     
 }
