@@ -1,20 +1,19 @@
 //
-//  WTCOnShelfRequest.m
+//  WTCSaledRequest.m
 //  WTCar
 //
-//  Created by apple on 2016/11/5.
+//  Created by apple on 2016/11/16.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCOnShelfRequest.h"
+#import "WTCSaledRequest.h"
 
-@implementation WTCOnShelfRequest
-
--(id)initWithToken:(NSString *)token OnShelfId:(NSNumber *)onShelfId successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
+@implementation WTCSaledRequest
+-(id)initWithToken:(NSString *)token SaledId:(NSNumber *)saledId successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
 {
     self = [super initWithToken:token successCallback:success failureCallback:failed];
     if (self) {
-        NSDictionary *parameters=@{@"id":onShelfId,
+        NSDictionary *parameters=@{@"id":saledId,
                                    };
         
         [self setParameters:parameters];
@@ -23,7 +22,7 @@
 }
 
 -(NSString *)getURL{
-    return @"onShelf.do";
+    return @"saled.do";
 }
 
 -(NSString *)getMethod{
@@ -34,11 +33,10 @@
     [super processResponse:responseDictionary];
     
     if([[self getResponse] isSucceed]){
-        NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
+        NSArray* data=responseDictionary[@"data"];
+        if(data!=nil && data != NULL && data != (NSArray *)[NSNull null]){
             [self getResponse].data=data;
         }
     }
 }
-
 @end

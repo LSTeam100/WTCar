@@ -20,6 +20,9 @@
 #import "WTCCollectMoneyViewController.h"
 #import "WTCAddCarViewController.h"
 #import "WTCOffShelfRequest.h"
+#import "WTCOnShelfRequest.h"
+#import "WTCarProdcutDel.h"
+#import "WTCSaledRequest.h"
 typedef enum
 {
     CarMangeTypeOnSale               = 0,
@@ -36,11 +39,17 @@ CarMangeType;
     NSMutableArray *saledArr;
     NSMutableArray *offShelfArr;
     NSArray *tempArr;
+    int onsaleCurrentPage;
+    int saledCurrentPage;
+    int offShelfCurrentPage;
+    NSInteger selectManage;
     
     
 }
 
 @end
+//添加分页功能
+static int DEFAULT_SIZE=10;
 
 @implementation WTCCarManageController
 
@@ -51,32 +60,28 @@ CarMangeType;
     onsaleArr = [[NSMutableArray alloc]init];
     saledArr = [[NSMutableArray alloc]init];
     offShelfArr = [[NSMutableArray alloc]init];
+    onsaleCurrentPage = 0;
+    saledCurrentPage = 0;
+    offShelfCurrentPage = 0;
     [self configureUI];
-    
     [self requestSteup];
-    
-    
+
 }
+
 #pragma mark-UI 相关
 -(void)configureUI
 {
+    setExtraCellLineHidden(self.tableView);
     self.onSaleBtn.selected = YES;
     [self.onSaleBtn setBackgroundImage:[UIImage imageNamed:@"btn_unselectsate"] forState:UIControlStateNormal];
     [self.onSaleBtn setBackgroundImage:[UIImage imageNamed:@"btn_selectstate"] forState:UIControlStateSelected];
-    
-    
-    
     [self.saledBtn setBackgroundImage:[UIImage imageNamed:@"btn_unselectsate"] forState:UIControlStateNormal];
     [self.saledBtn setBackgroundImage:[UIImage imageNamed:@"btn_selectstate"] forState:UIControlStateSelected];
-    
-    
     [self.offShelfBtn setBackgroundImage:[UIImage imageNamed:@"btn_unselectsate"] forState:UIControlStateNormal];
     [self.offShelfBtn setBackgroundImage:[UIImage imageNamed:@"btn_selectstate"] forState:UIControlStateSelected];
-    
-    
     self.bottomViewConstraint.constant = -100;
-    
-    //    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
+    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
+    [self.tableView removeFooter];
 }
 -(void)headerRereshing
 {
@@ -85,7 +90,16 @@ CarMangeType;
 
 -(void)requestSteup
 {
-    [self getOnSaleList];
+    if (carMangeType == CarMangeTypeOnSale) {
+        [self getOnSaleList];
+    }
+    else if(carMangeType == CarMangeTypeSaled){
+        [self getSaledList];
+    }
+    else{
+        [self getOffShelfList];
+    }
+    
 }
 
 -(IBAction)selectChanged:(id)sender
@@ -151,16 +165,25 @@ CarMangeType;
 }
 -(void)getOnSaleList
 {
+    onsaleCurrentPage = 0;
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
     WTCOnSaleListRequest *request = [[WTCOnSaleListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:0] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
         WTCOnSaleList *saleList = [request getResponse].data;
         onsaleArr = [[NSMutableArray alloc]initWithArray:saleList.rows];
+        if(onsaleArr.count>=DEFAULT_SIZE){
+            [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(onMoreData)];
+        }else{
+            [self.tableView removeFooter];
+        }
         [self.tableView reloadData];
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+
     }];
     [request start];
     
@@ -169,16 +192,24 @@ CarMangeType;
 {
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
-    
+    saledCurrentPage = 0;
     WTCSaledListRequest *request = [[WTCSaledListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:0] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
         WTCSaledLIST *saledList = [request getResponse].data;
         saledArr = [[NSMutableArray alloc]initWithArray:saledList.rows];
+        [self.tableView.header endRefreshing];
+
+        if(saledArr.count>=DEFAULT_SIZE){
+            [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(onMoreData)];
+        }else{
+            [self.tableView removeFooter];
+        }
         [self.tableView reloadData];
-        
-        [self setBusyIndicatorVisible:NO];
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+
         
     }];
     [request start];
@@ -186,16 +217,25 @@ CarMangeType;
 
 -(void)getOffShelfList
 {
+    offShelfCurrentPage = 0;
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
     WTCarOffShelfListRequest *request = [[WTCarOffShelfListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithLong:0] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
         WTCOffShelfList *offList = [request getResponse].data;
         offShelfArr = [[NSMutableArray alloc]initWithArray:offList.rows];
+        if(offShelfArr.count>=DEFAULT_SIZE){
+            [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(onMoreData)];
+        }else{
+            [self.tableView removeFooter];
+        }
         [self.tableView reloadData];
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+
         
     }];
     [request start];
@@ -230,10 +270,10 @@ CarMangeType;
         cell=[[[NSBundle mainBundle]loadNibNamed:@"WTCCarManageTableViewCell" owner:self options:nil] objectAtIndex:0];
         
         [cell.shareBtn addTarget:self action:@selector(navitoShareController:) forControlEvents:UIControlEventTouchUpInside];
-        [cell.manageBtn addTarget:self action:@selector(showBottomeView) forControlEvents:UIControlEventTouchUpInside];
+        [cell.manageBtn addTarget:self action:@selector(showBottomeView:) forControlEvents:UIControlEventTouchUpInside];
         [cell.collectPayBtn addTarget:self action:@selector(naviToCollectMoneyController:) forControlEvents:UIControlEventTouchUpInside];
     }
-    
+    cell.manageBtn.tag = indexPath.row;
     if (carMangeType == CarMangeTypeOnSale) {
         cell.collectPayBtn.hidden = NO;
         cell.shareBtn.hidden = NO;
@@ -281,8 +321,10 @@ CarMangeType;
     
     return cell;
 }
--(void)showBottomeView
+-(void)showBottomeView:(id)sender
 {
+    UIButton *btn = (UIButton *)sender;
+    selectManage = btn.tag;
     self.bottomViewConstraint.constant = 0;
     if (carMangeType == 0) {
         self.modifyView.hidden = NO;
@@ -334,13 +376,14 @@ CarMangeType;
 }
 -(IBAction)offShelfCar:(id)sender
 {
-    UIButton *btn = (UIButton *)sender;
-    if (carMangeType == 0) {
-        WTCASale *aSale = [onsaleArr objectAtIndex:btn.tag];
+    if (carMangeType == CarMangeTypeOnSale) {
+        NSString *loginToken = [[CommonVar sharedInstance]getLoginToken];
+        WTCASale *aSale = [onsaleArr objectAtIndex:selectManage];
         [self setBusyIndicatorVisible:YES];
-        WTCOffShelfRequest *request = [[WTCOffShelfRequest alloc]initWithToken:DEFAULTTOKEN OffShelfId:aSale.saleId successCallback:^(WTCarBaseRequest *request) {
+        WTCOffShelfRequest *request = [[WTCOffShelfRequest alloc]initWithToken:loginToken OffShelfId:aSale.saleId successCallback:^(WTCarBaseRequest *request) {
             [self setBusyIndicatorVisible:NO];
             [self hidenBottomView];
+            [onsaleArr removeObjectAtIndex:selectManage];
             [self.tableView reloadData];
             
         } failureCallback:^(WTCarBaseRequest *request) {
@@ -359,6 +402,210 @@ CarMangeType;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark-添加分页功能
+//添加分页功能
+-(void)onMoreData
+{
+    if (carMangeType == CarMangeTypeOnSale) {
+        [self loadMoreOnSaleList];
+    }
+    else if (carMangeType == CarMangeTypeSaled){
+        [self loadMoreSaledList];
+    }
+    else{
+        [self loadMoreOffShelfList];
+    }
+}
+-(void)loadMoreOnSaleList
+{
+    if (onsaleArr == nil || onsaleArr.count == 0) {
+        return;
+    }
+    onsaleCurrentPage++;
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    [self setBusyIndicatorVisible:YES];
+    WTCOnSaleListRequest *request = [[WTCOnSaleListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:onsaleCurrentPage] PageSize:[NSNumber numberWithInt:DEFAULT_SIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+        WTCOnSaleList *saleList = [request getResponse].data;
+        NSMutableArray  *buyerList = [[NSMutableArray alloc]initWithArray:saleList.rows];
+        if(buyerList.count>=DEFAULT_SIZE){
+            [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(onMoreData)];
+        }else{
+            [self.tableView removeFooter];
+        }
+        if (buyerList!=nil) {
+            [onsaleArr addObjectsFromArray:buyerList];
+        }
+        [self.tableView reloadData];
+        
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+
+    }];
+    [request start];
+}
+-(void)loadMoreSaledList
+{
+    if (saledArr == nil || saledArr.count == 0) {
+        return;
+    }
+    saledCurrentPage++;
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    [self setBusyIndicatorVisible:YES];
+    WTCSaledListRequest *request = [[WTCSaledListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:saledCurrentPage] PageSize:[NSNumber numberWithInt:DEFAULT_SIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+        WTCSaledLIST *saledList = [request getResponse].data;
+        NSMutableArray  *buyerList = [[NSMutableArray alloc]initWithArray:saledList.rows];
+        if(buyerList.count>=DEFAULT_SIZE){
+            [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(onMoreData)];
+        }else{
+            [self.tableView removeFooter];
+        }
+        if (buyerList!=nil) {
+            [saledArr addObjectsFromArray:buyerList];
+        }
+        [self.tableView reloadData];
+
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+    }];
+    [request start];
+    
+   
+}
+-(void)loadMoreOffShelfList
+{
+    if (offShelfArr == nil || offShelfArr.count == 0) {
+        return;
+    }
+    offShelfCurrentPage++;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCarOffShelfListRequest *request = [[WTCarOffShelfListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithLong:offShelfCurrentPage] PageSize:[NSNumber numberWithLong:DEFAULTPAGESIZE] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+        WTCOffShelfList *offList = [request getResponse].data;
+        NSMutableArray *buyerList= [[NSMutableArray alloc]initWithArray:offList.rows];
+        if(buyerList.count>=DEFAULT_SIZE){
+            [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(onMoreData)];
+        }else{
+            [self.tableView removeFooter];
+        }
+        if (buyerList!=nil) {
+            [offShelfArr addObjectsFromArray:buyerList];
+        }
+        [self.tableView reloadData];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self.tableView.header endRefreshing];
+        
+        
+    }];
+    [request start];
+}
+
+#pragma mark-上架车辆
+
+-(IBAction)onShelfCar{
+    
+    WTCAOffShelf *aoffShelf = [offShelfArr objectAtIndex:selectManage];
+    NSLog(@"saleId=%@",aoffShelf.saleId);
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCOnShelfRequest *request = [[WTCOnShelfRequest alloc]initWithToken:loginToken OnShelfId:aoffShelf.saleId successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self hidenBottomView];
+        [offShelfArr removeObjectAtIndex:selectManage];
+        [self.tableView reloadData];
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+
+    }];
+    [request start];
+}
+#pragma mark-删除商品
+-(IBAction)deletProduct:(id)sender
+{
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    if (carMangeType == CarMangeTypeOnSale) {
+        WTCASale *asale = [onsaleArr objectAtIndex:selectManage];
+        [self setBusyIndicatorVisible:YES];
+        WTCarProdcutDel *request = [[WTCarProdcutDel alloc]initWithToken:loginToken OffShelfId:asale.saleId successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [onsaleArr removeObjectAtIndex:selectManage];
+            [self hidenBottomView];
+            [self.tableView reloadData];
+
+
+            
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+
+        }];
+        [request start];
+    }
+    else if (carMangeType == CarMangeTypeSaled)
+    {
+        WTCASaled *saled = [saledArr objectAtIndex:selectManage];
+        [self setBusyIndicatorVisible:YES];
+        WTCarProdcutDel *request = [[WTCarProdcutDel alloc]initWithToken:loginToken OffShelfId:saled.saleId successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [saledArr removeObjectAtIndex:selectManage];
+            [self hidenBottomView];
+            [self.tableView reloadData];
+
+            
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            
+        }];
+        [request start];
+    }
+    else
+    {
+        WTCAOffShelf *offShelf = [offShelfArr objectAtIndex:selectManage];
+        [self setBusyIndicatorVisible:YES];
+        WTCarProdcutDel *request = [[WTCarProdcutDel alloc]initWithToken:loginToken OffShelfId:offShelf.saleId successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [offShelfArr removeObjectAtIndex:selectManage];
+            [self hidenBottomView];
+            [self.tableView reloadData];
+            
+            
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            
+        }];
+        [request start];
+    }
+   
+}
+
+#pragma mark-在售商品售出
+-(IBAction)saledCar:(id)sender
+{
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    WTCASale *asale = [onsaleArr objectAtIndex:selectManage];
+    [self setBusyIndicatorVisible:YES];
+    WTCSaledRequest *request = [[WTCSaledRequest alloc]initWithToken:loginToken SaledId:asale.saleId successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [onsaleArr removeObjectAtIndex:selectManage];
+        [self.tableView reloadData];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+    }];
+    [request start];
+
+}
+
 
 /*
  #pragma mark - Navigation

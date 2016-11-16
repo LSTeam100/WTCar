@@ -61,6 +61,7 @@ typedef enum
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setCollectionView];
     self.imageArray = [NSMutableArray array];
     urlImageArr = [[NSMutableArray alloc]init];
@@ -68,6 +69,16 @@ typedef enum
     infoArr = @[@"品牌车系",@"所在地",@"里程(公里)",@"初次上牌时间",@"价格",@"价格车辆描述"];
     self.cellData = [NSMutableArray arrayWithArray:@[ @"Existing text", @""]];
     
+}
+-(void)initData
+{
+    self.selectModel.name = @"";
+    self.selectBrand.name = @"";
+    self.selectType.name = @"";
+    self.plateDate = @"";
+    self.carDescibetion = @"";
+    self.province = @"";
+    self.city = @"";
 }
 //-(UIToolbar *)inputAccessoryView
 // {
@@ -432,6 +443,22 @@ typedef enum
 
 -(IBAction)commit:(id)sender{
     
+    self.selectModel.name = @"";
+    self.selectBrand.name = @"";
+    self.selectType.name = @"";
+    [self.imageArray removeAllObjects];
+    [urlImageArr removeAllObjects];
+    self.plateDate = @"";
+    self.carDescibetion = @"";
+    self.province = @"";
+    self.city = @"";
+    if ([self.selectModel.name isEqualToString:@""] || [self.selectBrand.name isEqualToString:@""] || [self.selectType.name isEqualToString:@""] || self.imageArray.count == 0 || urlImageArr.count == 0 || [self.plateDate isEqualToString:@""] || [self.carDescibetion isEqualToString:@""] || [self.province isEqualToString:@""] || [self.city isEqualToString:@""] ) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"选项不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
 
     
@@ -444,7 +471,7 @@ typedef enum
     }
     NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
     
-  WTCAddCarTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    WTCAddCarTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     int distance = [cell.infoField.text intValue];
     NSIndexPath *indexPath2=[NSIndexPath indexPathForRow:4 inSection:0];
     WTCAddCarTableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath2];
@@ -454,8 +481,15 @@ typedef enum
         [self setBusyIndicatorVisible:NO];
             WTCAddCarSuccessViewController *success = [[WTCAddCarSuccessViewController alloc]init];
             [self presentViewController:success animated:YES completion:nil];
-
-        
+            self.selectModel.name = @"";
+            self.selectBrand.name = @"";
+            self.selectType.name = @"";
+            [self.imageArray removeAllObjects];
+            [urlImageArr removeAllObjects];
+            self.plateDate = @"";
+            self.carDescibetion = @"";
+            self.province = @"";
+            self.city = @"";
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
     }];

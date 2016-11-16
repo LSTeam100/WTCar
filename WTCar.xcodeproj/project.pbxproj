@@ -189,6 +189,7 @@
 		04FAB33B1DD2323F00E3D969 /* ForgetPayCodeThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FAB3391DD2323F00E3D969 /* ForgetPayCodeThreeViewController.xib */; };
 		04FAB33F1DD23AFD00E3D969 /* ShopSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAB33D1DD23AFD00E3D969 /* ShopSettingTableViewCell.m */; };
 		04FAB3401DD23AFD00E3D969 /* ShopSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FAB33E1DD23AFD00E3D969 /* ShopSettingTableViewCell.xib */; };
+		18044E731DDC5B5B009599DC /* WTCSaledRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18044E721DDC5B5B009599DC /* WTCSaledRequest.m */; };
 		181A74C71DCDC83A006F96E7 /* WTCOnSaleList.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74C61DCDC83A006F96E7 /* WTCOnSaleList.m */; };
 		181A74D91DCDD86B006F96E7 /* WTCSaledLIST.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74D81DCDD86B006F96E7 /* WTCSaledLIST.m */; };
 		181A74DF1DCDDA3C006F96E7 /* WTCOffShelfList.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74DE1DCDDA3C006F96E7 /* WTCOffShelfList.m */; };
@@ -705,6 +706,8 @@
 		04FAB33C1DD23AFD00E3D969 /* ShopSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSettingTableViewCell.h; sourceTree = "<group>"; };
 		04FAB33D1DD23AFD00E3D969 /* ShopSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopSettingTableViewCell.m; sourceTree = "<group>"; };
 		04FAB33E1DD23AFD00E3D969 /* ShopSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopSettingTableViewCell.xib; sourceTree = "<group>"; };
+		18044E711DDC5B5B009599DC /* WTCSaledRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCSaledRequest.h; sourceTree = "<group>"; };
+		18044E721DDC5B5B009599DC /* WTCSaledRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCSaledRequest.m; sourceTree = "<group>"; };
 		181A74C51DCDC83A006F96E7 /* WTCOnSaleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCOnSaleList.h; sourceTree = "<group>"; };
 		181A74C61DCDC83A006F96E7 /* WTCOnSaleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCOnSaleList.m; sourceTree = "<group>"; };
 		181A74D71DCDD86B006F96E7 /* WTCSaledLIST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCSaledLIST.h; sourceTree = "<group>"; };
@@ -2303,6 +2306,8 @@
 				045F34EA1DD348F200CDD473 /* WTCVerfiyCodeRequest.m */,
 				1897AA411DD992CA00A29912 /* WTCProfileImageUploadRequest.h */,
 				1897AA421DD992CA00A29912 /* WTCProfileImageUploadRequest.m */,
+				18044E711DDC5B5B009599DC /* WTCSaledRequest.h */,
+				18044E721DDC5B5B009599DC /* WTCSaledRequest.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -2851,6 +2856,7 @@
 				18D8834B1DBB49B200F19129 /* UIScrollView+MJExtension.m in Sources */,
 				18BF6F161DC1D3A3003BF410 /* DNAssetsViewCell.m in Sources */,
 				043564ED1DC72BDF008B1B5F /* WTCCarShopNameViewController.m in Sources */,
+				18044E731DDC5B5B009599DC /* WTCSaledRequest.m in Sources */,
 				18D883551DBB49B200F19129 /* NSObject+MJProperty.m in Sources */,
 				0488DBC81DC64DA40018155D /* WTCBusinessVerityViewController.m in Sources */,
 				18ADE8C11DCC63F4009062F6 /* HomeNavigationBarView.m in Sources */,
