@@ -9,6 +9,5 @@
 #import "WTCarBaseRequest.h"
 
 @interface WTCPublishCarRequest : WTCarBaseRequest
--(id)initWithToken:(NSString *)token CBrand:(NSString *)cbrand CModel:(NSString *)cModel Ctype:(NSString *)ctype City:(NSString *)city FirstUpTime:(NSString *)firstUptime HeaderPic:(NSString *)headerPic Miles:(NSNumber *)miles PicList:(NSArray *)picList Price:(NSString *)price Product_descr:(NSString *)product_descr Province:(NSString *)province successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
-
+-(id)initWithToken:(NSString *)token CBrand:(NSString *)cbrand CModel:(NSString *)cModel Ctype:(NSString *)ctype City:(NSString *)city FirstUpTime:(NSString *)firstUptime HeaderPic:(NSString *)headerPic Miles:(NSNumber *)miles PicList:(NSMutableArray *)picList Price:(NSString *)price Product_descr:(NSString *)product_descr Province:(NSString *)province successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end

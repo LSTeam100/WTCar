@@ -18,6 +18,8 @@ typedef void(^onFailureCallback)(WTCarBaseRequest* request);
 -(id)initWithSuccessCallback: (onSuccessCallback)success failureCallback:(onFailureCallback) failed;
 
 -(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
+-(void)imageUpload:(NSString *)token PhotoName:(NSString *)photoName ImageUrl:(NSString *)imageUrl ImageData:(NSData *)imageData Success:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
+
 -(NSString*)getMethod;
 
 -(NSString*)getURL;

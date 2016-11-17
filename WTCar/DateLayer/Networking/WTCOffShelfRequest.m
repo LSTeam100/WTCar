@@ -35,8 +35,8 @@
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCOffShelfList *offShelfList = [[WTCOffShelfList alloc]initWithDictionary:data];
-            [self getResponse].data=offShelfList;
+//            WTCOffShelfList *offShelfList = [[WTCOffShelfList alloc]initWithDictionary:data];
+            [self getResponse].data=data;
         }
     }
 }

@@ -109,7 +109,11 @@
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWh-UC-sJi">
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZv-2b-JOJ"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZv-2b-JOJ">
+                                            <connections>
+                                                <action selector="saledCar:" destination="-1" eventType="touchUpInside" id="3bI-aI-lSF"/>
+                                            </connections>
+                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sellout" translatesAutoresizingMaskIntoConstraints="NO" id="268-KM-NMT"/>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已售" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAq-Wf-je9">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -131,7 +135,11 @@
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QC2-dc-Gge">
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-Lp-wkF"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-Lp-wkF">
+                                            <connections>
+                                                <action selector="deletProduct:" destination="-1" eventType="touchUpInside" id="cwO-ym-bfY"/>
+                                            </connections>
+                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete" translatesAutoresizingMaskIntoConstraints="NO" id="Gkg-Lt-IFm"/>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="删除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckN-9A-bGF">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -207,6 +215,9 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y08-lE-XlZ">
                                             <state key="normal" image="edite"/>
+                                            <connections>
+                                                <action selector="naviToAddCar:" destination="-1" eventType="touchUpInside" id="WSf-Fm-R4d"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1j-vr-u7N">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -226,6 +237,9 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYk-Xb-CgE">
                                             <state key="normal" backgroundImage="upshelf"/>
+                                            <connections>
+                                                <action selector="onShelfCar" destination="-1" eventType="touchUpInside" id="Xni-rS-cpo"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上架" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p0-d2-zDl">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -245,6 +259,9 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SC-Uk-nyD">
                                             <state key="normal" backgroundImage="delete"/>
+                                            <connections>
+                                                <action selector="deletProduct:" destination="-1" eventType="touchUpInside" id="Yjh-Zf-9Bn"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="删除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pad-vb-PwP">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -327,7 +344,7 @@
         <image name="delete" width="30" height="35"/>
         <image name="edite" width="35" height="34"/>
         <image name="fromsale" width="35" height="35"/>
-        <image name="sellout" width="35" height="35"/>
+        <image name="sellout" width="35" height="34"/>
         <image name="upshelf" width="35" height="35"/>
     </resources>
 </document>

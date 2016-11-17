@@ -31,6 +31,7 @@ alpha:1.0]
 #define DEFAULTPAGESIZE 10
 
 #define WXPayNotification     @"WXPayNotification"
+#define IMAGEUPLOADKEY @"file"
 //static NSString * const UPMShopOrderNotification=@"com.upmeilin.hohoda.upmshopordernotification";
 //static NSString * const UPMMyOrderNotification=@"com.upmeilin.hohoda.upmmyordernotification";
 //

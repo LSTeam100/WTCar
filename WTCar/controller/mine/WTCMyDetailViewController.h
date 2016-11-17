@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WTCMyDetailViewController : UIViewController
+#import "WTCMineDetailHeadTableViewCell.h"
+#import "WTCBaseViewController.h"
+@interface WTCMyDetailViewController : WTCBaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *NameVerityButton;
 @property (weak, nonatomic) IBOutlet UIButton *BusinessVerityButton;
 

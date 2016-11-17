@@ -159,6 +159,50 @@
     
 }
 
+-(void)imageUpload:(NSString *)token PhotoName:(NSString *)photoName ImageUrl:(NSString *)imageUrl ImageData:(NSData *)imageData Success:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
+{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    _headers=@{@"token":token};
+    if(_headers!=nil){
+        [_headers enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+        }];
+    }
+//    MultipartFile
+    [manager POST:imageUrl parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:imageData
+                                    name:@"files"
+                                fileName:photoName mimeType:@"image/jpeg"];
+
+
+        //        [formData appendPartWithFormData:[key1 dataUsingEncoding:NSUTF8StringEncoding]
+        //                                    name:@"key1"];
+        //
+        //        [formData appendPartWithFormData:[key2 dataUsingEncoding:NSUTF8StringEncoding]
+        //                                    name:@"key2"];
+    } progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSDictionary * result=responseObject;
+        [self processResponse:result];
+        if([_response isSucceed]){
+            if(_onSuccess!=nil){
+                _onSuccess(self);
+            }
+        }else{
+            [_response setErrorMessage:result[@"retMsg"]];
+            if(_onFailure!=nil){
+                _onFailure(self);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"Error: %@", error);
+        [self processError:error];
+        if(_onFailure!=nil){
+            _onFailure(self);
+        }
+
+    }];
+}
+
 
 -(void) processError:(NSError *)error{
     _response=[[WTCarResponse alloc]init];
@@ -169,6 +213,8 @@
         _response.statusCode=(int)error.code;
         _response.errorMessage=error.description;
     }
-    
 }
+
+
+
 @end

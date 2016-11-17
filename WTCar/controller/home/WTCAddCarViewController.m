@@ -21,6 +21,8 @@
 #import "WTCCarModel.h"
 #import "WTCCarType.h"
 #import "WTCCarBrand.h"
+#import "WTCProfileImageUploadRequest.h"
+#import "WTCPublishCarRequest.h"
 
 static NSString *collectionViewCellId = @"collectionViewCellId";
 static CGFloat imageSize = 80;
@@ -36,7 +38,7 @@ typedef enum
     NSArray *infoArr;
     CGFloat _cellHeight[2];
     UIToolbar *_inputAccessoryView;
-
+    NSMutableArray *urlImageArr;
 
 }
 
@@ -49,7 +51,8 @@ typedef enum
 @property(nonatomic,strong)WTCCarBrand *selectBrand;
 @property(nonatomic,strong)WTCCarType *selectType;
 @property(nonatomic,strong)WTCCarModel *selectModel;
-@property(nonatomic,strong)NSString *location;
+@property(nonatomic,strong)NSString *city;
+@property(nonatomic,strong)NSString *province;
 @property(nonatomic,strong)NSString *distance;
 @property(nonatomic,strong)NSString *plateDate;
 @end
@@ -58,13 +61,24 @@ typedef enum
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setCollectionView];
     self.imageArray = [NSMutableArray array];
+    urlImageArr = [[NSMutableArray alloc]init];
     self.title = @"发车";
-    infoArr = @[@"品牌车系",@"所在地",@"里程",@"初次上牌时间",@"价格车辆描述"];
+    infoArr = @[@"品牌车系",@"所在地",@"里程(公里)",@"初次上牌时间",@"价格",@"价格车辆描述"];
     self.cellData = [NSMutableArray arrayWithArray:@[ @"Existing text", @""]];
     
-    
+}
+-(void)initData
+{
+    self.selectModel.name = @"";
+    self.selectBrand.name = @"";
+    self.selectType.name = @"";
+    self.plateDate = @"";
+    self.carDescibetion = @"";
+    self.province = @"";
+    self.city = @"";
 }
 //-(UIToolbar *)inputAccessoryView
 // {
@@ -148,21 +162,70 @@ typedef enum
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if ([collectionView cellForItemAtIndexPath:indexPath].tag == 11) {
         [[KKPhotoPickerManager shareInstace] showActionSheetInView:self.view fromController:self completionBlock:^(NSMutableArray *imageArray) {
-            for (int i = 0; i<imageArray.count; i++) {
-                if (self.imageArray.count < 9) {
-                    UIImage *image = imageArray[i];
-                    [self.imageArray addObject:image]; //上传图片保存到数组
-                }
-            }
-            [self.collectionView reloadData];
+            [self upLoadImage:imageArray];
+//            for (int i = 0; i<imageArray.count; i++) {
+//                if (self.imageArray.count < 9) {
+//                    UIImage *image = imageArray[i];
+//                    [self.imageArray addObject:image]; //上传图片保存到数组
+//                }
+//            }
+
+//            [self.collectionView reloadData];
         }];
     }
+}
+-(void)upLoadImage:(NSMutableArray *)imageArr
+{
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_group_t group = dispatch_group_create();
+    NSDictionary *emptyDic = @{};
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    for (int i = 0; i < imageArr.count; i++) {
+//       __block int requestNum  = i;
+        UIImage *image = [imageArr objectAtIndex:i];
+        NSData *data = UIImageJPEGRepresentation(image,1.0);
+        NSString *addCarImgPath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"addCar_%d.jpg",i]];
+        [data writeToFile:addCarImgPath atomically:YES];
+        
+//        dispatch_group_async(group, queue, ^{
+        [self setBusyIndicatorVisible:YES];
+            WTCProfileImageUploadRequest *request = [[WTCProfileImageUploadRequest alloc]init];
+            request.requestImgPath = addCarImgPath;
+            [request WTCUploadFileWith:emptyDic fileKey:IMAGEUPLOADKEY filePath:addCarImgPath SuccessCallbackBlock:^(NSData *data, NSURLResponse * response) {
+                [self setBusyIndicatorVisible:NO];
+
+                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+                NSString *urlStr = [dic objectForKey:@"data"];
+                if (self.imageArray.count < 9) {
+                    UIImage *image = [UIImage imageWithContentsOfFile:request.requestImgPath];
+                    [urlImageArr addObject:urlStr];
+                    [self.imageArray addObject:image];
+                    //上传图片保存到数组
+                    [self.collectionView reloadData];
+                }
+            } FailCallbackBlock:^(NSError *error, NSURLResponse *response) {
+                [self setBusyIndicatorVisible:NO];
+            }];
+//        });
+        
+    }
+//    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+//        NSLog(@"全部加载完成");
+
+
+//    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+//            NSLog(@"全部加载完成");
+//            [self.collectionView reloadData];
+//    });
+
 }
 
 #pragma mark  删除图片
 - (void)cancleBtnClick:(UIButton *)sender{
     if (sender.tag < self.imageArray.count) {
         [self.imageArray removeObjectAtIndex:sender.tag];
+        [urlImageArr removeObjectAtIndex:sender.tag];
         sender.hidden = YES;
         [self.collectionView reloadData];
     }
@@ -194,7 +257,7 @@ typedef enum
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return infoArr.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -210,7 +273,7 @@ typedef enum
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 4) {
+    if (indexPath.row == 5) {
         return [self getCarDes:tableView atIndexPath:indexPath];
     }
     else
@@ -253,6 +316,9 @@ typedef enum
         cell.infoField.delegate = self;
     }
     
+    if (indexPath.row == 2) {
+//        cell.infoField.keyboardType = UIKeyboardTypeNumberPad;
+    }
     cell.infoField.tag = indexPath.row;
     
     
@@ -260,7 +326,7 @@ typedef enum
     
     if (indexPath.row == 0) {
         if (self.selectBrand != nil && self.selectType != nil && self.selectModel != nil) {
-            cell.infoField.text = [NSString stringWithFormat:@"%@ %@ %@",self.selectModel.fullname,self.selectType.fullname,self.selectModel.name];
+            cell.infoField.text = [NSString stringWithFormat:@"%@ %@ %@",self.selectBrand.name,self.selectType.name,self.selectModel.name];
         }
     }
 
@@ -269,7 +335,7 @@ typedef enum
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (indexPath.row == 4) {
+    if (indexPath.row == 5) {
         WTCCarDescribetionViewController *desController = [[WTCCarDescribetionViewController alloc]init];
         desController.desDelegate = self;
         [self.navigationController pushViewController:desController animated:YES];
@@ -280,7 +346,7 @@ typedef enum
 -(void)saveCarDescribtion:(NSString *)des
 {
     self.carDescibetion = des;
-    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:4 inSection:0];
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:5 inSection:0];
     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
 }
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
@@ -298,7 +364,8 @@ typedef enum
             textField.inputView=picker;
         } onCommit:^(KKAreaPicker *picker, KKAdrress *address) {
             textField.text = [NSString stringWithFormat:@"%@%@",address.provice,address.city];
-            self.location = textField.text;
+            self.city = address.city;
+            self.province = address.provice;
         }];
         return NO;
     }
@@ -375,8 +442,60 @@ typedef enum
 }
 
 -(IBAction)commit:(id)sender{
-    WTCAddCarSuccessViewController *success = [[WTCAddCarSuccessViewController alloc]init];
-    [self presentViewController:success animated:YES completion:nil];
+    
+    self.selectModel.name = @"";
+    self.selectBrand.name = @"";
+    self.selectType.name = @"";
+    [self.imageArray removeAllObjects];
+    [urlImageArr removeAllObjects];
+    self.plateDate = @"";
+    self.carDescibetion = @"";
+    self.province = @"";
+    self.city = @"";
+    if ([self.selectModel.name isEqualToString:@""] || [self.selectBrand.name isEqualToString:@""] || [self.selectType.name isEqualToString:@""] || self.imageArray.count == 0 || urlImageArr.count == 0 || [self.plateDate isEqualToString:@""] || [self.carDescibetion isEqualToString:@""] || [self.province isEqualToString:@""] || [self.city isEqualToString:@""] ) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"选项不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+
+    
+    NSMutableArray *picArr = [NSMutableArray arrayWithArray:urlImageArr];
+    
+    NSString *headPic;
+    if (picArr.count > 0) {
+        headPic = [picArr objectAtIndex:0];
+        [picArr removeObjectAtIndex:0];
+    }
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
+    
+    WTCAddCarTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    int distance = [cell.infoField.text intValue];
+    NSIndexPath *indexPath2=[NSIndexPath indexPathForRow:4 inSection:0];
+    WTCAddCarTableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath2];
+    NSString *price = cell2.infoField.text;
+    [self setBusyIndicatorVisible:YES];
+    WTCPublishCarRequest *request = [[WTCPublishCarRequest alloc] initWithToken:loginToken CBrand:self.selectBrand.name CModel:self.selectModel.name Ctype:self.selectType.name City:self.city FirstUpTime:self.plateDate HeaderPic:headPic Miles:[NSNumber numberWithInt:distance] PicList:picArr Price:price Product_descr:self.carDescibetion Province:self.province successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+            WTCAddCarSuccessViewController *success = [[WTCAddCarSuccessViewController alloc]init];
+            [self presentViewController:success animated:YES completion:nil];
+            self.selectModel.name = @"";
+            self.selectBrand.name = @"";
+            self.selectType.name = @"";
+            [self.imageArray removeAllObjects];
+            [urlImageArr removeAllObjects];
+            self.plateDate = @"";
+            self.carDescibetion = @"";
+            self.province = @"";
+            self.city = @"";
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+    }];
+    [request start];
+    
+    
     
 }
 //- (void)setToolBarForTextField:(id)aTextInput doneActionTarget:(id)aTarget actionSelector:(SEL)aDoneSEL

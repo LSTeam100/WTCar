@@ -27,7 +27,7 @@
 }
 
 -(NSString *)getMethod{
-    return @"GET";
+    return @"POST";
 }
 
 -(void)processResponse:(NSDictionary *)responseDictionary{
