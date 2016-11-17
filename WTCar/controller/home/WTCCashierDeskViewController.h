@@ -7,7 +7,7 @@
 //
 
 #import "WTCBaseViewController.h"
-
+#import "WTCPOSPayModel.h"
 @interface WTCCashierDeskViewController : WTCBaseViewController
-
+@property(nonatomic,strong)WTCPOSPayModel *posPayModel;
 @end

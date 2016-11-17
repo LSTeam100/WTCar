@@ -10,12 +10,20 @@
 #import "CaiserTableViewCell.h"
 #import "POSImageTableViewCell.h"
 #import "POSHistoryTableViewCell.h"
-
+#import "WTCToPayListRequest.h"
+#import "WTCToPayList.h"
+#import "WTCGetPayedList.h"
+#import "WTCGetPayedListRequest.h"
 @interface WTCCashierDeskViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *titleArr;
+    NSTimer *timer;
+    BOOL paySuccess;
+    
 }
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
+@property(nonatomic,strong)WTCToPayList *toPayList;
+@property(nonatomic,strong)WTCGetPayedList *payedList;
 @end
 
 @implementation WTCCashierDeskViewController
@@ -24,7 +32,15 @@
     [super viewDidLoad];
     self.title = @"收银台";
     titleArr = @[@"待收款",@"已收款",@"收款总额"];
+    timer =  [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(refreshOrder) userInfo:nil repeats:YES];
+
+    paySuccess = false;
     // Do any additional setup after loading the view from its nib.
+}
+-(void)refreshOrder
+{
+    [self getToPayList];
+    [self getPayedList];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -72,9 +88,20 @@
     cell = [tableView dequeueReusableCellWithIdentifier:idnetifer];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"CaiserTableViewCell" owner:self options:nil]objectAtIndex:0];
+        if (atIndex.row == 2) {
+            cell.describetionLabel.text = [NSString stringWithFormat:@"%@",self.posPayModel.orderPrice];
+        }
+        else if (atIndex.row == 0)
+        {
+            cell.describetionLabel.text = [NSString stringWithFormat:@"%@",self.toPayList.orderPrice];
+        }
+        else if (atIndex.row == 1)
+        {
+            cell.describetionLabel.text = [NSString stringWithFormat:@"%@",self.payedList.orderPrice];
+
+        }
     }
     cell.titleLabel.text = [titleArr objectAtIndex:atIndex.row];
-//    cell.describetionLabel.text = 
     return cell;
     
 }
@@ -86,8 +113,50 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"POSImageTableViewCell" owner:self options:nil]objectAtIndex:0];
     }
+    
+    if (paySuccess) {
+        [cell.posImageView setImage:[UIImage imageNamed:@"share_select"]];
+    }
+    else
+    {
+        [cell.posImageView sd_setImageWithURL:[NSURL URLWithString:self.posPayModel.payBarCodePicPath] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+
+    }
+    
     return cell;
     
+}
+-(void)getToPayList
+{
+    [self setBusyIndicatorVisible:YES];
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    WTCToPayListRequest *request = [[WTCToPayListRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        self.toPayList = [request getResponse].data;
+        [self.tableView reloadData];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+    }];
+    [request start];
+}
+-(void)getPayedList
+{
+    [self setBusyIndicatorVisible:YES];
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    WTCGetPayedListRequest *request = [[WTCGetPayedListRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        self.payedList = [request getResponse].data;
+        if (self.payedList.orderPrice == self.posPayModel.orderPrice && self.toPayList.orderPrice == 0) {
+            paySuccess = true;
+            [timer invalidate];
+        }
+        [self.tableView reloadData];
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+    }];
+    [request start];
 }
 -(UITableViewCell *)getPostHistoryCell:(UITableView *)tableView AtIndex:(NSIndexPath *)atIndex
 {
