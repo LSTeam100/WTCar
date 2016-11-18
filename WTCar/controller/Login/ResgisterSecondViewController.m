@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_getVerityCodeButton addTarget:self action:@selector(getVerityCodeButtonClick) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)getVerityCodeButtonClick{
+    
 }
 
 - (void)didReceiveMemoryWarning {

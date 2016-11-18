@@ -8,6 +8,9 @@
 
 #import "ForgetCodeThreeViewController.h"
 #import "LoginViewController.h"
+#import "WTCForgetLoginPasswordResult.h"
+#import "WTCForgetLoginPasswordRequest.h"
+#import "MBProgressHUD.h"
 @interface ForgetCodeThreeViewController ()
 
 @end
@@ -19,7 +22,10 @@
     // Do any additional setup after loading the view from its nib.
     [_completeButton addTarget:self action:@selector(compeleteToLogin) forControlEvents:UIControlEventTouchUpInside];
 }
-
+-(void)viewDidAppear:(BOOL)animated
+{
+    _TeleNumTextField.text = self.AccountTeleNumText;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -27,8 +33,40 @@
 
 - (void)compeleToLogin
 {
-    LoginViewController *loginViewController = [LoginViewController new];
-    [self.navigationController pushViewController:loginViewController animated:YES];
+    NSString *password = _passWordTextField.text;
+    NSString *accountTeleNum = _TeleNumTextField.text;
+    NSString *veritypassword = _verityPasswordTextField.text;
+    if (self.TeleNumTextField.text.length == 0) {
+        
+    }
+    else if(self.passWordTextField.text.length == 0){
+        
+    } else if (self.verityPasswordTextField.text.length == 0)
+    {
+        
+    }
+    else
+    {
+        [self setBusyIndicatorVisible:YES];
+        WTCForgetLoginPasswordRequest *request = [[WTCForgetLoginPasswordRequest alloc]initWithLoginName:accountTeleNum password:password VerityCode:veritypassword successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            
+            WTCForgetLoginPasswordResult *forgetloginpwdResult = [request getResponse].data;
+            NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+            [userDefault setValue:accountTeleNum forKey:@"loginName"];
+            [userDefault setValue:password forKey:@"password"];
+
+            
+            LoginViewController *loginViewController = [LoginViewController new];
+            [self.navigationController pushViewController:loginViewController animated:YES];
+
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+        }];
+        [request start];
+    }
+
 }
 /*
 #pragma mark - Navigation

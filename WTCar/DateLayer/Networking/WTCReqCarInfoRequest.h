@@ -9,5 +9,5 @@
 #import "WTCarBaseRequest.h"
 
 @interface WTCReqCarInfoRequest : WTCarBaseRequest
-
+-(id)initWithToken:(NSString *)token ReqCarInfoId:(NSNumber *)reqCarInfoId successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end

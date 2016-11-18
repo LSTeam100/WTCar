@@ -16,9 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_getVerityCodeButton addTarget:self action:@selector(getVerityCodeButtonClick) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)getVerityCodeButtonClick
+{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -36,6 +40,7 @@
 
 - (IBAction)submitButtonClick:(id)sender {
     ForgetCodeThreeViewController *forgetCodeThreeViewCon = [ForgetCodeThreeViewController new];
+    forgetCodeThreeViewCon.AccountTeleNumText = self.teleNumText;
     [self.navigationController pushViewController:forgetCodeThreeViewCon animated:YES];
 }
 @end

@@ -10,7 +10,7 @@
 #import "WTCChildLoginResult.h"
 @implementation WTCChildLoginRequest
 
--(id)initWithChildAccountKey:(NSString *)accountKey childAccount:(NSString *)account childAccountTele:(NSString *)childAccountMobile successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
+-(id)initWithChildAccountKey:(NSString *)accountKey mainAccount:(NSString *)account childAccountTele:(NSString *)childAccountMobile successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
     self=[super initWithSuccessCallback:success
                         failureCallback:failed];
     

@@ -8,5 +8,5 @@
 
 #import "WTCarBaseRequest.h"
 @interface WTCChildLoginRequest :WTCarBaseRequest
--(id)initWithChildAccountKey:(NSString *)accountKey childAccount:(NSString *)account childAccountTele:(NSString *)childAccountMobile successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
+-(id)initWithChildAccountKey:(NSString *)accountKey MainAccount:(NSString *)account childAccountTele:(NSString *)childAccountMobile successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end

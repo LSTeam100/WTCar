@@ -36,6 +36,7 @@
 
 - (IBAction)NextStepButtonClick:(id)sender {
     ForgetCodeSecondViewController *forgetCOdeSecViewCon = [ForgetCodeSecondViewController new];
+    forgetCOdeSecViewCon.teleNumText = _TeleNumTextField.text;
     [self.navigationController pushViewController:forgetCOdeSecViewCon animated:YES];
 }
 @end
