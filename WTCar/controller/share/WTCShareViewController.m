@@ -40,7 +40,7 @@
 //    _condition=[[NSCondition alloc]init];
     actionFlag = false;
     cycleCount = 0;
-//    timer =  [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(isHaveActivity) userInfo:nil repeats:YES];
+    timer =  [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(isHaveActivity) userInfo:nil repeats:YES];
     isShowing = false;
     
     NSDictionary *dic1= @{@"name":@"法拉利",
@@ -77,6 +77,7 @@
         onsaleArr = [[NSMutableArray alloc]init];
         for (int i = 0; i < saleList.rows.count; i++) {
 //            onsaleArr = [[NSMutableArray alloc]initWithArray:saleList.rows];
+            
             WTCASale *asale = [saleList.rows objectAtIndex:i];
             NSMutableDictionary *oneDic = [[NSMutableDictionary alloc]init];
 //            NSString *modelJson = asale.JSONString;

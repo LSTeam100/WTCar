@@ -9,6 +9,8 @@
 #import "WTCCollectMoneyViewController.h"
 #import "WTCCarManageTableViewCell.h"
 #import "WTCCommitBuyCarMoneyTableViewCell.h"
+#import "WTCPOSPayRequest.h"
+#import "WTCPOSPayModel.h"
 @interface WTCCollectMoneyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 
@@ -88,8 +90,23 @@
 }
 -(IBAction)navitCaisher:(id)sender
 {
-    WTCCashierDeskViewController *cashier = [[WTCCashierDeskViewController alloc]init];
-    [self.navigationController pushViewController:cashier animated:YES];
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    
+    double orderPrice = [self.aSale.price doubleValue];
+    WTCPOSPayRequest *request = [[WTCPOSPayRequest alloc]initWithToken:loginToken ProductId:self.aSale.saleId OrderPrice:orderPrice successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCPOSPayModel *posPayModel = [request getResponse].data;
+        
+        WTCCashierDeskViewController *cashier = [[WTCCashierDeskViewController alloc]init];
+        cashier.posPayModel = posPayModel;
+        [self.navigationController pushViewController:cashier animated:YES];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+    }];
+    [request start];
+    
 }
 
 - (void)didReceiveMemoryWarning {

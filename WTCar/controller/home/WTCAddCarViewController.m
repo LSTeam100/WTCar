@@ -453,8 +453,16 @@ typedef enum
     self.province = @"";
     self.city = @"";
     if ([self.selectModel.name isEqualToString:@""] || [self.selectBrand.name isEqualToString:@""] || [self.selectType.name isEqualToString:@""] || self.imageArray.count == 0 || urlImageArr.count == 0 || [self.plateDate isEqualToString:@""] || [self.carDescibetion isEqualToString:@""] || [self.province isEqualToString:@""] || [self.city isEqualToString:@""] ) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"选项不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alert show];
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        
+        // Set the text mode to show only text.
+        hud.mode = MBProgressHUDModeText;
+        hud.label.text = @"选项不能为空";
+        // Move to bottm center.
+        hud.offset = CGPointMake(0.f, MBProgressMaxOffset);
+        
+        [hud hideAnimated:YES afterDelay:3.f];
+
         return;
     }
     
