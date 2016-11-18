@@ -17,14 +17,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTF-YW-PZa">
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQf-pF-ZKk">
-                                    <state key="normal" title="Button" image="home_addCar"/>
+                                    <state key="normal" image="home_addCar"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obg-pz-er2">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="70" id="9Ed-aL-S6Q"/>
                                         <constraint firstAttribute="height" constant="70" id="9Yr-LM-RxV"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="home_CarManage"/>
+                                    <state key="normal" image="home_CarManage"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布车辆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogo-mV-Vv3">
                                     <constraints>
@@ -45,7 +45,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-xo-NOW">
-                                    <state key="normal" title="Button" image="home_shopSeting"/>
+                                    <state key="normal" image="home_shopSeting"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆管理" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-JE-p8n">
                                     <constraints>
@@ -61,14 +61,14 @@
                                         <constraint firstAttribute="height" constant="70" id="TlR-Yw-oGt"/>
                                         <constraint firstAttribute="width" constant="70" id="xr5-m9-ABJ"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="home_shoperPost"/>
+                                    <state key="normal" image="home_shoperPost"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa8-bV-JXT">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="0aV-aj-Q64"/>
                                         <constraint firstAttribute="width" constant="70" id="hRF-Yt-EFl"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="home_loan"/>
+                                    <state key="normal" image="home_loan"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商家POS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-0l-NAp">
                                     <constraints>
@@ -79,7 +79,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车险质保" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-Sp-g7M">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车险质保" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-Sp-g7M">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="L0K-d6-Gsx"/>
                                         <constraint firstAttribute="width" constant="80" id="sDh-zF-byX"/>
@@ -88,12 +88,12 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-if-rcI">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-if-rcI">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="I1L-YI-Ce4"/>
                                         <constraint firstAttribute="width" constant="70" id="qw2-xX-tqg"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="home_carInstruance"/>
+                                    <state key="normal" image="home_carInstruance"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配资服务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0t-S8-FC9">
                                     <constraints>
@@ -104,21 +104,21 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiN-NP-kKV">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiN-NP-kKV">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="70" id="Ffx-58-4OM"/>
                                         <constraint firstAttribute="height" constant="70" id="dyy-WY-jhw"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="home_serviceTool"/>
+                                    <state key="normal" image="home_serviceTool"/>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NF-Ck-p21">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NF-Ck-p21">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="Njs-ml-vtK"/>
                                         <constraint firstAttribute="width" constant="70" id="uXg-BW-2a5"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="home_carKnow"/>
+                                    <state key="normal" image="home_carKnow"/>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务工具" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d82-dM-PG3">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务工具" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d82-dM-PG3">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="80" id="FH6-L2-aAh"/>
                                         <constraint firstAttribute="height" constant="20" id="R0R-Dw-dqA"/>
@@ -127,7 +127,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汽车小常识" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbR-NK-ICF">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汽车小常识" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbR-NK-ICF">
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="FPZ-la-EgU"/>
                                         <constraint firstAttribute="width" constant="83" id="VKe-Xy-9Eb"/>
@@ -254,13 +254,13 @@
         </view>
     </objects>
     <resources>
-        <image name="home_CarManage" width="62" height="57"/>
-        <image name="home_addCar" width="52" height="57"/>
-        <image name="home_carInstruance" width="50" height="59"/>
-        <image name="home_carKnow" width="62" height="59"/>
-        <image name="home_loan" width="62" height="59"/>
-        <image name="home_serviceTool" width="52" height="59"/>
-        <image name="home_shopSeting" width="49" height="57"/>
-        <image name="home_shoperPost" width="52" height="59"/>
+        <image name="home_CarManage" width="35" height="33"/>
+        <image name="home_addCar" width="35" height="32"/>
+        <image name="home_carInstruance" width="35" height="35"/>
+        <image name="home_carKnow" width="35" height="28"/>
+        <image name="home_loan" width="30" height="35"/>
+        <image name="home_serviceTool" width="35" height="34"/>
+        <image name="home_shopSeting" width="35" height="33"/>
+        <image name="home_shoperPost" width="27" height="35"/>
     </resources>
 </document>

@@ -7,7 +7,7 @@
 //
 
 #import "WTCPayDetailRequest.h"
-
+#import "WTCPayDetail.h"
 @implementation WTCPayDetailRequest
 -(id)initWithToken:(NSString *)token POSId:(NSNumber *)posId successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
 {
@@ -35,8 +35,8 @@
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-//            WTCGetPayedList *payedList = [WTCGetPayedList objectWithKeyValues:data];
-            [self getResponse].data=data;
+            WTCPayDetail *detail = [[WTCPayDetail alloc]initWithDictionary:data];
+            [self getResponse].data=detail;
         }
     }
 }

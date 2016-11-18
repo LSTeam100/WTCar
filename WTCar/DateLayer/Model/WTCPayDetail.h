@@ -12,6 +12,7 @@
 @property(nonatomic,strong)NSString *amount;
 @property(nonatomic,strong)NSString *status;
 @property(nonatomic,strong)NSMutableArray *payDetailsArr;
+-(instancetype)initWithDictionary:(NSDictionary *)dataDic;
 @end
 
 @interface WTCPayOneDetail : NSObject
@@ -21,6 +22,6 @@
 @property(nonatomic,strong)NSString *payTime;
 @property(nonatomic,strong)NSString *pid;
 @property(nonatomic,strong)NSString *updateTime;
--(instancetype)initWithDictionary:(NSArray *)dataArr;
+-(instancetype)initWithDictionary:(NSDictionary *)dataDic;
 
 @end
