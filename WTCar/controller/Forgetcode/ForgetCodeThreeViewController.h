@@ -6,14 +6,16 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WTCBaseViewController.h"
 
-@interface ForgetCodeThreeViewController : UIViewController
+@interface ForgetCodeThreeViewController :WTCBaseViewController
+@property(nonatomic,strong)NSString *AccountTeleNumText;
 //手机号
 @property (weak, nonatomic) IBOutlet UITextField *TeleNumTextField;
 //设置登陆密码
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextField;
 //完成按钮
 @property (weak, nonatomic) IBOutlet UIButton *completeButton;
+@property (weak, nonatomic) IBOutlet UITextField *verityPasswordTextField;
 
 @end

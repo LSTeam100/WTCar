@@ -9,5 +9,5 @@
 #import "WTCarBaseRequest.h"
 
 @interface WTCApplyLoanRequest :WTCarBaseRequest
-
+-(id)initWithAmount:(NSString *)amount Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end

@@ -100,25 +100,13 @@
             
             WTCTabBarViewController *wtcTabbar=[[WTCTabBarViewController alloc]init];
             [self.navigationController pushViewController:wtcTabbar animated:YES];
-//            UINavigationController *parentVc= (UINavigationController *)[self presentingViewController];
-//            
-//            [parentVc popToRootViewControllerAnimated:NO];
-//            WTCTabBarViewController *wtcTabbar=[[WTCTabBarViewController alloc]init];
-//            [parentVc pushViewController:wtcTabbar animated:YES];
-            
-            
-            
         } failureCallback:^(WTCarBaseRequest *request) {
             [self setBusyIndicatorVisible:NO];
             [self handleResponseError:self request:request treatErrorAsUnknown:YES];
         }];
         [request start];
     }
-    
-    
-    
-//    WTCHomeViewController *homeViewController = [WTCHomeViewController new];
-//    [self.navigationController pushViewController:homeViewController animated:YES];
+
 }
 
 - (IBAction)childAccountLoginButtonClick:(id)sender {

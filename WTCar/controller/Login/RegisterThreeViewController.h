@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextField;
 //设置车辆类型
 @property (weak, nonatomic) IBOutlet UITextField *carTypeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *verityCodeTextfield;
+
 //注册完成按钮
 - (IBAction)confirmButtonClick:(id)sender;
 

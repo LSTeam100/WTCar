@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ForgetCodeSecondViewController : UIViewController
+@property(nonatomic,strong) NSString*teleNumText;
 //验证码输入栏
 @property (weak, nonatomic) IBOutlet UITextField *verityCodeTextField;
 //获取验证码按钮

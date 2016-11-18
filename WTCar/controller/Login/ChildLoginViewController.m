@@ -8,6 +8,9 @@
 
 #import "ChildLoginViewController.h"
 #import "WTCHomeViewController.h"
+#import "WTCChildLoginRequest.h"
+#import "WTCChildLoginResult.h"
+#import "WTCTabBarViewController.h"
 @interface ChildLoginViewController ()
 
 @end
@@ -35,7 +38,47 @@
 */
 
 - (IBAction)LoginButtonClick:(id)sender {
-    WTCHomeViewController *homeViewController = [WTCHomeViewController new];
-    [self.navigationController pushViewController:homeViewController animated:YES];
+    NSString *mainAccount = _MainTeleNumTextField.text;
+    NSString *childAccount = _ChildTeleNumTextField.text;
+    NSString *accountKey = _KeyTextField.text;
+    
+    if (self.MainTeleNumTextField.text.length == 0) {
+        
+    }
+    else if(self.ChildTeleNumTextField.text.length == 0){
+        
+    }else if (self.KeyTextField.text.length == 0){
+        
+    }
+    else
+    {
+        [self setBusyIndicatorVisible:YES];
+        WTCChildLoginRequest *request = [[WTCChildLoginRequest alloc]initWithChildAccountKey:accountKey MainAccount:mainAccount childAccountTele:childAccount successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            
+            WTCChildLoginResult *childloginResult = [request getResponse].data;
+            NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+            [userDefault setValue:childAccount forKey:@"childloginName"];
+            [userDefault setValue:accountKey forKey:@"childaccountKey"];
+            NSString *token=childloginResult.subToken;
+            [userDefault setValue:token forKey:@"subtoken"];
+            
+            WTCTabBarViewController *wtcTabbar=[[WTCTabBarViewController alloc]init];
+            [self.navigationController pushViewController:wtcTabbar animated:YES];
+            //            UINavigationController *parentVc= (UINavigationController *)[self presentingViewController];
+            //
+            //            [parentVc popToRootViewControllerAnimated:NO];
+            //            WTCTabBarViewController *wtcTabbar=[[WTCTabBarViewController alloc]init];
+            //            [parentVc pushViewController:wtcTabbar animated:YES];
+            
+            
+            
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+        }];
+        [request start];
+    }
+
 }
 @end

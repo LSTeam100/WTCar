@@ -8,6 +8,9 @@
 
 #import "WTCNotGetPOSViewController.h"
 #import "WTCGetPOSNotOpenViewController.h"
+#import "WTCReceivePOSResult.h"
+#import "WTCReceivePOSRequest.h"
+#import "MBProgressHUD.h"
 @interface WTCNotGetPOSViewController ()
 
 @end
@@ -36,7 +39,21 @@
 */
 
 - (IBAction)ToGetPOSButtonClick:(id)sender {
-    WTCGetPOSNotOpenViewController *GetPOSNotOpenViewCon = [WTCGetPOSNotOpenViewController new];
-    [self.navigationController pushViewController:GetPOSNotOpenViewCon animated:YES];
+    NSString *receivePosToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCReceivePOSRequest *request = [[WTCReceivePOSRequest alloc]initWithToken:receivePosToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCReceivePOSResult *receivePosResult = [request getResponse].data;
+        
+        WTCGetPOSNotOpenViewController *GetPOSNotOpenViewCon = [WTCGetPOSNotOpenViewController new];
+        [self.navigationController pushViewController:GetPOSNotOpenViewCon animated:YES];
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
 }
+
 @end

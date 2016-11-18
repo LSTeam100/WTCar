@@ -9,8 +9,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterThreeViewController">
             <connections>
                 <outlet property="TeleNumTextField" destination="cIy-6B-11M" id="eYp-3t-3Ai"/>
-                <outlet property="carTypeTextField" destination="gHm-Y4-bTO" id="IYY-d1-2oJ"/>
+                <outlet property="carTypeTextField" destination="OyL-iV-V1l" id="95F-ff-lN8"/>
                 <outlet property="passWordTextField" destination="Jgt-dT-NF3" id="71k-aa-8lo"/>
+                <outlet property="verityCodeTextfield" destination="gHm-Y4-bTO" id="yCh-B3-Pxt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -11,6 +11,7 @@
                 <outlet property="TeleNumTextField" destination="LjW-cz-Pjd" id="VKf-F5-VpW"/>
                 <outlet property="completeButton" destination="TSy-3a-62E" id="rZX-V0-O2x"/>
                 <outlet property="passWordTextField" destination="beo-w8-wS2" id="sGO-LZ-hkC"/>
+                <outlet property="verityPasswordTextField" destination="lRZ-d2-F4O" id="Qjl-T6-Kkq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

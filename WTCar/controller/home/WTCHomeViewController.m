@@ -17,6 +17,9 @@
 #import "HomeNavigationBarView.h"
 #import "WTCNotGetPOSViewController.h"
 #import "LoginViewController.h"
+#import "WTCGetPOSInfoResult.h"
+#import "WTCGetPOSInfoRequest.h"
+#import "MBProgressHUD.h"
 @interface WTCHomeViewController ()
 {
     CGFloat carouselHeight;
@@ -274,8 +277,28 @@
 
 -(void)ShangJPosButtonClick
 {
-     WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
-    [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+    NSString *getPosToken = [[CommonVar sharedInstance]getLoginToken];
+    WTCGetPOSInfoRequest *request = [[WTCGetPOSInfoRequest alloc]initWithToken:getPosToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetPOSInfoResult *getPosResult = [request getResponse].data;
+        NSNumber *applysatus = getPosResult.applySatus;
+        NSNumber *opensatus = getPosResult.openStatus;
+        NSNumber *Id = getPosResult.Id;
+        NSNumber *accounid = getPosResult.accountId;
+        NSString *posloginAccount = getPosResult.posloginAccount;
+        NSString *posSn = getPosResult.possSn;
+        NSString *creatTime = getPosResult.createTime;
+        NSString *updataTime = getPosResult.updateTime;
+        WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
+        [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
 }
 -(void)navitoLoanConTroller:(id)sender
 {

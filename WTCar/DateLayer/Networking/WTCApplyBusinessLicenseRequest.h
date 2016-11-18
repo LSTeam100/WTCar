@@ -9,5 +9,5 @@
 #import"WTCarBaseRequest.h"
 
 @interface WTCApplyBusinessLicenseRequest :WTCarBaseRequest
-
+-(id)initWithLicencePath:(NSString *)licenPath Token:(NSString*)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end

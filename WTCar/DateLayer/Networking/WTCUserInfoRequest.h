@@ -9,5 +9,5 @@
 #import "WTCarBaseRequest.h"
 
 @interface WTCUserInfoRequest :WTCarBaseRequest
-
+-(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end

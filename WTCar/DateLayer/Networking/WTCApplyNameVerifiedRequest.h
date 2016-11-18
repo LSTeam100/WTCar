@@ -9,5 +9,5 @@
 #import"WTCarBaseRequest.h"
 
 @interface WTCApplyNameVerifiedRequest : WTCarBaseRequest
-
+-(id)initWithIdcard:(NSString *)idcard realName:(NSString *)realName Token:(NSString*)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end
