@@ -13,9 +13,8 @@
 {
     self = [super initWithToken:token successCallback:success failureCallback:failed];
     if (self) {
-                NSDictionary *parameters=@{@"productId":posId,
+                NSDictionary *parameters=@{@"id":posId,
                                            };
-        
                 [self setParameters:parameters];
     }
     return self;

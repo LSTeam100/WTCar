@@ -12,6 +12,7 @@
 @property(nonatomic,strong)NSString *amount;
 @property(nonatomic,strong)NSString *status;
 @property(nonatomic,strong)NSMutableArray *payDetailsArr;
+@property(nonatomic,strong)NSString *subamount;
 -(instancetype)initWithDictionary:(NSDictionary *)dataDic;
 @end
 

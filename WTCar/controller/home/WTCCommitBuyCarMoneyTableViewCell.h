@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WTCCommitBuyCarMoneyTableViewCell : UITableViewCell
+@interface WTCCommitBuyCarMoneyTableViewCell : UITableViewCell<UITextFieldDelegate>
 @property(nonatomic,weak)IBOutlet UILabel * purchaseLabelPrice;
 @property(nonatomic,weak)IBOutlet UITextField *inputPriceTextField;
 

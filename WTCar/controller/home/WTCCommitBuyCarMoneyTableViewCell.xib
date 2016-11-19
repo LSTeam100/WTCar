@@ -24,7 +24,7 @@
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入交易金额" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-Rm-aMG">
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDX-8k-aFL">
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -46,6 +46,7 @@
                 <outlet property="inputPriceTextField" destination="2NG-Rm-aMG" id="68z-o7-fPi"/>
                 <outlet property="purchaseLabelPrice" destination="umx-SI-CIa" id="x9Q-mA-PEV"/>
             </connections>
+            <point key="canvasLocation" x="-14" y="97"/>
         </tableViewCell>
     </objects>
 </document>

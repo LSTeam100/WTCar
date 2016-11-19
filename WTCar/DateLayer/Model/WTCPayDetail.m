@@ -23,13 +23,19 @@
         }
         
         if ([dataDic objectForKey:@"status"]) {
-            self.status = [dataDic objectForKey:@"status"];
+            self.status = [NSString stringWithFormat:@"%@",[dataDic objectForKey:@"status"]];
         }
         else
         {
-            self.status = @"";
+            self.status = @"0";
         }
-        
+        if ([dataDic objectForKey:@"subamount"]) {
+            self.subamount = [dataDic objectForKey:@"subamount"];
+        }
+        else
+        {
+            self.subamount = @"0.00";
+        }
         if ([dataDic objectForKey:@"payDetails"]) {
             NSArray *detailArr = [dataDic objectForKey:@"payDetails"];
             for (int i = 0; i < detailArr.count; i++) {

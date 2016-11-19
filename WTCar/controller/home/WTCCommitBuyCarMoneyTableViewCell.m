@@ -12,9 +12,16 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.inputPriceTextField.returnKeyType = UIReturnKeyDone;
+    self.inputPriceTextField.delegate = self;
     // Initialization code
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

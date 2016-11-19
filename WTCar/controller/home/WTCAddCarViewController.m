@@ -443,15 +443,15 @@ typedef enum
 
 -(IBAction)commit:(id)sender{
     
-    self.selectModel.name = @"";
-    self.selectBrand.name = @"";
-    self.selectType.name = @"";
-    [self.imageArray removeAllObjects];
-    [urlImageArr removeAllObjects];
-    self.plateDate = @"";
-    self.carDescibetion = @"";
-    self.province = @"";
-    self.city = @"";
+//    self.selectModel.name = @"";
+//    self.selectBrand.name = @"";
+//    self.selectType.name = @"";
+//    [self.imageArray removeAllObjects];
+//    [urlImageArr removeAllObjects];
+//    self.plateDate = @"";
+//    self.carDescibetion = @"";
+//    self.province = @"";
+//    self.city = @"";
     if ([self.selectModel.name isEqualToString:@""] || [self.selectBrand.name isEqualToString:@""] || [self.selectType.name isEqualToString:@""] || self.imageArray.count == 0 || urlImageArr.count == 0 || [self.plateDate isEqualToString:@""] || [self.carDescibetion isEqualToString:@""] || [self.province isEqualToString:@""] || [self.city isEqualToString:@""] ) {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         

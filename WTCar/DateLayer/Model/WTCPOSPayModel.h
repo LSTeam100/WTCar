@@ -22,6 +22,7 @@
 @property(nonatomic,strong)NSString *status;
 @property(nonatomic,strong)NSString *summitTime;
 @property(nonatomic,strong)NSString *updateTime;
-
+-(instancetype)initWithDictionary:(NSDictionary *)dataDic;
 
 @end
+
