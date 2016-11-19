@@ -32,10 +32,11 @@
         
         if ([dataDic objectForKey:@"payDetails"]) {
             NSArray *detailArr = [dataDic objectForKey:@"payDetails"];
-            WTCPayOneDetail *oneDetail = [[WTCPayOneDetail alloc]initWithDictionary:detailArr];
-//            for (; <#condition#>; <#increment#>) {
-//                <#statements#>
-//            }
+            for (int i = 0; i < detailArr.count; i++) {
+                NSDictionary *oneDic = [detailArr objectAtIndex:i];
+                WTCPayOneDetail *oneDetail = [[WTCPayOneDetail alloc]initWithDictionary:oneDic];
+                [self.payDetailsArr addObject:oneDetail];
+            }
             
         }
         else{
@@ -49,20 +50,53 @@
 
 @implementation WTCPayOneDetail
 
--(instancetype)initWithDictionary:(NSArray *)dataArr
+-(instancetype)initWithDictionary:(NSDictionary *)dataDic
 {
     self = [super init];
     if (self) {
-//        if (<#condition#>) {
-//            <#statements#>
-//        }
-//        "amount": 7.00,
-//        "createTime": "2016-10-31 17:25:47",
-//        "id": 1,
-//        "payTime": "2016-10-31 17:25:45",
-//        "pid": 1,
-//        "updateTime": "2016-10-31 17:25:49"
-
+        
+        if ([dataDic objectForKey:@"amount"]) {
+            self.amount = [dataDic objectForKey:@"amount"];
+        }
+        else
+        {
+            self.amount = @"0";
+        }
+        if ([dataDic objectForKey:@"createTime"]) {
+            self.createTime = [dataDic objectForKey:@"createTime"];
+        }
+        else
+        {
+            self.createTime = @"0";
+        }
+        if ([dataDic objectForKey:@"id"]) {
+            self.oneDetailId = [dataDic objectForKey:@"id"];
+        }
+        else
+        {
+            self.oneDetailId = @"";
+        }
+        if ([dataDic objectForKey:@"payTime"]) {
+            self.payTime = [dataDic objectForKey:@"payTime"];
+        }
+        else
+        {
+            self.payTime = @"0";
+        }
+        if ([dataDic objectForKey:@"pid"]) {
+            self.pid = [dataDic objectForKey:@"pid"];
+        }
+        else
+        {
+            self.pid = @"0";
+        }
+        if ([dataDic objectForKey:@"updateTime"]) {
+            self.updateTime = [dataDic objectForKey:@"updateTime"];
+        }
+        else
+        {
+            self.updateTime = @"0";
+        }
         
     }
     return self;

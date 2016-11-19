@@ -14,6 +14,8 @@
 #import "WTCToPayList.h"
 #import "WTCGetPayedList.h"
 #import "WTCGetPayedListRequest.h"
+#import "WTCPayDetailRequest.h"
+#import "WTCPayDetail.h"
 @interface WTCCashierDeskViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *titleArr;
@@ -32,15 +34,22 @@
     [super viewDidLoad];
     self.title = @"收银台";
     titleArr = @[@"待收款",@"已收款",@"收款总额"];
-    timer =  [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(refreshOrder) userInfo:nil repeats:YES];
+    timer =  [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(refreshOrder) userInfo:nil repeats:YES];
 
     paySuccess = false;
     // Do any additional setup after loading the view from its nib.
 }
 -(void)refreshOrder
 {
-    [self getToPayList];
-    [self getPayedList];
+    
+//    [self getToPayList];
+//    [self getPayedList];
+    [self getPayDetail];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [timer invalidate];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -168,6 +177,20 @@
     }
     return cell;
     
+}
+-(void)getPayDetail
+{
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    
+    int posid = [self.posPayModel.posId intValue];
+    [self setBusyIndicatorVisible:YES];
+    WTCPayDetailRequest *request = [[WTCPayDetailRequest alloc]initWithToken:loginToken POSId:[NSNumber numberWithInt:posid] successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+    }];
+    [request start];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

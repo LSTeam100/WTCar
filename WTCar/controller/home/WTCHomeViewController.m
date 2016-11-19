@@ -102,7 +102,7 @@
 //    carouselHeight = 150*SCREEN_WIDTH/435;
     _scrollCount = 0;
 //    _allLbPicPathArry = [NSMutableArray new];
-    _allLbPicPathArry = [NSMutableArray arrayWithObjects:@"酒店信息", @"更多",@"酒店信息",@"更多",nil];
+    _allLbPicPathArry = [NSMutableArray arrayWithObjects:@"banner1", @"banner2",@"banner3",@"banner3",nil];
 }
 -(void)bannerPicInit{
     
@@ -189,15 +189,15 @@
         //get a reference to the label in the recycled view
         imageView = (UIImageView *)[view viewWithTag:5002];
     }
-    imageView.image = [UIImage imageNamed:@"1_banner_ch"];
+    imageView.image = [UIImage imageNamed:@"banner3"];
         if (index == 1){
-        imageView.image = [UIImage imageNamed:@"1_banner_en"];
+        imageView.image = [UIImage imageNamed:@"banner3"];
            }else if (index == 2){
-        imageView.image = [UIImage imageNamed:@"2_banner_ch"];
+        imageView.image = [UIImage imageNamed:@"banner3"];
         
         }
     else if (index == 3){
-        imageView.image = [UIImage imageNamed:@"2_banner_en"];
+        imageView.image = [UIImage imageNamed:@"banner3"];
            }
     return view;
     
