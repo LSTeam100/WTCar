@@ -8,6 +8,9 @@
 
 #import "WTCPOSToOpenViewController.h"
 #import "WTCPOSHasOpenedViewController.h"
+#import "WTCOpenPOSRequest.h"
+#import "WTCOpenPOSResult.h"
+#import "MBProgressHUD.h"
 @interface WTCPOSToOpenViewController ()
 
 @end
@@ -35,7 +38,21 @@
 */
 
 - (IBAction)savePOSOpenCodeButtonClick:(id)sender {
-    WTCPOSHasOpenedViewController *POSHasOpenViewCon = [WTCPOSHasOpenedViewController new];
-    [self.navigationController pushViewController:POSHasOpenViewCon animated:YES];
+    NSString*posLoginPasswd = _SetPOSPasswordTextField.text;
+    NSString *receivePosToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCOpenPOSRequest *request = [[WTCOpenPOSRequest alloc]initWithPosLoginPasswd:posLoginPasswd Token:receivePosToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCOpenPOSRequest *openPosResult = [request getResponse].data;
+        
+        WTCPOSHasOpenedViewController *POSHasOpenViewCon = [WTCPOSHasOpenedViewController new];
+        [self.navigationController pushViewController:POSHasOpenViewCon animated:YES];
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
 }
 @end

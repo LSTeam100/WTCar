@@ -6,9 +6,10 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WTCBaseViewController.h"
 
-@interface WTCBusinessVerityViewController : UIViewController
+@interface WTCBusinessVerityViewController :WTCBaseViewController
 - (IBAction)ConfirmBusinessButtonClick:(id)sender;
+- (IBAction)VeritylicencePicButtonClick:(id)sender;
 
 @end

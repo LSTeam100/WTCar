@@ -19,6 +19,11 @@
 #import "WTCChildAccountViewController.h"
 #import "WTCCashRecordViewController.h"
 #import "WTCMyDetailViewController.h"
+#import "WTCGetUserWalletResult.h"
+#import "WTCGetUserWalletRequest.h"
+#import "MBProgressHUD.h"
+#import "WTCIsBindCardResult.h"
+#import "WTCIsBindCardRequest.h"
 @interface WTCMineViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *posInfoArr;
@@ -41,6 +46,39 @@
     
     self.title = @"我的";
     // Do any additional setup after loading the view from its nib.
+}
+//是否绑定银行卡
+-(void)IsBindBankCardRequest
+{
+    NSString *IsBindBankToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCIsBindCardRequest *request = [[WTCIsBindCardRequest alloc]initWithToken:IsBindBankToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCIsBindCardResult *IsBindCardResult = [request getResponse].data;
+        _IsBind = IsBindCardResult.isBind;
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
+//获取用户钱包信息
+-(void)getUserWalletInfoRequest
+{
+    NSString *getWalletInfoToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCGetUserWalletRequest *request = [[WTCGetUserWalletRequest alloc]initWithToken:getWalletInfoToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetUserWalletResult *getUserWalletInfoResult = [request getResponse].data;
+
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -139,20 +177,36 @@
     }
     else if (indexPath.row == 3)
     {
-        SettingPayCodeViewController *setPayCodeViewcon = [SettingPayCodeViewController new];
-        setPayCodeViewcon.CashHasNameSetpassword = YES;
-         [self.navigationController pushViewController:setPayCodeViewcon animated:YES];
+        if (_IsBind==0) {
+            SettingPayCodeViewController *setPayCodeViewcon = [SettingPayCodeViewController new];
+            
+            setPayCodeViewcon.CashHasNameSetpassword = YES;
+            [self.navigationController pushViewController:setPayCodeViewcon animated:YES];
+        } else {
+            
+        }
+        
     }
     else if (indexPath.row == 4)
     {
-        WTCCashRecordViewController *CashRecordViewCon = [WTCCashRecordViewController new];
-        [self.navigationController pushViewController:CashRecordViewCon animated:YES];
+        if (_IsBind==0) {
+            WTCCashRecordViewController *CashRecordViewCon = [WTCCashRecordViewController new];
+            [self.navigationController pushViewController:CashRecordViewCon animated:YES];
+        } else {
+            
+        }
+
     }
     else if (indexPath.row == 5)
     {
-        WTCCashToPasswordViewController *cashToPasswordViewCon = [WTCCashToPasswordViewController new];
-        cashToPasswordViewCon.AddBankCardHasCardLogpassword = YES;
-        [self.navigationController pushViewController:cashToPasswordViewCon animated:YES];
+        if (_IsBind == 0) {
+            WTCCashToPasswordViewController *cashToPasswordViewCon = [WTCCashToPasswordViewController new];
+            cashToPasswordViewCon.AddBankCardHasCardLogpassword = YES;
+            [self.navigationController pushViewController:cashToPasswordViewCon animated:YES];
+        } else {
+            
+        }
+
     }
     else if (indexPath.row == 6)
     {

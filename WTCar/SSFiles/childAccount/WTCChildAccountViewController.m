@@ -90,6 +90,7 @@
     [cell.contentView setBackgroundColor:[UIColor whiteColor]];
     cell.ChildAccountNameLabel.text = _childNameArray[indexPath.row];
     cell.ChildAccountTeleLabel.text = _childTeleNumArray[indexPath.row];
+    [cell.ChangeChildAccountButton addTarget:self action:@selector(changeChildAccountButtonClick) forControlEvents:UIControlEventTouchUpInside];
     if (!IOS9_OR_LATER) {
 
     }
@@ -100,6 +101,11 @@
     }
     
     return cell;
+}
+
+-(void)changeChildAccountButtonClick
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,5 +18,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *SeccondLabel;
 @property (weak, nonatomic) IBOutlet UIView *shopSettingContentView;
 
-
+@property(nonatomic,strong) NSString *merchantAddress;
+@property(nonatomic,strong) NSString *merchantDescr;
+@property(nonatomic,strong) NSString *merchantImage_path;
+@property(nonatomic,strong) NSString *merchantName;
+@property(nonatomic,strong) NSString *mobile;
+@property(nonatomic,strong) NSString *nick;
 @end

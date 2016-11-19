@@ -8,6 +8,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCMyBankCardViewController">
             <connections>
+                <outlet property="BankCardTypeLabel" destination="8eQ-ZI-YUj" id="dgQ-Ht-A6U"/>
+                <outlet property="BankNameLabel" destination="mQr-1a-bOq" id="H0j-ai-7gB"/>
+                <outlet property="bankCardEndNumLabel" destination="PLf-OG-ueL" id="xGf-UN-6HL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -76,6 +79,9 @@
                     <state key="normal" title="删除" backgroundImage="ClickButton_title">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="DeleBankCardButtonClick:" destination="-1" eventType="touchUpInside" id="rHy-t2-KaA"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

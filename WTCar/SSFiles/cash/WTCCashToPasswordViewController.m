@@ -9,6 +9,8 @@
 #import "WTCCashToPasswordViewController.h"
 #import "WTCCashRecordViewController.h"
 #import "WTCMyBankCardViewController.h"
+#import "WTCApplyCashRequest.h"
+#import "MBProgressHUD.h"
 @interface WTCCashToPasswordViewController ()
 
 @end
@@ -24,15 +26,24 @@
     [_ConfirmCashButton addTarget:self action:@selector(ConfirmCashClick) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
 }
+//申请提现请求
+-(void)applyCashRequest
+{
+    NSString *amount = _cashNum;
+    [self setBusyIndicatorVisible:YES];
+    WTCApplyCashRequest *request = [[WTCApplyCashRequest alloc]initWithApplyCash:amount successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
 
 -(void)dataInit
 {
-//    _CashNoCardLogpassword = NO;
-//    _CashHasCardLogpassword = NO;
-//    _CashNoNameNoCardLogpassword = NO;
-//    _AddBankCardNoCardLogpassword = NO;
-//    _AddBankCardHasCardLogpassword = NO;
-//    _AddBankCardNoCardNoNameLogpassword = NO;
+
 }
 -(void)ConfirmCashClick
 {
@@ -40,8 +51,9 @@
         WTCMyBankCardViewController *mybankCardViewCon = [WTCMyBankCardViewController new];
         [self.navigationController pushViewController:mybankCardViewCon animated:YES];
     } else if (_CashHasCardLogpassword==YES){
-//    WTCCashRecordViewController *cashRecordViewCon = [WTCCashRecordViewController new];
-//    [self.navigationController pushViewController:cashRecordViewCon animated:YES];
+    WTCCashRecordViewController *cashRecordViewCon = [WTCCashRecordViewController new];
+        [self applyCashRequest];
+    [self.navigationController pushViewController:cashRecordViewCon animated:YES];
     }
 }
 -(void)addsubview

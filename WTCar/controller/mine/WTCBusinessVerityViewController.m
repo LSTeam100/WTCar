@@ -7,7 +7,9 @@
 //
 
 #import "WTCBusinessVerityViewController.h"
-
+#import "WTCApplyBusinessLicenseResult.h"
+#import "WTCApplyBusinessLicenseRequest.h"
+#import "MBProgressHUD.h"
 @interface WTCBusinessVerityViewController ()
 
 @end
@@ -36,5 +38,22 @@
 */
 
 - (IBAction)ConfirmBusinessButtonClick:(id)sender {
+    NSString *applyNameToken = [[CommonVar sharedInstance] getLoginToken];
+    NSString *licencePath = @"";
+    [self setBusyIndicatorVisible:YES];
+    WTCApplyBusinessLicenseRequest *request = [[WTCApplyBusinessLicenseRequest alloc]initWithLicencePath:licencePath Token:applyNameToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCApplyBusinessLicenseResult *applyNameResult = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
+}
+
+- (IBAction)VeritylicencePicButtonClick:(id)sender {
 }
 @end

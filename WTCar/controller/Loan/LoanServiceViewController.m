@@ -9,6 +9,9 @@
 #import "LoanServiceViewController.h"
 #import "LoanDetailTableViewCell.h"
 #import "AddLoanViewController.h"
+#import "WTCGetLoanListResult.h"
+#import "WTCGetLoanListRequest.h"
+#import "MBProgressHUD.h"
 @interface LoanServiceViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat cellHeight;
@@ -17,6 +20,7 @@
 @property(nonatomic,strong) NSArray *loanMoneyArray;
 @property(nonatomic,strong)NSArray *loanStateArray;
 @property(nonatomic,strong)NSArray *loanTimeArray;
+@property(nonatomic,strong)NSMutableArray *loanArray;
 @end
 
 @implementation LoanServiceViewController
@@ -29,6 +33,30 @@
     [self dataInit];
     [self makeTableView];
     // Do any additional setup after loading the view from its nib.
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [self getLoanListData];
+ }
+//获取loanList
+-(void)getLoanListData{
+    NSString *getLoanListToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCGetLoanListRequest *request = [[WTCGetLoanListRequest alloc]initWithToken:getLoanListToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetLoanListResult *getLoanListResult = [request getResponse].data;
+        _loanArray =[[NSMutableArray alloc]initWithArray:getLoanListResult.rows];
+        
+        [_loanDetailsTableView.header endRefreshing];
+        [_loanDetailsTableView reloadData];
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+        [_loanDetailsTableView.header endRefreshing];
+    }];
+    [request start];
+    
+
 }
 - (void)addLoan:(id)sender
 {

@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCUserTeleNumViewController">
             <connections>
+                <outlet property="TeleTextField" destination="QBi-kS-WA3" id="Moz-ru-Fgp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +31,9 @@
                         <constraint firstAttribute="width" constant="30" id="HU5-x1-X2E"/>
                     </constraints>
                     <state key="normal" image="textfieldDele_title2"/>
+                    <connections>
+                        <action selector="DeleTeleButtonClick:" destination="-1" eventType="touchUpInside" id="6BP-aL-i2b"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-bu-FjY">
                     <constraints>

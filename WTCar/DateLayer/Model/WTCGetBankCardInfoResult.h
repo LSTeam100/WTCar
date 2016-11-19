@@ -6,9 +6,9 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import"WTCarBaseRequest.h"
 
-@interface WTCGetBankCardInfoResult : NSObject
+@interface WTCGetBankCardInfoResult :WTCarBaseRequest
 @property(nonatomic,strong) NSString *bankNum;
 @property(nonatomic,strong) NSString *openedBank;
 @property(nonatomic,strong) NSNumber *realName;

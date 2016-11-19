@@ -6,9 +6,9 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import"WTCBaseViewController.h"
 
-@interface WTCPOSToOpenViewController : UIViewController
+@interface WTCPOSToOpenViewController : WTCBaseViewController
 //保存POS机密码
 - (IBAction)savePOSOpenCodeButtonClick:(id)sender;
 //POS机账号

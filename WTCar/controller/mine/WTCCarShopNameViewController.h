@@ -10,5 +10,7 @@
 
 @interface WTCCarShopNameViewController : UIViewController
 - (IBAction)SaveCarShopNameButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *ShopNameTextField;
+- (IBAction)DeleShopNameButtonClick:(id)sender;
 
 @end

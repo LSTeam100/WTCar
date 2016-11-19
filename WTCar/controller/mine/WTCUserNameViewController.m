@@ -19,7 +19,10 @@
     self.view.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];    
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewDidAppear:(BOOL)animated
+{
+    _NameTextField.text =_realName;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -36,5 +39,9 @@
 */
 
 - (IBAction)SaveUserNameButtonClick:(id)sender {
+    NSString*upDataName = _NameTextField.text;
+}
+
+- (IBAction)DeleTextFieldButtonClick:(id)sender {
 }
 @end

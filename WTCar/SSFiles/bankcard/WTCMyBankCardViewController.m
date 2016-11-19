@@ -7,7 +7,10 @@
 //
 
 #import "WTCMyBankCardViewController.h"
-
+#import "WTCDelBankCardRequest.h"
+#import "MBProgressHUD.h"
+#import "WTCGetBankCardInfoRequest.h"
+#import "WTCGetBankCardInfoResult.h"
 @interface WTCMyBankCardViewController ()
 
 @end
@@ -20,6 +23,28 @@
     
     self.navigationItem.title =@"我的银行卡";
     // Do any additional setup after loading the view from its nib.
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self getBankInfoRequest];
+}
+//获取银行卡信息
+-(void)getBankInfoRequest
+{
+    NSString *getbankInfoToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCGetBankCardInfoRequest *request = [[WTCGetBankCardInfoRequest alloc]initWithToken:getbankInfoToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetBankCardInfoResult *Result = [request getResponse].data;
+        _bankCardEndNumLabel.text = Result.bankNum;
+        _BankNameLabel.text = Result.openedBank;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,4 +62,18 @@
 }
 */
 
+- (IBAction)DeleBankCardButtonClick:(id)sender {
+    NSString *receivePosToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCDelBankCardRequest *request = [[WTCDelBankCardRequest alloc]initWithToken:receivePosToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        NSObject *Result = [request getResponse].data;
+
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
 @end

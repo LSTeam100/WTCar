@@ -8,7 +8,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCAddBankCardViewController">
             <connections>
+                <outlet property="BankCardTextField" destination="ROU-N3-O8Y" id="P9R-QG-UNb"/>
                 <outlet property="ConfirmAddBankCardButton" destination="5ge-Sh-mA6" id="cmi-AI-dIy"/>
+                <outlet property="openBankCardAddressTextField" destination="IGb-BW-WkZ" id="pIX-pR-F1S"/>
+                <outlet property="uesrIdNumLabel" destination="RMo-9d-zyM" id="XKv-ly-kcM"/>
+                <outlet property="userNameLabel" destination="nrc-9h-itg" id="CXM-F3-apt"/>
+                <outlet property="userTeleNumTextField" destination="dYx-Jq-M9u" id="RBe-3C-1ZT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -10,5 +10,7 @@
 
 @interface WTCUserTeleNumViewController : UIViewController
 - (IBAction)SaveUserTeleNumButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *TeleTextField;
+- (IBAction)DeleTeleButtonClick:(id)sender;
 
 @end

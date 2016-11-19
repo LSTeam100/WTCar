@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCCarShopIntroductionViewController">
             <connections>
+                <outlet property="ShopIntroTextView" destination="exJ-Rs-YqU" id="XAf-Rj-VK4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

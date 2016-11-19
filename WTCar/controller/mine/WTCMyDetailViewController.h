@@ -12,5 +12,12 @@
 @interface WTCMyDetailViewController : WTCBaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *NameVerityButton;
 @property (weak, nonatomic) IBOutlet UIButton *BusinessVerityButton;
-
+@property(nonatomic,strong) NSString *merchantAddress;
+@property(nonatomic,strong) NSString *merchantDescr;
+@property(nonatomic,strong) NSString *merchantImage_path;
+@property(nonatomic,strong) NSString *merchantName;
+@property(nonatomic,strong) NSString *mobile;
+@property(nonatomic,strong) NSString *nick;
+@property(nonatomic,strong) NSString *realName;
+@property(nonatomic,strong) NSString *headPortraitPath;
 @end

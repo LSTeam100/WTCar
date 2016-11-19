@@ -6,9 +6,11 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WTCBaseViewController.h"
 
-@interface WTCPeoNameVerityViewController : UIViewController
+@interface WTCPeoNameVerityViewController :WTCBaseViewController
 - (IBAction)ConfirmNameButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *realNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *IdcardTextField;
 
 @end

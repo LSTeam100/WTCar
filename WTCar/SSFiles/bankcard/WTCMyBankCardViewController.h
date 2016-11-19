@@ -6,8 +6,12 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import"WTCBaseViewController.h"
 
-@interface WTCMyBankCardViewController : UIViewController
+@interface WTCMyBankCardViewController :WTCBaseViewController
+@property (weak, nonatomic) IBOutlet UILabel *BankNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *BankCardTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bankCardEndNumLabel;
+- (IBAction)DeleBankCardButtonClick:(id)sender;
 
 @end

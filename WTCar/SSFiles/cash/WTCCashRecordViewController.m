@@ -8,6 +8,9 @@
 
 #import "WTCCashRecordViewController.h"
 #import "CashRecordTableViewCell.h"
+#import "WTCGetCashListResult.h"
+#import "WTCGetCashListRequest.h"
+#import "MBProgressHUD.h"
 @interface WTCCashRecordViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat cellHeight;
@@ -31,7 +34,24 @@
 
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self getCashListRequest];
+}
+//获取提现记录
+-(void)getCashListRequest
+{
+    
+    [self setBusyIndicatorVisible:YES];
+    WTCGetCashListRequest *request = [[WTCGetCashListRequest alloc]initWithToken:@"" successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
 -(void)dataInit{
     _cellNumTextArray = @[@"1000001",@"1000002"];
     _cellMoneyTextArray = @[@"50000",@"1000000"];

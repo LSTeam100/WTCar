@@ -10,5 +10,7 @@
 
 @interface ForgetPayCodeSecViewController : WTCBaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *NextToThreeButton;
+@property (weak, nonatomic) IBOutlet UITextField *verityCodeTextField;
+@property (weak, nonatomic) IBOutlet UIButton *getVerityCodeButton;
 
 @end

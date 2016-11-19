@@ -9,5 +9,5 @@
 #import "WTCarBaseRequest.h"
 
 @interface WTCChangePOSPassWordRequest :WTCarBaseRequest
--(id)initWithPosLoginPasswd:(NSString *)posLoginPasswd Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
+-(id)initWithNewPosLoginPasswd:(NSString *)newPosLoginPasswd PosLoginPasswd:(NSString *)posLoginPasswd Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end
