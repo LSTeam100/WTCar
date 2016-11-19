@@ -24,7 +24,7 @@
 }
 
 -(NSString *)getURL{
-    return @"/delSubUser.do";
+    return @"/upSubUser.do";
 }
 
 -(NSString *)getMethod{
@@ -35,7 +35,7 @@
     [super processResponse:responseDictionary];
     
     if([[self getResponse] isSucceed]){
-        NSLog(@"删除子账号成功");
+        NSLog(@"更新子账号成功");
     }
 }
 

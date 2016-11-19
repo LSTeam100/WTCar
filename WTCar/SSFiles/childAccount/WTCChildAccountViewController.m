@@ -10,6 +10,11 @@
 #import "AddChildAccountViewController.h"
 #import "ChangeAccountCodeViewController.h"
 #import "ChildAccountTableViewCell.h"
+#import "ChangeChildAccountViewController.h"
+#import "WTCDelSubUserRequest.h"
+#import "MBProgressHUD.h"
+#import "WTCSubUserListRequest.h"
+#import "WTCSubUser.h"
 @interface WTCChildAccountViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat cellHeight;
@@ -39,7 +44,23 @@
     
     cellHeight = 62;
 }
+//获取子账户列表
+-(void)getChildAccountListRequest
+{
+    NSString *getsubAccountListToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCSubUserListRequest *request = [[WTCSubUserListRequest alloc]initWithToken:getsubAccountListToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        NSObject *result = [request getResponse].data;
 
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
+}
 - (void)addChildAccount:(id)sender
 {
     AddChildAccountViewController *addChildViewCon = [AddChildAccountViewController new];
@@ -90,22 +111,32 @@
     [cell.contentView setBackgroundColor:[UIColor whiteColor]];
     cell.ChildAccountNameLabel.text = _childNameArray[indexPath.row];
     cell.ChildAccountTeleLabel.text = _childTeleNumArray[indexPath.row];
-    [cell.ChangeChildAccountButton addTarget:self action:@selector(changeChildAccountButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    if (!IOS9_OR_LATER) {
+    [cell.ChangeChildAccountButton addTarget:self action:@selector(changeChildAccountButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    _changeButtonID = [NSString stringWithFormat:@"%ld",indexPath.row];
+    [cell.DeleChildAccountButton addTarget:self action:@selector(deleChildAccountButtonClick) forControlEvents:UIControlEventTouchUpInside];
 
-    }
-    if (indexPath.row == 0) {
-        
-    }else if (indexPath.row == 1){
-        
-    }
-    
     return cell;
 }
-
--(void)changeChildAccountButtonClick
+-(void)deleChildAccountButtonClick
 {
+    NSNumber * ID = @([_changeButtonID integerValue]);
     
+    [self setBusyIndicatorVisible:YES];
+    WTCDelSubUserRequest *request = [[WTCDelSubUserRequest alloc]initWithDelSubUser:ID successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCSubUser *result = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
+-(void)changeChildAccountButtonClick:(id)sender
+{
+    ChangeChildAccountViewController *changeChildAccountViewCon = [ChangeChildAccountViewController new];
+    changeChildAccountViewCon.ButtonId = _changeButtonID;
+    [self.navigationController pushViewController:changeChildAccountViewCon animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -125,6 +156,7 @@
 
 - (IBAction)ChangeChildCodeButtonClick:(id)sender {
     ChangeAccountCodeViewController *changeCodeViewCon = [ChangeAccountCodeViewController new];
+    changeCodeViewCon.oldAccountKey = _AccountCodeLabel.text;
     [self.navigationController pushViewController:changeCodeViewCon animated:YES];
 }
 @end

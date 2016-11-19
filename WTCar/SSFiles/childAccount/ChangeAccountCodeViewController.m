@@ -7,7 +7,8 @@
 //
 
 #import "ChangeAccountCodeViewController.h"
-
+#import "WTCChangeAccountKeyRequest.h"
+#import "MBProgressHUD.h"
 @interface ChangeAccountCodeViewController ()
 
 @end
@@ -23,7 +24,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//Key更新请求
+-(void)UpSubAccountKeyRequest
+{
+    NSString *newKey = _AccountCodeTextField.text;
+    [self setBusyIndicatorVisible:YES];
+    WTCChangePayPasswdRequest *request = [[WTCChangePayPasswdRequest alloc]initChangeAccountKey:_oldAccountKey nwAccountKey:newKey successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+         NSObject*result = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
 
+}
 /*
 #pragma mark - Navigation
 
