@@ -8,6 +8,9 @@
 
 #import "AddLoanViewController.h"
 #import "AddLoanSuccessViewController.h"
+#import "WTCApplyLoanRequest.h"
+#import "WTCApplyLoanResult.h"
+#import "MBProgressHUD.h"
 @interface AddLoanViewController ()
 
 @end
@@ -36,7 +39,21 @@
 */
 
 - (IBAction)confirmLoanButtonClick:(id)sender {
-    AddLoanSuccessViewController *addloanSuccessViewCon= [AddLoanSuccessViewController new];
-    [self.navigationController pushViewController:addloanSuccessViewCon animated:YES];
+    NSString *loanNum = _loanMoneyNumTextField.text;
+    NSString *receivePosToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCApplyLoanRequest *request = [[WTCApplyLoanRequest alloc]initWithAmount:loanNum Token:receivePosToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCApplyLoanResult *applyLoanResult = [request getResponse].data;
+        
+        AddLoanSuccessViewController *addloanSuccessViewCon= [AddLoanSuccessViewController new];
+        [self.navigationController pushViewController:addloanSuccessViewCon animated:YES];
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
 }
 @end

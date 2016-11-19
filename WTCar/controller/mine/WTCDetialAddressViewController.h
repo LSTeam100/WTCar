@@ -10,5 +10,7 @@
 
 @interface WTCDetialAddressViewController : UIViewController
 - (IBAction)SaveDetialAddressButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *AddressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *DetialAddressTextField;
 
 @end

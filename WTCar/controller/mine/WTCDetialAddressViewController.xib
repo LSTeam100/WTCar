@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCDetialAddressViewController">
             <connections>
+                <outlet property="AddressTextField" destination="LIM-YP-hh2" id="O6p-Ou-zkj"/>
+                <outlet property="DetialAddressTextField" destination="FOF-xm-pH8" id="hcd-ed-yNt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

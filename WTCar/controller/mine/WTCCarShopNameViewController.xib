@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCCarShopNameViewController">
             <connections>
+                <outlet property="ShopNameTextField" destination="FrM-O2-ywL" id="YB5-f0-ZZK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +31,9 @@
                         <constraint firstAttribute="height" constant="25" id="MkJ-g0-tNx"/>
                     </constraints>
                     <state key="normal" image="textfieldDele_title2"/>
+                    <connections>
+                        <action selector="DeleShopNameButtonClick:" destination="-1" eventType="touchUpInside" id="x3l-FK-eR9"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auO-Cm-hvO">
                     <constraints>

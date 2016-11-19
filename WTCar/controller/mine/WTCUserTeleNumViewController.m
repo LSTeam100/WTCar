@@ -37,4 +37,6 @@
 
 - (IBAction)SaveUserTeleNumButtonClick:(id)sender {
 }
+- (IBAction)DeleTeleButtonClick:(id)sender {
+}
 @end

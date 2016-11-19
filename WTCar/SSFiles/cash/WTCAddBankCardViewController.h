@@ -6,9 +6,9 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import"WTCBaseViewController.h"
 
-@interface WTCAddBankCardViewController : UIViewController
+@interface WTCAddBankCardViewController :WTCBaseViewController
 @property(nonatomic) BOOL CashHasNameAndPassword;
 @property(nonatomic) BOOL CashNoNameNoPassword;
 @property(nonatomic) BOOL CashHasNameNoPassword;
@@ -19,5 +19,10 @@
 @property(nonatomic) BOOL AddBankHasNameNoPassword;
 @property(nonatomic) BOOL AddBankHasPasswordNoName;
 @property (weak, nonatomic) IBOutlet UIButton *ConfirmAddBankCardButton;
+@property (weak, nonatomic) IBOutlet UITextField *BankCardTextField;
+@property (weak, nonatomic) IBOutlet UITextField *userTeleNumTextField;
+@property (weak, nonatomic) IBOutlet UITextField *openBankCardAddressTextField;
+@property (weak, nonatomic) IBOutlet UILabel *uesrIdNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
 @end

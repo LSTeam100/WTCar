@@ -9,6 +9,10 @@
 #import "WTCCashWithCardNameViewController.h"
 #import "WTCCashToPasswordViewController.h"
 #import "WTCCashRecordViewController.h"
+#import "WTCApplyCashRequest.h"
+#import "MBProgressHUD.h"
+#import "WTCGetBankCardInfoResult.h"
+#import "WTCGetBankCardInfoRequest.h"
 @interface WTCCashWithCardNameViewController ()
 
 @end
@@ -20,14 +24,45 @@
     [_NextStepButton addTarget:self action:@selector(GotoLogPasswordOrCashRecord) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
 }
-
+//获取银行卡信息
+-(void)getBankInfoRequest
+{
+    NSString *getbankInfoToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCGetBankCardInfoRequest *request = [[WTCGetBankCardInfoRequest alloc]initWithToken:getbankInfoToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetBankCardInfoResult *receivePosResult = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
+//申请提现请求
+-(void)applyCashRequest
+{
+    NSString *amount = _CashNumTextField.text;
+    [self setBusyIndicatorVisible:YES];
+    WTCApplyCashRequest *request = [[WTCApplyCashRequest alloc]initWithApplyCash:amount successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
 -(void)GotoLogPasswordOrCashRecord
 {
     if (_CashHasPasswordAndName==YES) {
         WTCCashToPasswordViewController *toPasswordViewCon = [WTCCashToPasswordViewController new];
+        toPasswordViewCon.cashNum = _CashNumTextField.text;
         [self.navigationController pushViewController:toPasswordViewCon animated:YES];
     } else {
         WTCCashRecordViewController *cashRecordViewCon = [WTCCashRecordViewController new];
+        [self applyCashRequest];
         [self.navigationController pushViewController:cashRecordViewCon animated:YES];
     }
 

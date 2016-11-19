@@ -7,7 +7,9 @@
 //
 
 #import "WTCPOSChangePasswordViewController.h"
-
+#import "WTCChangePOSPassWordRequest.h"
+#import "WTCChangePOSPassWordResult.h"
+#import "MBProgressHUD.h"
 @interface WTCPOSChangePasswordViewController ()
 
 @end
@@ -55,5 +57,20 @@
 */
 
 - (IBAction)ConfirmPOSCodeButtonClick:(id)sender {
+    NSString *newPosLoginPasswd = _password2.textField.text;
+    NSString *posLoginPasswd = _password.textField.text;
+    NSString *changePasswdToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCChangePOSPassWordRequest *request = [[WTCChangePOSPassWordRequest alloc] initWithNewPosLoginPasswd:newPosLoginPasswd PosLoginPasswd:posLoginPasswd Token:changePasswdToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCChangePOSPassWordResult *receivePosResult = [request getResponse].data;
+
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+    
 }
 @end

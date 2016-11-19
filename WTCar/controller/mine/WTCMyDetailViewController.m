@@ -22,6 +22,11 @@
 #import "CommonVar.h"
 #import "TFFileUploadManager.h"
 #import "WTCProfileImageUploadRequest.h"
+//#import "WTCChangeShopInfoRequest.h"
+//#import "WTCChangeShopInfoResult.h"
+#import "MBProgressHUD.h"
+#import "WTCGetUserInfoResult.h"
+#import "WTCGetUserInfoRequest.h"
 @interface WTCMyDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,RSKImageCropViewControllerDelegate>
 {
     CGFloat cellHeight;
@@ -44,6 +49,27 @@
     [self makeTableView];
     // Do any additional setup after loading the view from its nib.
 }
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self getAccountInfo];
+}
+//获取账户信息
+-(void)getAccountInfo{
+    NSString *getAccountInfoToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCGetUserInfoRequest *request = [[WTCGetUserInfoRequest alloc]initWithToken:getAccountInfoToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetUserInfoResult *getUserInfoResult = [request getResponse].data;
+        _realName = getUserInfoResult.realName;
+        _mobile = getUserInfoResult.mobile;
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
+
 -(void)dataInit{
         _cellFirTextArray = @[@"头像",@"用户名",@"手机号",@"车行名称",@"详细地址",@"车行介绍"];
     _cellSecTextArray = @[@"",@"苗刚",@"18732166582",@"",@"",@"未填写"];
@@ -180,6 +206,7 @@
             
         }else if (indexPath.row == 1){
             WTCUserNameViewController*usernameViewCon = [WTCUserNameViewController new];
+            usernameViewCon.realName = _realName;
             [self.navigationController pushViewController:usernameViewCon animated:YES];
         }else if (indexPath.row == 2){
             WTCUserTeleNumViewController*userTeleViewCon = [WTCUserTeleNumViewController new];

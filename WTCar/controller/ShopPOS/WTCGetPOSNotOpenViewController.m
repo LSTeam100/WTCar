@@ -8,6 +8,7 @@
 
 #import "WTCGetPOSNotOpenViewController.h"
 #import "WTCPOSToOpenViewController.h"
+
 @interface WTCGetPOSNotOpenViewController ()
 
 @end

@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCUserNameViewController">
             <connections>
+                <outlet property="NameTextField" destination="IVS-B9-rri" id="5yJ-YH-HJu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +31,9 @@
                         <constraint firstAttribute="width" constant="30" id="ntK-gX-IAQ"/>
                     </constraints>
                     <state key="normal" image="textfieldDele_title2"/>
+                    <connections>
+                        <action selector="DeleTextFieldButtonClick:" destination="-1" eventType="touchUpInside" id="97c-JC-NlE"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-Jn-Lqq">
                     <constraints>

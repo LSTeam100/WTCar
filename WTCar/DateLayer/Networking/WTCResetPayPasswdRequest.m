@@ -6,7 +6,6 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 #import "WTCResetPayPasswdRequest.h"
-
 @implementation WTCResetPayPasswdRequest
 
 -(id)initWithPayPasswd:(NSString *)code payPassword:(NSString *)payPassword successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{

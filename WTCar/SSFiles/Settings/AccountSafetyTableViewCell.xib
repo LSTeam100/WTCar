@@ -34,16 +34,16 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2U-xx-ZgJ">
                         <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="0LV-3C-FLw"/>
+                            <constraint firstAttribute="height" constant="1" id="EhN-Ui-29y"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="x2U-xx-ZgJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5QV-T7-QXz"/>
                     <constraint firstAttribute="trailingMargin" secondItem="5RX-wf-Q7M" secondAttribute="trailing" constant="10" id="91w-Jk-acK"/>
+                    <constraint firstAttribute="bottom" secondItem="x2U-xx-ZgJ" secondAttribute="bottom" id="94b-gU-NtK"/>
+                    <constraint firstItem="x2U-xx-ZgJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MGP-zw-2gB"/>
+                    <constraint firstAttribute="trailing" secondItem="x2U-xx-ZgJ" secondAttribute="trailing" constant="8" id="W7Y-wU-TyX"/>
                     <constraint firstItem="hvk-KY-6he" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="eAO-QB-Ncw"/>
-                    <constraint firstAttribute="trailing" secondItem="x2U-xx-ZgJ" secondAttribute="trailing" constant="8" id="mTc-1Y-Etk"/>
-                    <constraint firstItem="x2U-xx-ZgJ" firstAttribute="top" secondItem="5RX-wf-Q7M" secondAttribute="bottom" constant="35" id="qnm-Pp-ys3"/>
                     <constraint firstItem="hvk-KY-6he" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wnX-B7-jhj"/>
                     <constraint firstItem="5RX-wf-Q7M" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="y49-rp-btF"/>
                 </constraints>

@@ -8,6 +8,8 @@
 
 #import "SettingPayCodeViewController.h"
 #import "WTCAddBankCardViewController.h"
+#import "WTCSetPayPasswdRequest.h"
+#import "WTCSetPayPasswdResult.h"
 @interface SettingPayCodeViewController ()
 {
     
@@ -75,6 +77,20 @@
 */
 
 - (IBAction)ConfirmButtonClick:(id)sender {
+    NSString *payPasswd = _password.textField.text;
+    NSString *setPasswdToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+     WTCSetPayPasswdRequest*request = [[WTCSetPayPasswdRequest alloc]initSetPayPasswd:payPasswd Token:setPasswdToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCSetPayPasswdResult *setPayPasswdResult = [request getResponse].data;
+
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
     if (_CashHasNameSetpassword == YES) {
         WTCAddBankCardViewController *addCardViewCon = [WTCAddBankCardViewController new];
         addCardViewCon.CashHasNameNoPassword = YES;

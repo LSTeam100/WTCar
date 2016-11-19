@@ -6,9 +6,9 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WTCBaseViewController.h"
 
-@interface WTCGetPOSNotOpenViewController : UIViewController
+@interface WTCGetPOSNotOpenViewController : WTCBaseViewController
 //开通POS
 - (IBAction)GetPOSToOpenButtonClick:(id)sender;
 

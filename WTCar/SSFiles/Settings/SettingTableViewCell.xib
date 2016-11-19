@@ -34,17 +34,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dou-6c-gUL">
                         <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="ruj-bw-Fxv"/>
+                            <constraint firstAttribute="height" constant="1" id="QbF-39-D2L"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="dou-6c-gUL" secondAttribute="trailing" constant="8" id="0tf-Xz-Lee"/>
                     <constraint firstItem="dNA-pe-GyF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8mE-Y1-3bf"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Fb4-85-W0W" secondAttribute="trailing" constant="10" id="A4J-HL-6tw"/>
-                    <constraint firstItem="dou-6c-gUL" firstAttribute="top" secondItem="Fb4-85-W0W" secondAttribute="bottom" constant="35" id="E8g-ee-Vv2"/>
-                    <constraint firstAttribute="trailing" secondItem="dou-6c-gUL" secondAttribute="trailing" constant="8" id="M20-Mf-gmS"/>
-                    <constraint firstItem="dou-6c-gUL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MCH-3B-vZ5"/>
                     <constraint firstItem="Fb4-85-W0W" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RZs-7g-KaM"/>
+                    <constraint firstAttribute="bottom" secondItem="dou-6c-gUL" secondAttribute="bottom" id="Zho-9t-Tuz"/>
+                    <constraint firstItem="dou-6c-gUL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hTb-dU-uGY"/>
                     <constraint firstItem="dNA-pe-GyF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="ipM-6G-cUU"/>
                 </constraints>
             </tableViewCellContentView>

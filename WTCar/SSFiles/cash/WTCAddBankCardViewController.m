@@ -9,6 +9,8 @@
 #import "WTCAddBankCardViewController.h"
 #import "WTCCashWithCardNameViewController.h"
 #import "WTCCashToPasswordViewController.h"
+#import "WTCBindBankCardRequest.h"
+#import "MBProgressHUD.h"
 @interface WTCAddBankCardViewController ()
 
 @end
@@ -34,9 +36,26 @@
     _AddBankHasPasswordNoName = NO;
     _AddBankHasNameAndPassword = NO;
 }
-
+//绑定银行卡
+-(void)BindBankCardRequest
+{
+    NSString *bankCard = _BankCardTextField.text;
+    NSString *openCardAddress = _openBankCardAddressTextField.text;
+    [self setBusyIndicatorVisible:YES];
+    WTCBindBankCardRequest *request = [[WTCBindBankCardRequest alloc]initWithBindBankCard:bankCard openedBank:openCardAddress  successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        NSObject *Result = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
 -(void)GotoCashViewCon
 {
+    [self BindBankCardRequest];
     if (_CashHasNameNoPassword == YES) {
         WTCCashWithCardNameViewController *cashViewCon = [WTCCashWithCardNameViewController new];
         cashViewCon.CashHasPasswordAndName = NO;

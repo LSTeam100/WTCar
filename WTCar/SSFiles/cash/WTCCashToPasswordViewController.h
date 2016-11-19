@@ -22,5 +22,5 @@
  */
 @property(nonatomic,retain)TTPasswordView *password;
 @property (weak, nonatomic) IBOutlet UIButton *ConfirmCashButton;
-
+@property (nonatomic,strong)NSString *cashNum;
 @end

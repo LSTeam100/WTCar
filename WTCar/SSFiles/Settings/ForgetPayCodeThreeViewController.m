@@ -7,7 +7,9 @@
 //
 
 #import "ForgetPayCodeThreeViewController.h"
-
+#import "WTCForgetPayPasswdResult.h"
+#import "WTCForgetPayPasswdRequest.h"
+#import "MBProgressHUD.h"
 @interface ForgetPayCodeThreeViewController ()
 
 @end
@@ -36,7 +38,19 @@
 
 -(void)confirmNewCode
 {
-   
+    NSString *payPasswd = _password2.textField.text;
+    [self setBusyIndicatorVisible:YES];
+    WTCForgetPayPasswdRequest*request = [[WTCForgetPayPasswdRequest alloc]initWithCode:_verityCode payPassword:payPasswd  successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCForgetPayPasswdResult *forgetPayPasswdResult = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

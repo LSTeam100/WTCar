@@ -37,4 +37,6 @@
 
 - (IBAction)SaveCarShopNameButtonClick:(id)sender {
 }
+- (IBAction)DeleShopNameButtonClick:(id)sender {
+}
 @end

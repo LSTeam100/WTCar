@@ -6,11 +6,12 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import"WTCBaseViewController.h"
 
-@interface AddChildAccountViewController : UIViewController
+@interface AddChildAccountViewController : WTCBaseViewController
 @property (weak, nonatomic) IBOutlet UITextField *TeleNumTextField;
 @property (weak, nonatomic) IBOutlet UITextField *ChildAccountNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *AddChildAccountButton;
+
 
 @end

@@ -9,6 +9,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgetPayCodeSecViewController">
             <connections>
                 <outlet property="NextToThreeButton" destination="0KX-tD-8cZ" id="vpC-1Z-Lg7"/>
+                <outlet property="getVerityCodeButton" destination="ghx-Hh-2Id" id="6mN-Ez-stK"/>
+                <outlet property="verityCodeTextField" destination="h06-Eg-zib" id="eDB-Z8-h8X"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

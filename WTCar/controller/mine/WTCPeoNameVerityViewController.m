@@ -7,7 +7,9 @@
 //
 
 #import "WTCPeoNameVerityViewController.h"
-
+#import "WTCApplyNameVerifiedRequest.h"
+#import "WTCApplyNameVerifiedResult.h"
+#import "MBProgressHUD.h"
 @interface WTCPeoNameVerityViewController ()
 
 @end
@@ -36,5 +38,19 @@
 */
 
 - (IBAction)ConfirmNameButtonClick:(id)sender {
+    NSString *applyNameToken = [[CommonVar sharedInstance] getLoginToken];
+    NSString *realname = _realNameTextField.text;
+    NSString *Idcard = _IdcardTextField.text;
+    [self setBusyIndicatorVisible:YES];
+    WTCApplyNameVerifiedRequest *request = [[WTCApplyNameVerifiedRequest alloc]initWithIdcard:Idcard realName:realname Token:applyNameToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCApplyNameVerifiedResult *applyNameResult = [request getResponse].data;
+
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
 }
 @end

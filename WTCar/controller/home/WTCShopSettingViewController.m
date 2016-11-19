@@ -10,6 +10,11 @@
 #import "WTCMyDetailViewController.h"
 #import "ShopSettingTableViewCell.h"
 #import "ShopSettingView.h"
+#import "WTCGetShopInfoResult.h"
+#import "WTCGetShopInfoRequest.h"
+#import "MBProgressHUD.h"
+#import "WTCChangeShopInfoResult.h"
+#import "WTCChangeShopInfoRequest.h"
 @interface WTCShopSettingViewController ()
 @property(strong,nonatomic)ShopSettingView *shopsettingView;
 @end
@@ -25,6 +30,37 @@
 }
 -(void)dataInit{
    
+}
+
+-(void)getShopInfoRequest{
+    NSString *getShopInfoToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCGetShopInfoRequest *request = [[WTCGetShopInfoRequest alloc]initWithToken:getShopInfoToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetShopInfoResult *getShopInfoResult = [request getResponse].data;
+        NSString *mobile = getShopInfoResult.mobile;
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
+}
+//修改店铺信息提交
+-(void)changeShopInfoRequest{
+    NSString *changeShopInfoToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCChangeShopInfoRequest *request = [[WTCChangeShopInfoRequest alloc]initWithmerchanAddress:_merchantAddress merchanDescr:_merchantDescr merchanImage_path:_merchantImage_path merchanName:_merchantName mobile:_mobile nick:_nick token:changeShopInfoToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCChangeShopInfoResult *changeShopInfoResult = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
 }
 
 -(void)makeShopSettingView

@@ -10,5 +10,6 @@
 
 @interface WTCCarShopIntroductionViewController : UIViewController
 - (IBAction)SaveCarShopIntroButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *ShopIntroTextView;
 
 @end

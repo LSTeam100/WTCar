@@ -10,6 +10,7 @@
 #import "define.h"
 #import "TTPasswordView.h"
 @interface ForgetPayCodeThreeViewController : WTCBaseViewController
+@property(nonatomic,strong) NSString *verityCode;
 @property (weak, nonatomic) IBOutlet UIButton *confirmNewCodeButton;
 /**
  *   密码框

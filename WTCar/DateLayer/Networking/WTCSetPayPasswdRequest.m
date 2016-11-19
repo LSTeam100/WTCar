@@ -6,15 +6,15 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCSetPayPasswdRequest .h"
+#import "WTCSetPayPasswdRequest.h"
 @implementation WTCSetPayPasswdRequest 
 
--(id)initSetPayPasswd:(NSString *)payPassword  successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
+-(id)initSetPayPasswd:(NSString *)payPassword Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
     self=[super initWithSuccessCallback:success
                         failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"nwPayPassword":payPassword};
+        NSDictionary *parameters=@{@"payPassword":payPassword,@"token":token};
         [self setParameters:parameters];
     }
     return self;

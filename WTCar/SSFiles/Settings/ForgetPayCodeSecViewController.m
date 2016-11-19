@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_getVerityCodeButton addTarget:self action:@selector(getVerityCodeButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
     [_NextToThreeButton addTarget:self action:@selector(ToThreeClick) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
 }
@@ -23,9 +25,12 @@
 -(void)ToThreeClick
 {
     ForgetPayCodeThreeViewController *forgetPayThreeViewCon = [ForgetPayCodeThreeViewController new];
+    forgetPayThreeViewCon.verityCode = _verityCodeTextField.text;
     [self.navigationController pushViewController:forgetPayThreeViewCon animated:YES];
 }
-
+-(void)getVerityCodeButtonClick{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

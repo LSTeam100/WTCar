@@ -1,27 +1,27 @@
 //
-//  WTCChangePOSPassWordRequest.m
+//  WTCGetUserInfoRequest.m
 //  WTCar
 //
-//  Created by MacBookPro on 2016/11/16.
+//  Created by MacBookPro on 2016/11/19.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCChangePOSPassWordRequest.h"
-#import "WTCChangePOSPassWordResult.h"
-@implementation WTCChangePOSPassWordRequest
--(id)initWithNewPosLoginPasswd:(NSString *)newPosLoginPasswd PosLoginPasswd:(NSString *)posLoginPasswd Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
+#import "WTCGetUserInfoRequest.h"
+#import "WTCGetUserInfoResult.h"
+@implementation WTCGetUserInfoRequest
+-(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
     self=[super initWithSuccessCallback:success
                         failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"newPosLoginPasswd":newPosLoginPasswd,@"posLoginPasswd":posLoginPasswd,@"token":token};
+        NSDictionary *parameters=@{@"token":token};
         [self setParameters:parameters];
     }
     return self;
 }
 
 -(NSString *)getURL{
-    return @"/upPosPwd.do";
+    return @"/getUserInfo.do";
 }
 
 -(NSString *)getMethod{
@@ -33,11 +33,10 @@
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCChangePOSPassWordResult *result=[[WTCChangePOSPassWordResult alloc]init];
+            WTCGetUserInfoResult *result=[[WTCGetUserInfoResult alloc]init];
             
             [self getResponse].data=result;
         }
     }
 }
-
 @end
