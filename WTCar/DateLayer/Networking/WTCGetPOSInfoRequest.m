@@ -33,11 +33,11 @@
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
             WTCGetPOSInfoResult *result=[[WTCGetPOSInfoResult alloc]init];
             result.accountId = data[@"accountId"];
-            result.applySatus = data[@"applyStatus"];
+            result.applySatus = data[@"applySatus"];
             result.createTime = data[@"createTime"];
             result.Id = data[@"id"];
             result.openStatus = data[@"openStatus"];
-            result.posloginAccount = data[@"posloginAccount"];
+            result.posloginAccount = data[@"posLoginAccount"];
             result.possSn = data[@"posSn"];
             result.updateTime = data[@"updateTime"];
             [self getResponse].data=result;

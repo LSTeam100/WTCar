@@ -22,6 +22,7 @@
 #import "MBProgressHUD.h"
 #import "WTCBannerRequest.h"
 #import "WTCBanner.h"
+#import "WTCPOSHasOpenedViewController.h"
 @interface WTCHomeViewController ()
 {
     CGFloat carouselHeight;
@@ -306,23 +307,41 @@
 -(void)ShangJPosButtonClick
 {
     NSString *getPosToken = [[CommonVar sharedInstance]getLoginToken];
+    [self setBusyIndicatorVisible:YES];
     WTCGetPOSInfoRequest *request = [[WTCGetPOSInfoRequest alloc]initWithToken:getPosToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         
         WTCGetPOSInfoResult *getPosResult = [request getResponse].data;
+        if (getPosResult == NULL || getPosResult == nil) {
+            WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
+            NotGetPosViewController.posFag = 0;
+            [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+        }
         
-        
-        
-        NSNumber *applysatus = getPosResult.applySatus;
-        NSNumber *opensatus = getPosResult.openStatus;
-        NSNumber *Id = getPosResult.Id;
-        NSNumber *accounid = getPosResult.accountId;
-        NSString *posloginAccount = getPosResult.posloginAccount;
-        NSString *posSn = getPosResult.possSn;
-        NSString *creatTime = getPosResult.createTime;
-        NSString *updataTime = getPosResult.updateTime;
-        WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
-        [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+        else
+        {
+            int applyStatus = [getPosResult.applySatus intValue];
+            int openStatus = [getPosResult.openStatus intValue];
+            if (applyStatus == 1) {
+                WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
+                NotGetPosViewController.posFag = 1;
+                [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+            }
+            else if (applyStatus == 2)
+            {
+                if (openStatus == 1) {
+                    WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
+                    NotGetPosViewController.posFag = 2;
+                    [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+                }
+                else
+                {
+                    WTCPOSHasOpenedViewController *controller = [[WTCPOSHasOpenedViewController alloc]init];
+                    [self.navigationController pushViewController:controller animated:YES];
+                }
+                
+            }
+        }
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];

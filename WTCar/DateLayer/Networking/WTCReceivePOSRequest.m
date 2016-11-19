@@ -11,12 +11,11 @@
 @implementation WTCReceivePOSRequest
 
 -(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"token":token};
-        [self setParameters:parameters];
+//        NSDictionary *parameters=@{@"token":token};
+//        [self setParameters:parameters];
     }
     return self;
 }
@@ -34,9 +33,9 @@
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCReceivePOSResult *result=[[WTCReceivePOSResult alloc]init];
+//            WTCReceivePOSResult *result=[[WTCReceivePOSResult alloc]init];
 
-            [self getResponse].data=result;
+            [self getResponse].data=data;
         }
     }
 }

@@ -11,6 +11,8 @@
 #import "WTCOpenPOSRequest.h"
 #import "WTCOpenPOSResult.h"
 #import "MBProgressHUD.h"
+#import "WTCGetPOSInfoRequest.h"
+#import "WTCGetPOSInfoResult.h"
 @interface WTCPOSToOpenViewController ()
 
 @end
@@ -19,7 +21,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"POS机开通";
+    [self getPOSInfo];
     // Do any additional setup after loading the view from its nib.
+}
+-(void)getPOSInfo
+{
+    NSString *getPosToken = [[CommonVar sharedInstance]getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCGetPOSInfoRequest *request = [[WTCGetPOSInfoRequest alloc]initWithToken:getPosToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetPOSInfoResult *getPosResult = [request getResponse].data;
+        if (getPosResult == NULL || getPosResult == nil) {
+        }
+        else
+        {
+            
+            self.POSIDTextField.text = getPosResult.posloginAccount;
+        }
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +71,7 @@
     WTCOpenPOSRequest *request = [[WTCOpenPOSRequest alloc]initWithPosLoginPasswd:posLoginPasswd Token:receivePosToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         
-        WTCOpenPOSRequest *openPosResult = [request getResponse].data;
+//        WTCOpenPOSRequest *openPosResult = [request getResponse].data;
         
         WTCPOSHasOpenedViewController *POSHasOpenViewCon = [WTCPOSHasOpenedViewController new];
         [self.navigationController pushViewController:POSHasOpenViewCon animated:YES];

@@ -8,6 +8,8 @@
 
 #import "WTCPOSHasOpenedViewController.h"
 #import "WTCPOSChangePasswordViewController.h"
+#import "WTCGetPOSInfoResult.h"
+#import "WTCGetPOSInfoRequest.h"
 @interface WTCPOSHasOpenedViewController ()
 
 @end
@@ -16,7 +18,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title =@"商家POS";
+    [self getPOSInfo];
     // Do any additional setup after loading the view from its nib.
+}
+-(void)getPOSInfo
+{
+    NSString *getPosToken = [[CommonVar sharedInstance]getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCGetPOSInfoRequest *request = [[WTCGetPOSInfoRequest alloc]initWithToken:getPosToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCGetPOSInfoResult *getPosResult = [request getResponse].data;
+        if (getPosResult == NULL || getPosResult == nil) {
+        }
+        else
+        {
+            
+            self.POSIDLabel.text = getPosResult.posloginAccount;
+            self.POSSNLabel.text = getPosResult.possSn;
+        }
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+    
 }
 
 - (void)didReceiveMemoryWarning {
