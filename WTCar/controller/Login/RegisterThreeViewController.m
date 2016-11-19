@@ -52,7 +52,7 @@
     
     NSString *mobilePhone = self.TeleNumTextField.text;
     NSString *password = self.passWordTextField.text;
-    NSString *VerityCode = self.verityCodeTextfield.text;
+    NSString *VerityCode = _verityCode;
     NSString *carType = self.carTypeTextField.text;
     if (self.TeleNumTextField.text.length == 0) {
         

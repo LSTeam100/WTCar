@@ -41,6 +41,7 @@
 
 - (IBAction)SubmitButtonClick:(id)sender {
     RegisterThreeViewController *regisThreeViewCon = [RegisterThreeViewController new];
+    regisThreeViewCon.verityCode = _verityCodeTextField.text;
     [self.navigationController pushViewController:regisThreeViewCon animated:YES];
 }
 @end
