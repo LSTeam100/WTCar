@@ -56,6 +56,11 @@
                         <constraint firstAttribute="height" constant="1" id="phX-tV-7Nq"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBs-Ar-MPv">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Bfy-L7-w9y"/>
+                    </constraints>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -63,24 +68,28 @@
                 <constraint firstAttribute="trailing" secondItem="DhC-X2-Kj3" secondAttribute="trailing" constant="8" id="BtP-RR-eN5"/>
                 <constraint firstItem="ec9-ZJ-5jP" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="CgC-4C-cfD"/>
                 <constraint firstItem="DhC-X2-Kj3" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="8" id="DSh-XN-Dy8"/>
+                <constraint firstAttribute="trailing" secondItem="TBs-Ar-MPv" secondAttribute="trailing" constant="16" id="L09-Ey-Gp6"/>
                 <constraint firstItem="DhC-X2-Kj3" firstAttribute="top" secondItem="G0g-m2-VM7" secondAttribute="bottom" constant="11" id="Lfc-75-BIE"/>
                 <constraint firstItem="G0g-m2-VM7" firstAttribute="centerY" secondItem="ec9-ZJ-5jP" secondAttribute="centerY" id="NAF-MD-t2k"/>
                 <constraint firstItem="7oy-Aw-VCO" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="Qvj-nk-mJ7"/>
                 <constraint firstItem="woT-Rk-Wci" firstAttribute="top" secondItem="DhC-X2-Kj3" secondAttribute="bottom" constant="5" id="R0N-Gy-Mc2"/>
                 <constraint firstItem="woT-Rk-Wci" firstAttribute="leading" secondItem="7oy-Aw-VCO" secondAttribute="trailing" constant="59" id="SEH-xK-Zah"/>
                 <constraint firstItem="7oy-Aw-VCO" firstAttribute="centerY" secondItem="woT-Rk-Wci" secondAttribute="centerY" constant="0.5" id="UI0-5B-1Qr"/>
+                <constraint firstItem="TBs-Ar-MPv" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="16" id="XDs-YI-WFy"/>
                 <constraint firstItem="S5p-iu-Bfc" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="8" id="YH8-sr-NaR"/>
                 <constraint firstItem="G0g-m2-VM7" firstAttribute="leading" secondItem="Do2-DM-izg" secondAttribute="leading" constant="65" id="Z4a-ue-Srp"/>
                 <constraint firstAttribute="trailing" secondItem="S5p-iu-Bfc" secondAttribute="trailing" constant="8" id="iSz-jM-3Na"/>
                 <constraint firstItem="S5p-iu-Bfc" firstAttribute="top" secondItem="woT-Rk-Wci" secondAttribute="bottom" constant="4" id="mnM-6d-YGz"/>
                 <constraint firstItem="G0g-m2-VM7" firstAttribute="top" secondItem="Do2-DM-izg" secondAttribute="top" constant="6" id="p18-vH-vlo"/>
+                <constraint firstItem="TBs-Ar-MPv" firstAttribute="centerY" secondItem="7oy-Aw-VCO" secondAttribute="centerY" constant="2" id="p2c-8q-3AV"/>
             </constraints>
             <connections>
+                <outlet property="GotoMapViewButton" destination="TBs-Ar-MPv" id="LK9-6j-WJy"/>
                 <outlet property="ShopAddressLabel" destination="7oy-Aw-VCO" id="f52-ti-3fO"/>
                 <outlet property="ShopOwenerNameLabel" destination="ec9-ZJ-5jP" id="Way-lS-Iqn"/>
                 <outlet property="ShopOwenerTeleNumLabel" destination="G0g-m2-VM7" id="WL4-tG-VEP"/>
             </connections>
-            <point key="canvasLocation" x="60" y="44"/>
+            <point key="canvasLocation" x="59.5" y="43.5"/>
         </view>
     </objects>
     <resources>

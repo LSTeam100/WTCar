@@ -7,7 +7,7 @@
 //
 
 #import "ShopSettingView.h"
-
+#import "WTCMapViewController.h"
 @implementation ShopSettingView
 
 /*
@@ -17,5 +17,6 @@
     // Drawing code
 }
 */
+
 
 @end

@@ -225,6 +225,7 @@
 		048DB0AE1DDF555100B31CF4 /* WTCForgetPayPasswdResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DB0AD1DDF555100B31CF4 /* WTCForgetPayPasswdResult.m */; };
 		048DB0B11DE01E2F00B31CF4 /* WTCGetUserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DB0B01DE01E2F00B31CF4 /* WTCGetUserInfoRequest.m */; };
 		048DB0B41DE0B20D00B31CF4 /* WTCChekVerityCodeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DB0B31DE0B20D00B31CF4 /* WTCChekVerityCodeRequest.m */; };
+		04AD151F1DE16F0E005E8BF0 /* WTCChangePayPwdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD151E1DE16F0E005E8BF0 /* WTCChangePayPwdRequest.m */; };
 		04FAB32B1DD2297000E3D969 /* ChangePayCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAB3291DD2297000E3D969 /* ChangePayCodeViewController.m */; };
 		04FAB32C1DD2297000E3D969 /* ChangePayCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FAB32A1DD2297000E3D969 /* ChangePayCodeViewController.xib */; };
 		04FAB3301DD2298E00E3D969 /* ForgetPayCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAB32E1DD2298E00E3D969 /* ForgetPayCodeViewController.m */; };
@@ -839,6 +840,8 @@
 		048DB0B01DE01E2F00B31CF4 /* WTCGetUserInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCGetUserInfoRequest.m; sourceTree = "<group>"; };
 		048DB0B21DE0B20D00B31CF4 /* WTCChekVerityCodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCChekVerityCodeRequest.h; sourceTree = "<group>"; };
 		048DB0B31DE0B20D00B31CF4 /* WTCChekVerityCodeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCChekVerityCodeRequest.m; sourceTree = "<group>"; };
+		04AD151D1DE16F0E005E8BF0 /* WTCChangePayPwdRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCChangePayPwdRequest.h; sourceTree = "<group>"; };
+		04AD151E1DE16F0E005E8BF0 /* WTCChangePayPwdRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCChangePayPwdRequest.m; sourceTree = "<group>"; };
 		04FAB3281DD2297000E3D969 /* ChangePayCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePayCodeViewController.h; sourceTree = "<group>"; };
 		04FAB3291DD2297000E3D969 /* ChangePayCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePayCodeViewController.m; sourceTree = "<group>"; };
 		04FAB32A1DD2297000E3D969 /* ChangePayCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePayCodeViewController.xib; sourceTree = "<group>"; };
@@ -2588,6 +2591,8 @@
 				048DB0AA1DDF553400B31CF4 /* WTCForgetPayPasswdRequest.m */,
 				048DB0AF1DE01E2F00B31CF4 /* WTCGetUserInfoRequest.h */,
 				048DB0B01DE01E2F00B31CF4 /* WTCGetUserInfoRequest.m */,
+				04AD151D1DE16F0E005E8BF0 /* WTCChangePayPwdRequest.h */,
+				04AD151E1DE16F0E005E8BF0 /* WTCChangePayPwdRequest.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -3159,6 +3164,7 @@
 				1836DEED1DC1FA81005C5A9E /* ACEExpandableTextCell.m in Sources */,
 				18D883821DBB49F500F19129 /* UIView+WebCacheOperation.m in Sources */,
 				18D883AE1DBC738E00F19129 /* MultiTablesView.m in Sources */,
+				04AD151F1DE16F0E005E8BF0 /* WTCChangePayPwdRequest.m in Sources */,
 				048DB0561DDF2F2D00B31CF4 /* WTCIsBindCardResult.m in Sources */,
 				185EAF4E1DC5A369008C1471 /* WTCCommitBuyCarMoneyTableViewCell.m in Sources */,
 				048DB0901DDF2F3A00B31CF4 /* WTCGetPOSInfoRequest.m in Sources */,

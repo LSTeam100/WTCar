@@ -7,7 +7,7 @@
 //
 
 #import "ChangePayCodeViewController.h"
-//#import "WTCChangePayPasswdRequest.h"
+#import "WTCChangePayPwdRequest.h"
 #import "WTCChangePayPasswdResult.h"
 #import "MBProgressHUD.h"
 @interface ChangePayCodeViewController ()
@@ -24,22 +24,22 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-//-(void)changePayPasswdButtonClick{
-//    NSString *nwPayPasswd = _password2.textField.text;
-//    NSString *oldPayPasswd = _password.textField.text;
-//    [self setBusyIndicatorVisible:YES];
-//    WTCChangePayPasswdRequest*request = [[WTCChangePayPasswdRequest alloc]initChangePayPasswd:nwPayPasswd payPassword:oldPayPasswd successCallback:^(WTCarBaseRequest *request) {
-//        [self setBusyIndicatorVisible:NO];
-//        
-//        WTCChangePayPasswdResult *setPayPasswdResult = [request getResponse].data;
-//        
-//    } failureCallback:^(WTCarBaseRequest *request) {
-//        [self setBusyIndicatorVisible:NO];
-//        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
-//    }];
-//    [request start];
-//
-//}
+-(void)changePayPasswdButtonClick{
+    NSString *nwPayPasswd = _password2.textField.text;
+    NSString *oldPayPasswd = _password.textField.text;
+    [self setBusyIndicatorVisible:YES];
+    WTCChangePayPwdRequest*request = [[WTCChangePayPwdRequest alloc]initChangePayPasswd:nwPayPasswd payPassword:oldPayPasswd successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCChangePayPasswdResult *setPayPasswdResult = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+
+}
 
 //加载密码输入框
 -(void)addsubview

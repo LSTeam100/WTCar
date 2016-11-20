@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/Login/ResgisterSecondViewController.m"
-            timestampString = "501300544.594847"
+            timestampString = "501312364.686231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -122,99 +122,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
-            timestampString = "501305486.004239"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-getBankInfoRequest"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WTCCashWithCardNameViewController getBankInfoRequest]"
-                  moduleName = "WTCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
-                  timestampString = "501305486.534313"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "282">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__55-[WTCCashWithCardNameViewController getBankInfoRequest]_block_invoke"
-                  moduleName = "WTCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
-                  timestampString = "501305486.536685"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "165">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "WTCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
-                  timestampString = "501305486.539097"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "WTCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
-                  timestampString = "501305486.541151"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "29">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__55-[WTCCashWithCardNameViewController getBankInfoRequest]_block_invoke.19"
-                  moduleName = "WTCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
-                  timestampString = "501305486.543127"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
             timestampString = "501305488.107622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -247,7 +154,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/bankcard/WTCMyBankCardViewController.m"
-                  timestampString = "501305533.696241"
+                  timestampString = "501318927.779073"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -262,7 +169,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/bankcard/WTCMyBankCardViewController.m"
-                  timestampString = "501305533.700226"
+                  timestampString = "501318927.78081"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -285,6 +192,134 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "-getBankInfoRequest"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/DateLayer/Networking/WTCGetBankCardInfoRequest.m"
+            timestampString = "501310513.451794"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-processResponse:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/SSFiles/Settings/SettingPayCodeViewController.m"
+            timestampString = "501312713.68039"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-ConfirmButtonClick:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SettingPayCodeViewController ConfirmButtonClick:]"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/Settings/SettingPayCodeViewController.m"
+                  timestampString = "501318927.79069"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "246">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[SettingPayCodeViewController ConfirmButtonClick:]_block_invoke"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/Settings/SettingPayCodeViewController.m"
+                  timestampString = "501318927.792352"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
+            timestampString = "501316756.755374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-applyCashRequest"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WTCCashWithCardNameViewController applyCashRequest]"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
+                  timestampString = "501318927.796663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__53-[WTCCashWithCardNameViewController applyCashRequest]_block_invoke"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
+                  timestampString = "501318927.798422"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/SSFiles/cash/WTCCashWithCardNameViewController.m"
+            timestampString = "501317021.17977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-applyCashRequest"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

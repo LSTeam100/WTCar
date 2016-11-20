@@ -32,6 +32,7 @@
         
         WTCVerifyCode *result = [request getResponse].data;
         _verityCodeTextField.text = result.validationCode;
+        [_verityCodeTextField reloadInputViews];
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
@@ -44,6 +45,7 @@
 -(void)checkCodeRequest
 {
     NSString *code = _verityCodeTextField.text;
+    
     NSString *account = _teleNum;
     [self setBusyIndicatorVisible:YES];
      WTCChekVerityCodeRequest*request = [[WTCChekVerityCodeRequest alloc]initWithLoginName:account Code:code  successCallback:^(WTCarBaseRequest *request) {

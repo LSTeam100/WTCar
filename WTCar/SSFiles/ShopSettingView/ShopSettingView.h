@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *ShopOwenerTeleNumLabel;
 //店铺地址
 @property (weak, nonatomic) IBOutlet UILabel *ShopAddressLabel;
+@property (weak, nonatomic) IBOutlet UIButton *GotoMapViewButton;
 
 @end
