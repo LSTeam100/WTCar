@@ -46,8 +46,8 @@
         {
             self.status = [NSNumber numberWithDouble:0];
         }
-        if ( [dataDic objectForKey:@"updataTime"]) {
-            self.updateTime = [dataDic objectForKey:@"updataTime"];
+        if ( [dataDic objectForKey:@"updateTime"]) {
+            self.updateTime = [dataDic objectForKey:@"updateTime"];
         }
         else
         {

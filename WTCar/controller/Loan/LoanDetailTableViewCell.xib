@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="407" height="62"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="407" height="62"/>
+                <frame key="frameInset" width="407" height="61"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配资中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gh-wt-k2z">
@@ -26,10 +26,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-8-12-12：55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-fC-GLt">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="140" id="xRr-EX-bLE"/>
-                            <constraint firstAttribute="height" constant="21" id="znv-eY-TaK"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -47,10 +43,10 @@
                 <constraints>
                     <constraint firstItem="BUn-Ed-ZIC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-0.25" id="16R-UU-jgv"/>
                     <constraint firstItem="BUn-Ed-ZIC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="31" id="OgZ-X6-2e1"/>
-                    <constraint firstItem="NE5-fC-GLt" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cRX-9R-qTj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="9Gh-wt-k2z" secondAttribute="trailing" constant="40" id="dnE-RN-eyz"/>
                     <constraint firstItem="9Gh-wt-k2z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="eIJ-4m-Osr"/>
-                    <constraint firstItem="NE5-fC-GLt" firstAttribute="top" secondItem="9Gh-wt-k2z" secondAttribute="bottom" constant="4" id="x5s-T6-ynC"/>
+                    <constraint firstAttribute="bottom" secondItem="NE5-fC-GLt" secondAttribute="bottom" constant="5" id="ucN-qT-y0O"/>
+                    <constraint firstAttribute="trailing" secondItem="NE5-fC-GLt" secondAttribute="trailing" constant="10" id="xNf-N7-qeS"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
