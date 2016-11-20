@@ -340,6 +340,9 @@
 		18850B7F1DCED65B00DA8F47 /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18850B7D1DCED65B00DA8F47 /* CategoryTableViewCell.m */; };
 		18850B801DCED65B00DA8F47 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18850B7E1DCED65B00DA8F47 /* CategoryTableViewCell.xib */; };
 		1897AA431DD992CA00A29912 /* WTCProfileImageUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897AA421DD992CA00A29912 /* WTCProfileImageUploadRequest.m */; };
+		18ACFC1D1DE195130083F736 /* WTCUpdatePayPasswdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ACFC191DE195130083F736 /* WTCUpdatePayPasswdRequest.m */; };
+		18ACFC1E1DE195130083F736 /* WTCCarDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ACFC1B1DE195130083F736 /* WTCCarDetailRequest.m */; };
+		18ACFC211DE195210083F736 /* WTCarDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ACFC1F1DE195210083F736 /* WTCarDetailModel.m */; };
 		18ADE8C11DCC63F4009062F6 /* HomeNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */; };
 		18ADE8C31DCC641F009062F6 /* HomeNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */; };
 		18ADE8CF1DCC760B009062F6 /* WTCHotBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE8CD1DCC760B009062F6 /* WTCHotBrandTableViewCell.m */; };
@@ -1039,6 +1042,12 @@
 		18850B7E1DCED65B00DA8F47 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		1897AA411DD992CA00A29912 /* WTCProfileImageUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCProfileImageUploadRequest.h; sourceTree = "<group>"; };
 		1897AA421DD992CA00A29912 /* WTCProfileImageUploadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCProfileImageUploadRequest.m; sourceTree = "<group>"; };
+		18ACFC191DE195130083F736 /* WTCUpdatePayPasswdRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCUpdatePayPasswdRequest.m; sourceTree = "<group>"; };
+		18ACFC1A1DE195130083F736 /* WTCUpdatePayPasswdRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCUpdatePayPasswdRequest.h; sourceTree = "<group>"; };
+		18ACFC1B1DE195130083F736 /* WTCCarDetailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCCarDetailRequest.m; sourceTree = "<group>"; };
+		18ACFC1C1DE195130083F736 /* WTCCarDetailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCCarDetailRequest.h; sourceTree = "<group>"; };
+		18ACFC1F1DE195210083F736 /* WTCarDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarDetailModel.m; sourceTree = "<group>"; };
+		18ACFC201DE195210083F736 /* WTCarDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCarDetailModel.h; sourceTree = "<group>"; };
 		18ADE8BF1DCC63F4009062F6 /* HomeNavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationBarView.h; sourceTree = "<group>"; };
 		18ADE8C01DCC63F4009062F6 /* HomeNavigationBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationBarView.m; sourceTree = "<group>"; };
 		18ADE8C21DCC641F009062F6 /* HomeNavigationBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavigationBarView.xib; sourceTree = "<group>"; };
@@ -2388,6 +2397,8 @@
 		18F80EB41DB5F5C400FF1830 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18ACFC1F1DE195210083F736 /* WTCarDetailModel.m */,
+				18ACFC201DE195210083F736 /* WTCarDetailModel.h */,
 				1828D14F1DE098A4000B60F8 /* WTCBanner.m */,
 				1828D1501DE098A4000B60F8 /* WTCBanner.h */,
 				048DB01F1DDF2F2D00B31CF4 /* WTCApplyBusinessLicenseResult.h */,
@@ -2475,6 +2486,10 @@
 		18F80EB51DB5F5C400FF1830 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				18ACFC191DE195130083F736 /* WTCUpdatePayPasswdRequest.m */,
+				18ACFC1A1DE195130083F736 /* WTCUpdatePayPasswdRequest.h */,
+				18ACFC1B1DE195130083F736 /* WTCCarDetailRequest.m */,
+				18ACFC1C1DE195130083F736 /* WTCCarDetailRequest.h */,
 				1828D14C1DE0988A000B60F8 /* WTCBannerRequest.m */,
 				1828D14D1DE0988A000B60F8 /* WTCBannerRequest.h */,
 				048DB05B1DDF2F3A00B31CF4 /* WTCApplyBusinessLicenseRequest.h */,
@@ -3022,6 +3037,7 @@
 				18D883751DBB49F500F19129 /* NSData+ImageContentType.m in Sources */,
 				18BF6F3B1DC1DB7C003BF410 /* SafeControl.m in Sources */,
 				0451EDF81DBE3B720026D046 /* SettingViewController.m in Sources */,
+				18ACFC211DE195210083F736 /* WTCarDetailModel.m in Sources */,
 				045F352E1DD4CD7B00CDD473 /* ChildAccountTableViewCell.m in Sources */,
 				04FAB32B1DD2297000E3D969 /* ChangePayCodeViewController.m in Sources */,
 				043564E31DC72799008B1B5F /* WTCUserNameViewController.m in Sources */,
@@ -3091,6 +3107,7 @@
 				18D883461DBB49B200F19129 /* MJRefreshGifFooter.m in Sources */,
 				18BF6F321DC1DB7C003BF410 /* KKAreaPicker.m in Sources */,
 				045F34FA1DD348F200CDD473 /* WTCReqCarInfoRequest.m in Sources */,
+				18ACFC1E1DE195130083F736 /* WTCCarDetailRequest.m in Sources */,
 				18044E7F1DDCB3FA009599DC /* WTCToPayList.m in Sources */,
 				1841A97B1DDE11740050ECB4 /* WTCPayDetail.m in Sources */,
 				1841A9721DDE07F70050ECB4 /* WTCGetPayedListRequest.m in Sources */,
@@ -3104,6 +3121,7 @@
 				18F80E851DB5F30400FF1830 /* AppDelegate.mm in Sources */,
 				18D8834E1DBB49B200F19129 /* README.md in Sources */,
 				185EB00A1DC64195008C1471 /* WTCPOSViewController.m in Sources */,
+				18ACFC1D1DE195130083F736 /* WTCUpdatePayPasswdRequest.m in Sources */,
 				185EB0231DC790E9008C1471 /* POSImageTableViewCell.m in Sources */,
 				18F80EC71DB60CE700FF1830 /* AFNetworkReachabilityManager.m in Sources */,
 				18D883491DBB49B200F19129 /* MJRefreshLegendFooter.m in Sources */,

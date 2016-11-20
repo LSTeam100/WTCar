@@ -17,6 +17,7 @@
 /**
  *   密码框
  */
+@property(nonatomic,assign)BOOL flag;
 @property(nonatomic,retain)TTPasswordView *password;
 @property(nonatomic,retain)TTPasswordView *password2;
 @property(nonatomic,retain)TTPasswordView *password3;

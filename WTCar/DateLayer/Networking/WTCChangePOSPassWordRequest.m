@@ -11,9 +11,9 @@
 @implementation WTCChangePOSPassWordRequest
 -(id)initWithNewPosLoginPasswd:(NSString *)newPosLoginPasswd PosLoginPasswd:(NSString *)posLoginPasswd Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
     self=[super initWithToken:token successCallback:success failureCallback:failed];
-    
     if(self){
-        NSDictionary *parameters=@{@"newPosLoginPasswd":newPosLoginPasswd,@"posLoginPasswd":posLoginPasswd};
+        NSDictionary *parameters=@{@"newPosLoginPasswd":newPosLoginPasswd,
+            @"posLoginPasswd":posLoginPasswd};
         [self setParameters:parameters];
     }
     return self;
@@ -32,9 +32,9 @@
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCChangePOSPassWordResult *result=[[WTCChangePOSPassWordResult alloc]init];
+//            WTCChangePOSPassWordResult *result=[[WTCChangePOSPassWordResult alloc]init];
             
-            [self getResponse].data=result;
+            [self getResponse].data=data;
         }
     }
 }

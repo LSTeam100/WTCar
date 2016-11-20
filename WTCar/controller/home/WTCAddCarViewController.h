@@ -11,5 +11,7 @@
 #import "WTCCarCategoryViewController.h"
 @interface WTCAddCarViewController : WTCBaseViewController<DescribetionControllerDelegate,carCategoryDelegate>
 
+@property(nonatomic,assign)NSInteger editeStatus;
+@property(nonatomic,strong)NSNumber *carDetailId;
 
 @end
