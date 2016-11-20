@@ -21,7 +21,7 @@
 }
 
 -(NSString *)getURL{
-    return @"/applyBusinessLicense";
+    return @"/applyBusinessLicense.do";
 }
 
 -(NSString *)getMethod{

@@ -68,7 +68,7 @@
         [self setBusyIndicatorVisible:NO];
         
         WTCIsAccountExistResult *result = [request getResponse].data;
-        NSLog(@"成功");
+
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:YES];

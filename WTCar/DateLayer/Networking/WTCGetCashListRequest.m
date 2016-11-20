@@ -21,7 +21,7 @@
 }
 
 -(NSString *)getURL{
-    return @"/cashList";
+    return @"/cashList.do";
 }
 
 -(NSString *)getMethod{
