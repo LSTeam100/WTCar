@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "sellout-icon.png",
+      "filename" : "Vehicle-sellout-icon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "sellout-icon@2x.png",
+      "filename" : "Vehicle-sellout-icon@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "sellout-icon@3x.png",
+      "filename" : "Vehicle-sellout-icon@3x.png",
       "scale" : "3x"
     }
   ],

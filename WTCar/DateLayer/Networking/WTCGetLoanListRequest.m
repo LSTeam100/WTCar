@@ -30,9 +30,9 @@
     [super processResponse:responseDictionary];
     
     if([[self getResponse] isSucceed]){
-        NSDictionary* data=responseDictionary[@"data"];
-        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCGetLoanListResult *result=[[WTCGetLoanListResult alloc]init];
+        NSArray* data=responseDictionary[@"data"];
+        if(data!=nil && data != NULL && data != (NSArray *)[NSNull null]){
+            WTCGetLoanListResult *result=[[[WTCGetLoanListResult alloc]init]initWithDictionary:data];
             
             [self getResponse].data=result;
         }

@@ -8,5 +8,5 @@
 #import "WTCarBaseRequest.h"
 
 @interface WTCSubUserListRequest : WTCarBaseRequest
--(id)initWithSubUserList:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
+-(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end

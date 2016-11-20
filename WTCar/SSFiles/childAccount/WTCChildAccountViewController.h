@@ -14,5 +14,5 @@
 @property (weak, nonatomic) IBOutlet UIView *DeckView;
 - (IBAction)ChangeChildCodeButtonClick:(id)sender;
 @property(strong,nonatomic)NSString *changeButtonID;
-
+@property(nonatomic,strong)NSMutableArray *childAccountMuarry;
 @end

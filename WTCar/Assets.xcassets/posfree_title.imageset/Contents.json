@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "pos-free-icon.png",
+      "filename" : "pos-Free.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pos-free-icon@2x.png",
+      "filename" : "pos-Free@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pos-free-icon@3x.png",
+      "filename" : "pos-Free@3x.png",
       "scale" : "3x"
     }
   ],

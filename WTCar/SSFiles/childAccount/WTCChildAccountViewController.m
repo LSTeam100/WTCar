@@ -36,7 +36,10 @@
     [self makeTableView];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self getChildAccountListRequest];
+}
 - (void)dataInit
 {
     _childNameArray = @[@"苗刚"];
@@ -52,7 +55,8 @@
     WTCSubUserListRequest *request = [[WTCSubUserListRequest alloc]initWithToken:getsubAccountListToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         
-        NSObject *result = [request getResponse].data;
+        WTCSubUser *result = [request getResponse].data;
+        _childAccountMuarry = [[NSMutableArray alloc]initWithArray:result.rows];
 
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
@@ -98,7 +102,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _childNameArray.count;
+    return _childAccountMuarry.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return cellHeight;
@@ -109,8 +113,8 @@
     
     _childAccountTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [cell.contentView setBackgroundColor:[UIColor whiteColor]];
-    cell.ChildAccountNameLabel.text = _childNameArray[indexPath.row];
-    cell.ChildAccountTeleLabel.text = _childTeleNumArray[indexPath.row];
+    cell.ChildAccountNameLabel.text = _childAccountMuarry[indexPath.row][@"childAccountName"];
+    cell.ChildAccountTeleLabel.text = _childAccountMuarry[indexPath.row][@"childAccountMobile"];
     [cell.ChangeChildAccountButton addTarget:self action:@selector(changeChildAccountButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     _changeButtonID = [NSString stringWithFormat:@"%ld",indexPath.row];
     [cell.DeleChildAccountButton addTarget:self action:@selector(deleChildAccountButtonClick) forControlEvents:UIControlEventTouchUpInside];

@@ -10,14 +10,13 @@
 #import "WTCSubUser.h"
 @implementation WTCSubUserListRequest
 
--(id)initWithSubUserList:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
+-(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed
 {
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{};
-        [self setParameters:parameters];
+//        NSDictionary *parameters=@{};
+//        [self setParameters:parameters];
     }
     return self;
 }
@@ -34,7 +33,7 @@
     [super processResponse:responseDictionary];
     
     if([[self getResponse] isSucceed]){
-        NSDictionary* data=responseDictionary[@"data"];
+        NSArray* data=responseDictionary[@"data"];
         if(data!=nil){
             WTCSubUser *subUser = [[WTCSubUser alloc]initWithDictionary:data];
             [self getResponse].data=subUser;
