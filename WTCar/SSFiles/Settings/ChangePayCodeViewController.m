@@ -7,7 +7,7 @@
 //
 
 #import "ChangePayCodeViewController.h"
-#import "WTCUpdatePayPasswdRequest.h"
+#import "WTCChangePayPwdRequest.h"
 #import "WTCChangePayPasswdResult.h"
 #import "MBProgressHUD.h"
 @interface ChangePayCodeViewController ()
@@ -28,10 +28,10 @@
     NSString *nwPayPasswd = _password2.textField.text;
     NSString *oldPayPasswd = _password.textField.text;
     [self setBusyIndicatorVisible:YES];
-    WTCUpdatePayPasswdRequest *request = [[WTCUpdatePayPasswdRequest alloc]initChangePayPasswd:nwPayPasswd payPassword:oldPayPasswd successCallback:^(WTCarBaseRequest *request) {
+    WTCChangePayPwdRequest*request = [[WTCChangePayPwdRequest alloc]initChangePayPasswd:nwPayPasswd payPassword:oldPayPasswd successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         
-        
+        WTCChangePayPasswdResult *setPayPasswdResult = [request getResponse].data;
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];

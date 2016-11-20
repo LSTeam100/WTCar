@@ -11,12 +11,11 @@
 @implementation WTCGetShopInfoRequest
 
 -(id)initWithAccountToken:(NSString *)accountToken  successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:accountToken successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"accountKey":accountToken};
-        [self setParameters:parameters];
+//        NSDictionary *parameters=@{@"accountKey":accountToken};
+//        [self setParameters:parameters];
     }
     return self;
 }

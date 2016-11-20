@@ -22,7 +22,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    _TeleNumTextField.text = _teleNum;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -52,7 +54,7 @@
     
     NSString *mobilePhone = self.TeleNumTextField.text;
     NSString *password = self.passWordTextField.text;
-    NSString *VerityCode = self.verityCodeTextfield.text;
+    NSString *VerityCode = _verityCode;
     NSString *carType = self.carTypeTextField.text;
     if (self.TeleNumTextField.text.length == 0) {
         

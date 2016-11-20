@@ -6,10 +6,10 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import"WTCBaseViewController.h"
 
-@interface ChangeAccountCodeViewController : UIViewController
+@interface ChangeAccountCodeViewController :WTCBaseViewController
 @property (weak, nonatomic) IBOutlet UITextField *AccountCodeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *ChangeAccountCodeButton;
-
+@property(nonatomic,strong) NSString *oldAccountKey;
 @end

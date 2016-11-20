@@ -11,11 +11,10 @@
 @implementation WTCApplyBusinessLicenseRequest
 
 -(id)initWithLicencePath:(NSString *)licenPath Token:(NSString*)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"licencePath":licenPath,@"token":token};
+        NSDictionary *parameters=@{@"licencePath":licenPath};
         [self setParameters:parameters];
     }
     return self;

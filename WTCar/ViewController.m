@@ -44,6 +44,8 @@
         else{
             WTCTabBarViewController *upmTabbar=[[WTCTabBarViewController alloc]init];
             [self.navigationController pushViewController:upmTabbar animated:YES];
+//            LoginViewController *login = [[LoginViewController alloc]init];
+//            [self.navigationController pushViewController:login animated:YES];
         }
     }
     

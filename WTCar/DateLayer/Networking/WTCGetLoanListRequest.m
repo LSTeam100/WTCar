@@ -10,12 +10,11 @@
 #import "WTCGetLoanListResult.h"
 @implementation WTCGetLoanListRequest
 -(id)initWithToken:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"token":token};
-        [self setParameters:parameters];
+//        NSDictionary *parameters=@{@"token":token};
+//        [self setParameters:parameters];
     }
     return self;
 }

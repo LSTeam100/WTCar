@@ -20,12 +20,6 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6in-JB-Zqg">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfieldDele_title" translatesAutoresizingMaskIntoConstraints="NO" id="8BE-fs-qrq">
-                            <constraints>
-                                <constraint firstAttribute="width" constant="30" id="YOb-gi-lbz"/>
-                                <constraint firstAttribute="height" constant="30" id="aJ2-jM-heM"/>
-                            </constraints>
-                        </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入新的秘钥" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="781-D9-clI">
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="83w-fK-z4i"/>
@@ -34,28 +28,43 @@
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yy5-6b-dwD">
-                            <frame key="frameInset" minX="16" minY="59" width="343" height="0.5"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yy5-6b-dwD">
                             <color key="backgroundColor" red="0.71372549019999998" green="0.86274509799999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="p6C-ja-n43"/>
+                            </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU1-Km-0cL">
-                            <frame key="frameInset" minX="17" minY="96" width="341" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU1-Km-0cL">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="6D4-B2-wr7"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <state key="normal" title="保存" backgroundImage="ClickButton_title">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wh-Ez-xLh">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="6Jk-Uc-EeZ"/>
+                                <constraint firstAttribute="height" constant="30" id="x5w-Pl-NKa"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="textfieldDele_title"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="8BE-fs-qrq" secondAttribute="trailing" constant="23" id="84v-sW-S0x"/>
-                        <constraint firstItem="8BE-fs-qrq" firstAttribute="leading" secondItem="781-D9-clI" secondAttribute="trailing" constant="8" id="HFg-Om-xZZ"/>
-                        <constraint firstItem="8BE-fs-qrq" firstAttribute="centerY" secondItem="781-D9-clI" secondAttribute="centerY" constant="-2.5" id="K6t-8D-4ao"/>
+                        <constraint firstItem="tU1-Km-0cL" firstAttribute="top" secondItem="yy5-6b-dwD" secondAttribute="bottom" constant="36.5" id="N4o-JV-U5z"/>
+                        <constraint firstItem="tU1-Km-0cL" firstAttribute="leading" secondItem="6in-JB-Zqg" secondAttribute="leading" constant="17" id="PlG-ej-nzN"/>
+                        <constraint firstAttribute="trailing" secondItem="tU1-Km-0cL" secondAttribute="trailing" constant="17" id="QcL-qL-3zh"/>
                         <constraint firstItem="781-D9-clI" firstAttribute="top" secondItem="6in-JB-Zqg" secondAttribute="top" constant="25" id="Ty6-tb-LUH"/>
+                        <constraint firstAttribute="trailing" secondItem="yy5-6b-dwD" secondAttribute="trailing" constant="16" id="X1q-ay-W8F"/>
+                        <constraint firstItem="yy5-6b-dwD" firstAttribute="leading" secondItem="6in-JB-Zqg" secondAttribute="leading" constant="16" id="dOY-7i-zRc"/>
+                        <constraint firstItem="yy5-6b-dwD" firstAttribute="top" secondItem="3Wh-Ez-xLh" secondAttribute="bottom" constant="4" id="eAF-dp-dON"/>
+                        <constraint firstItem="3Wh-Ez-xLh" firstAttribute="leading" secondItem="781-D9-clI" secondAttribute="trailing" constant="8" id="eCg-s8-0bH"/>
+                        <constraint firstAttribute="trailing" secondItem="3Wh-Ez-xLh" secondAttribute="trailing" constant="17" id="gCM-Py-emh"/>
                         <constraint firstAttribute="height" constant="283" id="lV8-2p-Bh0"/>
                         <constraint firstItem="781-D9-clI" firstAttribute="leading" secondItem="6in-JB-Zqg" secondAttribute="leading" constant="16" id="mdN-fe-Uj0"/>
+                        <constraint firstItem="3Wh-Ez-xLh" firstAttribute="top" secondItem="6in-JB-Zqg" secondAttribute="top" constant="25" id="pFd-5Q-NXx"/>
                     </constraints>
                 </view>
             </subviews>
@@ -65,6 +74,7 @@
                 <constraint firstItem="6in-JB-Zqg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZWp-bl-wr8"/>
                 <constraint firstAttribute="trailing" secondItem="6in-JB-Zqg" secondAttribute="trailing" id="rY7-b3-PB3"/>
             </constraints>
+            <point key="canvasLocation" x="72.5" y="104.5"/>
         </view>
     </objects>
     <resources>

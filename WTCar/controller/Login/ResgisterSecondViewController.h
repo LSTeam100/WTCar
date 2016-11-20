@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *getVerityCodeButton;
 //验证码提交
 - (IBAction)SubmitButtonClick:(id)sender;
-
+//手机号
+@property(nonatomic,strong)NSString *teleNum;
 @end

@@ -16,5 +16,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *getVerityCodeButton;
 //提交验证码按钮
 - (IBAction)submitButtonClick:(id)sender;
-
+//手机号
 @end
