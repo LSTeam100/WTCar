@@ -58,8 +58,8 @@
         {
             self.bannerId = @"";
         }
-        if ([dataDic objectForKey:@"picUrl"]) {
-            self.picUrl = [dataDic objectForKey:@"picUrl"];
+        if ([dataDic objectForKey:@"picurl"]) {
+            self.picUrl = [dataDic objectForKey:@"picurl"];
         }
         else
         {

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "pulldown-button.png",
+      "filename" : "drop-downarrow.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pulldown-button@2x.png",
+      "filename" : "drop-downarrow@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pulldown-button@3x.png",
+      "filename" : "drop-downarrow@3x.png",
       "scale" : "3x"
     }
   ],

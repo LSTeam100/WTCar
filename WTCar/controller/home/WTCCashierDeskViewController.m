@@ -192,7 +192,7 @@
 }
 -(void)getPayDetail
 {
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     
     int posid = [self.posPayModel.posPayId intValue];
     [self setBusyIndicatorVisible:YES];

@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"会员注册";
     [self.getVerityCodeButton setEnabled:YES];
 
     [_getVerityCodeButton addTarget:self action:@selector(getVerityCodeButtonClick) forControlEvents:UIControlEventTouchUpInside];
@@ -56,7 +57,6 @@
 }
 -(void)countDown
 {
-    NSLog(@"进入倒计时方法");
     countTime--;
     if (countTime == 0) {
         [countDownTimer invalidate];
@@ -78,6 +78,7 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [countDownTimer invalidate];
+    [self.getVerityCodeButton setTitle:[NSString stringWithFormat:@"获取验证码"] forState:UIControlStateNormal];
 }
 
 //检验验证码

@@ -23,8 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.navigationController.navigationBar.hidden = YES;
-    self.TeleNumTextField.text = @"15102373847";
+    self.TeleNumTextField.text = @"18801171093";
     self.passWordTextField.text = @"123456";
+    self.passWordTextField.secureTextEntry = YES;
     
     _TeleImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:_TeleImageView];

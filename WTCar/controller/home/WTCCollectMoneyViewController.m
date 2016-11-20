@@ -93,7 +93,7 @@
 -(IBAction)navitCaisher:(id)sender
 {
     
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     
     NSIndexPath *indexPath2=[NSIndexPath indexPathForRow:0 inSection:1];
     WTCCommitBuyCarMoneyTableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath2];

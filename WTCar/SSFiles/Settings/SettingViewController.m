@@ -148,7 +148,7 @@
 }
 -(void)logoutClick
 {
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
     WTCLogoutRequest *request = [[WTCLogoutRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];

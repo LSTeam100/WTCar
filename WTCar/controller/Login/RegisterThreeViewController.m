@@ -12,7 +12,7 @@
 #import "WTCRegisterRequest.h"
 #import "WTCRegisterResult.h"
 #import "MBProgressHUD.h"
-@interface RegisterThreeViewController ()
+@interface RegisterThreeViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -20,6 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _passWordTextField.delegate = self;
+    _TeleNumTextField.delegate = self;
+    _carTypeTextField.delegate = self ;
+    _passWordTextField.returnKeyType = UIReturnKeyDone;
+    _TeleNumTextField.returnKeyType = UIReturnKeyDone;
+    _carTypeTextField.returnKeyType = UIReturnKeyDone;
+    self.title = @"会员注册";
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewDidAppear:(BOOL)animated{

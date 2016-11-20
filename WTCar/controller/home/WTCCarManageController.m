@@ -371,13 +371,26 @@ static int DEFAULT_SIZE=10;
 }
 -(IBAction)naviToAddCar:(id)sender
 {
-    WTCAddCarViewController *addCar = [[WTCAddCarViewController alloc]init];
-    UIButton *btn = (UIButton *)sender;
-    WTCASale *aSale = [onsaleArr objectAtIndex:btn.tag];
+    if (carMangeType == CarMangeTypeOnSale) {
+        WTCAddCarViewController *addCar = [[WTCAddCarViewController alloc]init];
+        UIButton *btn = (UIButton *)sender;
+        WTCASale *aSale = [onsaleArr objectAtIndex:btn.tag];
+        
+        addCar.editeStatus = 1;
+        addCar.carDetailId = aSale.saleId;
+        [self.navigationController pushViewController:addCar animated:YES];
+    }
+    else if(carMangeType == CarMangeTypeOffShelf)
+    {
+        WTCAddCarViewController *addCar = [[WTCAddCarViewController alloc]init];
+        UIButton *btn = (UIButton *)sender;
+        WTCAOffShelf *aoffShelf = [offShelfArr objectAtIndex:btn.tag];
 
-    addCar.editeStatus = 1;
-    addCar.carDetailId = aSale.saleId;
-    [self.navigationController pushViewController:addCar animated:YES];
+        addCar.editeStatus = 1;
+        addCar.carDetailId = aoffShelf.saleId;
+        [self.navigationController pushViewController:addCar animated:YES];
+    }
+    
 }
 -(IBAction)offShelfCar:(id)sender
 {
@@ -428,7 +441,7 @@ static int DEFAULT_SIZE=10;
         return;
     }
     onsaleCurrentPage++;
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
     WTCOnSaleListRequest *request = [[WTCOnSaleListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:onsaleCurrentPage] PageSize:[NSNumber numberWithInt:DEFAULT_SIZE] successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
@@ -459,7 +472,7 @@ static int DEFAULT_SIZE=10;
         return;
     }
     saledCurrentPage++;
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
     WTCSaledListRequest *request = [[WTCSaledListRequest alloc]initWithToken:loginToken CurPage:[NSNumber numberWithInt:saledCurrentPage] PageSize:[NSNumber numberWithInt:DEFAULT_SIZE] successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
