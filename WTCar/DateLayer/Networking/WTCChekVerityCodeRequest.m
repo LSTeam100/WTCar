@@ -1,20 +1,21 @@
 //
-//  WTCVerfiyCodeRequest.m
+//  WTCChekVerityCodeRequest.m
 //  WTCar
 //
-//  Created by apple on 2016/11/4.
+//  Created by MacBookPro on 2016/11/20.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCVerfiyCodeRequest.h"
-#import "WTCVerifyCode.h"
-@implementation WTCVerfiyCodeRequest
--(id)initWithLoginName:(NSString *)loginName successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
+#import "WTCChekVerityCodeRequest.h"
+
+@implementation WTCChekVerityCodeRequest
+
+-(id)initWithLoginName:(NSString *)loginName Code:(NSString *)code successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
     self=[super initWithSuccessCallback:success
                         failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"account":loginName,
+        NSDictionary *parameters=@{@"account":loginName,@"code":code
                                    };
         [self setParameters:parameters];
     }
@@ -22,7 +23,7 @@
 }
 
 -(NSString *)getURL{
-    return @"/reqValidationCode.do";
+    return @"/checkCode.do";
 }
 
 -(NSString *)getMethod{
@@ -35,11 +36,10 @@
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCVerifyCode *VerifyCode=[[WTCVerifyCode alloc]init];
-            VerifyCode.validationCode=data[@"validationCode"];
-            [self getResponse].data=VerifyCode;
+ 
         }
     }
 }
+
 
 @end

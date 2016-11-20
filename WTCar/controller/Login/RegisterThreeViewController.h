@@ -21,4 +21,5 @@
 - (IBAction)confirmButtonClick:(id)sender;
 //验证码
 @property(nonatomic,strong)NSString *verityCode;
+@property(nonatomic,strong)NSString *teleNum;
 @end

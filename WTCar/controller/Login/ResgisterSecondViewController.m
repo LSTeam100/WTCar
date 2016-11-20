@@ -8,6 +8,10 @@
 
 #import "ResgisterSecondViewController.h"
 #import "RegisterThreeViewController.h"
+#import "WTCVerfiyCodeRequest.h"
+#import "WTCVerifyCode.h"
+#import "MBProgressHUD.h"
+#import "WTCChekVerityCodeRequest.h"
 @interface ResgisterSecondViewController ()
 
 @end
@@ -21,7 +25,37 @@
 }
 
 -(void)getVerityCodeButtonClick{
-    
+    NSString *account =_teleNum;
+    [self setBusyIndicatorVisible:YES];
+    WTCVerfiyCodeRequest *request = [[WTCVerfiyCodeRequest alloc]initWithLoginName:account successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCVerifyCode *result = [request getResponse].data;
+        _verityCodeTextField.text = result.validationCode;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
+}
+
+//检验验证码
+-(void)checkCodeRequest
+{
+    NSString *code = _verityCodeTextField.text;
+    NSString *account = _teleNum;
+    [self setBusyIndicatorVisible:YES];
+     WTCChekVerityCodeRequest*request = [[WTCChekVerityCodeRequest alloc]initWithLoginName:account Code:code  successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        NSObject *result = [request getResponse].data;
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,8 +74,10 @@
 */
 
 - (IBAction)SubmitButtonClick:(id)sender {
+    [self checkCodeRequest];
     RegisterThreeViewController *regisThreeViewCon = [RegisterThreeViewController new];
     regisThreeViewCon.verityCode = _verityCodeTextField.text;
+    regisThreeViewCon.teleNum = _teleNum;
     [self.navigationController pushViewController:regisThreeViewCon animated:YES];
 }
 @end

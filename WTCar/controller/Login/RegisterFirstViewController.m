@@ -8,6 +8,8 @@
 
 #import "RegisterFirstViewController.h"
 #import "ResgisterSecondViewController.h"
+#import "WTCIsAccountExistResult.h"
+#import "WTCIsAccountExistRequest.h"
 
 @interface RegisterFirstViewController ()<UITextFieldDelegate>
 
@@ -57,9 +59,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+//验证账号
+-(void)IsAccountExist
+{
+    NSString *teleAccount = _TeleNumTextField.text;
+    [self setBusyIndicatorVisible:YES];
+    WTCIsAccountExistRequest *request = [[WTCIsAccountExistRequest alloc]initWithLoginName:teleAccount successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+        WTCIsAccountExistResult *result = [request getResponse].data;
+        NSLog(@"成功");
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+    [request start];
 
+}
 - (IBAction)NextStepButtonClick:(id)sender {
+    [self IsAccountExist];
     ResgisterSecondViewController *registerSecondViewCon = [ResgisterSecondViewController new];
+    registerSecondViewCon.teleNum = _TeleNumTextField.text;
     [self.navigationController pushViewController:registerSecondViewCon animated:YES];
 }
 @end

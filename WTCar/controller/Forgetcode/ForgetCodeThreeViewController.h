@@ -18,4 +18,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *completeButton;
 @property (weak, nonatomic) IBOutlet UITextField *verityPasswordTextField;
 
+@property(nonatomic,strong)NSString *VerityCodeForget;
 @end

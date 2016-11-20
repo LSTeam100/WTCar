@@ -35,7 +35,7 @@
 {
     NSString *password = _passWordTextField.text;
     NSString *accountTeleNum = _TeleNumTextField.text;
-    NSString *veritypassword = _verityPasswordTextField.text;
+    NSString *veritypassword = _VerityCodeForget;
     if (self.TeleNumTextField.text.length == 0) {
         
     }

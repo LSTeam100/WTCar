@@ -41,6 +41,7 @@
 - (IBAction)submitButtonClick:(id)sender {
     ForgetCodeThreeViewController *forgetCodeThreeViewCon = [ForgetCodeThreeViewController new];
     forgetCodeThreeViewCon.AccountTeleNumText = self.teleNumText;
+    forgetCodeThreeViewCon.VerityCodeForget = _verityCodeTextField.text;
     [self.navigationController pushViewController:forgetCodeThreeViewCon animated:YES];
 }
 @end
