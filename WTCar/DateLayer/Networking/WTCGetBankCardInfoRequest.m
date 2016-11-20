@@ -21,7 +21,7 @@
 }
 
 -(NSString *)getURL{
-    return @"/getBankCardInfo";
+    return @"/getBankCardInfo.do";
 }
 
 -(NSString *)getMethod{
