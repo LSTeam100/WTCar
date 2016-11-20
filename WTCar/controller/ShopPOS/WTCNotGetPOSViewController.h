@@ -9,6 +9,8 @@
 #import"WTCBaseViewController.h"
 @interface WTCNotGetPOSViewController : WTCBaseViewController
 //获取店铺POS
+@property(nonatomic,assign)int posFag;
 - (IBAction)ToGetPOSButtonClick:(id)sender;
+@property(nonatomic,weak)IBOutlet UIButton *posBtn;
 
 @end

@@ -9,6 +9,10 @@
 #import "SettingTableViewCell.h"
 #import "AccountSafetyViewController.h"
 #import "LoginViewController.h"
+#import "WTCLogoutRequest.h"
+#import "AppDelegate.h"
+#import <StoreKit/StoreKit.h>
+
 @interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat cellHeight;
@@ -144,8 +148,31 @@
 }
 -(void)logoutClick
 {
-    LoginViewController *loginViewCon = [LoginViewController new];
-    [self.navigationController pushViewController:loginViewCon animated:YES];
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    [self setBusyIndicatorVisible:YES];
+    WTCLogoutRequest *request = [[WTCLogoutRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        NSUserDefaults *ns=[NSUserDefaults standardUserDefaults];
+        [ns removeObjectForKey:@"token"];
+        
+        AppDelegate *app=(AppDelegate *)[UIApplication sharedApplication].delegate;
+//        if(app!=nil){
+//            [app unregisterXG];
+//        }
+        
+        UINavigationController * root=self.navigationController;
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        
+        LoginViewController *loginVc=[[LoginViewController alloc]init];
+        [root pushViewController:loginVc animated:YES];
+    
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+    }];
+    [request start];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

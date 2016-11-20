@@ -16,16 +16,22 @@
 #import "WTCGetPayedListRequest.h"
 #import "WTCPayDetailRequest.h"
 #import "WTCPayDetail.h"
+#import "WTCPOSPayRequest.h"
+
 @interface WTCCashierDeskViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *titleArr;
     NSTimer *timer;
     BOOL paySuccess;
+    NSArray *payDetailArr;
+    NSString *toPay;
+    NSString *payed;
     
 }
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 @property(nonatomic,strong)WTCToPayList *toPayList;
 @property(nonatomic,strong)WTCGetPayedList *payedList;
+
 @end
 
 @implementation WTCCashierDeskViewController
@@ -35,7 +41,8 @@
     self.title = @"收银台";
     titleArr = @[@"待收款",@"已收款",@"收款总额"];
     timer =  [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(refreshOrder) userInfo:nil repeats:YES];
-
+    toPay = @"0";
+    payed = @"0";
     paySuccess = false;
     // Do any additional setup after loading the view from its nib.
 }
@@ -62,7 +69,7 @@
     }
     else
     {
-        return 1;
+        return payDetailArr.count;
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,7 +79,7 @@
     }
     else
     {
-        return 45;
+        return 60;
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -102,11 +109,11 @@
         }
         else if (atIndex.row == 0)
         {
-            cell.describetionLabel.text = [NSString stringWithFormat:@"%@",self.toPayList.orderPrice];
+            cell.describetionLabel.text = [NSString stringWithFormat:@"%@",toPay];
         }
         else if (atIndex.row == 1)
         {
-            cell.describetionLabel.text = [NSString stringWithFormat:@"%@",self.payedList.orderPrice];
+            cell.describetionLabel.text = [NSString stringWithFormat:@"%@",payed];
 
         }
     }
@@ -135,38 +142,38 @@
     return cell;
     
 }
--(void)getToPayList
-{
-    [self setBusyIndicatorVisible:YES];
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
-    WTCToPayListRequest *request = [[WTCToPayListRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
-        self.toPayList = [request getResponse].data;
-        [self.tableView reloadData];
-        
-    } failureCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
-    }];
-    [request start];
-}
--(void)getPayedList
-{
-    [self setBusyIndicatorVisible:YES];
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
-    WTCGetPayedListRequest *request = [[WTCGetPayedListRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
-        self.payedList = [request getResponse].data;
-        if (self.payedList.orderPrice == self.posPayModel.orderPrice && self.toPayList.orderPrice == 0) {
-            paySuccess = true;
-            [timer invalidate];
-        }
-        [self.tableView reloadData];
-    } failureCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
-        
-    }];
-    [request start];
-}
+//-(void)getToPayList
+//{
+//    [self setBusyIndicatorVisible:YES];
+//    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+//    WTCToPayListRequest *request = [[WTCToPayListRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+//        [self setBusyIndicatorVisible:NO];
+//        self.toPayList = [request getResponse].data;
+//        [self.tableView reloadData];
+//        
+//    } failureCallback:^(WTCarBaseRequest *request) {
+//        [self setBusyIndicatorVisible:NO];
+//    }];
+//    [request start];
+//}
+//-(void)getPayedList
+//{
+//    [self setBusyIndicatorVisible:YES];
+//    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+//    WTCGetPayedListRequest *request = [[WTCGetPayedListRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+//        [self setBusyIndicatorVisible:NO];
+//        self.payedList = [request getResponse].data;
+//        if (self.payedList.orderPrice == self.posPayModel.orderPrice && self.toPayList.orderPrice == 0) {
+//            paySuccess = true;
+//            [timer invalidate];
+//        }
+//        [self.tableView reloadData];
+//    } failureCallback:^(WTCarBaseRequest *request) {
+//        [self setBusyIndicatorVisible:NO];
+//        
+//    }];
+//    [request start];
+//}
 -(UITableViewCell *)getPostHistoryCell:(UITableView *)tableView AtIndex:(NSIndexPath *)atIndex
 {
     static NSString *idnetifer = @"caiserImageCell";
@@ -175,6 +182,11 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"POSHistoryTableViewCell" owner:self options:nil]objectAtIndex:0];
     }
+    WTCPayOneDetail *oneDetail = [payDetailArr objectAtIndex:atIndex.row];
+    NSString *thisPayed = oneDetail.amount;
+    cell.moneyLabel.text = [NSString stringWithFormat:@"到账金额:%@元",thisPayed];
+    cell.dateLabel.text = [NSString stringWithFormat:@"到账时间:%@",oneDetail.payTime];
+    
     return cell;
     
 }
@@ -182,10 +194,21 @@
 {
     NSString *loginToken = [CommonVar sharedInstance].loginToken;
     
-    int posid = [self.posPayModel.posId intValue];
+    int posid = [self.posPayModel.posPayId intValue];
     [self setBusyIndicatorVisible:YES];
     WTCPayDetailRequest *request = [[WTCPayDetailRequest alloc]initWithToken:loginToken POSId:[NSNumber numberWithInt:posid] successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        WTCPayDetail *detail = [request getResponse].data;
+        toPay = detail.subamount;
+        payed = detail.amount;
+
+        payDetailArr = [NSArray arrayWithArray:detail.payDetailsArr];
+        if ([detail.status isEqualToString:@"3"]) {
+            [timer invalidate];
+            paySuccess = true;
+        }
+        [self.tableView reloadData];
+        
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WTCPOSHasOpenedViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface WTCPOSHasOpenedViewController : WTCBaseViewController
 //修改POS机登陆密码
 - (IBAction)ChangePOSLogCodeButtonClick:(id)sender;
 //POS机账号ID

@@ -37,7 +37,7 @@
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCPOSPayModel *posModel = [WTCPOSPayModel objectWithKeyValues:data];
+            WTCPOSPayModel *posModel = [[WTCPOSPayModel alloc]initWithDictionary:data];
             [self getResponse].data=posModel;
         }
     }

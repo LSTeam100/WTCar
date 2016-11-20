@@ -11,6 +11,8 @@
 #import "WTCReceivePOSResult.h"
 #import "WTCReceivePOSRequest.h"
 #import "MBProgressHUD.h"
+#import "WTCPOSHasOpenedViewController.h"
+#import "WTCPOSToOpenViewController.h"
 @interface WTCNotGetPOSViewController ()
 
 @end
@@ -20,12 +22,60 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];
+    if (self.posFag == 0) {
+        [self.posBtn setTitle:@"立即领取POS机" forState:UIControlStateNormal];
+    }
+    else if (self.posFag ==1)
+    {
+        [self.posBtn setTitle:@"审核中" forState:UIControlStateNormal];
+    }
+    else if (self.posFag ==2)
+    {
+        [self.posBtn setTitle:@"已领取POS机,点此开通" forState:UIControlStateNormal];
+
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(IBAction)getPos:(id)sender
+{
+    if (self.posFag == 0) {
+        NSString *loginToken = [CommonVar sharedInstance].loginToken;
+        [self setBusyIndicatorVisible:YES];
+        WTCReceivePOSRequest *request = [[WTCReceivePOSRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            NSString *message = [request getResponse].data;
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+            
+            hud.mode = MBProgressHUDModeText;
+            hud.label.text = message;
+            // Move to bottm center.
+            hud.offset = CGPointMake(0.f, MBProgressMaxOffset);
+            
+            [hud hideAnimated:YES afterDelay:3.f];
+            
+            [self performSelector:@selector(back) withObject:nil afterDelay:3];
+            
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+        }];
+        [request start];
+
+    }
+    else if (self.posFag == 2)
+    {
+        WTCPOSToOpenViewController * controller = [[WTCPOSToOpenViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+}
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 /*

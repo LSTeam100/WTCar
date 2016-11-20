@@ -9,55 +9,108 @@
 #import "WTCPOSPayModel.h"
 
 @implementation WTCPOSPayModel
-//-(instancetype)initWithDictionary:(NSDictionary *)dataDic
-//{
-//    self = [super init];
-//    if (self) {
-//        
-////        if ([dataDic objectForKey:@"amount"]) {
-////            self.amount = [dataDic objectForKey:@"amount"];
-////        }
-////        else{
-////            self.amount = @"";
-////        }
-////        if ([dataDic objectForKey:@"createTime"]) {
-////            self.createTime = [dataDic objectForKey:@"createTime"];
-////        }
-////        else{
-////            self.createTime = @"";
-////        }
-////        
-////        if ([dataDic objectForKey:@"posPayId"]) {
-////            self.posPayId = [dataDic objectForKey:@"posPayId"];
-////            
-////        }
-////        else
-////        {
-////            self.posPayId = @"";
-////        }
-////
-////        if ([dataDic objectForKey:@"orderPrice"]) {
-////            self.orderPrice =[dataDic objectForKey:@"orderPrice"];
-////        }
-////        else
-////        {
-////            self.
-////        }
-////        @property(nonatomic,strong)NSString *amount;
-////        @property(nonatomic,strong)NSString *createTime;
-////        @property(nonatomic,strong)NSString *posPayId;
-////        @property(nonatomic,strong)NSNumber *orderPrice;
-////        @property(nonatomic,strong)NSString *payBarCode;
-////        @property(nonatomic,strong)NSString *payBarCodePicPath;
-////        @property(nonatomic,strong)NSString *payTime;
-////        @property(nonatomic,strong)NSString *posId;
-////        @property(nonatomic,strong)NSString *productId;
-////        @property(nonatomic,strong)NSString *receiptType;
-////        @property(nonatomic,strong)NSString *status;
-////        @property(nonatomic,strong)NSString *summitTime;
-////        @property(nonatomic,strong)NSString *updateTime;
-//    }
-//    return self;
-//}
+-(instancetype)initWithDictionary:(NSDictionary *)dataDic
+{
+    self = [super init];
+    if (self) {
+        
+        if ([dataDic objectForKey:@"amount"]) {
+            self.amount = [dataDic objectForKey:@"amount"];
+        }
+        else{
+            self.amount = @"";
+        }
+        if ([dataDic objectForKey:@"createTime"]) {
+            self.createTime = [dataDic objectForKey:@"createTime"];
+        }
+        else{
+            self.createTime = @"";
+        }
+        
+        if ([dataDic objectForKey:@"id"]) {
+            self.posPayId = [dataDic objectForKey:@"id"];
+            
+        }
+        else
+        {
+            self.posPayId = @"";
+        }
+
+        if ([dataDic objectForKey:@"orderPrice"]) {
+            self.orderPrice = [dataDic objectForKey:@"orderPrice"];
+        }
+        else
+        {
+            self.orderPrice = [NSNumber numberWithInt:99999999];
+        }
+        
+        if ([dataDic objectForKey:@"payBarCode"]) {
+            self.payBarCode = [dataDic objectForKey:@"payBarCode"];
+        }
+        else
+        {
+            self.payBarCode = @"";
+        }
+        if ([dataDic objectForKey:@"payBarCodePicPath"]) {
+            self.payBarCodePicPath = [dataDic objectForKey:@"payBarCodePicPath"];
+        }
+        else
+        {
+            self.payBarCodePicPath = @"";
+        }
+        if ([dataDic objectForKey:@"payTime"]) {
+            self.payTime = [dataDic objectForKey:@"payTime"];
+        }
+        else
+        {
+            self.payTime = @"";
+        }
+        if ([dataDic objectForKey:@"posId"]) {
+            self.posId = [dataDic objectForKey:@"posId"];
+        }
+        else
+        {
+            self.posId = @"";
+        }
+        if ([dataDic objectForKey:@"productId"]) {
+            self.productId = [dataDic objectForKey:@"productId"];
+        }
+        else
+        {
+            self.productId = @"";
+        }
+        
+        if ([dataDic objectForKey:@"receiptType"]) {
+            self.receiptType = [dataDic objectForKey:@"receiptType"];
+        }
+        else
+        {
+            self.receiptType = @"";
+        }
+        if ([dataDic objectForKey:@"status"]) {
+            self.status = [dataDic objectForKey:@"status"];
+        }
+        else
+        {
+            self.status = @"";
+        }
+        if ([dataDic objectForKey:@"summitTime"]) {
+            self.summitTime = [dataDic objectForKey:@"summitTime"];
+        }
+        else
+        {
+            self.summitTime = @"";
+        }
+        if ([dataDic objectForKey:@"updateTime"]) {
+            self.updateTime = [dataDic objectForKey:@"updateTime"];
+        }
+        else
+        {
+            self.updateTime = @"";
+        }
+        
+    }
+    return self;
+}
 
 @end

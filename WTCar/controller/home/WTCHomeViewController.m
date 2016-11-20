@@ -20,6 +20,9 @@
 #import "WTCGetPOSInfoResult.h"
 #import "WTCGetPOSInfoRequest.h"
 #import "MBProgressHUD.h"
+#import "WTCBannerRequest.h"
+#import "WTCBanner.h"
+#import "WTCPOSHasOpenedViewController.h"
 @interface WTCHomeViewController ()
 {
     CGFloat carouselHeight;
@@ -39,6 +42,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title =@"梧桐汽车";
     viewX = CGRectGetWidth(self.view.frame);//屏幕宽
     viewY = CGRectGetHeight(self.view.frame);//屏幕高
     
@@ -51,7 +55,8 @@
     [self dataInit];
     [self bannerPicInit];
     [self buttonViewInit];
-    
+    [self startScroll];
+
 //    self.navigationController.view.backgroundColor= [UIColor redColor];
     // Do any additional setup after loading the view from its nib.
 }
@@ -64,7 +69,6 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-    [self startScroll];
 }
 
 -(void)buttonViewInit{
@@ -102,7 +106,27 @@
 //    carouselHeight = 150*SCREEN_WIDTH/435;
     _scrollCount = 0;
 //    _allLbPicPathArry = [NSMutableArray new];
-    _allLbPicPathArry = [NSMutableArray arrayWithObjects:@"banner1", @"banner2",@"banner3",@"banner3",nil];
+    _allLbPicPathArry = [NSMutableArray arrayWithCapacity:0];
+    
+    [self getBannerRequest];
+}
+-(void)getBannerRequest
+{
+    [self setBusyIndicatorVisible:YES];
+    WTCBannerRequest *request = [[WTCBannerRequest alloc]initWithSuccessCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCBanner *banners = [request getResponse].data;
+        
+        _allLbPicPathArry = [[NSMutableArray alloc]initWithArray:banners.bannerArr];
+        [_carousel reloadData];
+        
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        
+    }];
+    [request start];
+    
 }
 -(void)bannerPicInit{
     
@@ -162,7 +186,7 @@
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    return 4;
+    return self.allLbPicPathArry.count;
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
@@ -189,16 +213,21 @@
         //get a reference to the label in the recycled view
         imageView = (UIImageView *)[view viewWithTag:5002];
     }
-    imageView.image = [UIImage imageNamed:@"banner3"];
-        if (index == 1){
-        imageView.image = [UIImage imageNamed:@"banner3"];
-           }else if (index == 2){
-        imageView.image = [UIImage imageNamed:@"banner3"];
-        
-        }
-    else if (index == 3){
-        imageView.image = [UIImage imageNamed:@"banner3"];
-           }
+    
+    WTCOneBanner *oneBanner = [_allLbPicPathArry objectAtIndex:index];
+    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:oneBanner.picUrl] placeholderImage:[UIImage imageNamed:@"banner3"]];
+    
+//    imageView.image = [UIImage imageNamed:@"banner3"];
+//        if (index == 1){
+//        imageView.image = [UIImage imageNamed:@"banner3"];
+//           }else if (index == 2){
+//        imageView.image = [UIImage imageNamed:@"banner3"];
+//        
+//        }
+//    else if (index == 3){
+//        imageView.image = [UIImage imageNamed:@"banner3"];
+//           }
     return view;
     
 }
@@ -278,20 +307,41 @@
 -(void)ShangJPosButtonClick
 {
     NSString *getPosToken = [[CommonVar sharedInstance]getLoginToken];
+    [self setBusyIndicatorVisible:YES];
     WTCGetPOSInfoRequest *request = [[WTCGetPOSInfoRequest alloc]initWithToken:getPosToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         
         WTCGetPOSInfoResult *getPosResult = [request getResponse].data;
-        NSNumber *applysatus = getPosResult.applySatus;
-        NSNumber *opensatus = getPosResult.openStatus;
-        NSNumber *Id = getPosResult.Id;
-        NSNumber *accounid = getPosResult.accountId;
-        NSString *posloginAccount = getPosResult.posloginAccount;
-        NSString *posSn = getPosResult.possSn;
-        NSString *creatTime = getPosResult.createTime;
-        NSString *updataTime = getPosResult.updateTime;
-        WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
-        [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+        if (getPosResult == NULL || getPosResult == nil) {
+            WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
+            NotGetPosViewController.posFag = 0;
+            [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+        }
+        
+        else
+        {
+            int applyStatus = [getPosResult.applySatus intValue];
+            int openStatus = [getPosResult.openStatus intValue];
+            if (applyStatus == 1) {
+                WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
+                NotGetPosViewController.posFag = 1;
+                [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+            }
+            else if (applyStatus == 2)
+            {
+                if (openStatus == 1) {
+                    WTCNotGetPOSViewController*NotGetPosViewController = [WTCNotGetPOSViewController new];
+                    NotGetPosViewController.posFag = 2;
+                    [self.navigationController pushViewController:NotGetPosViewController animated:YES];
+                }
+                else
+                {
+                    WTCPOSHasOpenedViewController *controller = [[WTCPOSHasOpenedViewController alloc]init];
+                    [self.navigationController pushViewController:controller animated:YES];
+                }
+                
+            }
+        }
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];

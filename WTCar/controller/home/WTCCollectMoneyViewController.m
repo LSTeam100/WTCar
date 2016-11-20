@@ -11,7 +11,7 @@
 #import "WTCCommitBuyCarMoneyTableViewCell.h"
 #import "WTCPOSPayRequest.h"
 #import "WTCPOSPayModel.h"
-@interface WTCCollectMoneyViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface WTCCollectMoneyViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 
 @end
@@ -88,11 +88,35 @@
 
     return cell;
 }
+
+
 -(IBAction)navitCaisher:(id)sender
 {
+    
     NSString *loginToken = [CommonVar sharedInstance].loginToken;
     
-    double orderPrice = [self.aSale.price doubleValue];
+    NSIndexPath *indexPath2=[NSIndexPath indexPathForRow:0 inSection:1];
+    WTCCommitBuyCarMoneyTableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath2];
+    NSString *price = cell2.inputPriceTextField.text;
+
+    
+    double orderPrice = [price doubleValue];
+    
+    
+    if (orderPrice == 0) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        
+        // Set the text mode to show only text.
+        hud.mode = MBProgressHUDModeText;
+        hud.label.text = @"支付不能为空";
+        // Move to bottm center.
+        hud.offset = CGPointMake(0.f, MBProgressMaxOffset);
+        
+        [hud hideAnimated:YES afterDelay:3.f];
+        return;
+
+    }
+    
     WTCPOSPayRequest *request = [[WTCPOSPayRequest alloc]initWithToken:loginToken ProductId:self.aSale.saleId OrderPrice:orderPrice successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         WTCPOSPayModel *posPayModel = [request getResponse].data;
@@ -113,7 +137,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//-(BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//    textField.
+//}
 /*
 #pragma mark - Navigation
 
