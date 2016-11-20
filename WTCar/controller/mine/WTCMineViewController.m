@@ -24,12 +24,18 @@
 #import "MBProgressHUD.h"
 #import "WTCIsBindCardResult.h"
 #import "WTCIsBindCardRequest.h"
+#import "WTCUserInfoRequest.h"
+#import "WTCGetUserInfoResult.h"
+
 @interface WTCMineViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *posInfoArr;
     NSArray *headIconArr;
 }
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
+@property(nonatomic,strong)NSString *userName;
+@property(nonatomic,strong)NSString *userPhoto;
+@property(nonatomic,strong)NSString *merchantName;
 @end
 
 @implementation WTCMineViewController
@@ -45,6 +51,7 @@
     headIconArr = @[@"mine_collectmoney",@"mine_wtihdrawCash",@"mine_bill",@"mine_bannkcard",@"mine_sub_account",@"mine_recommend",@"mine_seting"];
     
     self.title = @"我的";
+    [self getUserBaseInfo];
     // Do any additional setup after loading the view from its nib.
 }
 //是否绑定银行卡
@@ -100,7 +107,6 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-//    [super viewWillAppear:animated];
     [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -154,6 +160,24 @@
         NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"HeadTableViewCell" owner:self options:nil];
         cell = [cellArr objectAtIndex:0];
     }
+    
+//    @property(nonatomic,weak)IBOutlet UIImageView *profileImageView;
+//    @property(nonatomic,weak)IBOutlet UILabel *shopNameLabel;
+//    @property(nonatomic,weak)IBOutlet UILabel *shopOwnerLabel;
+//    @property(nonatomic,weak)IBOutlet UIImageView *vIdtiferImageview;
+//    @property(nonatomic,weak)IBOutlet UIImageView *bodyIndeiferImageView;
+
+    if (self.userName) {
+        cell.shopOwnerLabel.text = self.userName;
+    }
+    if (self.userPhoto) {
+        [cell.profileImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.userPhoto]] placeholderImage:[UIImage imageNamed:@"mine_user"]];
+    }
+    if (self.merchantName) {
+        cell.shopNameLabel.text = self.merchantName;
+    }
+    
+    
     return cell;
 }
 -(void)clickTestButton
@@ -229,7 +253,29 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark-获取用户基本信息
+-(void)getUserBaseInfo
+{
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    [self setBusyIndicatorVisible:YES];
+    WTCUserInfoRequest *request = [[WTCUserInfoRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCGetUserInfoResult *result = [request getResponse].data;
+        
+        self.userName = result.realName;
+        self.userPhoto = result.headPortraitPath;
+        self.merchantName = result.merchantName;
+        NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
 
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:NO];
+    }];
+    [request start];
+    
+}
 /*
 #pragma mark - Navigation
 

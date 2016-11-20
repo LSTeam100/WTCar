@@ -13,6 +13,10 @@
 #import "MBProgressHUD.h"
 #import "WTCChekVerityCodeRequest.h"
 @interface ResgisterSecondViewController ()
+{
+    NSTimer *countDownTimer;
+    NSInteger countTime;
+}
 
 @end
 
@@ -20,25 +24,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.getVerityCodeButton setEnabled:YES];
+
     [_getVerityCodeButton addTarget:self action:@selector(getVerityCodeButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void)getVerityCodeButtonClick{
+    countTime = 60;
+
     NSString *account =_teleNum;
     [self setBusyIndicatorVisible:YES];
     WTCVerfiyCodeRequest *request = [[WTCVerfiyCodeRequest alloc]initWithLoginName:account successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         
+        countDownTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:countDownTimer forMode:NSRunLoopCommonModes];
+        
         WTCVerifyCode *result = [request getResponse].data;
         _verityCodeTextField.text = result.validationCode;
         [_verityCodeTextField reloadInputViews];
         
+        
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+        
     }];
     [request start];
+}
+-(void)countDown
+{
+    NSLog(@"进入倒计时方法");
+    countTime--;
+    if (countTime == 0) {
+        [countDownTimer invalidate];
+        [self.getVerityCodeButton setTitle:[NSString stringWithFormat:@"获取验证码"] forState:UIControlStateNormal];
+        
+        [self.getVerityCodeButton setEnabled:YES];
+
+    }
+    else
+    {
+        [self.getVerityCodeButton setTitle:[NSString stringWithFormat:@"倒计时%ld",countTime] forState:UIControlStateNormal];
+        [self.getVerityCodeButton setEnabled:NO];
+        
+    }
+    
+    
+    
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [countDownTimer invalidate];
 }
 
 //检验验证码

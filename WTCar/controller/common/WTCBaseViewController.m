@@ -129,6 +129,16 @@
     {
         [self showMessage:@"当前城市不支持"];
     }
+    else if (statusCode==-1)
+    {
+        NSString *message = [request getResponse].errorMessage;
+        [self showMessage:message];
+    }
+    else if (statusCode == 1004)
+    {
+        NSString *message = [request getResponse].errorMessage;
+        [self showMessage:message];
+    }
     else{
         if(treated){
             [self showDefaultFailureMessage];

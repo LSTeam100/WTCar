@@ -26,7 +26,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarBrandViewController.m"
-                  timestampString = "501263529.381139"
+                  timestampString = "501324779.602367"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "168"
@@ -41,7 +41,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarBrandViewController.m"
-                  timestampString = "501263529.382566"
+                  timestampString = "501324779.604924"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "168"
@@ -170,22 +170,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/Login/LoginViewController.m"
-            timestampString = "499854178.649169"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-keyboardHide:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WTCar/controller/Login/LoginViewController.m"
             timestampString = "499854448.831723"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -193,54 +177,6 @@
             endingLineNumber = "72"
             landmarkName = "@implementation LoginViewController"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WTCar/controller/Login/LoginViewController.m"
-            timestampString = "499854448.831723"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-didReceiveMemoryWarning"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WTCar/controller/common/WTCBaseViewController.m"
-            timestampString = "500488230.631007"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-handleResponseError:request:treatErrorAsUnknown:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WTCar/controller/common/WTCBaseViewController.m"
-            timestampString = "500488230.631007"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "-handleResponseError:request:treatErrorAsUnknown:"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -376,7 +312,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarCategoryViewController.m"
-                  timestampString = "501263529.43372"
+                  timestampString = "501324779.645774"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "116"
@@ -391,7 +327,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarCategoryViewController.m"
-                  timestampString = "501263529.435656"
+                  timestampString = "501324779.647278"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "116"
@@ -406,7 +342,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarCategoryViewController.m"
-                  timestampString = "501263529.437221"
+                  timestampString = "501324779.648685"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "116"
@@ -421,7 +357,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarCategoryViewController.m"
-                  timestampString = "501263529.43863"
+                  timestampString = "501324779.650138"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "116"
@@ -436,7 +372,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarCategoryViewController.m"
-                  timestampString = "501263529.440023"
+                  timestampString = "501324779.651635"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "116"
@@ -613,11 +549,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCAddCarViewController.m"
-            timestampString = "500980298.983713"
+            timestampString = "501322161.331344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-upLoadImage:"
             landmarkType = "7">
          </BreakpointContent>
@@ -629,11 +565,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCAddCarViewController.m"
-            timestampString = "500980298.983713"
+            timestampString = "501322161.331344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "-upLoadImage:"
             landmarkType = "7">
          </BreakpointContent>
@@ -645,11 +581,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCAddCarViewController.m"
-            timestampString = "500980298.983713"
+            timestampString = "501322161.331344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "-upLoadImage:"
             landmarkType = "7">
          </BreakpointContent>
@@ -693,11 +629,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCAddCarViewController.m"
-            timestampString = "500980298.983713"
+            timestampString = "501322161.331344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "-upLoadImage:"
             landmarkType = "7">
          </BreakpointContent>
@@ -757,11 +693,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCAddCarViewController.m"
-            timestampString = "500980298.983713"
+            timestampString = "501322352.167924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "405"
-            endingLineNumber = "405"
+            startingLineNumber = "490"
+            endingLineNumber = "490"
             landmarkName = "-textFieldDidBeginEditing:"
             landmarkType = "7">
          </BreakpointContent>
@@ -773,11 +709,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCCarManageController.m"
-            timestampString = "500990721.970476"
+            timestampString = "501316747.114987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "410"
-            endingLineNumber = "410"
+            startingLineNumber = "415"
+            endingLineNumber = "415"
             landmarkName = "-onMoreData"
             landmarkType = "7">
          </BreakpointContent>
@@ -789,11 +725,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCCarManageController.m"
-            timestampString = "500990721.970476"
+            timestampString = "501316747.114987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "490"
-            endingLineNumber = "490"
+            startingLineNumber = "495"
+            endingLineNumber = "495"
             landmarkName = "-loadMoreOffShelfList"
             landmarkType = "7">
             <Locations>
@@ -805,11 +741,11 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarManageController.m"
-                  timestampString = "501263540.082537"
+                  timestampString = "501324779.71192"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "490"
-                  endingLineNumber = "490"
+                  startingLineNumber = "495"
+                  endingLineNumber = "495"
                   offsetFromSymbolStart = "276">
                </Location>
                <Location
@@ -820,11 +756,11 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCCarManageController.m"
-                  timestampString = "501263540.084453"
+                  timestampString = "501324779.713395"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "490"
-                  endingLineNumber = "490"
+                  startingLineNumber = "495"
+                  endingLineNumber = "495"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -837,11 +773,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCCarManageController.m"
-            timestampString = "500990721.970476"
+            timestampString = "501316747.114987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "493"
-            endingLineNumber = "493"
+            startingLineNumber = "498"
+            endingLineNumber = "498"
             landmarkName = "-loadMoreOffShelfList"
             landmarkType = "7">
          </BreakpointContent>
@@ -853,11 +789,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCCarManageController.m"
-            timestampString = "500990721.970476"
+            timestampString = "501316747.114987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "536"
-            endingLineNumber = "536"
+            startingLineNumber = "541"
+            endingLineNumber = "541"
             landmarkName = "-deletProduct:"
             landmarkType = "7">
          </BreakpointContent>
@@ -869,11 +805,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCCarManageController.m"
-            timestampString = "500981788.943766"
+            timestampString = "501316747.114987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "379"
-            endingLineNumber = "379"
+            startingLineNumber = "384"
+            endingLineNumber = "384"
             landmarkName = "-offShelfCar:"
             landmarkType = "7">
          </BreakpointContent>
@@ -885,11 +821,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCCarManageController.m"
-            timestampString = "500990721.970476"
+            timestampString = "501316747.114987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "390"
-            endingLineNumber = "390"
+            startingLineNumber = "395"
+            endingLineNumber = "395"
             landmarkName = "-offShelfCar:"
             landmarkType = "7">
          </BreakpointContent>
@@ -996,22 +932,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WTCar/controller/home/WTCAddCarViewController.m"
-            timestampString = "501252430.407124"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "455"
-            endingLineNumber = "455"
-            landmarkName = "-commit:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "WTCar/controller/home/WTCHomeViewController.m"
             timestampString = "501263927.76306"
             startingColumnNumber = "9223372036854775807"
@@ -1060,13 +980,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WTCar/controller/ShopPOS/WTCPOSHasOpenedViewController.m"
-            timestampString = "501263521.581332"
+            filePath = "WTCar/controller/home/WTCAddCarViewController.m"
+            timestampString = "501321326.086401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "-getPOSInfo"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1076,13 +996,157 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WTCar/controller/ShopPOS/WTCPOSHasOpenedViewController.m"
-            timestampString = "501263572.656765"
+            filePath = "WTCar/controller/home/WTCAddCarViewController.m"
+            timestampString = "501321326.086401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-getPOSInfo"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-getCarDetailInfo"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WTCAddCarViewController getCarDetailInfo]"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCAddCarViewController.m"
+                  timestampString = "501324779.757353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[WTCAddCarViewController getCarDetailInfo]_block_invoke"
+                  moduleName = "WTCar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/WTCar/WTCar/controller/home/WTCAddCarViewController.m"
+                  timestampString = "501324779.758776"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/controller/home/WTCAddCarViewController.m"
+            timestampString = "501322161.331344"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-getCarDetailInfo"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/controller/home/WTCAddCarViewController.m"
+            timestampString = "501321326.086401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-getCarDetailInfo"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/controller/home/WTCAddCarViewController.m"
+            timestampString = "501322161.331344"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-getCarDetailInfo"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/controller/Login/ResgisterSecondViewController.m"
+            timestampString = "501324941.475204"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-getVerityCodeButtonClick"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/controller/Login/ResgisterSecondViewController.m"
+            timestampString = "501324954.214928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-getVerityCodeButtonClick"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/controller/Login/ResgisterSecondViewController.m"
+            timestampString = "501324954.214928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-countDown"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WTCar/controller/Login/ResgisterSecondViewController.m"
+            timestampString = "501324954.214928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-getVerityCodeButtonClick"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
