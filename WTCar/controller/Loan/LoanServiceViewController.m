@@ -102,7 +102,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _loanStateArray.count;
+    return _loanArray.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return cellHeight;
@@ -113,9 +113,9 @@
     
     _loanDetailsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [cell.contentView setBackgroundColor:[UIColor whiteColor]];
-    cell.LoanMoneyLabel.text = _loanMoneyArray[indexPath.row];
-    cell.LoanStateLabel.text = _loanStateArray[indexPath.row];
-    cell.LoanTimeLabel.text = _loanTimeArray[indexPath.row];
+    cell.LoanMoneyLabel.text = _loanArray[indexPath.row][@"amount"];
+    cell.LoanStateLabel.text = _loanMoneyArray[indexPath.row][@"status"];
+    cell.LoanTimeLabel.text = _loanMoneyArray[indexPath.row][@"updataTime"];
     if (!IOS9_OR_LATER) {
         cell.LoanMoneyLabel.font = [UIFont boldSystemFontOfSize:15];
         cell.LoanStateLabel.font = [UIFont boldSystemFontOfSize:15];
