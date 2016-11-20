@@ -6,8 +6,8 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WTCChangePayPasswdRequest.h"
-@implementation WTCChangePayPasswdRequest
+#import "WTCUpdatePayPasswdRequest.h"
+@implementation WTCUpdatePayPasswdRequest
 
 -(id)initChangePayPasswd:(NSString *)nwPayPassword payPassword:(NSString *)payPassword successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
     self=[super initWithSuccessCallback:success

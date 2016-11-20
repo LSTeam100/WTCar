@@ -23,7 +23,8 @@
 #import "WTCCarBrand.h"
 #import "WTCProfileImageUploadRequest.h"
 #import "WTCPublishCarRequest.h"
-
+#import "WTCarDetailModel.h"
+#import "WTCCarDetailRequest.h"
 static NSString *collectionViewCellId = @"collectionViewCellId";
 static CGFloat imageSize = 80;
 
@@ -55,6 +56,10 @@ typedef enum
 @property(nonatomic,strong)NSString *province;
 @property(nonatomic,strong)NSString *distance;
 @property(nonatomic,strong)NSString *plateDate;
+@property(nonatomic,strong)NSString *price;
+@property(nonatomic,strong)NSString *cbrandName;
+@property(nonatomic,strong)NSString *cModelName;
+@property(nonatomic,strong)NSString *ctypeName;
 @end
 
 @implementation WTCAddCarViewController
@@ -69,16 +74,67 @@ typedef enum
     infoArr = @[@"品牌车系",@"所在地",@"里程(公里)",@"初次上牌时间",@"价格",@"价格车辆描述"];
     self.cellData = [NSMutableArray arrayWithArray:@[ @"Existing text", @""]];
     
+    if (self.editeStatus == 1) {
+        [self getCarDetailInfo];
+    }
+    
+}
+-(void)getCarDetailInfo
+{
+    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    [self setBusyIndicatorVisible:YES];
+    WTCCarDetailRequest *request = [[WTCCarDetailRequest alloc]initWithToken:loginToken CarDetailId:self.carDetailId successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCarDetailModel *detaiModel = [request getResponse].data;
+        urlImageArr = [NSMutableArray arrayWithArray:detaiModel.primaryPicUrlArr];
+        self.imageArray = [[NSMutableArray alloc]initWithCapacity:4];
+        
+        for (int i = 0; i <urlImageArr.count; i ++) {
+            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+            NSString *url = [urlImageArr objectAtIndex:i];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                [self.imageArray addObject:image];
+                [self.collectionView reloadData];
+
+            }];
+ 
+        }
+        //        for (int i = 0; i < urlImageArr.count; i++) {
+//            NSString *url = [urlImageArr objectAtIndex:i];
+//            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+//            [self.imageArray addObject:image];
+//        }
+        self.plateDate = detaiModel.firstUpTime;
+        self.cModelName = detaiModel.cmodel;
+        self.cbrandName = detaiModel.cbrand;
+        self.ctypeName = detaiModel.ctype;
+        self.city = detaiModel.city;
+        self.province = detaiModel.province;
+        self.distance = detaiModel.miles;
+        self.price = detaiModel.price;
+        self.carDescibetion = detaiModel.productDescr;
+        
+        [self.tableView reloadData];
+
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+    }];
+
+    [request start];
 }
 -(void)initData
 {
-    self.selectModel.name = @"";
-    self.selectBrand.name = @"";
-    self.selectType.name = @"";
-    self.plateDate = @"";
-    self.carDescibetion = @"";
-    self.province = @"";
-    self.city = @"";
+        self.selectModel.name = @"";
+        self.selectBrand.name = @"";
+        self.selectType.name = @"";
+        [self.imageArray removeAllObjects];
+        [urlImageArr removeAllObjects];
+        self.plateDate = @"";
+        self.carDescibetion = @"";
+        self.province = @"";
+        self.city = @"";
+
 }
 //-(UIToolbar *)inputAccessoryView
 // {
@@ -290,6 +346,7 @@ typedef enum
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
     }
     if (self.carDescibetion) {
+        
         cell.textLabel.text = self.carDescibetion;
     }
     else
@@ -327,6 +384,34 @@ typedef enum
     if (indexPath.row == 0) {
         if (self.selectBrand != nil && self.selectType != nil && self.selectModel != nil) {
             cell.infoField.text = [NSString stringWithFormat:@"%@ %@ %@",self.selectBrand.name,self.selectType.name,self.selectModel.name];
+        }
+    }
+    
+    if (self.editeStatus == 1) {
+        if (indexPath.row == 0) {
+            if (self.selectBrand != nil && self.selectType != nil && self.selectModel != nil) {
+                cell.infoField.text = [NSString stringWithFormat:@"%@ %@ %@",self.selectBrand.name,self.selectType.name,self.selectModel.name];
+            }
+            else
+            {
+               cell.infoField.text = [NSString stringWithFormat:@"%@ %@ %@",self.cbrandName,self.ctypeName,self.cModelName];
+            }
+        }
+        else if (indexPath.row == 1)
+        {
+            cell.infoField.text = [NSString stringWithFormat:@"%@%@",self.province,self.city];
+        }
+        else if (indexPath.row == 2)
+        {
+            cell.infoField.text = [NSString stringWithFormat:@"%@",self.distance];
+        }
+        else if (indexPath.row == 3)
+        {
+            cell.infoField.text = self.plateDate;
+        }
+        else if (indexPath.row == 4)
+        {
+            cell.infoField.text = self.price;
         }
     }
 
@@ -452,41 +537,43 @@ typedef enum
 //    self.carDescibetion = @"";
 //    self.province = @"";
 //    self.city = @"";
-    if ([self.selectModel.name isEqualToString:@""] || [self.selectBrand.name isEqualToString:@""] || [self.selectType.name isEqualToString:@""] || self.imageArray.count == 0 || urlImageArr.count == 0 || [self.plateDate isEqualToString:@""] || [self.carDescibetion isEqualToString:@""] || [self.province isEqualToString:@""] || [self.city isEqualToString:@""] ) {
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    
+    if (self.editeStatus == 0) {
+        if ([self.selectModel.name isEqualToString:@""] || [self.selectBrand.name isEqualToString:@""] || [self.selectType.name isEqualToString:@""] || self.imageArray.count == 0 || urlImageArr.count == 0 || [self.plateDate isEqualToString:@""] || [self.carDescibetion isEqualToString:@""] || [self.province isEqualToString:@""] || [self.city isEqualToString:@""] ) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+            
+            // Set the text mode to show only text.
+            hud.mode = MBProgressHUDModeText;
+            hud.label.text = @"选项不能为空";
+            // Move to bottm center.
+            hud.offset = CGPointMake(0.f, MBProgressMaxOffset);
+            
+            [hud hideAnimated:YES afterDelay:3.f];
+            
+            return;
+        }
         
-        // Set the text mode to show only text.
-        hud.mode = MBProgressHUDModeText;
-        hud.label.text = @"选项不能为空";
-        // Move to bottm center.
-        hud.offset = CGPointMake(0.f, MBProgressMaxOffset);
         
-        [hud hideAnimated:YES afterDelay:3.f];
-
-        return;
-    }
-    
-    
-    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
-
-    
-    NSMutableArray *picArr = [NSMutableArray arrayWithArray:urlImageArr];
-    
-    NSString *headPic;
-    if (picArr.count > 0) {
-        headPic = [picArr objectAtIndex:0];
-        [picArr removeObjectAtIndex:0];
-    }
-    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
-    
-    WTCAddCarTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    int distance = [cell.infoField.text intValue];
-    NSIndexPath *indexPath2=[NSIndexPath indexPathForRow:4 inSection:0];
-    WTCAddCarTableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath2];
-    NSString *price = cell2.infoField.text;
-    [self setBusyIndicatorVisible:YES];
-    WTCPublishCarRequest *request = [[WTCPublishCarRequest alloc] initWithToken:loginToken CBrand:self.selectBrand.name CModel:self.selectModel.name Ctype:self.selectType.name City:self.city FirstUpTime:self.plateDate HeaderPic:headPic Miles:[NSNumber numberWithInt:distance] PicList:picArr Price:price Product_descr:self.carDescibetion Province:self.province successCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
+        NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+        
+        
+        NSMutableArray *picArr = [NSMutableArray arrayWithArray:urlImageArr];
+        
+        NSString *headPic;
+        if (picArr.count > 0) {
+            headPic = [picArr objectAtIndex:0];
+            [picArr removeObjectAtIndex:0];
+        }
+        NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
+        
+        WTCAddCarTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        int distance = [cell.infoField.text intValue];
+        NSIndexPath *indexPath2=[NSIndexPath indexPathForRow:4 inSection:0];
+        WTCAddCarTableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath2];
+        NSString *price = cell2.infoField.text;
+        [self setBusyIndicatorVisible:YES];
+        WTCPublishCarRequest *request = [[WTCPublishCarRequest alloc] initWithToken:loginToken CBrand:self.selectBrand.name CModel:self.selectModel.name Ctype:self.selectType.name City:self.city FirstUpTime:self.plateDate HeaderPic:headPic Miles:[NSNumber numberWithInt:distance] PicList:picArr Price:price Product_descr:self.carDescibetion Province:self.province successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
             WTCAddCarSuccessViewController *success = [[WTCAddCarSuccessViewController alloc]init];
             [self presentViewController:success animated:YES completion:nil];
             self.selectModel.name = @"";
@@ -498,12 +585,17 @@ typedef enum
             self.carDescibetion = @"";
             self.province = @"";
             self.city = @"";
-    } failureCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
-    }];
-    [request start];
-    
-    
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+        }];
+        [request start];
+
+    }
+    else
+    {
+        
+    }
     
 }
 //- (void)setToolBarForTextField:(id)aTextInput doneActionTarget:(id)aTarget actionSelector:(SEL)aDoneSEL
@@ -543,6 +635,7 @@ typedef enum
 #pragma mark-选择车系回调方法
 -(void)selectBrand:(WTCCarBrand *)brand type:(WTCCarType *)type Model:(WTCCarModel *)model
 {
+    
     self.selectModel = model;
     self.selectType = type;
     self.selectBrand = brand;

@@ -372,6 +372,11 @@ static int DEFAULT_SIZE=10;
 -(IBAction)naviToAddCar:(id)sender
 {
     WTCAddCarViewController *addCar = [[WTCAddCarViewController alloc]init];
+    UIButton *btn = (UIButton *)sender;
+    WTCASale *aSale = [onsaleArr objectAtIndex:btn.tag];
+
+    addCar.editeStatus = 1;
+    addCar.carDetailId = aSale.saleId;
     [self.navigationController pushViewController:addCar animated:YES];
 }
 -(IBAction)offShelfCar:(id)sender

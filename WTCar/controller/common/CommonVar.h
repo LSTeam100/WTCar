@@ -15,5 +15,6 @@
 
 -(NSString *)getLoginToken;
 
+-(void)showMessage:(NSString *)message ShowController:(UIViewController *)showController;
 
 @end

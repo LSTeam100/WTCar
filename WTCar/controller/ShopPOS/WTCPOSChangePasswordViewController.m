@@ -10,6 +10,7 @@
 #import "WTCChangePOSPassWordRequest.h"
 #import "WTCChangePOSPassWordResult.h"
 #import "MBProgressHUD.h"
+#import "WTCHomeViewController.h"
 @interface WTCPOSChangePasswordViewController ()
 
 @end
@@ -18,7 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title =@"修改支付密码";
+    if (self.flag == 1) {
+        self.navigationItem.title =@"修改POS登录密码";
+    }
+    else
+    {
+        self.navigationItem.title =@"修改支付密码";
+
+    }
     [self addsubview];
     // Do any additional setup after loading the view from its nib.
 }
@@ -57,20 +65,42 @@
 */
 
 - (IBAction)ConfirmPOSCodeButtonClick:(id)sender {
+    NSString *congfirmPosLoginPasswd = _password3.textField.text;
     NSString *newPosLoginPasswd = _password2.textField.text;
     NSString *posLoginPasswd = _password.textField.text;
-    NSString *changePasswdToken = [[CommonVar sharedInstance] getLoginToken];
-    [self setBusyIndicatorVisible:YES];
-    WTCChangePOSPassWordRequest *request = [[WTCChangePOSPassWordRequest alloc] initWithNewPosLoginPasswd:newPosLoginPasswd PosLoginPasswd:posLoginPasswd Token:changePasswdToken successCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
+    
+    if ([newPosLoginPasswd isEqualToString:congfirmPosLoginPasswd]) {
         
-        WTCChangePOSPassWordResult *receivePosResult = [request getResponse].data;
+        [self setBusyIndicatorVisible:YES];
+        NSString *changePasswdToken = [[CommonVar sharedInstance] getLoginToken];
 
-    } failureCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
-        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
-    }];
-    [request start];
+        WTCChangePOSPassWordRequest *request = [[WTCChangePOSPassWordRequest alloc] initWithNewPosLoginPasswd:newPosLoginPasswd PosLoginPasswd:posLoginPasswd Token:changePasswdToken successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            
+            int index = 0;
+            for (int i = 0; i < self.navigationController.viewControllers.count; i++) {
+                id controller = [self.navigationController.viewControllers objectAtIndex:i];
+                NSLog(@"controller=%@",controller);
+                if ([controller isKindOfClass:[WTCHomeViewController class]]) {
+                    index = i;
+                    [self.navigationController popToViewController:controller animated:YES];
+                    
+                }
+            }
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+        }];
+        [request start];
+
+        
+    }
+    else
+    {
+        [[CommonVar sharedInstance]showMessage:@"输入密码不一致" ShowController:self.navigationController];
+    }
+    
+    
     
 }
 @end
