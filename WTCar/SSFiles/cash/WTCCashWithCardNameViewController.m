@@ -24,6 +24,10 @@
     [_NextStepButton addTarget:self action:@selector(GotoLogPasswordOrCashRecord) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
 }
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self getBankInfoRequest];
+}
 //获取银行卡信息
 -(void)getBankInfoRequest
 {

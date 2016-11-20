@@ -10,11 +10,10 @@
 #import "WTCApplyLoanResult.h"
 @implementation WTCApplyLoanRequest
 -(id)initWithAmount:(NSString *)amount Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"amount":amount,@"token":token};
+        NSDictionary *parameters=@{@"amount":amount};
         [self setParameters:parameters];
     }
     return self;

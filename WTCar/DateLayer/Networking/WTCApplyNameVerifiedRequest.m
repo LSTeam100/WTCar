@@ -11,11 +11,10 @@
 @implementation WTCApplyNameVerifiedRequest
 
 -(id)initWithIdcard:(NSString *)idcard realName:(NSString *)realName Token:(NSString*)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"idcard":idcard,@"realName":realName,@"token":token};
+        NSDictionary *parameters=@{@"idcard":idcard,@"realName":realName};
         [self setParameters:parameters];
     }
     return self;

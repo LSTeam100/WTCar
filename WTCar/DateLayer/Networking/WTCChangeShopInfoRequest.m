@@ -11,11 +11,10 @@
 @implementation WTCChangeShopInfoRequest
 
 -(id)initWithmerchanAddress:(NSString *)merchanAddress merchanDescr:(NSString *)merchanDescr merchanImage_path:(NSString *)merchanImage_path merchanName:(NSString *)merchanName mobile:(NSString *)mobile nick:(NSString *)nick token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"merchanAddress":merchanAddress,@"merchanDescr":merchanDescr,@"merchanImage_path":merchanImage_path,@"merchanName":merchanName,@"mobile":mobile,@"nick":nick,@"mobile":mobile,@"token":token};
+        NSDictionary *parameters=@{@"merchanAddress":merchanAddress,@"merchanDescr":merchanDescr,@"merchanImage_path":merchanImage_path,@"merchanName":merchanName,@"mobile":mobile,@"nick":nick,@"mobile":mobile};
         [self setParameters:parameters];
     }
     return self;

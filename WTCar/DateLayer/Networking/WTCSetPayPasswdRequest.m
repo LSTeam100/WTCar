@@ -10,11 +10,10 @@
 @implementation WTCSetPayPasswdRequest 
 
 -(id)initSetPayPasswd:(NSString *)payPassword Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
-        NSDictionary *parameters=@{@"payPassword":payPassword,@"token":token};
+        NSDictionary *parameters=@{@"payPassword":payPassword};
         [self setParameters:parameters];
     }
     return self;
