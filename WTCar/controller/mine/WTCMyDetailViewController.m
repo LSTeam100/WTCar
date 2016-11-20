@@ -27,6 +27,7 @@
 #import "MBProgressHUD.h"
 #import "WTCGetUserInfoResult.h"
 #import "WTCGetUserInfoRequest.h"
+#import "WTCPortratUploadRequest.h"
 @interface WTCMyDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,RSKImageCropViewControllerDelegate>
 {
     CGFloat cellHeight;
@@ -35,6 +36,8 @@
 @property (nonatomic,strong)NSArray *cellSecTextArray;
 @property (nonatomic,strong)UITableView *myDetialTableView;
 @property(nonatomic,strong)UIImage *photoImage;
+@property(nonatomic,strong)WTCGetUserInfoResult *userInfoResult;
+
 @end
 
 @implementation WTCMyDetailViewController
@@ -379,12 +382,22 @@
     
     NSDictionary *param = @{};
     [self setBusyIndicatorVisible:YES];
-    WTCProfileImageUploadRequest *request = [[WTCProfileImageUploadRequest alloc]init];
-    [request WTCUploadFileWith:param fileKey:@"file" filePath:profilePath SuccessCallbackBlock:^(NSData *data, NSURLResponse *response) {
+    WTCPortratUploadRequest *request = [[WTCPortratUploadRequest alloc]init];
+    NSString *token = [[CommonVar sharedInstance] getLoginToken];
+    [request WTCPortraitUploadFileWithToken:token params:param fileKey:@"file" filePath:profilePath SuccessCallbackBlock:^(NSData *data, NSURLResponse *response) {
+                [self setBusyIndicatorVisible:NO];
+
+    } FailCallbackBlock:^(NSError *eror, NSURLResponse *response) {
         [self setBusyIndicatorVisible:NO];
-    } FailCallbackBlock:^(NSError *data, NSURLResponse *response) {
-        [self setBusyIndicatorVisible:NO];
+//        [self handleResponseError:self request:request treatErrorAsUnknown:NO];
+
     }];
+     //    WTCPortratUploadRequest *request = [[WTCPortratUploadRequest alloc]init];
+//    [request WTCUploadFileWith:param fileKey:@"file" filePath:profilePath SuccessCallbackBlock:^(NSData *data, NSURLResponse *response) {
+//        [self setBusyIndicatorVisible:NO];
+//    } FailCallbackBlock:^(NSError *data, NSURLResponse *response) {
+//        [self setBusyIndicatorVisible:NO];
+//    }];
     
     
     

@@ -11,6 +11,7 @@
 #import "WTCCashToPasswordViewController.h"
 #import "WTCBindBankCardRequest.h"
 #import "MBProgressHUD.h"
+#import "WTCMyBankCardViewController.h"
 @interface WTCAddBankCardViewController ()
 
 @end
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"添加银行卡";
     [self dataInit];
     [_ConfirmAddBankCardButton addTarget:self action:@selector(GotoCashViewCon) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
@@ -42,34 +44,37 @@
     NSString *bankCard = _BankCardTextField.text;
     NSString *openCardAddress = _openBankCardAddressTextField.text;
     [self setBusyIndicatorVisible:YES];
-    WTCBindBankCardRequest *request = [[WTCBindBankCardRequest alloc]initWithBindBankCard:bankCard openedBank:openCardAddress  successCallback:^(WTCarBaseRequest *request) {
+    NSString *token = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCBindBankCardRequest *request = [[WTCBindBankCardRequest alloc]initWithBindBankCard:token Bankcard:bankCard openedBank:openCardAddress successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
-        
-        NSObject *Result = [request getResponse].data;
-        
+        WTCMyBankCardViewController *myBank = [[WTCMyBankCardViewController alloc]init];
+        [self.navigationController pushViewController:myBank animated:YES];
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:YES];
+
     }];
+  
     [request start];
 }
 -(void)GotoCashViewCon
 {
     [self BindBankCardRequest];
-    if (_CashHasNameNoPassword == YES) {
-        WTCCashWithCardNameViewController *cashViewCon = [WTCCashWithCardNameViewController new];
-        cashViewCon.CashHasPasswordAndName = NO;
-        [self.navigationController pushViewController:cashViewCon animated:YES];
-    } else {
-        WTCCashToPasswordViewController *cashTopasswordViewCon = [WTCCashToPasswordViewController new];
-        cashTopasswordViewCon.CashHasCardLogpassword = YES;
-        [self.navigationController pushViewController:cashTopasswordViewCon animated:YES];
-    }
+//    if (_CashHasNameNoPassword == YES) {
+//        WTCCashWithCardNameViewController *cashViewCon = [WTCCashWithCardNameViewController new];
+//        cashViewCon.CashHasPasswordAndName = NO;
+//        [self.navigationController pushViewController:cashViewCon animated:YES];
+//    } else {
+//        WTCCashToPasswordViewController *cashTopasswordViewCon = [WTCCashToPasswordViewController new];
+//        cashTopasswordViewCon.CashHasCardLogpassword = YES;
+//        [self.navigationController pushViewController:cashTopasswordViewCon animated:YES];
+//    }
     
 }
 -(void)dataInit
 {
-
+    self.uesrIdNumLabel.text = self.idcard;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

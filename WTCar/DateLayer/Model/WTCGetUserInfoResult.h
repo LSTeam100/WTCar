@@ -15,4 +15,14 @@
 @property(nonatomic,strong)NSString *merchantName;
 @property(nonatomic,strong)NSString *mobile;
 @property(nonatomic,strong)NSString *realName;
+@property(nonatomic,strong)NSNumber *avail;
+@property(nonatomic,strong)NSNumber *frozen;
+@property(nonatomic,assign)NSInteger isBk;
+@property(nonatomic,assign)NSInteger isMerchantAudit;
+@property(nonatomic,assign)NSInteger isPaypwd;
+@property(nonatomic,assign)NSInteger isRealNameAudit;
+@property(nonatomic,strong)NSString *merchantImagePath;
+@property(nonatomic,strong)NSString *nick;
+@property(nonatomic,strong)NSString *idcard;
+-(instancetype)initWithDictionary:(NSDictionary *)dataDic;
 @end

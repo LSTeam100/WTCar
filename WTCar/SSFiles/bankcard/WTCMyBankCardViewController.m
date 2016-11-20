@@ -37,8 +37,12 @@
         [self setBusyIndicatorVisible:NO];
         
         WTCGetBankCardInfoResult *Result = [request getResponse].data;
-        _bankCardEndNumLabel.text = Result.bankNum;
+        NSString *bankStr = Result.bankNum;
+        NSString *endStr = [bankStr substringFromIndex:bankStr.length - 4];
+
+        _bankCardEndNumLabel.text = endStr;
         _BankNameLabel.text = Result.openedBank;
+        
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
@@ -67,13 +71,19 @@
     [self setBusyIndicatorVisible:YES];
     WTCDelBankCardRequest *request = [[WTCDelBankCardRequest alloc]initWithToken:receivePosToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        [[CommonVar sharedInstance] showMessage:@"删除银行卡成功" ShowController:self];
+        [self performSelector:@selector(back) withObject:nil afterDelay:3.0];
         
-        NSObject *Result = [request getResponse].data;
+//        NSObject *Result = [request getResponse].data;
 
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:YES];
     }];
     [request start];
+}
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

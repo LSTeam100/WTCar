@@ -83,7 +83,14 @@
      WTCSetPayPasswdRequest*request = [[WTCSetPayPasswdRequest alloc]initSetPayPasswd:payPasswd Token:setPasswdToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         
-        WTCSetPayPasswdResult *setPayPasswdResult = [request getResponse].data;
+         if (self.isWithdraw == true) {
+             
+         }
+         else
+         {
+             [[CommonVar sharedInstance] showMessage:@"设置支付密码成功" ShowController:self];
+         }
+//        WTCSetPayPasswdResult *setPayPasswdResult = [request getResponse].data;
 
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
@@ -100,5 +107,9 @@
     }
     
 //    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

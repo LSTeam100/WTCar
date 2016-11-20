@@ -8,5 +8,5 @@
 #import "WTCarBaseRequest.h"
 
 @interface WTCBindBankCardRequest : WTCarBaseRequest
--(id)initWithBindBankCard:(NSString *)bankcard  openedBank:(NSString *)openedBank  successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
+-(id)initWithBindBankCard:(NSString *)token Bankcard:(NSString *)bankcard  openedBank:(NSString *)openedBank  successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed;
 @end
