@@ -256,7 +256,8 @@
 #pragma mark-获取用户基本信息
 -(void)getUserBaseInfo
 {
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    NSLog(@"loginToken=%@",loginToken);
     [self setBusyIndicatorVisible:YES];
     WTCUserInfoRequest *request = [[WTCUserInfoRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];

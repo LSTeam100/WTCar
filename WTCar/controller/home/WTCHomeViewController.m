@@ -48,9 +48,16 @@
     
     
     CGFloat offset = 44;
-    _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, viewX, viewY-44-offset)];
-    _mainScrollView.backgroundColor = [UIColor blackColor];
+    float bannerWidth = [UIScreen mainScreen].bounds.size.width;
+    float fen = 16.0/9.0;
+    float bannerHeight = bannerWidth /fen;
+    NSLog(@"bannerHeight=%f",bannerHeight);
+    NSLog(@"viewX=%f",viewX);
+    carouselHeight = bannerHeight;
+//    _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, viewX, viewY-44-offset)];
+    _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, viewX, bannerHeight)];
     _mainScrollView.showsVerticalScrollIndicator = false;//禁止垂直滚动条显示
+    _mainScrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_mainScrollView];
     [self dataInit];
     [self bannerPicInit];
@@ -74,7 +81,11 @@
 -(void)buttonViewInit{
     //九宫格View
     _buttonView = [[NSBundle mainBundle]loadNibNamed:@"MainButtonView" owner:nil options:nil][0];
-    _buttonView.frame = CGRectMake(0, carouselHeight+60, _mainScrollView.frame.size.width, SCREEN_HEIGHT-carouselHeight+80);
+    float bannerWidth = [UIScreen mainScreen].bounds.size.width;
+    float fen = 16.0/9.0;
+    float bannerHeight = bannerWidth /fen;
+    carouselHeight = bannerHeight;
+    _buttonView.frame = CGRectMake(0, bannerHeight, _mainScrollView.frame.size.width, SCREEN_HEIGHT-bannerHeight+80);
     _buttonView.backgroundColor = [UIColor whiteColor];
     
     
@@ -130,10 +141,12 @@
 }
 -(void)bannerPicInit{
     
-    UIImage *carouselImage = [UIImage imageNamed:@"1_banner_ch"];
+    UIImage *carouselImage = [UIImage imageNamed:@"banner3"];
     carouselHeight = carouselImage.size.height * (viewX / carouselImage.size.width);
-    
-    _carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 0, viewX, carouselHeight)];
+    float Width = [UIScreen mainScreen].bounds.size.width;
+    float fen = 16.0/9.0;
+    float Height = Width /fen;
+    _carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 0, viewX, Height)];
     _carousel.backgroundColor = [UIColor clearColor];
     _carousel.type = iCarouselTypeLinear;
     _carousel.delegate = self;
@@ -169,11 +182,11 @@
     //    NSLog(@"%ld",(long)_scrollCount);
     _scrollCount ++;
     _pageControl.currentPage = _scrollCount;
-    if (_scrollCount > 4) {
+    if (_scrollCount >  self.allLbPicPathArry.count + 1) {
         _scrollCount = 0;
         [_carousel reloadData];
     }
-    if (_scrollCount>3) {
+    if (_scrollCount >  self.allLbPicPathArry.count) {
         _pageControl.currentPage = 0;
     }
     
@@ -186,25 +199,35 @@
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    return self.allLbPicPathArry.count;
+    if (self.allLbPicPathArry.count == 0) {
+        return 1;
+    }
+    else
+    {
+        return self.allLbPicPathArry.count;
+
+    }
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
     UIImageView *imageView = nil;
+//    imageView.contentMode =
+
     
     //create new view if no view is available for recycling
     if (view == nil)
     {
-        view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, carouselHeight)];
-        view.contentMode = UIViewContentModeCenter;
-        
         CGFloat height = carouselHeight;
+
+        view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, carouselHeight)];
+        
         
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, height)];
         imageView.backgroundColor = [UIColor clearColor];
         imageView.tag = 5002;
         
-        
+        view.contentMode = UIViewContentModeScaleAspectFit;
+
         [view addSubview:imageView];
     }
     else
@@ -213,10 +236,20 @@
         //get a reference to the label in the recycled view
         imageView = (UIImageView *)[view viewWithTag:5002];
     }
+    if (_allLbPicPathArry.count > 0) {
+        WTCOneBanner *oneBanner = [_allLbPicPathArry objectAtIndex:index];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+
+        [imageView sd_setImageWithURL:[NSURL URLWithString:oneBanner.picUrl] placeholderImage:[UIImage imageNamed:@"banner3"]];
+    }
+    else
+    {
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+
+        imageView.image = [UIImage imageNamed:@"banner3"];
+    }
     
-    WTCOneBanner *oneBanner = [_allLbPicPathArry objectAtIndex:index];
     
-    [imageView sd_setImageWithURL:[NSURL URLWithString:oneBanner.picUrl] placeholderImage:[UIImage imageNamed:@"banner3"]];
     
 //    imageView.image = [UIImage imageNamed:@"banner3"];
 //        if (index == 1){

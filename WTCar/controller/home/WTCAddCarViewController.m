@@ -25,6 +25,7 @@
 #import "WTCPublishCarRequest.h"
 #import "WTCarDetailModel.h"
 #import "WTCCarDetailRequest.h"
+#import "WTCarUpdataCarInfo.h"
 static NSString *collectionViewCellId = @"collectionViewCellId";
 static CGFloat imageSize = 80;
 
@@ -60,6 +61,8 @@ typedef enum
 @property(nonatomic,strong)NSString *cbrandName;
 @property(nonatomic,strong)NSString *cModelName;
 @property(nonatomic,strong)NSString *ctypeName;
+@property(nonatomic,strong)NSString *modifyCarId;
+@property(nonatomic,strong)NSNumber *sid;
 @end
 
 @implementation WTCAddCarViewController
@@ -81,7 +84,7 @@ typedef enum
 }
 -(void)getCarDetailInfo
 {
-    NSString *loginToken = [CommonVar sharedInstance].loginToken;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
     WTCCarDetailRequest *request = [[WTCCarDetailRequest alloc]initWithToken:loginToken CarDetailId:self.carDetailId successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
@@ -113,6 +116,8 @@ typedef enum
         self.distance = detaiModel.miles;
         self.price = detaiModel.price;
         self.carDescibetion = detaiModel.productDescr;
+        self.modifyCarId = detaiModel.carDetialId;
+        self.sid = detaiModel.oldCarId;
         
         [self.tableView reloadData];
 
@@ -537,7 +542,8 @@ typedef enum
 //    self.carDescibetion = @"";
 //    self.province = @"";
 //    self.city = @"";
-    
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+
     if (self.editeStatus == 0) {
         if ([self.selectModel.name isEqualToString:@""] || [self.selectBrand.name isEqualToString:@""] || [self.selectType.name isEqualToString:@""] || self.imageArray.count == 0 || urlImageArr.count == 0 || [self.plateDate isEqualToString:@""] || [self.carDescibetion isEqualToString:@""] || [self.province isEqualToString:@""] || [self.city isEqualToString:@""] ) {
             MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -554,7 +560,6 @@ typedef enum
         }
         
         
-        NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
         
         
         NSMutableArray *picArr = [NSMutableArray arrayWithArray:urlImageArr];
@@ -594,7 +599,53 @@ typedef enum
     }
     else
     {
+        NSString *brand;
+        if (self.selectBrand==nil) {
+            brand = self.cbrandName;
+        }
+        else
+        {
+            brand = self.selectBrand.name;
+        }
+        NSString *model;
+        if (self.selectModel == nil) {
+            model = self.cModelName;
+        }
+        else
+        {
+            model = self.selectModel.name;
+        }
+        NSString *type;
+        if (self.selectType == nil) {
+            type = self.ctypeName;
+        }
+        else
+        {
+            type =self.selectType.name;
+        }
+        NSMutableArray *picArr = [NSMutableArray arrayWithArray:urlImageArr];
         
+        NSString *headPic;
+        if (picArr.count > 0) {
+            headPic = [picArr objectAtIndex:0];
+            [picArr removeObjectAtIndex:0];
+        }
+        NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
+        
+        WTCAddCarTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        int distance = [cell.infoField.text intValue];
+        NSIndexPath *indexPath2=[NSIndexPath indexPathForRow:4 inSection:0];
+        WTCAddCarTableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath2];
+        NSString *price = cell2.infoField.text;
+        [self setBusyIndicatorVisible:YES];
+        WTCarUpdataCarInfo *request = [[WTCarUpdataCarInfo alloc]initWithToken:loginToken CBrand:brand CModel:model Ctype:type City:self.city FirstUpTime:self.plateDate HeaderPic:headPic Miles:[NSNumber numberWithInt:distance] PicList:picArr Price:price Product_descr:self.carDescibetion Province:self.province Sid:self.sid ModifyId:self.carDetailId successCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [self getCarDetailInfo];
+        } failureCallback:^(WTCarBaseRequest *request) {
+            [self setBusyIndicatorVisible:NO];
+            [self handleResponseError:self request:request treatErrorAsUnknown:NO];
+        }];
+        [request start];
     }
     
 }

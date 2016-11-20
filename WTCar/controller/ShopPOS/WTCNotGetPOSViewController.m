@@ -44,7 +44,7 @@
 -(IBAction)getPos:(id)sender
 {
     if (self.posFag == 0) {
-        NSString *loginToken = [CommonVar sharedInstance].loginToken;
+        NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
         [self setBusyIndicatorVisible:YES];
         WTCReceivePOSRequest *request = [[WTCReceivePOSRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
             [self setBusyIndicatorVisible:NO];
