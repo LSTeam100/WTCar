@@ -9,7 +9,10 @@
 #import "WTCMineDetailViewController.h"
 #import "HeadTableViewCell.h"
 #import "AuthenticationTableViewCell.h"
+#import "WTCUserInfoRequest.h"
+#import "WTCGetUserInfoResult.h"
 @interface WTCMineDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)WTCGetUserInfoResult *userResult;
 @property(nonatomic,weak)IBOutlet UITableView *tableView;
 @end
 
@@ -24,6 +27,31 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self getUserBaseInfo];
+    
+}
+-(void)getUserBaseInfo
+{
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCUserInfoRequest *request = [[WTCUserInfoRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCGetUserInfoResult *result = [request getResponse].data;
+        self.userResult = result;
+        //        NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
+        //        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+        [self.tableView reloadData];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:NO];
+    }];
+    [request start];
+    
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -77,6 +105,7 @@
         NSArray *cellArr = [[NSBundle mainBundle]loadNibNamed:@"HeadTableViewCell" owner:self options:nil];
         cell = [cellArr objectAtIndex:0];
     }
+    [cell.profileImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.userResult.headPortraitPath]] placeholderImage:[UIImage imageNamed:@"mine_user"]];
     return cell;
 }
 

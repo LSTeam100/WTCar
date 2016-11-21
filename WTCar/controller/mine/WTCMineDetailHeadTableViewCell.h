@@ -10,4 +10,5 @@
 
 @interface WTCMineDetailHeadTableViewCell : UITableViewCell
 @property(nonatomic,weak)IBOutlet UIButton *headBtn;
+@property(nonatomic,weak)IBOutlet UIImageView *headImageView;
 @end

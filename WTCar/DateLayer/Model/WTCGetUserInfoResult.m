@@ -119,6 +119,20 @@
             self.idcard = @"";
  
         }
+        if ([dataDic objectForKey:@"city"]) {
+            self.city = [dataDic objectForKey:@"city"];
+        }
+        else
+        {
+            self.city = @"";
+        }
+        if ([dataDic objectForKey:@"province"]) {
+            self.province = [dataDic objectForKey:@"province"];
+        }
+        else
+        {
+            self.province = @"";
+        }
         
     }
     return self;

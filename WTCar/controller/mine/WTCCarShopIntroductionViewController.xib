@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCCarShopIntroductionViewController">
             <connections>
-                <outlet property="ShopIntroTextView" destination="exJ-Rs-YqU" id="XAf-Rj-VK4"/>
+                <outlet property="textView" destination="exJ-Rs-YqU" id="afA-0J-nh9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,12 +17,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="exJ-Rs-YqU">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="exJ-Rs-YqU" customClass="BRPlaceholderTextView">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="189" id="fdS-ja-i6N"/>
                     </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
@@ -62,12 +61,12 @@
                 <constraint firstItem="PEs-7F-Fjn" firstAttribute="top" secondItem="exJ-Rs-YqU" secondAttribute="bottom" constant="8" id="Y5R-qz-5qb"/>
                 <constraint firstItem="kbX-dk-t6G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ZH1-A0-DpY"/>
                 <constraint firstItem="HaJ-Bu-QME" firstAttribute="centerY" secondItem="PEs-7F-Fjn" secondAttribute="centerY" id="e0e-7v-9Sf"/>
-                <constraint firstItem="exJ-Rs-YqU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ezo-Kf-Owy"/>
+                <constraint firstItem="exJ-Rs-YqU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ezo-Kf-Owy"/>
                 <constraint firstAttribute="trailing" secondItem="PEs-7F-Fjn" secondAttribute="trailing" constant="37" id="k36-DB-Y0k"/>
                 <constraint firstItem="kbX-dk-t6G" firstAttribute="top" secondItem="PEs-7F-Fjn" secondAttribute="bottom" constant="58" id="pB9-HV-KqN"/>
                 <constraint firstItem="PEs-7F-Fjn" firstAttribute="leading" secondItem="HaJ-Bu-QME" secondAttribute="trailing" constant="8" id="vbb-BN-MEP"/>
-                <constraint firstItem="exJ-Rs-YqU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="112" id="vk9-EJ-tLn"/>
-                <constraint firstAttribute="trailing" secondItem="exJ-Rs-YqU" secondAttribute="trailing" constant="16" id="yuX-1v-gao"/>
+                <constraint firstItem="exJ-Rs-YqU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vk9-EJ-tLn"/>
+                <constraint firstAttribute="trailing" secondItem="exJ-Rs-YqU" secondAttribute="trailing" constant="10" id="yuX-1v-gao"/>
             </constraints>
             <point key="canvasLocation" x="59.5" y="71.5"/>
         </view>

@@ -248,6 +248,7 @@
 		181A74EE1DCDE242006F96E7 /* WTCarGetStoreInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A74ED1DCDE242006F96E7 /* WTCarGetStoreInfo.m */; };
 		182586151DE1B8A50065BF64 /* WTCarUpdataCarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 182586141DE1B8A50065BF64 /* WTCarUpdataCarInfo.m */; };
 		1825861B1DE1FE030065BF64 /* WTCPortratUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825861A1DE1FE030065BF64 /* WTCPortratUploadRequest.m */; };
+		182586221DE33F9E0065BF64 /* WTCModifyStoreInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 182586211DE33F9E0065BF64 /* WTCModifyStoreInfoRequest.m */; };
 		1828D14E1DE0988A000B60F8 /* WTCBannerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D14C1DE0988A000B60F8 /* WTCBannerRequest.m */; };
 		1828D1511DE098A4000B60F8 /* WTCBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D14F1DE098A4000B60F8 /* WTCBanner.m */; };
 		1836DEED1DC1FA81005C5A9E /* ACEExpandableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836DEEC1DC1FA81005C5A9E /* ACEExpandableTextCell.m */; };
@@ -886,6 +887,8 @@
 		182586141DE1B8A50065BF64 /* WTCarUpdataCarInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCarUpdataCarInfo.m; sourceTree = "<group>"; };
 		182586191DE1FE030065BF64 /* WTCPortratUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCPortratUploadRequest.h; sourceTree = "<group>"; };
 		1825861A1DE1FE030065BF64 /* WTCPortratUploadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCPortratUploadRequest.m; sourceTree = "<group>"; };
+		182586201DE33F9E0065BF64 /* WTCModifyStoreInfoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCModifyStoreInfoRequest.h; sourceTree = "<group>"; };
+		182586211DE33F9E0065BF64 /* WTCModifyStoreInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCModifyStoreInfoRequest.m; sourceTree = "<group>"; };
 		1828D14C1DE0988A000B60F8 /* WTCBannerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCBannerRequest.m; sourceTree = "<group>"; };
 		1828D14D1DE0988A000B60F8 /* WTCBannerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCBannerRequest.h; sourceTree = "<group>"; };
 		1828D14F1DE098A4000B60F8 /* WTCBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCBanner.m; sourceTree = "<group>"; };
@@ -2618,6 +2621,8 @@
 				182586141DE1B8A50065BF64 /* WTCarUpdataCarInfo.m */,
 				182586191DE1FE030065BF64 /* WTCPortratUploadRequest.h */,
 				1825861A1DE1FE030065BF64 /* WTCPortratUploadRequest.m */,
+				182586201DE33F9E0065BF64 /* WTCModifyStoreInfoRequest.h */,
+				182586211DE33F9E0065BF64 /* WTCModifyStoreInfoRequest.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -3118,6 +3123,7 @@
 				18D883461DBB49B200F19129 /* MJRefreshGifFooter.m in Sources */,
 				18BF6F321DC1DB7C003BF410 /* KKAreaPicker.m in Sources */,
 				045F34FA1DD348F200CDD473 /* WTCReqCarInfoRequest.m in Sources */,
+				182586221DE33F9E0065BF64 /* WTCModifyStoreInfoRequest.m in Sources */,
 				18ACFC1E1DE195130083F736 /* WTCCarDetailRequest.m in Sources */,
 				18044E7F1DDCB3FA009599DC /* WTCToPayList.m in Sources */,
 				1841A97B1DDE11740050ECB4 /* WTCPayDetail.m in Sources */,
@@ -3397,6 +3403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ECVCAG6ZK6;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTCar/lib/BaiduMapAPI",
@@ -3414,7 +3421,7 @@
 					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/WeChat",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haima.testAd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3424,6 +3431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ECVCAG6ZK6;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTCar/lib/BaiduMapAPI",
@@ -3441,7 +3449,7 @@
 					"$(PROJECT_DIR)/WTCar/lib/UMSocial/SocialLibraries/WeChat",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = apple.WTCar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haima.testAd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

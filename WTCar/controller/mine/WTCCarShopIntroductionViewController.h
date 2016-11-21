@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WTCCarShopIntroductionViewController : UIViewController
+#import "BRPlaceholderTextView.h"
+#import "WTCBaseViewController.h"
+@interface WTCCarShopIntroductionViewController : WTCBaseViewController
 - (IBAction)SaveCarShopIntroButtonClick:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextView *ShopIntroTextView;
+//@property (weak, nonatomic) IBOutlet UITextView *ShopIntroTextView;
+@property(nonatomic,weak)IBOutlet BRPlaceholderTextView *textView;
+
+@property(nonatomic,strong)NSString *shopDes;
 
 @end

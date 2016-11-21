@@ -22,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationController.navigationBar.hidden = YES;
+    self.navigationItem.hidesBackButton =YES;
+    self.navigationController.navigationBar.hidden = YES;
     self.TeleNumTextField.text = @"18801171093";
     self.passWordTextField.text = @"123456";
     self.passWordTextField.secureTextEntry = YES;

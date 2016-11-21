@@ -303,9 +303,9 @@
 -(void)getUserBaseInfo
 {
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
-    [self setBusyIndicatorVisible:YES];
+//    [self setBusyIndicatorVisible:YES];
     WTCUserInfoRequest *request = [[WTCUserInfoRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
+//        [self setBusyIndicatorVisible:NO];
         WTCGetUserInfoResult *result = [request getResponse].data;
         
         self.userInfoResult = result;
@@ -317,7 +317,7 @@
         [self.tableView reloadData];
         
     } failureCallback:^(WTCarBaseRequest *request) {
-        [self setBusyIndicatorVisible:NO];
+//        [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:NO];
     }];
     [request start];

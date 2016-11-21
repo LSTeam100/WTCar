@@ -24,5 +24,7 @@
 @property(nonatomic,strong)NSString *merchantImagePath;
 @property(nonatomic,strong)NSString *nick;
 @property(nonatomic,strong)NSString *idcard;
+@property(nonatomic,strong)NSString *city;
+@property(nonatomic,strong)NSString *province;
 -(instancetype)initWithDictionary:(NSDictionary *)dataDic;
 @end

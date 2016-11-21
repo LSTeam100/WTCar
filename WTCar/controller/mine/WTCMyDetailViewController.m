@@ -28,6 +28,7 @@
 #import "WTCGetUserInfoResult.h"
 #import "WTCGetUserInfoRequest.h"
 #import "WTCPortratUploadRequest.h"
+#import "WTCUserInfoRequest.h"
 @interface WTCMyDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,RSKImageCropViewControllerDelegate>
 {
     CGFloat cellHeight;
@@ -54,7 +55,8 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-    [self getAccountInfo];
+//    [self getAccountInfo];
+    [self getUserBaseInfo];
 }
 //获取账户信息
 -(void)getAccountInfo{
@@ -72,7 +74,25 @@
     }];
     [request start];
 }
-
+-(void)getUserBaseInfo
+{
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    [self setBusyIndicatorVisible:YES];
+    WTCUserInfoRequest *request = [[WTCUserInfoRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        WTCGetUserInfoResult *result = [request getResponse].data;
+        self.userInfoResult = result;
+        //        NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
+        //        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+        [self.myDetialTableView reloadData];
+        
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:NO];
+    }];
+    [request start];
+    
+}
 -(void)dataInit{
         _cellFirTextArray = @[@"头像",@"用户名",@"手机号",@"车行名称",@"详细地址",@"车行介绍"];
     _cellSecTextArray = @[@"",@"苗刚",@"18732166582",@"",@"",@"未填写"];
@@ -97,13 +117,13 @@
     return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
-        return 3;
-    } else if(section == 1)
-    {
-        return 3;
-    }
-    return 1;
+    return 3;
+//    if (section == 0) {
+//        return 3;
+//    } else  {
+//        return 3;
+//    }
+//    return 1;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
@@ -128,41 +148,62 @@
         _myDetialTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [cell.contentView setBackgroundColor:[UIColor whiteColor]];
         if (indexPath.section==0) {
+//            NSLog(@"row=%ld",(long)indexPath.row);
             cell.mineDataLabel.text = _cellFirTextArray[indexPath.row];
-            cell.detailLabel.text = _cellSecTextArray[indexPath.row];
+            if (indexPath.row == 1) {
+//                NSLog(@"nick=%@",self.userInfoResult.nick);
+//                NSLog(@"mobile=%@",self.userInfoResult.mobile);
+                cell.detailLabel.text = self.userInfoResult.nick;
+            }
+            else
+            {
+                cell.detailLabel.text = self.userInfoResult.mobile;
+
+            }
         }else{
             cell.mineDataLabel.text = _cellFirTextArray[indexPath.row+3];
-            cell.detailLabel.text = _cellSecTextArray[indexPath.row+3];
+            if (indexPath.row == 0) {
+                cell.detailLabel.text =self.userInfoResult.merchantName;
+            }
+            else if (indexPath.row == 1)
+            {
+                cell.detailLabel.text = self.userInfoResult.merchantAddress;
+            }
+            else
+            {
+                cell.detailLabel.text = self.userInfoResult.merchantDescr;
+
+            }
         }
         
         if (!IOS9_OR_LATER) {
             cell.mineDataLabel.font = [UIFont boldSystemFontOfSize:15];
             cell.detailLabel.font = [UIFont boldSystemFontOfSize:15];
         }
-        if (indexPath.section == 0) {
-            
-            if (indexPath.row == 0) {
-                UIImage *image = [UIImage imageNamed:@"交通示意图"];
-                CGFloat width = 68;
-                CGFloat height = 68;
-                UIImageView *PeoPicImage = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-width-30)/2, 31, width, height)];
-                PeoPicImage.image = image;
-                PeoPicImage.backgroundColor = [UIColor clearColor];
-            }else if (indexPath.row == 1){
-                
-            }else if (indexPath.row == 2){
-                
-            }
-        }else{
-            if (indexPath.row == 0) {
-                
-            }else if (indexPath.row ==1)
-            {
-                
-            }else if (indexPath.row == 2){
-                
-            }
-        }
+//        if (indexPath.section == 0) {
+//            
+//            if (indexPath.row == 0) {
+//                UIImage *image = [UIImage imageNamed:@"交通示意图"];
+//                CGFloat width = 68;
+//                CGFloat height = 68;
+//                UIImageView *PeoPicImage = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-width-30)/2, 31, width, height)];
+//                PeoPicImage.image = image;
+//                PeoPicImage.backgroundColor = [UIColor clearColor];
+//            }else if (indexPath.row == 1){
+//                
+//            }else if (indexPath.row == 2){
+//                
+//            }
+//        }else{
+//            if (indexPath.row == 0) {
+//                
+//            }else if (indexPath.row ==1)
+//            {
+//                
+//            }else if (indexPath.row == 2){
+//                
+//            }
+//        }
         return cell;
 
     }
@@ -178,8 +219,13 @@
         [cell.headBtn addTarget:self action:@selector(updateImageView) forControlEvents:UIControlEventTouchUpInside];
 
     }
-    if (self.photoImage) {
-        [cell.headBtn setImage:self.photoImage forState:UIControlStateNormal];
+    if (self.userInfoResult) {
+        [cell.headImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.userInfoResult.headPortraitPath]] placeholderImage:[UIImage imageNamed:@"mine_user"]];
+    }
+    else
+    {
+//        [cell.headBtn setImage:[UIImage imageNamed:@"mine_user"] forState:UIControlStateNormal];
+        [cell.headImageView setImage:[UIImage imageNamed:@"mine_user"]];
     }
     return cell;
     
@@ -209,24 +255,30 @@
             
         }else if (indexPath.row == 1){
             WTCUserNameViewController*usernameViewCon = [WTCUserNameViewController new];
-            usernameViewCon.realName = _realName;
+            usernameViewCon.realName = self.userInfoResult.nick;
             [self.navigationController pushViewController:usernameViewCon animated:YES];
         }else if (indexPath.row == 2){
             WTCUserTeleNumViewController*userTeleViewCon = [WTCUserTeleNumViewController new];
+            userTeleViewCon.telePhone = self.userInfoResult.mobile;
             [self.navigationController pushViewController:userTeleViewCon animated:YES];
             
         }
     } else if (indexPath.section == 1){
          if (indexPath.row == 0){
             WTCCarShopNameViewController*carshopNameViewCon = [WTCCarShopNameViewController new];
+             carshopNameViewCon.shopName = self.userInfoResult.merchantName;
             [self.navigationController pushViewController:carshopNameViewCon animated:YES];
             
         }else if (indexPath.row == 1){
             WTCDetialAddressViewController*detailAddressViewCon = [WTCDetialAddressViewController new];
+            detailAddressViewCon.detailAdress = self.userInfoResult.merchantAddress;
+            detailAddressViewCon.province = self.userInfoResult.province;
+            detailAddressViewCon.city = self.userInfoResult.city;
             [self.navigationController pushViewController:detailAddressViewCon animated:YES];
             
         }else if (indexPath.row == 2){
             WTCCarShopIntroductionViewController*carIntroViewCon = [WTCCarShopIntroductionViewController new];
+            carIntroViewCon.shopDes = self.userInfoResult.merchantDescr;
             [self.navigationController pushViewController:carIntroViewCon animated:YES];
             
         }
