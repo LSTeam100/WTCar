@@ -138,7 +138,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/bankcard/WTCMyBankCardViewController.m"
-                  timestampString = "501338055.344422"
+                  timestampString = "501338775.310466"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -153,7 +153,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/bankcard/WTCMyBankCardViewController.m"
-                  timestampString = "501338055.346991"
+                  timestampString = "501338775.313187"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -202,7 +202,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/Settings/SettingPayCodeViewController.m"
-                  timestampString = "501338055.355558"
+                  timestampString = "501338775.319753"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -217,7 +217,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/SSFiles/Settings/SettingPayCodeViewController.m"
-                  timestampString = "501338055.357266"
+                  timestampString = "501338775.321436"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -250,7 +250,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/DateLayer/Networking/WTCarBaseRequest.m"
-                  timestampString = "501338055.361857"
+                  timestampString = "501338775.326198"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -265,7 +265,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/DateLayer/Networking/WTCarBaseRequest.m"
-                  timestampString = "501338055.364846"
+                  timestampString = "501338775.328498"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -273,22 +273,6 @@
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WTCar/controller/home/WTCHomeViewController.m"
-            timestampString = "501326070.150501"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
-            landmarkName = "-ShangJPosButtonClick"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -394,7 +378,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/controller/mine/WTCMineViewController.m"
-                  timestampString = "501338055.391414"
+                  timestampString = "501338775.352295"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -409,7 +393,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/controller/mine/WTCMineViewController.m"
-                  timestampString = "501338055.393987"
+                  timestampString = "501338775.354506"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -458,7 +442,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/DateLayer/Networking/WTCarBaseRequest.m"
-                  timestampString = "501338055.402"
+                  timestampString = "501338775.361993"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "139"
@@ -473,7 +457,7 @@
                   moduleName = "WTCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/MAC/Downloads/WTCar-master/WTCar/DateLayer/Networking/WTCarBaseRequest.m"
-                  timestampString = "501338055.40475"
+                  timestampString = "501338775.363684"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "139"
