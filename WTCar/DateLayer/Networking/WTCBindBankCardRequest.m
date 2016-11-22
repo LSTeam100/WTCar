@@ -9,9 +9,8 @@
 #import "WTCBindBankCardRequest.h"
 @implementation WTCBindBankCardRequest
 
--(id)initWithBindBankCard:(NSString *)bankcard  openedBank:(NSString *)openedBank  successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+-(id)initWithBindBankCard:(NSString *)token Bankcard:(NSString *)bankcard  openedBank:(NSString *)openedBank  successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
+    self = [super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
         NSDictionary *parameters=@{
@@ -32,10 +31,16 @@
 
 -(void)processResponse:(NSDictionary *)responseDictionary{
     [super processResponse:responseDictionary];
-    
-    if([[self getResponse] isSucceed]){
-        NSLog(@"绑定成功");
+    NSDictionary* data=responseDictionary[@"data"];
+    if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
+        
+        [self getResponse].data=data;
     }
+
+//    
+//    if([[self getResponse] isSucceed]){
+//        NSLog(@"绑定成功");
+//    }
 }
 
 @end

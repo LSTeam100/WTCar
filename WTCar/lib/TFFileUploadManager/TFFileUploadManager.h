@@ -33,5 +33,5 @@
 -(void)uploadFileWithURL:(NSString*)urlString params:(NSDictionary*)params fileKey:(NSString*)fileKey filePath:(NSString*)filePath completeHander:(void(^)(NSURLResponse *response, NSData *data, NSError *connectionError))completeHander;
 
 -(void)WTCUploadFileWithURL:(NSString *)urlString params:(NSDictionary *)params fileKey:(NSString *)fileKey filePath:(NSString *)filePath SuccessCallbackBlock:(void (^)(NSData *,NSURLResponse *))successBlock FailCallbackBlock:(void(^)(NSError *,NSURLResponse *))failBlock;
-
+-(void)WTCPortraitUploadFileWithToken:(NSString *)token Url:(NSString *)urlString params:(NSDictionary *)params fileKey:(NSString *)fileKey filePath:(NSString *)filePath SuccessCallbackBlock:(void (^)(NSData *,NSURLResponse *))successBlock FailCallbackBlock:(void(^)(NSError *,NSURLResponse *))failBlock;
 @end

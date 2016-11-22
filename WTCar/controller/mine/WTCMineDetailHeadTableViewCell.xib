@@ -17,12 +17,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_next" translatesAutoresizingMaskIntoConstraints="NO" id="vpZ-z9-fzv"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xDk-K2-LIa">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="qZV-h4-p4b"/>
+                            <constraint firstAttribute="width" constant="56" id="rwo-I6-ybW"/>
+                        </constraints>
+                    </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBp-Qp-2FV">
                         <constraints>
                             <constraint firstAttribute="height" constant="56" id="LdT-1V-jlu"/>
                             <constraint firstAttribute="width" constant="56" id="XIS-xW-tL4"/>
                         </constraints>
-                        <state key="normal" backgroundImage="mine_user"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wr-gz-0Cn">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -34,18 +39,20 @@
                     <constraint firstItem="9Wr-gz-0Cn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1sF-2v-PTg"/>
                     <constraint firstItem="jBp-Qp-2FV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KjO-gV-zsy"/>
                     <constraint firstItem="9Wr-gz-0Cn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="RU3-t7-XN1"/>
+                    <constraint firstItem="xDk-K2-LIa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zsx-ro-Z3L"/>
                     <constraint firstItem="vpZ-z9-fzv" firstAttribute="leading" secondItem="jBp-Qp-2FV" secondAttribute="trailing" constant="10" id="hE3-em-PnC"/>
                     <constraint firstAttribute="trailing" secondItem="vpZ-z9-fzv" secondAttribute="trailing" constant="10" id="ktT-4P-O8f"/>
                     <constraint firstItem="vpZ-z9-fzv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nYP-Ez-Ccw"/>
+                    <constraint firstItem="vpZ-z9-fzv" firstAttribute="leading" secondItem="xDk-K2-LIa" secondAttribute="trailing" constant="10" id="sJF-Y7-3rd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="headBtn" destination="jBp-Qp-2FV" id="lr4-x9-OfC"/>
+                <outlet property="headImageView" destination="xDk-K2-LIa" id="LsG-sO-wae"/>
             </connections>
         </tableViewCell>
     </objects>
     <resources>
         <image name="mine_next" width="6" height="10"/>
-        <image name="mine_user" width="56" height="56"/>
     </resources>
 </document>

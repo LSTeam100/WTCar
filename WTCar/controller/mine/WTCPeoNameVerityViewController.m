@@ -10,6 +10,7 @@
 #import "WTCApplyNameVerifiedRequest.h"
 #import "WTCApplyNameVerifiedResult.h"
 #import "MBProgressHUD.h"
+#import "SettingPayCodeViewController.h"
 @interface WTCPeoNameVerityViewController ()
 
 @end
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];
+    self.title = @"实名认证";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -45,12 +47,26 @@
     WTCApplyNameVerifiedRequest *request = [[WTCApplyNameVerifiedRequest alloc]initWithIdcard:Idcard realName:realname Token:applyNameToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         
-        WTCApplyNameVerifiedResult *applyNameResult = [request getResponse].data;
+        if (self.isWithdraw == true) {
+            SettingPayCodeViewController *controller = [SettingPayCodeViewController new];
+            controller.isWithdraw = self.isWithdraw;
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+        else
+        {
+            [[CommonVar sharedInstance]showMessage:@"认证成功" ShowController:self];
+            [self performSelector:@selector(back) withObject:nil afterDelay:3.0];
+        }
+//        WTCApplyNameVerifiedResult *applyNameResult = [request getResponse].data;
 
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:YES];
     }];
     [request start];
+}
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

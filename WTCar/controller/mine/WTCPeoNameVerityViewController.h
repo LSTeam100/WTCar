@@ -12,5 +12,6 @@
 - (IBAction)ConfirmNameButtonClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *realNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *IdcardTextField;
+@property(nonatomic,assign)BOOL isWithdraw;
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WTCUserTeleNumViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface WTCUserTeleNumViewController : WTCBaseViewController<UITextFieldDelegate>
 - (IBAction)SaveUserTeleNumButtonClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *TeleTextField;
+@property(nonatomic,strong)NSString *telePhone;
 - (IBAction)DeleTeleButtonClick:(id)sender;
 
 @end

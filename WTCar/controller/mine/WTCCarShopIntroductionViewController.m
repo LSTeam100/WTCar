@@ -7,7 +7,7 @@
 //
 
 #import "WTCCarShopIntroductionViewController.h"
-
+#import "WTCModifyStoreInfoRequest.h"
 @interface WTCCarShopIntroductionViewController ()
 
 @end
@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.textView.text = self.shopDes;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -35,5 +36,32 @@
 */
 
 - (IBAction)SaveCarShopIntroButtonClick:(id)sender {
+    
+    NSString*upDataName = self.textView.text;
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    
+    if (upDataName.length == 0) {
+        [[CommonVar sharedInstance]showMessage:@"车辆描述不能为空" ShowController:self];
+        return;
+    }
+    
+    [self setBusyIndicatorVisible:YES];
+    NSDictionary *dic = @{@"merchantDescr":upDataName};
+    WTCModifyStoreInfoRequest *request = [[WTCModifyStoreInfoRequest alloc]initModifyStoreInfo:loginToken DataDic:dic successCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [[CommonVar sharedInstance]showMessage:@"修改成功" ShowController:self];
+        [self performSelector:@selector(back) withObject:nil afterDelay:3.0];
+    } failureCallback:^(WTCarBaseRequest *request) {
+        [self setBusyIndicatorVisible:NO];
+        [self handleResponseError:self request:request treatErrorAsUnknown:NO];
+    }];
+    [request start];
+
+    
 }
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

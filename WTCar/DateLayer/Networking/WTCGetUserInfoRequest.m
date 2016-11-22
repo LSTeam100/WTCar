@@ -32,7 +32,7 @@ self=[super initWithToken:token successCallback:success failureCallback:failed];
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCGetUserInfoResult *result=[[WTCGetUserInfoResult alloc]init];
+            WTCGetUserInfoResult *result=[[WTCGetUserInfoResult alloc]initWithDictionary:data];
             
             [self getResponse].data=result;
         }

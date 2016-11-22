@@ -33,13 +33,13 @@
     if([[self getResponse] isSucceed]){
         NSDictionary* data=responseDictionary[@"data"];
         if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
-            WTCGetUserInfoResult *result=[[WTCGetUserInfoResult alloc]init];
-            result.headPortraitPath = data[@"headPortraitPath"];
-            result.merchantAddress = data[@"merchantAddress"];
-            result.merchantDescr = data[@"merchantDescr"];
-            result.merchantName = data[@"merchantName"];
-            result.mobile = data[@"mobile"];
-            result.realName = data[@"realName"];
+            WTCGetUserInfoResult *result=[[WTCGetUserInfoResult alloc]initWithDictionary:data];
+//            result.headPortraitPath = data[@"headPortraitPath"];
+//            result.merchantAddress = data[@"merchantAddress"];
+//            result.merchantDescr = data[@"merchantDescr"];
+//            result.merchantName = data[@"merchantName"];
+//            result.mobile = data[@"mobile"];
+//            result.realName = data[@"realName"];
             [self getResponse].data=result;
         }
     }

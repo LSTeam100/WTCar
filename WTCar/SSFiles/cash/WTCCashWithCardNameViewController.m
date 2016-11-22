@@ -13,6 +13,7 @@
 #import "MBProgressHUD.h"
 #import "WTCGetBankCardInfoResult.h"
 #import "WTCGetBankCardInfoRequest.h"
+
 @interface WTCCashWithCardNameViewController ()
 
 @end
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [_NextStepButton addTarget:self action:@selector(GotoLogPasswordOrCashRecord) forControlEvents:UIControlEventTouchUpInside];
+    self.title = @"提现";
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -38,12 +40,16 @@
         
         WTCGetBankCardInfoResult *receivePosResult = [request getResponse].data;
         
+        self.UserNameLabel.text = receivePosResult.realName;
+        self.UserCardLabel.text = receivePosResult.bankNum;
+        self.CardAddressLabel.text = receivePosResult.openedBank;
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:YES];
     }];
     [request start];
 }
+
 //申请提现请求
 -(void)applyCashRequest
 {
@@ -61,6 +67,7 @@
 -(void)GotoLogPasswordOrCashRecord
 {
     if (_CashHasPasswordAndName==YES) {
+        
         WTCCashToPasswordViewController *toPasswordViewCon = [WTCCashToPasswordViewController new];
         toPasswordViewCon.cashNum = _CashNumTextField.text;
         [self.navigationController pushViewController:toPasswordViewCon animated:YES];

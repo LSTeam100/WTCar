@@ -154,19 +154,13 @@
         [self setBusyIndicatorVisible:NO];
         NSUserDefaults *ns=[NSUserDefaults standardUserDefaults];
         [ns removeObjectForKey:@"token"];
-        
-        AppDelegate *app=(AppDelegate *)[UIApplication sharedApplication].delegate;
-//        if(app!=nil){
-//            [app unregisterXG];
-//        }
-        
         UINavigationController * root=self.navigationController;
-        [self.navigationController popToRootViewControllerAnimated:NO];
-        
-        LoginViewController *loginVc=[[LoginViewController alloc]init];
-        [root pushViewController:loginVc animated:YES];
-    
-        
+        if (self.navigationController) {
+//            [self.navigationController popToRootViewControllerAnimated:NO];
+            LoginViewController *loginVc=[[LoginViewController alloc]init];
+            [root pushViewController:loginVc animated:YES];
+        }
+                
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         

@@ -30,5 +30,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *SecCodeLabel;
 //密码修改完成
 - (IBAction)ConfirmButtonClick:(id)sender;
+@property(nonatomic,assign)BOOL isWithdraw;
 
 @end

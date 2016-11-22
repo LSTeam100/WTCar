@@ -24,5 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *openBankCardAddressTextField;
 @property (weak, nonatomic) IBOutlet UILabel *uesrIdNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property(nonatomic,assign)BOOL isWidthdraw;
+@property(nonatomic,strong)NSString *idcard;
 
 @end

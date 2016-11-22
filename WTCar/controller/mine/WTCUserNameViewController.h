@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WTCUserNameViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface WTCUserNameViewController : WTCBaseViewController
 - (IBAction)SaveUserNameButtonClick:(id)sender;
 - (IBAction)DeleTextFieldButtonClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *NameTextField;

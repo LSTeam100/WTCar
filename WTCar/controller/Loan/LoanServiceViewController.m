@@ -113,9 +113,31 @@
     
     _loanDetailsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [cell.contentView setBackgroundColor:[UIColor whiteColor]];
-    cell.LoanMoneyLabel.text = _loanArray[indexPath.row][@"amount"];
-    cell.LoanStateLabel.text = _loanMoneyArray[indexPath.row][@"status"];
-    cell.LoanTimeLabel.text = _loanMoneyArray[indexPath.row][@"updataTime"];
+    
+    WTCALoan *aloan = [_loanArray objectAtIndex:indexPath.row];
+    
+    
+    
+    cell.LoanMoneyLabel.text = [NSString stringWithFormat:@"%@元",aloan.amount];
+    
+    int loanStatus = [aloan.status intValue];
+    NSString *status;
+    if (loanStatus == 1) {
+        status = @"审核中";
+    }
+    else if (loanStatus == 2)
+    {
+        status = @"审核通过";
+    }
+    else
+    {
+        status = @"审核未通过";
+    }
+    
+    
+    cell.LoanStateLabel.text = [NSString stringWithFormat:@"%@",status];
+    cell.LoanTimeLabel.text = aloan.updateTime;
+    cell.LoanTimeLabel.textColor = [UIColor blackColor];
     if (!IOS9_OR_LATER) {
         cell.LoanMoneyLabel.font = [UIFont boldSystemFontOfSize:15];
         cell.LoanStateLabel.font = [UIFont boldSystemFontOfSize:15];

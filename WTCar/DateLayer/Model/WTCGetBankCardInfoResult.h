@@ -11,5 +11,5 @@
 @interface WTCGetBankCardInfoResult :WTCarBaseRequest
 @property(nonatomic,strong) NSString *bankNum;
 @property(nonatomic,strong) NSString *openedBank;
-@property(nonatomic,strong) NSNumber *realName;
+@property(nonatomic,strong) NSString *realName;
 @end

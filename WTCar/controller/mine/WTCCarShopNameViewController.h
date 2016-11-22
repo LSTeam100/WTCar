@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WTCCarShopNameViewController : UIViewController
+#import "WTCBaseViewController.h"
+@interface WTCCarShopNameViewController : WTCBaseViewController<UITextFieldDelegate>
 - (IBAction)SaveCarShopNameButtonClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *ShopNameTextField;
+@property(nonatomic,strong)NSString *shopName;
 - (IBAction)DeleShopNameButtonClick:(id)sender;
 
 @end
