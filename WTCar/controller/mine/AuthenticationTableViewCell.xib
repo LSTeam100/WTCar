@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="99"/>
+                <frame key="frameInset" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKH-Hm-xO0">
@@ -32,12 +32,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tSm-7b-XSU" firstAttribute="leading" secondItem="ZDa-dT-6UZ" secondAttribute="trailing" constant="5" id="D2X-KP-xS1"/>
-                            <constraint firstItem="ZDa-dT-6UZ" firstAttribute="centerY" secondItem="KKH-Hm-xO0" secondAttribute="centerY" id="Vng-4q-oTc"/>
-                            <constraint firstItem="ZDa-dT-6UZ" firstAttribute="leading" secondItem="KKH-Hm-xO0" secondAttribute="leading" constant="10" id="gG2-t7-k4M"/>
+                            <constraint firstItem="ZDa-dT-6UZ" firstAttribute="leading" secondItem="KKH-Hm-xO0" secondAttribute="leading" constant="10" id="OCR-kI-RB8"/>
+                            <constraint firstItem="khN-dq-11D" firstAttribute="leading" secondItem="ZDa-dT-6UZ" secondAttribute="trailing" constant="15" id="Y9E-ip-rbI"/>
                             <constraint firstAttribute="bottom" secondItem="tSm-7b-XSU" secondAttribute="bottom" constant="10" id="gXU-Cs-eUF"/>
-                            <constraint firstItem="khN-dq-11D" firstAttribute="leading" secondItem="ZDa-dT-6UZ" secondAttribute="trailing" constant="15" id="ij4-Un-Iqs"/>
                             <constraint firstItem="khN-dq-11D" firstAttribute="top" secondItem="KKH-Hm-xO0" secondAttribute="top" constant="20" id="sLe-ul-5jO"/>
+                            <constraint firstItem="ZDa-dT-6UZ" firstAttribute="centerY" secondItem="KKH-Hm-xO0" secondAttribute="centerY" id="vui-Ng-Cm1"/>
+                            <constraint firstItem="tSm-7b-XSU" firstAttribute="leading" secondItem="KKH-Hm-xO0" secondAttribute="leading" constant="28" id="y2X-6M-XoP"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omY-rA-8n5">
@@ -57,11 +57,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cr4-VW-ZZj" firstAttribute="top" secondItem="omY-rA-8n5" secondAttribute="top" constant="20" id="CKe-tD-w0j"/>
-                            <constraint firstItem="fH7-bW-KC0" firstAttribute="leading" secondItem="omY-rA-8n5" secondAttribute="leading" constant="10" id="CeE-ON-FSY"/>
-                            <constraint firstItem="fH7-bW-KC0" firstAttribute="centerY" secondItem="omY-rA-8n5" secondAttribute="centerY" id="j91-iC-mYe"/>
+                            <constraint firstItem="i2p-SS-9vN" firstAttribute="leading" secondItem="omY-rA-8n5" secondAttribute="leading" constant="42" id="LVf-Ao-iTk"/>
+                            <constraint firstItem="cr4-VW-ZZj" firstAttribute="leading" secondItem="fH7-bW-KC0" secondAttribute="trailing" constant="10" id="i6S-1k-5pm"/>
+                            <constraint firstItem="fH7-bW-KC0" firstAttribute="leading" secondItem="omY-rA-8n5" secondAttribute="leading" constant="10" id="m5g-fl-aRX"/>
                             <constraint firstAttribute="bottom" secondItem="i2p-SS-9vN" secondAttribute="bottom" constant="10" id="oaC-Qw-Blr"/>
-                            <constraint firstItem="cr4-VW-ZZj" firstAttribute="leading" secondItem="fH7-bW-KC0" secondAttribute="trailing" constant="10" id="odz-Xa-mw0"/>
-                            <constraint firstItem="i2p-SS-9vN" firstAttribute="leading" secondItem="fH7-bW-KC0" secondAttribute="trailing" constant="5" id="vtU-bL-tFD"/>
+                            <constraint firstItem="fH7-bW-KC0" firstAttribute="centerY" secondItem="omY-rA-8n5" secondAttribute="centerY" id="zjm-yK-ZG0"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -80,7 +80,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="mineDetail_body" width="26" height="30"/>
+        <image name="mineDetail_body" width="13" height="15"/>
         <image name="mineDetail_vIdtier" width="27" height="30"/>
     </resources>
 </document>

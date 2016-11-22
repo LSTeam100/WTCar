@@ -9,7 +9,10 @@
 #import "WTCBaseViewController.h"
 #import "define.h"
 #import "TTPasswordView.h"
-@interface SettingPayCodeViewController : WTCBaseViewController
+#import "WTCGetUserInfoResult.h"
+#import "UPMBaseCustomNavBarViewController.h"
+
+@interface SettingPayCodeViewController : UPMBaseCustomNavBarViewController<UPMNavigationBarDelegate>
 @property(nonatomic) BOOL OnlySetpassword;
 @property(nonatomic) BOOL CashHasNameSetpassword;
 @property(nonatomic) BOOL CashNoNameSetpassword;
@@ -20,6 +23,8 @@
  */
 @property(nonatomic,retain)TTPasswordView *password;
 @property(nonatomic,retain)TTPasswordView *password2;
+
+@property(nonatomic,strong)WTCGetUserInfoResult *userInfoResult;
 /**
  *  第一次输入的密码
  */
@@ -31,5 +36,6 @@
 //密码修改完成
 - (IBAction)ConfirmButtonClick:(id)sender;
 @property(nonatomic,assign)BOOL isWithdraw;
+@property(nonatomic,assign)NSInteger isCheckPayCheckPassword;
 
 @end

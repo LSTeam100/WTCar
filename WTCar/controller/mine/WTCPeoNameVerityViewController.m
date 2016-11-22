@@ -50,6 +50,7 @@
         if (self.isWithdraw == true) {
             SettingPayCodeViewController *controller = [SettingPayCodeViewController new];
             controller.isWithdraw = self.isWithdraw;
+            controller.userInfoResult = self.userInfoResult;
             [self.navigationController pushViewController:controller animated:YES];
         }
         else

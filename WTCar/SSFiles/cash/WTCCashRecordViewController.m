@@ -45,6 +45,8 @@
     [self setBusyIndicatorVisible:YES];
     WTCGetCashListRequest *request = [[WTCGetCashListRequest alloc]initWithToken:@"" successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        self.itemArr = [request getResponse].data;
+        [self.cashRecordTableView reloadData];
         
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
@@ -78,7 +80,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _cellNumTextArray.count;
+    return self.itemArr.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return cellHeight;
@@ -90,11 +92,29 @@
     _cashRecordTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [cell.contentView setBackgroundColor:[UIColor whiteColor]];
 
-    cell.cashNumLabel.text = _cellNumTextArray[indexPath.row];
-    cell.cashMoneyLabel.text = _cellMoneyTextArray[indexPath.row];
-    cell.cashStateLabel.text = _cellStateTextArray[indexPath.row];
-    cell.cashTimeLabel.text = _cellTimeTextArray[indexPath.row];
+    NSDictionary *oneDic = [self.itemArr objectAtIndex:indexPath.row];
+
+    cell.cashNumLabel.text = [oneDic objectForKey:@"withdrawNum"];
+    cell.cashMoneyLabel.text = [oneDic objectForKey:@"amount"];
     
+    NSString *cashStatus;
+    int status = [[oneDic objectForKey:@"status"]intValue];
+    if (status == 1) {
+        cashStatus = @"审核中";
+    }
+    else if (status == 2)
+    {
+        cashStatus = @"已提现";
+    }
+    else
+    {
+        cashStatus = @"未通过";
+
+    }
+    
+    
+    cell.cashStateLabel.text = cashStatus;
+    cell.cashTimeLabel.text = [oneDic objectForKey:@"createTime"];
     if (!IOS9_OR_LATER) {
 
     }

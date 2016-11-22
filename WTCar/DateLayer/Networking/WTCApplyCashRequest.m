@@ -9,9 +9,8 @@
 #import "WTCApplyCashRequest.h"
 @implementation WTCApplyCashRequest
 
--(id)initWithApplyCash:(NSString *)amount    successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
-    self=[super initWithSuccessCallback:success
-                        failureCallback:failed];
+-(id)initWithApplyCash:(NSString *)amount Token:(NSString *)token successCallback:(onSuccessCallback)success failureCallback:(onFailureCallback)failed{
+    self=[super initWithToken:token successCallback:success failureCallback:failed];
     
     if(self){
         NSDictionary *parameters=@{
@@ -33,7 +32,10 @@
     [super processResponse:responseDictionary];
     
     if([[self getResponse] isSucceed]){
-        NSLog(@"体现申请成功");
+        NSDictionary* data=responseDictionary[@"data"];
+        if(data!=nil && data != NULL && data != (NSDictionary *)[NSNull null]){
+            [self getResponse].data=data;
+        }
     }
 }
 

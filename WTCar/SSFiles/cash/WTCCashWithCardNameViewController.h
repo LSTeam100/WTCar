@@ -7,8 +7,8 @@
 //
 
 #import "WTCBaseViewController.h"
-
-@interface WTCCashWithCardNameViewController : WTCBaseViewController
+#import "UPMBaseCustomNavBarViewController.h"
+@interface WTCCashWithCardNameViewController : UPMBaseCustomNavBarViewController
 @property (weak, nonatomic) IBOutlet UILabel *UserNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *UserCardLabel;
 @property (weak, nonatomic) IBOutlet UILabel *CardAddressLabel;
