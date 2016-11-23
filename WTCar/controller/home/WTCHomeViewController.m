@@ -48,14 +48,14 @@
     
     
     CGFloat offset = 44;
-    float bannerWidth = [UIScreen mainScreen].bounds.size.width;
+    float bannerWidth = SCREEN_WIDTH;
     float fen = 16.0/9.0;
     float bannerHeight = bannerWidth /fen;
     NSLog(@"bannerHeight=%f",bannerHeight);
     NSLog(@"viewX=%f",viewX);
     carouselHeight = bannerHeight;
 //    _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, viewX, viewY-44-offset)];
-    _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, viewX, bannerHeight)];
+    _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, bannerHeight+100)];
     _mainScrollView.showsVerticalScrollIndicator = false;//禁止垂直滚动条显示
     _mainScrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_mainScrollView];
@@ -85,7 +85,7 @@
     float fen = 16.0/9.0;
     float bannerHeight = bannerWidth /fen;
     carouselHeight = bannerHeight;
-    _buttonView.frame = CGRectMake(0, bannerHeight, _mainScrollView.frame.size.width, SCREEN_HEIGHT-bannerHeight+80);
+    _buttonView.frame = CGRectMake(0, bannerHeight+70, viewX, SCREEN_HEIGHT-bannerHeight+80);
     _buttonView.backgroundColor = [UIColor whiteColor];
     
     
@@ -142,25 +142,25 @@
 -(void)bannerPicInit{
     
     UIImage *carouselImage = [UIImage imageNamed:@"banner3"];
-    carouselHeight = carouselImage.size.height * (viewX / carouselImage.size.width);
-    float Width = [UIScreen mainScreen].bounds.size.width;
+    carouselHeight = carouselImage.size.height * (SCREEN_WIDTH / carouselImage.size.width);
+    float Width = SCREEN_WIDTH;
     float fen = 16.0/9.0;
     float Height = Width /fen;
-    _carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 0, viewX, Height)];
+    _carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, Height)];
     _carousel.backgroundColor = [UIColor clearColor];
     _carousel.type = iCarouselTypeLinear;
     _carousel.delegate = self;
     _carousel.dataSource = self;
     
     [_mainScrollView addSubview:_carousel];
-    _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, _carousel.frame.size.height/7*6, viewX, _carousel.frame.size.height/7)];
+    _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, _carousel.frame.size.height/7*6, SCREEN_WIDTH, _carousel.frame.size.height/7)];
     _pageControl.numberOfPages = _carousel.numberOfItems;
     _pageControl.backgroundColor = [UIColor clearColor];
     _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
     _pageControl.currentPage = 0;
     
-    [_carousel addSubview:_pageControl];
+//    [_carousel addSubview:_pageControl];
 
 }
 
@@ -190,7 +190,7 @@
         _pageControl.currentPage = 0;
     }
     
-    [_carousel addSubview:_pageControl];
+//    [_carousel addSubview:_pageControl];
     
     [_carousel scrollToItemAtIndex:_scrollCount duration:1];
 }
