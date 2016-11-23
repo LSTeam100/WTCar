@@ -7,8 +7,9 @@
 //
 
 #import"WTCBaseViewController.h"
-
-@interface WTCAddBankCardViewController :WTCBaseViewController
+#import "WTCGetUserInfoResult.h"
+#import "UPMBaseCustomNavBarViewController.h"
+@interface WTCAddBankCardViewController :UPMBaseCustomNavBarViewController
 @property(nonatomic) BOOL CashHasNameAndPassword;
 @property(nonatomic) BOOL CashNoNameNoPassword;
 @property(nonatomic) BOOL CashHasNameNoPassword;
@@ -26,5 +27,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property(nonatomic,assign)BOOL isWidthdraw;
 @property(nonatomic,strong)NSString *idcard;
+@property(nonatomic,strong)WTCGetUserInfoResult *userInfoResult;
 
 @end

@@ -180,30 +180,6 @@
             cell.mineDataLabel.font = [UIFont boldSystemFontOfSize:15];
             cell.detailLabel.font = [UIFont boldSystemFontOfSize:15];
         }
-//        if (indexPath.section == 0) {
-//            
-//            if (indexPath.row == 0) {
-//                UIImage *image = [UIImage imageNamed:@"交通示意图"];
-//                CGFloat width = 68;
-//                CGFloat height = 68;
-//                UIImageView *PeoPicImage = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-width-30)/2, 31, width, height)];
-//                PeoPicImage.image = image;
-//                PeoPicImage.backgroundColor = [UIColor clearColor];
-//            }else if (indexPath.row == 1){
-//                
-//            }else if (indexPath.row == 2){
-//                
-//            }
-//        }else{
-//            if (indexPath.row == 0) {
-//                
-//            }else if (indexPath.row ==1)
-//            {
-//                
-//            }else if (indexPath.row == 2){
-//                
-//            }
-//        }
         return cell;
 
     }
@@ -292,6 +268,7 @@
 }
 -(void)businessVerityClick{
     WTCBusinessVerityViewController *businessVerityViewCon = [WTCBusinessVerityViewController new];
+    businessVerityViewCon.uploadLicenseUrl = self.userInfoResult.businessLicencePath;
     [self.navigationController pushViewController:businessVerityViewCon animated:YES];
     
 }
@@ -444,23 +421,6 @@
 //        [self handleResponseError:self request:request treatErrorAsUnknown:NO];
 
     }];
-     //    WTCPortratUploadRequest *request = [[WTCPortratUploadRequest alloc]init];
-//    [request WTCUploadFileWith:param fileKey:@"file" filePath:profilePath SuccessCallbackBlock:^(NSData *data, NSURLResponse *response) {
-//        [self setBusyIndicatorVisible:NO];
-//    } FailCallbackBlock:^(NSError *data, NSURLResponse *response) {
-//        [self setBusyIndicatorVisible:NO];
-//    }];
-    
-    
-    
-//  TFFileUploadManager *upload = [[TFFileUploadManager alloc] init];
-//    [upload WTCUploadFileWithURL:url params:param fileKey:@"file" filePath:profilePath SuccessCallbackBlock:^(NSData *data, NSURLResponse *response) {
-//        [self setBusyIndicatorVisible:NO];
-//        NSLog(@"data=%@",data);
-//    } FailCallbackBlock:^(NSError *error, NSURLResponse *response) {
-//        [self setBusyIndicatorVisible:NO];
-//        NSLog(@"error=%@",error);
-//    }];
 
     
     

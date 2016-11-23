@@ -31,12 +31,14 @@
 {
     NSString *amount = _cashNum;
     [self setBusyIndicatorVisible:YES];
-    WTCApplyCashRequest *request = [[WTCApplyCashRequest alloc]initWithApplyCash:amount successCallback:^(WTCarBaseRequest *request) {
+    
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
+    WTCApplyCashRequest *request = [[WTCApplyCashRequest alloc]initWithApplyCash:amount Token:loginToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
-        
+        WTCCashRecordViewController *controller = [[WTCCashRecordViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
-        [self handleResponseError:self request:request treatErrorAsUnknown:YES];
     }];
     [request start];
 }

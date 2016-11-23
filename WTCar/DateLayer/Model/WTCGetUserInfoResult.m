@@ -133,6 +133,13 @@
         {
             self.province = @"";
         }
+        if ([dataDic objectForKey:@"businessLicencePath"]) {
+            self.businessLicencePath = [dataDic objectForKey:@"businessLicencePath"];
+        }
+        else
+        {
+            self.businessLicencePath = @"";
+        }
         
     }
     return self;

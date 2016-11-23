@@ -12,6 +12,7 @@
 #import "WTCBindBankCardRequest.h"
 #import "MBProgressHUD.h"
 #import "WTCMyBankCardViewController.h"
+#import "WTCMineViewController.h"
 @interface WTCAddBankCardViewController ()
 
 @end
@@ -20,12 +21,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"添加银行卡";
+//    self.title = @"添加银行卡";
+    self.naviGantionBar.titleLabel.text = @"添加银行卡";
     [self dataInit];
     [_ConfirmAddBankCardButton addTarget:self action:@selector(GotoCashViewCon) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    [self.navigationController.navigationBar setTranslucent:YES];
+    self.navigationController.navigationBarHidden=YES;
+    self.naviGantionBar.hidden = NO;
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.naviGantionBar.hidden = YES;
+//    [self.navigationController.navigationBar setTranslucent:YES];
+    self.navigationController.navigationBarHidden=NO;
+    
+}
 -(void)viewDidDisappear:(BOOL)animated
 {
     _CashNoNameNoPassword = NO;
@@ -37,6 +53,8 @@
     _AddBankHasNameNoPassword = NO;
     _AddBankHasPasswordNoName = NO;
     _AddBankHasNameAndPassword = NO;
+    self.navigationController.navigationBarHidden=NO;
+
 }
 //绑定银行卡
 -(void)BindBankCardRequest
@@ -48,8 +66,16 @@
     [self setBusyIndicatorVisible:YES];
     WTCBindBankCardRequest *request = [[WTCBindBankCardRequest alloc]initWithBindBankCard:token Bankcard:bankCard openedBank:openCardAddress successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
-        WTCMyBankCardViewController *myBank = [[WTCMyBankCardViewController alloc]init];
-        [self.navigationController pushViewController:myBank animated:YES];
+        if (self.isWidthdraw == true) {
+            WTCCashWithCardNameViewController *controler = [[WTCCashWithCardNameViewController alloc]init];
+            controler.isWidhtdraw = self.isWidthdraw;
+            [self.navigationController pushViewController:controler animated:YES];
+        }
+        else
+        {
+            WTCMyBankCardViewController *myBank = [[WTCMyBankCardViewController alloc]init];
+            [self.navigationController pushViewController:myBank animated:YES];
+        }
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:YES];
@@ -74,11 +100,33 @@
 }
 -(void)dataInit
 {
-    self.uesrIdNumLabel.text = self.idcard;
+    self.uesrIdNumLabel.text = self.userInfoResult.idcard;
+    self.userNameLabel.text = self.userInfoResult.realName;
+    self.userTeleNumTextField.text = self.userInfoResult.mobile;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)back
+{
+    if (self.isWidthdraw == true) {
+        int index = 0;
+        for (int i = 0; i < self.navigationController.viewControllers.count; i++) {
+            id controller = [self.navigationController.viewControllers objectAtIndex:i];
+            if ([controller isKindOfClass:[WTCMineViewController class]]) {
+                index = i;
+                [self.navigationController popToViewController:controller animated:YES];
+                
+            }
+        }
+        
+    }
+    else
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    //    NSLog(@"sssss");
 }
 
 /*

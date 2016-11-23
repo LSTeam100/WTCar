@@ -13,5 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *CashMoneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *CashStateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *CashTimeLabel;
-
+@property(nonatomic,strong)NSMutableArray *itemArr;
 @end

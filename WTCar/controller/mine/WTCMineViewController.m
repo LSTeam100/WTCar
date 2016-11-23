@@ -210,14 +210,19 @@
         if (self.userInfoResult.isRealNameAudit == 2) {
             if (self.userInfoResult.isPaypwd == 2) {
                 if (self.userInfoResult.isBk == 2) {
-                    WTCCashWithCardNameViewController *card = [[WTCCashWithCardNameViewController alloc]init];
-                    [self.navigationController pushViewController:card animated:YES];
+                    
+                    SettingPayCodeViewController *controller = [SettingPayCodeViewController new];
+                    controller.isWithdraw = true;
+                    controller.isCheckPayCheckPassword = 1;
+                    controller.userInfoResult = self.userInfoResult;
+                    [self.navigationController pushViewController:controller animated:YES];
                 }
                 else
                 {
                     WTCAddBankCardViewController *addCard = [[WTCAddBankCardViewController alloc]init];
                     addCard.isWidthdraw = YES;
                     addCard.idcard = self.userInfoResult.idcard;
+                    addCard.userInfoResult = self.userInfoResult;
                     [self.navigationController pushViewController:addCard animated:YES];
 //                    WTCCashWithCardNameViewController *card = [[WTCCashWithCardNameViewController alloc]init];
 //                    card.isWidhtdraw = YES;
@@ -228,6 +233,8 @@
             else
             {
                 SettingPayCodeViewController *controller = [SettingPayCodeViewController new];
+                controller.isWithdraw = true;
+                controller.userInfoResult = self.userInfoResult;
                 [self.navigationController pushViewController:controller animated:YES];
             }
         }
@@ -235,6 +242,7 @@
         {
             WTCPeoNameVerityViewController *controller = [[WTCPeoNameVerityViewController alloc]init];
             controller.isWithdraw = true;
+            controller.userInfoResult = self.userInfoResult;
             [self.navigationController pushViewController:controller animated:YES];
         }
 
@@ -303,9 +311,9 @@
 -(void)getUserBaseInfo
 {
     NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
-//    [self setBusyIndicatorVisible:YES];
+    [self setBusyIndicatorVisible:YES];
     WTCUserInfoRequest *request = [[WTCUserInfoRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
-//        [self setBusyIndicatorVisible:NO];
+        [self setBusyIndicatorVisible:NO];
         WTCGetUserInfoResult *result = [request getResponse].data;
         
         self.userInfoResult = result;
@@ -317,7 +325,7 @@
         [self.tableView reloadData];
         
     } failureCallback:^(WTCarBaseRequest *request) {
-//        [self setBusyIndicatorVisible:NO];
+        [self setBusyIndicatorVisible:NO];
         [self handleResponseError:self request:request treatErrorAsUnknown:NO];
     }];
     [request start];

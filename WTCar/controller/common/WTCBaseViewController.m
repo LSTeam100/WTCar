@@ -117,6 +117,11 @@
     {
         
     }
+    else if (statusCode == 1017)
+    {
+        NSString *message = [request getResponse].errorMessage;
+        [self showMessage:message];
+    }
     else if (statusCode==450)
     {
         [self showMessage:@"该用户已存在"];

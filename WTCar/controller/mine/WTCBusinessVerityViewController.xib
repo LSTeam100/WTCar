@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCBusinessVerityViewController">
             <connections>
+                <outlet property="shopImageView" destination="hho-t9-LTF" id="5dd-5r-DQM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -117,6 +118,12 @@
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hho-t9-LTF">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="dWC-kg-NSo"/>
+                        <constraint firstAttribute="height" constant="70" id="jrd-Jt-oxx"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -129,6 +136,7 @@
                 <constraint firstItem="gw6-UQ-Uof" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="HmN-K4-hZu"/>
                 <constraint firstItem="nxc-Ct-fKu" firstAttribute="centerY" secondItem="IXq-c9-7wX" secondAttribute="centerY" id="IW3-G1-jMR"/>
                 <constraint firstAttribute="trailing" secondItem="gw6-UQ-Uof" secondAttribute="trailing" constant="16" id="JUv-6T-0nI"/>
+                <constraint firstItem="hho-t9-LTF" firstAttribute="top" secondItem="I7X-70-Jsc" secondAttribute="bottom" constant="8" id="Lew-Sk-Swq"/>
                 <constraint firstItem="I7X-70-Jsc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="PAd-nh-7y8"/>
                 <constraint firstAttribute="trailing" secondItem="LhF-GR-pgc" secondAttribute="trailing" id="VeA-wT-j5C"/>
                 <constraint firstItem="vv0-2B-L0z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="b3a-bS-c5b"/>
@@ -142,9 +150,10 @@
                 <constraint firstItem="nxc-Ct-fKu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="179" id="rdV-I9-P4G"/>
                 <constraint firstItem="HTS-cm-gll" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="vDh-sn-sie"/>
                 <constraint firstItem="aU1-vK-q23" firstAttribute="top" secondItem="I7X-70-Jsc" secondAttribute="bottom" constant="8" id="vZJ-gS-TBD"/>
+                <constraint firstItem="hho-t9-LTF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="wnc-re-gi6"/>
                 <constraint firstAttribute="bottom" secondItem="LhF-GR-pgc" secondAttribute="bottom" id="yb2-4Y-ZJp"/>
             </constraints>
-            <point key="canvasLocation" x="268" y="67"/>
+            <point key="canvasLocation" x="436.5" y="65.5"/>
         </view>
     </objects>
     <resources>

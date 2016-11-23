@@ -26,5 +26,6 @@
 @property(nonatomic,strong)NSString *idcard;
 @property(nonatomic,strong)NSString *city;
 @property(nonatomic,strong)NSString *province;
+@property(nonatomic,strong)NSString *businessLicencePath;
 -(instancetype)initWithDictionary:(NSDictionary *)dataDic;
 @end

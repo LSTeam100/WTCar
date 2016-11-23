@@ -11,5 +11,8 @@
 @interface WTCBusinessVerityViewController :WTCBaseViewController
 - (IBAction)ConfirmBusinessButtonClick:(id)sender;
 - (IBAction)VeritylicencePicButtonClick:(id)sender;
+@property(nonnull,strong)IBOutlet UIImageView *shopImageView;
+@property(nonatomic,strong)NSString *uploadLicenseUrl;
+
 
 @end
