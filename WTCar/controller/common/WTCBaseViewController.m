@@ -73,6 +73,8 @@
                    request:(WTCarBaseRequest *)request
        treatErrorAsUnknown:(BOOL) treated{
     int statusCode=[request getResponse].statusCode;
+    NSString *message = [request getResponse].errorMessage;
+
     if(statusCode==430||statusCode==431){
         [self handleSessionTimeout:currentController request:request];
         return YES;
@@ -113,6 +115,10 @@
     {
         [self showMessage:@"无权限"];
     }
+    else if (statusCode==53)
+    {
+        [self showMessage:message];
+    }
     else if (statusCode==404)
     {
         
@@ -133,6 +139,10 @@
     else if (statusCode==511)
     {
         [self showMessage:@"当前城市不支持"];
+    }
+    else if (statusCode == 0053)
+    {
+        [self showMessage:message];
     }
     else if (statusCode==-1)
     {

@@ -41,9 +41,9 @@
 //获取提现记录
 -(void)getCashListRequest
 {
-    
+    NSString *loginToken = [[CommonVar sharedInstance] getLoginToken];
     [self setBusyIndicatorVisible:YES];
-    WTCGetCashListRequest *request = [[WTCGetCashListRequest alloc]initWithToken:@"" successCallback:^(WTCarBaseRequest *request) {
+    WTCGetCashListRequest *request = [[WTCGetCashListRequest alloc]initWithToken:loginToken successCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
         self.itemArr = [request getResponse].data;
         [self.cashRecordTableView reloadData];

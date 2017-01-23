@@ -62,8 +62,8 @@
     WTCApplyCashRequest *request = [[WTCApplyCashRequest alloc]initWithApplyCash:amount Token:loginToken successCallback:^(WTCarBaseRequest *request) {
 //        self.itemArr = [request getResponse].data;
         [self setBusyIndicatorVisible:NO];
+        
         WTCCashRecordViewController *controller = [[WTCCashRecordViewController alloc]init];
-//        controller.itemArr = [[NSMutableArray alloc]initWithArray:self.itemArr];
         [self.navigationController pushViewController:controller animated:YES];
         
 
@@ -75,16 +75,18 @@
 }
 -(void)GotoLogPasswordOrCashRecord
 {
-    if (_CashHasPasswordAndName==YES) {
-        
-        WTCCashToPasswordViewController *toPasswordViewCon = [WTCCashToPasswordViewController new];
-        toPasswordViewCon.cashNum = _CashNumTextField.text;
-        [self.navigationController pushViewController:toPasswordViewCon animated:YES];
-    } else {
-        WTCCashRecordViewController *cashRecordViewCon = [WTCCashRecordViewController new];
-        [self applyCashRequest];
-        [self.navigationController pushViewController:cashRecordViewCon animated:YES];
-    }
+    [_CashNumTextField resignFirstResponder];
+    [self applyCashRequest];
+//    if (_CashHasPasswordAndName==YES) {
+//        
+//        WTCCashToPasswordViewController *toPasswordViewCon = [WTCCashToPasswordViewController new];
+//        toPasswordViewCon.cashNum = _CashNumTextField.text;
+//        [self.navigationController pushViewController:toPasswordViewCon animated:YES];
+//    } else {
+//        WTCCashRecordViewController *cashRecordViewCon = [WTCCashRecordViewController new];
+//        [self applyCashRequest];
+//        [self.navigationController pushViewController:cashRecordViewCon animated:YES];
+//    }
 
 }
 - (void)didReceiveMemoryWarning {

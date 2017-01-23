@@ -13,6 +13,7 @@
 @property (nonatomic,strong) iCarousel *carousel;
 @property (nonatomic,assign) CGFloat carouselHeight;
 @property (nonatomic,strong) UIPageControl *pageControl;
+//@property(nonatomic,strong)NSArray *guideArr;
 @end
 
 @implementation GuideViewController
@@ -31,6 +32,10 @@
     [super viewDidLoad];
     self.title = @"引导";
     self.view.backgroundColor = [UIColor colorWithRed:210/255.0f green:250/255.0f blue:218/255.0f alpha:1];
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+//    NSString *leadPage=[userDefault objectForKey:@"leadPage"];
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey];
+    [userDefault setValue:version forKey:@"leadPage"];
     
     CGFloat offset = 0;
     if (IOS7_OR_LATER) {
@@ -68,7 +73,7 @@
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    return 2;
+    return 3;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
@@ -108,7 +113,7 @@
         imageView = (UIImageView *)[view viewWithTag:5002];
     }
     
-    NSString *imageName = [NSString stringWithFormat:@"img_shop_default@%dx",index + 1];
+    NSString *imageName = [NSString stringWithFormat:@"guide@%ldx",index + 1];
     imageView.image = [UIImage imageNamed:imageName];
     
     return view;
@@ -146,6 +151,14 @@
     if (index == 1) {
         [self guideBack:nil];
     }
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    
 }
 
 - (CGFloat)carousel:(__unused iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value

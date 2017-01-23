@@ -66,7 +66,7 @@
     [self updateImageView];
 }
 
-#pragma mark-替换头像
+#pragma mark-替换图片
 
 -(void)updateImageView
 {

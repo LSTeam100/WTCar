@@ -39,6 +39,7 @@
         [self.navigationController pushViewController:controller animated:YES];
     } failureCallback:^(WTCarBaseRequest *request) {
         [self setBusyIndicatorVisible:NO];
+        
     }];
     [request start];
 }

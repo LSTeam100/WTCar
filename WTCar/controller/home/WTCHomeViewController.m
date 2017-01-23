@@ -46,13 +46,11 @@
     viewX = CGRectGetWidth(self.view.frame);//屏幕宽
     viewY = CGRectGetHeight(self.view.frame);//屏幕高
     
-    
-    CGFloat offset = 44;
+//    CGFloat offset = 44;
     float bannerWidth = [UIScreen mainScreen].bounds.size.width;
     float fen = 16.0/9.0;
     float bannerHeight = bannerWidth /fen;
-    NSLog(@"bannerHeight=%f",bannerHeight);
-    NSLog(@"viewX=%f",viewX);
+
     carouselHeight = bannerHeight;
 //    _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, viewX, viewY-44-offset)];
     _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, viewX, bannerHeight)];
@@ -85,7 +83,7 @@
     float fen = 16.0/9.0;
     float bannerHeight = bannerWidth /fen;
     carouselHeight = bannerHeight;
-    _buttonView.frame = CGRectMake(0, bannerHeight, _mainScrollView.frame.size.width, SCREEN_HEIGHT-bannerHeight+80);
+    _buttonView.frame = CGRectMake(0, bannerHeight, _mainScrollView.frame.size.width,[UIScreen mainScreen].bounds.size.height-bannerHeight+80);
     _buttonView.backgroundColor = [UIColor whiteColor];
     
     

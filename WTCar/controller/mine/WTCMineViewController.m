@@ -115,6 +115,8 @@
 {
     [self getUserBaseInfo];
     [[self WTCTabBarController] setTabBarHidden:NO animated:YES];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    self.navigationController.navigationBarHidden=NO;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -179,6 +181,21 @@
     }
     if (self.merchantName) {
         cell.shopNameLabel.text = self.merchantName;
+    }
+    if (self.userInfoResult.isMerchantAudit == 1) {
+        cell.vIdtiferImageview.image = [UIImage imageNamed:@""];
+    }
+    else
+    {
+        cell.vIdtiferImageview.image = [UIImage imageNamed:@""];
+    }
+    
+    if (self.userInfoResult.isRealNameAudit == 1) {
+        cell.bodyIndeiferImageView.image = [UIImage imageNamed:@""];
+    }
+    else
+    {
+        cell.bodyIndeiferImageView.image = [UIImage imageNamed:@""];
     }
     
     

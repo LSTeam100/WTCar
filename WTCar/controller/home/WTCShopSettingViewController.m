@@ -27,11 +27,12 @@
     self.view.backgroundColor = [UIColor colorWithRed:244/255.0f green:247/255.0f blue:245/255.0f alpha:1];
     self.title = @"店铺设置";
     [_shopsettingView.GotoMapViewButton addTarget:self action:@selector(gotoMapViewButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self dataInit];
     [self makeShopSettingView];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)dataInit{
-   
+    [self getShopInfoRequest];
 }
 //地图页面
 -(void)gotoMapViewButtonClick
